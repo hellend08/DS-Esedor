@@ -1,1 +1,27 @@
+#container{
 
+}
+
+.font-title{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 144px;
+  line-height: 180px;
+  letter-spacing: 0.19em;
+}
+
+.section1{
+  background: #000000;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.section2{
+  background: #ffff;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
