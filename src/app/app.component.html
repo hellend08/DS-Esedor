@@ -58,11 +58,13 @@
           </div>
         </div>
       </div>
-      <div class="px-[6rem] flex justify-between mt-12">
+      <div class="px-[6rem] flex justify-between mt-16">
         <div class="w-[10.75rem] Lexend" *ngFor="let folder of dataEmpresa">
           <span class="text-[#626973] text-[0.875rem] font-bold">{{folder.name}}</span>
           <div class="mt-8">
             <p class="text-[#454C59] text-[0.875rem]">{{folder.description}}</p>
+          </div>
+          <div class="flex flex-wrap content-center mt-4">
             <img src="{{folder.image}}">
           </div>
         </div>
@@ -100,38 +102,23 @@
   </section>
 
   <!--Seccion Servicios-->
-  <section class="section bg-[#141C26] py-2 px-4 h-full flex flex-wrap content-center">
+  <section class="section h-auto bg-[#141C26] py-2 px-4 h-full flex flex-wrap content-center">
     <div class="w-full">
       <div class="px-[6rem] w-full Lexend text-white">
         <div>
           <mat-icon></mat-icon>
-          <h3 style="font-size: 1.563rem !important;font-family: Lexend !important;">Filosofia</h3>
+          <h3 style="font-size: 1.563rem !important;font-family: 'Lexend', sans-serif;">Filosofia</h3>
         </div>
 
         <div>
-          <ul>
+          <ul *ngFor="let service of dataService" class="leading-none">
             <li>
-              <h1>Consultoría estratégica
-                & investigación</h1>
-              <span>Ayudamos a definir la estrategia para transformar tu negocio y alcanzar la madurez digital.</span>
-            </li>
-            <li>
-              <h1>Diseño de productos y servicios</h1>
-              <span>Soluciones orientadas a mejorar la experiencia de tus clientes en  canales digitales y presenciales.</span>
-            </li>
-            <li>
-              <h1>Sistemas de diseño y branding </h1>
-              <span>Gestiona la identidad visual de tu producto digital unificanto branding, experiencia de usuario y desarrollo en un solo lugar.</span>
-            </li>
-            <li>
-              <h1>Innovación y
-                transformación digital</h1>
-              <span>Ayudamos a definir la estrategia para transformar tu negocio y alcanzar la madurez digital.</span>
-            </li>
-            <li>
-              <h1>Desarrollo de
-                software y código creativo</h1>
-              <span>Implementamos tecnologías emergentes desde la agilidad para generar resultados reales.</span>
+              <div class="pr-[35rem]">
+                <span style="font-size: 3.063rem !important; font-family: 'Lexend', sans-serif;">{{service.title}}</span>
+              </div>
+              <div class="mb-4 mt-2 w-[20.563rem]">
+                <span style="letter-spacing: 0.005em;line-height: 17px;">{{service.description}}</span>
+              </div>
             </li>
           </ul>
         </div>
