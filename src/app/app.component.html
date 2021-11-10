@@ -58,9 +58,13 @@
           </div>
         </div>
       </div>
-      <div>
-        <div>
-
+      <div class="px-[6rem] flex justify-between mt-12">
+        <div class="w-[10.75rem] Lexend" *ngFor="let folder of dataEmpresa">
+          <span class="text-[#626973] text-[0.875rem] font-bold">{{folder.name}}</span>
+          <div class="mt-8">
+            <p class="text-[#454C59] text-[0.875rem]">{{folder.description}}</p>
+            <img src="{{folder.image}}">
+          </div>
         </div>
       </div>
     </div>
