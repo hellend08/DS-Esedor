@@ -19,12 +19,20 @@ export interface Servicios {
 export class AppComponent {
   title = 'DS-Esedo-Frontend';
 
+  dataBotones: any[] = [
+    {name: 'Diseño de una web'},
+    {name: 'Un sistema completo'},
+    {name: 'Sistema de diseño'},
+    {name: 'Branding'},
+    {name: 'Proyecto Start-Up'},
+  ];
+
   dataEmpresa: Empresas[] = [
     {name: 'Niubiz(Ex VisanetPerú)', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/logoniubiz.png'},
     {name: 'Primax', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/primaxlogo.png'},
     {name: 'Redeban', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/LogoRedeban.png'},
     {name: 'Ripley', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/LogoRipley.png'},
-    {name: 'Caja Cusco', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'http://www.cmac-cusco.com.pe/images/logotipo.png'}
+    {name: 'Caja Cusco', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/logoCajaCusco.png'},
   ];
 
 

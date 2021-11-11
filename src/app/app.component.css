@@ -63,3 +63,7 @@
   top: 6.8vh;
   left: 3vw;
 }
+
+::ng-deep ol, ul {
+  list-style-type: symbols('|') !important;
+}
