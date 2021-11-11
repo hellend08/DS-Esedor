@@ -19,14 +19,6 @@ export interface Servicios {
 export class AppComponent {
   title = 'DS-Esedo-Frontend';
 
-  dataBotones: any[] = [
-    {name: 'Diseño de una web'},
-    {name: 'Un sistema completo'},
-    {name: 'Sistema de diseño'},
-    {name: 'Branding'},
-    {name: 'Proyecto Start-Up'},
-  ];
-
   dataEmpresa: Empresas[] = [
     {name: 'Niubiz(Ex VisanetPerú)', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/logoniubiz.png'},
     {name: 'Primax', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/primaxlogo.png'},
@@ -49,5 +41,9 @@ export class AppComponent {
     {title: 'Innovación y transformación digital', description: 'Ayudamos a definir la estrategia para transformar tu negocio y alcanzar la madurez digital.\n'},
     {title: 'Desarrollo de software y código creativo', description: 'Implementamos tecnologías emergentes desde la agilidad para generar resultados reales.'},
   ]
+
+  paso1 = true;
+  paso2 = false;
+  paso3 = false;
 
 }
