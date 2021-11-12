@@ -45,5 +45,6 @@ export class AppComponent {
   paso1 = true;
   paso2 = false;
   paso3 = false;
+  formulario = false;
 
 }
