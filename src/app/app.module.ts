@@ -11,13 +11,15 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { IndexComponent } from './views/index/index.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     NosotrosComponent,
-    ContactComponent
+    ContactComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+.section{
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.main-header {
+  position: fixed;
+  top: 4vh;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.main-menu__logo {
+  width: 8rem;
+  margin: 0;
+  top: 6.8vh;
+  left: 3vw;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: #222DE9;
+  border-radius: 5px;
+}
+
+input, select, textarea{
+  color: #ffffff;
+}
+
+textarea:focus, input:focus {
+  color: #ffffff;
+}
+
+::placeholder {
+  color: #efefef;
+}
