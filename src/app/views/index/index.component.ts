@@ -46,11 +46,13 @@ export class IndexComponent implements OnInit {
     {title: 'Desarrollo de software y código creativo', description: 'Implementamos tecnologías emergentes desde la agilidad para generar resultados reales.'},
   ]
 
+
   constructor(private router: Router) { }
 
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
   }
+
 
   ngOnInit(): void {
   }

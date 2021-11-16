@@ -12,6 +12,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { IndexComponent } from './views/index/index.component';
+import {DragScrollModule} from "ngx-drag-scroll";
 
 @NgModule({
   declarations: [
@@ -21,15 +22,16 @@ import { IndexComponent } from './views/index/index.component';
     ContactComponent,
     IndexComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatFormFieldModule,
+        MatInputModule,
+        DragScrollModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
