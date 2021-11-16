@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {ViewportScroller} from "@angular/common";
 
 export interface Empresas {
   name: string;
@@ -47,10 +48,14 @@ export class IndexComponent implements OnInit {
   ]
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private _vps: ViewportScroller) { }
 
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
+  }
+
+  scrollFn(anchor: string): void{
+    this._vps.scrollToAnchor(anchor)
   }
 
 

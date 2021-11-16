@@ -12,7 +12,7 @@
           <a (click)="redirectProject()" class="cursor-pointer">Proyectos</a>
         </li>
         <li>
-          <a>Nosotros</a>
+          <a (click)="scrollFn('inicio')">Nosotros</a>
         </li>
         <li>
           <a>Contacto</a>
@@ -26,9 +26,9 @@
 </header>
 
 
-<div id="" class="h-full w-full">
+<div class="h-full w-full">
   <!--Seccion Inicio-->
-  <section class="section bg-[#000000] py-2 px-4 h-full flex flex-wrap content-center">
+  <section id="inicio" class="section bg-[#000000] py-2 px-4 h-full flex flex-wrap content-center">
     <div class="w-full">
       <div class="text-[#D8D8D8] flex flex-wrap content-center">
         <div class="w-full 2xl:mb-14">
@@ -36,10 +36,10 @@
         </div>
         <div class="w-full mt-[-2.7rem] 2xl:mt-[-3rem]">
           <div class="flex justify-center flex-wrap content-center">
-            <img class="absolute 2xl:w-[61.424rem] 2xl:h-[21.139rem]" src="assets/img/rectangulo.svg">
+            <img alt="vector" class="absolute 2xl:w-[61.424rem] 2xl:h-[21.139rem]" src="assets/img/rectangulo.svg">
           </div>
           <div class="flex justify-center flex-wrap content-center">
-            <img class="lg:w-[36.438rem] 2xl:w-[38.438rem] absolute 2xl:h-[21.563rem] lg:h-[19.563rem]" src="assets/img/laptop.png">
+            <img alt="Celular" class="lg:w-[36.438rem] 2xl:w-[38.438rem] absolute 2xl:h-[21.563rem] lg:h-[19.563rem]" src="assets/img/laptop.png">
           </div>
         </div>
         <div class="w-full flex justify-end mt-[14rem] 2xl:mt-[16rem]">
@@ -321,36 +321,36 @@
           <div class="flex justify-between space-x-4">
             <mat-form-field appearance="outline" class="w-[20rem]">
               <mat-label class="text-white"> Nombres </mat-label>
-              <input matInput placeholder="Ingresa tus nombre">
+              <input matInput>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-[20rem]">
               <mat-label class="text-white"> Apellidos </mat-label>
-              <input matInput placeholder="Ingresa tus apellidos">
+              <input matInput>
             </mat-form-field>
           </div>
 
           <div class="flex justify-between">
             <mat-form-field appearance="outline" class="w-[20rem]">
               <mat-label class="text-white"> Dirección de correo electrónico </mat-label>
-              <input matInput placeholder="Ingresa tu correo">
+              <input matInput>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-[20rem]">
               <mat-label class="text-white"> Número de teléfono o celular </mat-label>
-              <input matInput placeholder="Ingresa tu numero celular">
+              <input matInput>
             </mat-form-field>
           </div>
 
           <div class="flex justify-between">
             <mat-form-field appearance="outline" class="w-[20rem]">
               <mat-label class="text-white"> Empresa y cargo </mat-label>
-              <input matInput placeholder="Ingresa el nombre de tu empresa">
+              <input matInput>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-[20rem]">
               <mat-label class="text-white"> Tiempo de entrega </mat-label>
-              <input matInput placeholder="Ingresa el tiempo estimado">
+              <input matInput>
             </mat-form-field>
           </div>
           <div class="col-start-1 col-end-2 w-full">
