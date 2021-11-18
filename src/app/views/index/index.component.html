@@ -12,7 +12,7 @@
           <a (click)="redirectProject()" class="cursor-pointer">Proyectos</a>
         </li>
         <li>
-          <a (click)="scrollFn('inicio')">Nosotros</a>
+          <a>Nosotros</a>
         </li>
         <li>
           <a>Contacto</a>
@@ -29,10 +29,10 @@
 <div class="h-full w-full">
   <!--Seccion Inicio-->
   <section id="inicio" class="section bg-[#000000] py-2 px-4 h-full flex flex-wrap content-center">
-    <div class="w-full">
+    <div class="w-full mt-10">
       <div class="text-[#D8D8D8] flex flex-wrap content-center">
         <div class="w-full 2xl:mb-14">
-          <a class="font-title lexendzetta">{{actualprimero}}</a>
+          <a class="text-[8rem] 2xl:font-title lexendzetta">{{actualprimero}}</a>
         </div>
         <div class="w-full mt-[-2.7rem] 2xl:mt-[-3rem]">
           <div class="flex justify-center flex-wrap content-center">
@@ -43,14 +43,18 @@
           </div>
         </div>
         <div class="w-full flex justify-end mt-[14rem] 2xl:mt-[16rem]">
-          <a class="font-title lexendzetta">{{actualsegundo}}</a>
+          <a class="text-[8rem] 2xl:font-title lexendzetta">{{actualsegundo}}</a>
+        </div>
+
+        <div>
+          <img (click)="scrollFn('casos')" alt="icon-arrow-down" class="float cursor-pointer" src="assets/img/icon-arrow-down.svg">
         </div>
       </div>
     </div>
   </section>
 
   <!--Seccion Casos destacados-->
-  <section class="section bg-[#ffff] py-2 px-4 h-full flex flex-wrap content-center">
+  <section id="casos" class="section bg-[#ffff] py-2 px-4 h-full flex flex-wrap content-center">
 
     <!--Paso1-->
     <div class="w-full">

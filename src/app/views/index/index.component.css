@@ -105,4 +105,18 @@ textarea:focus, input:focus {
   color: #efefef;
 }
 
-/* Div slide */
+/* Btn float */
+.float{
+  position:fixed;
+  bottom:40px;
+  left:60px;
+}
+
+/*color icon*/
+.icono{
+  background: -moz-linear-gradient(to right, #000000 100%, #626973 100%, #FFFFFF 100%);
+  background: -webkit-linear-gradient(to right, #000000 100%, #626973 100%, #FFFFFF 100%);
+  background: linear-gradient(to right, #000000 100%, #626973 100%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
