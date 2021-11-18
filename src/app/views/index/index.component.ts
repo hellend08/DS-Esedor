@@ -24,11 +24,6 @@ export class IndexComponent implements OnInit {
   paso3 = false;
   formulario = false;
 
-  empresasDash = [
-    {name: 'demo'},
-    {name: 'demo2'},
-  ];
-
   dataEmpresa: Empresas[] = [
     {name: 'Niubiz(Ex VisanetPerú)', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/logoniubiz.png'},
     {name: 'Primax', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/primaxlogo.png'},
@@ -53,6 +48,16 @@ export class IndexComponent implements OnInit {
   ]
 
 
+  titulos = [
+    {title1: 'PRIMAX', title2: 'SOLUTIONS'},
+    {title1: 'RIPLEY', title2: 'PUNTOS'},
+    {title1: 'REDEBAN', title2: 'COLOMBIA'},
+  ];
+
+  changeCounter = 0;
+  actualprimero!: string;
+  actualsegundo!: string;
+
   constructor(private router: Router, private _vps: ViewportScroller) { }
 
   public redirectProject() {
@@ -63,8 +68,17 @@ export class IndexComponent implements OnInit {
     this._vps.scrollToAnchor(anchor)
   }
 
-
   ngOnInit(): void {
+    this.actualprimero = this.titulos[0].title1;
+    this.actualsegundo = this.titulos[0].title2;
+    setInterval(() => {
+      this.changeCounter++;
+      if (this.changeCounter > this.titulos.length -1) {
+        this.changeCounter = 0;
+      }
+      this.actualprimero = this.titulos[this.changeCounter].title1;
+      this.actualsegundo = this.titulos[this.changeCounter].title2;
+    }, 5000);
   }
 
 }
