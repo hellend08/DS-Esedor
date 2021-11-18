@@ -1,13 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Font*/
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: LexendZetta;
+  src: url("assets/font/LexendZetta.ttf");
+}
+
+@font-face {
+  font-family: Lexend;
+  src: url("assets/font/Lexend.ttf");
+}
+
+@font-face {
+  font-family: LexendBold;
+  src: url("assets/font/Lexend-Bold.ttf");
+}
+
+.lexend {
+  font-family: Lexend;
+}
+
+.lexendb {
+  font-family: LexendBold;
+}
+
+.lexendzetta {
+  font-family: LexendZetta;
+}
 
 
 html, body { height: 100%; }
 body { margin: 0;
-  font-family: 'Lexend', sans-serif; }
+  font-family: Lexend; }
 
