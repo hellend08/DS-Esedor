@@ -13,6 +13,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { IndexComponent } from './views/index/index.component';
 import {DragScrollModule} from "ngx-drag-scroll";
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {DragScrollModule} from "ngx-drag-scroll";
         MatToolbarModule,
         MatFormFieldModule,
         MatInputModule,
-        DragScrollModule
+        DragScrollModule,
+        MatListModule
     ],
   providers: [],
   bootstrap: [AppComponent]

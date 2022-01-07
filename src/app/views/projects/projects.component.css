@@ -45,3 +45,7 @@ textarea:focus, input:focus {
 ::placeholder {
   color: #efefef;
 }
+
+.backgroung-gradient{
+  background: linear-gradient(3.37deg, #000000 2.68%, #454C59 154.23%);
+}
