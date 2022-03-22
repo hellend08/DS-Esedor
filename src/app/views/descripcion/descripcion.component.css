@@ -1,14 +1,4 @@
-#parallax{
-  width: 100%;
-  height: 110vh;
-  padding:7rem 0;
-  background:url('/assets/img/estadisticas.png') center center / cover no-repeat fixed;
- }
 
- #parallax2{
-  width: 100%;
-  height: 110vh;
-  padding:7rem 0;
-  background:url('/assets/img/chica-computadora.png') center center / cover no-repeat fixed;
- }
+
+
 
