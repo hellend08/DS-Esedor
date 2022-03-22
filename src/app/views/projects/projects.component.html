@@ -201,12 +201,26 @@
 </section>
 
 
-<section class="h-full flex justify-between">
-  <div class="w-[50%] h-full backgroung-gradient flex flex-wrap justify-center content-center">
-    <img class="h-[80%]" alt="cel1" src="assets/img/cel1.png">
+<section class="lg:h-full lg:flex justify-between hidden">
+  <div class="lg:w-[50%] h-full backgroung-gradient flex flex-wrap justify-center content-center">
+    <img class="w-[40%]" alt="cel1" src="assets/img/cel1.png">
   </div>
-  <div class="w-[50%] h-full bg-[#222DE9] flex flex-wrap justify-center content-center">
-    <img class="h-[80%]" alt="cel2" src="assets/img/cel2.png">
+  <div class="lg:w-[50%] h-full bg-[#222DE9] flex flex-wrap justify-center content-center">
+    <img class="w-[40%]" alt="cel2" src="assets/img/cel2.png">
+  </div>
+</section>
+
+
+<!--Responsive-->
+<section class="h-full lg:hidden">
+  <div class="w-full h-full backgroung-gradient flex flex-wrap justify-center content-center">
+    <img class="w-[70%]" alt="cel1" src="assets/img/cel1.png">
+  </div>
+</section>
+
+<section class="h-full lg:hidden">
+  <div class="w-full h-full bg-[#222DE9] flex flex-wrap justify-center content-center">
+    <img class="w-[53%]" alt="cel2" src="assets/img/cel2.png">
   </div>
 </section>
 
@@ -280,16 +294,22 @@
 <section class="mb-40 mt-60">
 
   <div class="lexendzetta text-[10px] 2xl:text-[25px] mt-[5rem] 2xl:mt-[18rem]">
-    <p class="lexendzetta ml-[33%] lg:text-[8px]">win to win</p>
+    <p class="lexendzetta lg:block hidden ml-[33%] text-[14px] lg:text-[8px]">win to win</p>
 
-    <div class="mt-10 ml-[20%]">
+    <div class="mt-10 ml-[20%] lg:block hidden">
       <p class=" lexendzetta ml-[15%] lg:text-[25px] w-[800px]">Entender los problemas de los</p>
       <p class=" lexendzetta lg:text-[25px] w-[700px]"> usuarios para crear un productos que realmente les
         genere
         valor al usarlo para realizar tareas operacionales automatizadas.</p>
     </div>
 
-
+    <div class="px-4 lg:hidden">
+      <span class="text-[14px] lexendb leading-[17.5px] tracking-[0.15%]">Definición de producto</span>
+      <p class="text-[18px] lexendzetta leading-[22.5px]">
+        During these uncertain times, many of us find ourselves in introspection mode, with new ideas and
+        resolving to do better. We wish we could help everyone and fix everything.
+      </p>
+    </div>
   </div>
 
 
@@ -319,17 +339,19 @@
 
 </section>
 
-<section class="h-full px-40 bg-[#141C26] lexendzetta text-[#D8D8D8] flex justify-between flex-wrap content-center">
-  <div>
-    <div class="px-4">
-      <a class="text-[16px] 2xl:text-[36px] ">Ir a proyecto</a>
+<section class="h-full lg:px-40  bg-[#141C26] lexendzetta text-[#D8D8D8] flex justify-center">
+  <div class="flex justify-between flex-wrap content-center w-full px-4 lg:px-0">
+    <div>
+      <div class="lg:px-4">
+        <a class="text-[18px] lg:text-[16px] 2xl:text-[36px] ">Ir a proyecto</a>
+      </div>
+      <div class="lg:-mt-10">
+        <a class="text-[36px] lg:text-[100px] 2xl:text-[144px]">Redeban</a>
+      </div>
     </div>
-    <div class="-mt-10">
-      <a class="text-[100px] 2xl:text-[144px]">Redeban</a>
+    <div class="flex lg:flex-wrap justify-end content-center">
+      <img alt="Arrow" class="w-[39.6px] lg:w-[60%] 2xl:w-[100%]" src="assets/img/icon/Arrow.svg">
     </div>
-  </div>
-  <div class="flex flex-wrap content-center">
-    <img alt="Arrow" class="w-[60%] 2xl:w-[100%]" src="assets/img/icon/Arrow.svg">
   </div>
 </section>
 
