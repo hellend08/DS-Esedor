@@ -6,13 +6,15 @@ import {NosotrosComponent} from "./views/nosotros/nosotros.component";
 import {ProjectsComponent} from "./views/projects/projects.component";
 import {AppComponent} from "./app.component";
 import {IndexComponent} from "./views/index/index.component";
+import { DescripcionComponent } from './views/descripcion/descripcion.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'index', component: IndexComponent },
   { path: 'contacto', component: ContactComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'proyectos', component: ProjectsComponent }
+  { path: 'proyectos', component: ProjectsComponent },
+  { path: 'descripcion', component: DescripcionComponent}
 ]
 
 @NgModule({
