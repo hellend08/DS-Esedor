@@ -14,6 +14,7 @@ import {MatInputModule} from "@angular/material/input";
 import { IndexComponent } from './views/index/index.component';
 import {DragScrollModule} from "ngx-drag-scroll";
 import {MatListModule} from '@angular/material/list';
+import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatListModule} from '@angular/material/list';
     ProjectsComponent,
     NosotrosComponent,
     ContactComponent,
-    IndexComponent
+    IndexComponent,
+    ToolbarComponent
   ],
     imports: [
         BrowserModule,

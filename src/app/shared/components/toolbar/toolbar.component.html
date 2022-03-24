@@ -1,0 +1,25 @@
+<mat-toolbar class="main-header text-black -mt-6 bg-transparent">
+  <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem] px-4 lg:px-0">
+    <div class="flex">
+      <div>
+        <img class="w-[2.313] h-[2rem]" src="assets/img/logoE.svg">
+      </div>
+      <span [class.header_variable]="header_variable" style="line-height: 22px;" class=" text-[1.125rem] lexend">Esedor</span>
+    </div>
+    <div class="flex lg:space-x-10">
+      <div [class.header_variable]="header_variable" class="space-x-10 lg:block hidden">
+        <span  class="cursor-pointer">Proyectos</span>
+        <span>Nosotros</span>
+        <span>Contacto</span>
+      </div>
+      <div>
+        <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1" x2="42" y2="1" stroke="#000000" stroke-width="2"/>
+          <path d="M0 11L23 11" stroke="#000000" stroke-width="2"/>
+          <line y1="21" x2="42" y2="21" stroke="#000000" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</mat-toolbar>
