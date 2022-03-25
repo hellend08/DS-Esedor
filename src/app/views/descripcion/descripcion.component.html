@@ -1,20 +1,30 @@
 <section class="py-10 flex flex-wrap content-around">
-
-  <div class="px-32 grid grid-cols-2 gap-20 content-start mt-16 text-[14px]  tracking-wider lexendb">
+  <div class="flex justify-center w-full lg:hidden">
+    <img src="assets/img/iphoneinit.png">
+  </div>
+  <div class="px-4 lg:px-32 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-20 content-start mt-5 lg:mt-16 text-[14px] tracking-wider lexendb">
     <div>
       <h4>CLIENTE</h4>
+      <span class="lg:hidden lexendzetta text-[36px]">Redeban </span>
     </div>
-    <div>
-      <h4>FECHA</h4>
-      <span>2021</span>
+    <div class="flex justify-between text-[14px]">
+      <div>
+        <h4>FECHA</h4>
+        <span class="lexend">2021</span>
+      </div>
+
+      <div class="lg:hidden">
+        <h4>PAÍS</h4>
+        <span class="lexend">COLOMBIA</span>
+      </div>
     </div>
   </div>
   <br>
-  <div class="mt-28 ml-[-420px] w-[-420px] ">
+  <div class="mt-28 lg:ml-[-420px] w-[-420px] lg:block hidden">
     <span class="lg:text-[88px] 2xl:leading-[7.25rem] 2xl:text-[50px] w-[20px] lexendzetta ">Redeban</span>
   </div>
-  <div class="px-32 mt-20">
-    <div class="grid grid-cols-2 gap-4 content-start w-[30%] text-[14px] tracking-wider lexend">
+  <div class="lg:px-32 px-4 mt-20">
+    <div class="grid grid-cols-2 lg:gap-4 content-start lg:w-[30%] text-[14px] tracking-wider lexend">
       <div>
         <h3 class="lexendb">ENTREGABLES</h3>
         <ul>INTEGRATED CAMPAIGN</ul>
@@ -33,10 +43,10 @@
       </div>
     </div>
 
-    <img class="absolute w-[65%] h-[75%] right-[1rem] 2xl:right-[20rem] top-[3rem] 2xl:top-[0rem] "
+    <img class="absolute lg:block hidden w-[65%] h-[75%] right-[1rem] 2xl:right-[20rem] top-[3rem] 2xl:top-[0rem] "
       src="/assets/img/laptop-estadisticas.png">
 
-    <div class="grid grid-cols-2 gap-20 content-start lexendb text-[16px] 2xl:text-[25px] mt-[12rem] 2xl:mt-[18rem]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 content-start lexendb text-[16px] 2xl:text-[25px] mt-[5rem] lg:mt-[12rem] 2xl:mt-[18rem]">
       <div>
         <h4 class="text-[12px] 2xl:text-[21px]">Primax y el reto</h4>
         <p class="mt-4">
@@ -62,20 +72,23 @@
   </div>
 
 
+  <div class="mt-20 px-4">
+    <img class="w-[175px] h-[51px]" src="/assets/img/Redeban-logo.png" alt="">
+  </div>
 
-  <div class="relative left-[53%] lexendb mt-20 lg:text-[50px] 2xl:leading-[40px] 2xl:text-[50px] w-[350px] ">
+  <div class="relative px-4 lg:left-[53%] lexendb mt-[44px] lg:mt-20 text-[48px] lg:text-[50px] 2xl:leading-[40px] 2xl:text-[50px] w-[350px] ">
     <h2>
       Data Driven y producto digital
     </h2>
   </div>
 
-  <div class=" w-[20%] mt-20 ml-[-15%]  ">
+  <div class="lg:block hidden w-[20%] mt-20 ml-[-15%]  ">
     <img src="/assets/img/Redeban-logo.png" alt="">
   </div>
 
 </section>
 
-<section class="h-[100%] mt-80 ">
+<section class="h-[100%] lg:mt-80 ">
 
   <div class="w-full h-screen bg-no-repeat bg-cover bg-fixed "
    style="background-image: url(/assets/img/estadisticas.png);">
@@ -86,18 +99,24 @@
 
 
 <section style="background: black;"
-  class="grid grid-cols-2 bg-[#000000] gap-20 content-start lexendb text-[16px] 2xl:text-[25px]  2xl:mt-[18rem] ">
+  class="grid lg:grid-cols-2 grid-cols-1 bg-[#000000] gap-20 content-start lexendb text-[16px] 2xl:text-[25px]  2xl:mt-[18rem] py-10">
   <div class=" pl-20 lexendzetta mt-[150px] lg:text-[40px] 2xl:leading-[40px] 2xl:text-[50px] w-[1150px] mt-[5rem]">
     <p style="color: white;">Visualizacion</p>
     <span style="color: white;"> de datos P2P y</span>
     <p style="color: white;"> P2M</p>
   </div>
   <div>
-    <div style="color: white;">
+    <div style="color: white;" class="lexend px-4">
 
-      <h3 class="lexendzetta mt-4 lg:text-[22px] 2xl:leading-[15px] 2xl:text-[30px] w-[500px] mt-40 mb-40">
+      <h4 class="mt-4 text-[21px] lg:text-[22px] 2xl:leading-[15px] 2xl:text-[30px] lg:w-[500px] lg:mt-40 lg:mb-40">
         During these uncertain times, many of us find ourselves in introspection mode, with new ideas and
-        resolving to do better. We wish we could help everyone and fix everything.</h3>
+        resolving to do better. We wish we could help everyone and fix everything.</h4>
+
+      <p class="lg:hidden mt-10">
+        “During these uncertain times, many of us find ourselves in introspection mode, with new ideas and resolving to do better. We wish we could help everyone and fix everything. “
+        Mijalys Silva
+        Head of UX
+      </p>
     </div>
   </div>
 </section>
@@ -107,7 +126,7 @@
   <p>video Primax</p>
 </section>
 
-<section>
+<section class="py-10">
 
   <div class="w-[70%] ml-40 mt-60">
     <img src="/assets/img/laptop-sucursal.png" alt="">
@@ -117,27 +136,39 @@
     <img src="/assets/img/sucursal.png" alt="">
   </div>
 
-  <div class="mt-80">
-    <div class="absolute left-[65%] mb-8 w-[30%] text-[22px]">
+  <div class="lg:mt-80 px-4">
+    <div class="lg:ml-40 mt-20 lexendb text-[48px] lg:text-[50px] 2xl:leading-[40px] 2xl:text-[50px] lg:w-[350px] ">
+      <h2>Desarrollo front-end</h2>
+    </div>
+
+    <div class="lg:absolute lg:left-[65%] mb-8 lg:w-[30%] text-[22px]">
       <h3>Este sistema nace con el proposito de crear valor
         a todos los stakeholder b2b de la empresa, administrando
         diferentes entornos dentro de la organización</h3>
     </div>
 
-    <div class=" ml-40 mt-20 lexendb lg:text-[50px] 2xl:leading-[40px] 2xl:text-[50px] w-[350px] ">
+    <div class="lg:block hidden lg:ml-40 mt-20 lexendb lg:text-[50px] 2xl:leading-[40px] 2xl:text-[50px] lg:w-[350px] ">
       <h2>Desarrollo front-end</h2>
     </div>
   </div>
 
-  <div class="w-[80px] absolute left-[65%] mt-20 text-[10px]">
-    <p class="mb-8">Tecnologías</p>
+  <!--<div class="lg:w-[80px] lg:absolute lg:left-[65%] mt-20 text-[10px] px-4 lg:block hidden">
+    <p class="mb-4">Tecnologías</p>
     <span>Angular
       Tailwind CSS
       Material</span>
+  </div>-->
+
+  <div class="lg:w-[80px] lexendb text-[14px] lg:absolute lg:left-[65%] mt-20 px-4">
+    <p class="mb-4 lg:mb-2 text-[36px] lg:text-[21px] lexend">Tecnologías</p>
+    <p>Angular</p>
+    <p>Tailwind CSS</p>
+    <p>Material</p>
   </div>
+
 </section>
 
-<section class="h-[100%] mt-80 ">
+<section class="h-[100%] lg:mt-80 ">
 
   <div class="w-full h-screen bg-no-repeat bg-cover bg-fixed "
    style="background-image: url(/assets/img/chica-computadora.png);">
@@ -159,64 +190,66 @@
 
 
 
-<section  style="background: #E8E8E8;"
-  class="grid grid-cols-2 gap-20 content-start lexendb 2xl:text-[25px]  2xl:mt-[18rem] ">
+<section class="mb-40 mt-60">
 
-  <div class="lexendzetta text-[10px] 2xl:text-[25px] mt-[5rem] 2xl:mt-[18rem] ml-[30%]">
-    <p class="lexendzetta ml-[70%] lg:text-[8px]">win to win</p>
+  <div class="lexendzetta text-[10px] 2xl:text-[25px] mt-[5rem] 2xl:mt-[18rem]">
+    <p class="lexendzetta lg:block hidden ml-[33%] text-[14px] lg:text-[8px]">win to win</p>
 
-    <div class="mt-10 ml-[20%]">
-      <p class=" lexendzetta ml-[60%] lg:text-[25px] w-[750px]">Entender los problemas de los</p>
-      <p class=" lexendzetta lg:text-[25px] w-[825px]"> usuarios para crear un productos que realmente les
+    <div class="mt-10 ml-[20%] lg:block hidden">
+      <p class=" lexendzetta ml-[15%] lg:text-[25px] w-[800px]">Entender los problemas de los</p>
+      <p class=" lexendzetta lg:text-[25px] w-[700px]"> usuarios para crear un productos que realmente les
         genere
         valor al usarlo para realizar tareas operacionales automatizadas.</p>
     </div>
 
-
+    <div class="px-4 lg:hidden">
+      <span class="text-[14px] lexendb leading-[17.5px] tracking-[0.15%]">Definición de producto</span>
+      <p class="text-[18px] lexendzetta leading-[22.5px]">
+        During these uncertain times, many of us find ourselves in introspection mode, with new ideas and
+        resolving to do better. We wish we could help everyone and fix everything.
+      </p>
+    </div>
   </div>
 
 
 
-  <div class="grid grid-cols-2 gap-20 content-start lexendb text-[16px] 2xl:text-[25px] 2xl:mt-[18rem] mt-[600px] ">
-    <div class="mt-[20%] ml-[-155%]">
-      <p class="text-[12px] 2xl:text-[21px] "> TEAM</p>
-
-      <div class="mt-4 text-[8px] w-[160px]">
-
-        <p>LUIS WATANABE Delivery Manager</p>
-        <span>LIZ VEGA Product Owner</span>
-        <p> CARLOS HIDALGO Head of Agile</p>
-        <span> ROLANDO SACHÚN Scrum Master</span>
-        <p> MIJALYS SILVA Head of UX</p>
-        <span> ANDRES AMPUERO Product Designer</span>
-        <p> MELANY MERCADO Ux Designer </p>
-        <span> KEN RAMIREZ Lead front-end </span>
-        <p> HELEN VÁSQUEZ Front-end </p>
-        <span> DANIELA GUTIERREZ Front-end </span>
-
-      </div>
+  <div class="grid grid-cols-2 gap-20 content-start lexendb text-[16px] 2xl:text-[25px] mt-[12rem] 2xl:mt-[18rem] mt-96 ">
+    <div class="mt-[20%] ml-[43%] text-[13px]">
+      <p class="lg:text-[12px] 2xl:text-[21px] "> TEAM</p>
+      <p class="mt-4 lg:text-[8px] w-[150px] ">
 
 
+        LUIS WATANABE Delivery Manager
+        PATRICIA ALCANTARA Lead
+        CARLOS ALTAMIRANO Product Owner
+        JÉSUS xxxxxxx Project Manager
+        MIJALYS SILVA Head of UX
+        NELSON PEREIRA Product Designer
+        MELANY MERCADO UX Designer
+
+
+
+      </p>
     </div>
-
-
-    <div class="w-[500px] ml-[-140%] mb-40">
+    <div>
       <img src="/assets/img/mano-like.png" alt="">
     </div>
-
   </div>
+
 </section>
 
-<section class="h-full px-40 bg-[#141C26] lexendzetta text-[#D8D8D8] flex justify-between flex-wrap content-center">
-  <div>
-    <div class="px-4">
-      <a class="text-[16px] 2xl:text-[36px] ">Ir a proyecto</a>
+<section class="h-full lg:px-40  bg-[#141C26] lexendzetta text-[#D8D8D8] flex justify-center">
+  <div class="flex justify-between flex-wrap content-center w-full px-4 lg:px-0">
+    <div>
+      <div class="lg:px-4">
+        <a class="text-[18px] lg:text-[16px] 2xl:text-[36px] ">Ir a proyecto</a>
+      </div>
+      <div class="lg:-mt-10">
+        <a class="text-[36px] lg:text-[100px] 2xl:text-[144px]">Redeban</a>
+      </div>
     </div>
-    <div class="-mt-10">
-      <a class="text-[100px] 2xl:text-[144px]">Redeban</a>
+    <div class="flex lg:flex-wrap justify-end content-center">
+      <img alt="Arrow" class="w-[39.6px] lg:w-[60%] 2xl:w-[100%]" src="assets/img/icon/Arrow.svg">
     </div>
-  </div>
-  <div class="flex flex-wrap content-center">
-    <img alt="Arrow" class="w-[60%] 2xl:w-[100%]" src="assets/img/icon/Arrow.svg">
   </div>
 </section>
