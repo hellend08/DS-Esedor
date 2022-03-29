@@ -120,11 +120,12 @@
 
   <section class="bg-[#5682FF] px-4">
     <div class="flex items-end h-[457px]">
-    <div class="border-b-[1px] border-white flex justify-between">
-      <p class="text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
-      <h1 class="text-[46px] lexendzetta text-[#FFFFFF] w-[60%] leading-[57px]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do </h1>
+      <div class="border-b-[1px] border-white flex justify-between">
+        <p class="text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
+        <h1 class="text-[46px] lexendzetta text-[#FFFFFF] w-[60%] leading-[57px]">Amet minim mollit non deserunt ullamco
+          est sit aliqua dolor do </h1>
+      </div>
     </div>
-  </div>
     <div class="h-[400px] flex justify-between items-center">
       <img src="../../../assets/img/logo_empresa/niubiz.png" alt="">
       <img src="../../../assets/img/logo_empresa/primax.png" alt="">
@@ -135,19 +136,28 @@
     </div>
   </section>
 
-  <section class="bg-[#000000] h-[700px] flex">
-    <div>
-      <p>Blog</p>
+  <section class="bg-[#000000] h-[700px] flex justify-between px-4">
+    <div class="inline-block">
+      <p class="text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
     </div>
-    <div class="border-l border-white">
-      <div class="flex justify-between">
-        <p>01.10.21</p>
-        <p>Ver más</p>
-      </div>
-        <h3>La democratización del diseño: “Design Systems”</h3>
+    <div class="inline-block w-[40%] space-y-24 pt-8">
+      <div class="border-l border-white px-4">
+        <div class="flex justify-between text-sm text-white">
+          <p class="lexendb">01.10.21</p>
+          <p class="lexend">Ver más</p>
+        </div>
+        <h3 class="text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design Systems”</h3>
         <img src="" alt="">
-      
-      <!-- <div></div> -->
+      </div>
+
+      <div class="border-l border-white px-4">
+        <div class="flex justify-between text-sm text-white">
+          <p class="lexendb">01.10.21</p>
+          <p class="lexend">Ver más</p>
+        </div>
+        <h3 class="text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los chatbots</h3>
+        <img src="" alt="">
+      </div>
     </div>
 
   </section>
@@ -301,7 +311,7 @@
   </section> -->
 
   <!--Seccion Start project-->
-  <footer class="section py-2 px-4 flex flex-wrap content-center justify-center"
+  <footer class="section py-2 px-4 flex flex-col content-center justify-center"
     style="background: linear-gradient(to top, #193EFF 0%, #8B99E4 100%);">
     <div class="pt-40" *ngIf="paso1">
       <h1 class="text-center text-[49px] lexendzetta text-[#FFFFFF] w-[70%] mx-auto leading-[61px]">Iniciemos un
@@ -333,9 +343,10 @@
         </div>
       </div>
       <p class="text-center lexend text-sm text-white pt-12">También puedes escribirnos directamente a</p>
-
       <p class="text-center lexendb text-sm text-white">hola@esedor.com</p>
+
     </div>
+
 
     <!--Paso1-->
     <!-- <div class="w-full mt-10" *ngIf="paso1">
@@ -527,5 +538,25 @@
         <p>hola@esedor.com</p>
       </div>
     </div>
+
+    <div class="flex justify-between">
+      <div class="text-white lexend text-[13px]">
+        <p>Ubicación</p>
+        <p class="leading-[16px] pt-4 pb-8">
+          Swiss Tower <br>
+          Av. Alfredo Benavides <br>
+          #1944 – Piso 9 <br>
+          Miraflores, Lima
+        </p>
+        <p>Esedor © 2022</p>
+      </div>
+      <div class="text-[13px] lexend font-medium text-white space-y-2 pb-2 flex flex-col justify-end">
+        <p>LINKEDIN</p>
+        <p>FACEBOOK</p>
+        <p>INSTAGRAM</p>
+        <p>YOUTUBE</p>
+      </div>
+    </div>
+
   </footer>
 </div>
