@@ -15,6 +15,7 @@ import { IndexComponent } from './views/index/index.component';
 import {DragScrollModule} from "ngx-drag-scroll";
 import {MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
+import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
     NosotrosComponent,
     ContactComponent,
     IndexComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    NotifaiVista1Component
   ],
     imports: [
         BrowserModule,
