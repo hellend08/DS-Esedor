@@ -35,17 +35,17 @@
     </div>
     <div class="text-[#FFFFFF] lg:w-[75%]">
       <ul class="flex lexend justify-between space-x-5">
-        <li>
+        <li class="hidden lg:block">
           <a (click)="redirectProject()" class="cursor-pointer">Proyectos</a>
         </li>
-        <li>
+        <li class="hidden lg:block">
           <a>Nosotros</a>
         </li>
-        <li>
+        <li class="hidden lg:block">
           <a>Contacto</a>
         </li>
         <li>
-          <mat-icon class="text-[2.5rem] mt-[-0.7rem]">menu</mat-icon>
+          <mat-icon class="text-[2.5rem] lg:mt-[-0.7rem] mr-4 lg:mr-0">menu</mat-icon>
         </li>
       </ul>
     </div>
@@ -54,11 +54,11 @@
 
 
 <div class="h-full w-full">
-  <section class="pt-28 px-3 h-full" style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
-    <p class="text-right text-sm lexendzetta font-bold text-white">EN</p>
-    <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4">Primax</h1>
+  <section class="pt-28 px-3 h-full flex justify-center lg:block" style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
+    <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
+    <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block">Primax</h1>
     <div class="flex items-center py-40 justify-between">
-      <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%]">
+      <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
         <p>2021</p>
         <p>Marketplace</p>
         <p>Experiencia de usuario</p>
@@ -66,10 +66,10 @@
         <p>Definición de producto</p>
       </div>
       <div class="flex justify-center">
-        <img src="assets/img/rectangle.png" alt="">
-        <img src="assets/img/phone.png" class="absolute top-[220px]" alt="">
+        <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
+        <img class="absolute top-[320px] lg:top-[220px] w-[138px] lg:w-auto" src="assets/img/phone.png" alt="">
       </div>
-      <div class="w-[30%]">
+      <div class="w-[30%] hidden lg:block">
 
       </div>
     </div>
@@ -81,38 +81,36 @@
 
   </section>
 
-  <section class="bg-[#141C26] pt-[5rem] px-4">
-    <div class="border-b-[1px] border-white pb-2 flex flex-wrap items-end justify-between">
-      <div class="flex items-center">
-        <!-- w-[35%] -->
-        <img src="assets/img/arrow-right.png" alt="">
-        <p class="text-[28px] lexendzetta text-white ml-2">Quienes somos</p>
+  <section class="bg-[#141C26] pt-[9rem] lg:pt-[5rem] px-4">
+    <div class="border-b-[1px] border-white pb-2 flex flex-col-reverse md:flex-row lg:items-end justify-between">
+      <div class="flex items-center pt-12 lg:pt-0">
+        <img class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
+        <p class="text-[21px] lg:text-[36px] lexend text-white ml-2">Quienes somos</p>
       </div>
-      <div class="w-[65%] space-y-8">
-        <h1 class="text-[40px] 2xl:text-[49px] lexendzetta text-white">Creamos experiencias. Generando impacto.
+      <div class="lg:w-[65%] space-y-5 lg:space-y-8">
+        <h1 class="text-[18px] lg:text-[40px] 2xl:text-[49px] lexendzetta text-white">Creamos experiencias. Generando impacto.
           Para marcas ambiciosas.</h1>
-          <!-- w-[90%] -->
-        <h4 class="text-[21px] lexendzetta text-white w-[85%]">Colaboramos en compañías ambiciosas para crear experiencias 
+        <h4 class="text-[14.5px] lg:text-[21px] lexend text-white lg:w-[85%]">Colaboramos en compañías ambiciosas para crear experiencias 
           digitales en millones de usuarios de todo el mundo.</h4>
       </div>
     </div>
-    <div class="border-b-[1px] border-white flex flex-wrap items-end justify-between h-[600px]">
-      <p class="text-[96px] lexendzetta text-white">Proyectos</p>
+    <div class="border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[300px] lg:h-[600px]">
+      <p class="text-[42px] lg:text-[96px] lexendzetta text-white">Proyectos</p>
       <!-- w-[60%] -->
-      <div class="flex items-center justify-end pb-1">
+      <div class="flex items-center lg:justify-end pb-4 lg:pb-1">
         <!-- w-[40%] -->
-        <img src="assets/img/arrow-right.png" alt="">
-        <p class="text-[36px] lexendzetta text-white ml-2">Ver proyectos</p>
+        <img class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
+        <p class="text-[21px] lg:text-[36px] lexendzetta text-white ml-2">Ver proyectos</p>
       </div>
     </div>
     <div class="py-[7rem]">
-      <div class="w-[32%] h-[500px] bg-[#454C59] flex items-center justify-center">
+      <div class="lg:w-[32%] h-[500px] bg-[#454C59] flex items-center justify-center">
         <img src="assets/img/phone-right.png" alt="">
       </div>
-      <div class="flex flex-wrap w-[32%] items-start py-2 justify-between">
+      <div class="flex flex-wrap lg:w-[32%] items-start py-2 justify-between">
         <div class="w-[85%] space-y-3">
-          <p class="text-[34.5px] lexendzetta text-[#626973]">Primax</p>
-          <p class="text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación y estrategía - Definición
+          <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Primax</p>
+          <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación y estrategía - Definición
             de producto - Sistema de diseño - Experiencia de usuario </p>
         </div>
         <img src="assets/img/short-arrow-right.png" alt="">
@@ -122,13 +120,13 @@
 
   <section class="bg-[#5682FF] px-4">
     <div class="flex items-end h-[450px]">
-      <div class="border-b-[1px] border-white flex justify-between">
-        <p class="text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
-        <h1 class="text-[46px] lexendzetta text-[#FFFFFF] w-[60%] leading-[57px]">Amet minim mollit non deserunt ullamco
+      <div class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0">
+        <p class="text-[22px] lg:text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
+        <h1 class="text-[28px] lg:text-[46px] lexendzetta text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">Amet minim mollit non deserunt ullamco
           est sit aliqua dolor do </h1>
       </div>
     </div>
-    <div class="h-[400px] flex justify-between items-center">
+    <div class="h-[400px] flex flex-wrap justify-between items-center">
       <img src="assets/img/logo_empresa/niubiz.png" alt="">
       <img src="assets/img/logo_empresa/primax.png" alt="">
       <img src="assets/img/logo_empresa/redeban.png" alt="">
@@ -138,17 +136,17 @@
     </div>
   </section>
 
-  <section class="bg-[#000000] h-[700px] flex justify-between px-4">
+  <section class="bg-[#000000] h-[700px] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4">
     <div class="inline-block">
-      <p class="text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
+      <p class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
     </div>
-    <div class="inline-block w-[40%] space-y-24 pt-8">
+    <div class="inline-block lg:w-[40%] space-y-24 pt-8">
       <div class="border-l border-white px-4">
         <div class="flex justify-between text-sm text-white">
           <p class="lexendb">01.10.21</p>
           <p class="lexend">Ver más</p>
         </div>
-        <h3 class="text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design Systems”</h3>
+        <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design Systems”</h3>
         <img src="" alt="">
       </div>
 
@@ -157,7 +155,7 @@
           <p class="lexendb">01.10.21</p>
           <p class="lexend">Ver más</p>
         </div>
-        <h3 class="text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los chatbots</h3>
+        <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los chatbots</h3>
         <img src="" alt="">
       </div>
     </div>
@@ -313,33 +311,33 @@
   </section> -->
 
   <!--Seccion Start project-->
-  <footer class="section py-2 px-4 flex flex-col content-center justify-center h-full"
+  <footer class="section py-2 px-4 flex flex-col content-center justify-center lg:h-full"
     style="background: linear-gradient(to top, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
     <div class="pt-40" *ngIf="paso1">
-      <h1 class="text-center text-[49px] lexendzetta text-[#FFFFFF] w-[70%] mx-auto leading-[61px]">Iniciemos un
+      <h1 class="text-center text-[24px] lg:text-[49px] lexendzetta text-[#FFFFFF] lg:w-[70%] mx-auto leading-[30px] lg:leading-[61px]">Iniciemos un
         proyecto</h1>
       <div>
-        <div class="flex justify-center space-x-4 mt-20">
+        <div class="flex flex-wrap lg:justify-center space-y-4 lg:space-y-0 lg:space-x-4 mt-20">
           <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
             <span class="text[#626973] lexend">Diseño de una web</span>
           </div>
           <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
             <span class="text[#626973] lexend">Un sistema completo</span>
           </div>
           <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
             <span class="text[#626973] lexend">Sistema de diseño</span>
           </div>
         </div>
-        <div class="flex justify-center mt-4 space-x-4">
+        <div class="flex flex-wrap justify-center mt-4 space-y-4 lg:space-y-0 lg:space-x-4">
           <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
             <span class="text[#626973] lexend">Branding</span>
           </div>
           <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
             <span class="text[#626973] lexend">Proyecto Start-Up</span>
           </div>
         </div>
