@@ -17,6 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { ProjectsDashboardComponent } from './views/projects-dashboard/projects-dashboard.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     ContactComponent,
     IndexComponent,
     ToolbarComponent,
-    ProjectsDashboardComponent
+    ProjectsDashboardComponent,
+    ToolbarComponent,
+    NotifaiVista1Component
   ],
     imports: [
         BrowserModule,
@@ -37,8 +40,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
         MatFormFieldModule,
         MatInputModule,
         DragScrollModule,
-        MatListModule,
-        MatSidenavModule
+        MatListModule
     ],
   providers: [],
   bootstrap: [AppComponent]
