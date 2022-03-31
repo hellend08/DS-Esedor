@@ -15,9 +15,9 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent },
   { path: 'contacto', component: ContactComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'proyectos', component: ProjectsComponent },
+  { path: 'proyectos/primax', component: ProjectsComponent },
   { path: 'descripcion', component: DescripcionComponent},
-  { path: 'proyectos1', component: ProjectsDashboardComponent},
+  { path: 'proyectos', component: ProjectsDashboardComponent},
   { path: 'descripcion', component: DescripcionComponent},
   { path: 'notifai-vista1', component: NotifaiVista1Component}
 ]

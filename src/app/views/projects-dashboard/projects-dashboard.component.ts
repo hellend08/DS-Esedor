@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-projects-dashboard',
@@ -8,15 +9,19 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class ProjectsDashboardComponent implements OnInit {
 
   empresas = [
-    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/project/project01.png', alt: 'Primax', tipo: 'automotriz'},
-    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Redeban', tipo: 'banca'},
-    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project03.png', alt: 'Niubiz', tipo: 'ecomerce'},
-    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecomerce'},
-    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecomerce'},
-    {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca'}
+    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/project/project01.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax'},
+    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos/primax'},
+    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project03.png', alt: 'Niubiz', tipo: 'ecomerce', ruta: '/proyectos/primax'},
+    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecomerce', ruta: '/proyectos/primax'},
+    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecomerce', ruta: '/proyectos/primax'},
+    {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos/primax'}
   ]
 
   filtrado = this.empresas;
+
+  public redirectInternas(ruta: string) {
+    this.router.navigateByUrl(ruta);
+  }
 
   filterEmpresas(value: string){
     if (value === 'todos'){
@@ -37,7 +42,7 @@ export class ProjectsDashboardComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   starproject_1 = true;
   starproject_2 = false;

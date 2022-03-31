@@ -46,7 +46,7 @@
       </h2>
 
       <div class="grid grid-cols-2 gap-10 my-16">
-        <div *ngFor="let emp of filtrado">
+        <div *ngFor="let emp of filtrado" (click)="redirectInternas(emp.ruta)">
           <img alt="{{emp.alt}}" src="{{emp.img}}">
           <span class="text-[1.125rem]">{{emp.descripcion}}</span>
           <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
