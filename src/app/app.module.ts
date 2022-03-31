@@ -15,6 +15,8 @@ import { IndexComponent } from './views/index/index.component';
 import {DragScrollModule} from "ngx-drag-scroll";
 import {MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
+import { ProjectsDashboardComponent } from './views/projects-dashboard/projects-dashboard.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
     NosotrosComponent,
     ContactComponent,
     IndexComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ProjectsDashboardComponent
   ],
     imports: [
         BrowserModule,
@@ -34,7 +37,8 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
         MatFormFieldModule,
         MatInputModule,
         DragScrollModule,
-        MatListModule
+        MatListModule,
+        MatSidenavModule
     ],
   providers: [],
   bootstrap: [AppComponent]
