@@ -1,0 +1,165 @@
+<mat-toolbar class="main-header text-[#D8D8D8] -mt-6 bg-transparent">
+  <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem]">
+    <div class="flex">
+      <div>
+        <img class="w-[2.313] h-[2rem]" src="assets/img/logo.svg">
+      </div>
+      <span [class.header_variable]="header_variable" style="line-height: 22px;" class="-ml-16 text-[1.125rem] lexend">Esedor</span>
+    </div>
+    <div class="flex space-x-10">
+      <div [class.header_variable]="header_variable" class="space-x-10">
+        <span  class="cursor-pointer">Proyectos</span>
+        <span>Nosotros</span>
+        <span>Contacto2</span>
+      </div>
+      <div>
+        <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1" x2="42" y2="1" stroke="#D8D8D8" stroke-width="2"/>
+          <path d="M0 11L23 11" stroke="#D8D8D8" stroke-width="2"/>
+          <line y1="21" x2="42" y2="21" stroke="#D8D8D8" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="w-full mt-20 min-h-full px-24 bg-white">
+  <mat-drawer mode="side" class="w-[250px] flex justify-end" opened>
+    <div class="border-l border-black">
+      <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem]">
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('todos')">Todos</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('banca')">Banca</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('educacion')">Educación</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('salud')">Salud</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('automotriz')">Automotriz</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('ecomerce')">Ecommerce</mat-list-item>
+      </mat-list>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="flex bg-white justify-center flex-wrap content-center">
+    <div>
+      <span style="line-height: 17px; letter-spacing: 0.0015em" class="text-[0.875rem] Lexend-Bold">Proyectos recientes</span>
+      <h2 style="line-height: 44px;" class="lexend text-[2.188rem]">
+        Every project is a chance to try something new. Look at something with a fresh
+        perspective. Do something for the first time.
+      </h2>
+
+      <div class="grid grid-cols-2 gap-10 my-16">
+        <div *ngFor="let emp of filtrado" (click)="redirectInternas(emp.ruta)">
+          <img alt="{{emp.alt}}" src="{{emp.img}}">
+          <span class="text-[1.125rem]">{{emp.descripcion}}</span>
+          <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<div id="project" class="h-full bg-[#5682FF] flex justify-center flex-wrap content-center">
+  <div class="w-full">
+    <div class="text-white text-center">
+      <span style="letter-spacing: 0.0015em; line-height: 17px;" class="text-[0.875rem] text-center Lexend-Bold">Iniciemos un proyecto</span>
+    </div>
+
+    <div class="flex justify-center text-center text-white">
+      <h2 *ngIf="starproject_1 || starproject_2" style="line-height: 44px;" class="text-[2.188rem] w-[604px] lexend">Conversemos, selecciona una de las opciones y te tomemos un café</h2>
+      <h2 *ngIf="starproject_3 || starproject_4" style="line-height: 44px;" class="text-[2.188rem] w-[604px] lexend">Por donde esuchaste sobre Esedor</h2>
+    </div>
+
+    <div *ngIf="starproject_1" class="space-y-6 mt-28">
+      <div class="flex justify-center space-x-4">
+        <button (click)="starproject_1=false; starproject_2=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Diseño de una web</button>
+        <button (click)="starproject_1=false; starproject_2=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Un sistema completo</button>
+        <button (click)="starproject_1=false; starproject_2=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Sistema de diseño</button>
+      </div>
+      <div class="flex justify-center space-x-4">
+        <button (click)="starproject_1=false; starproject_2=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Branding</button>
+        <button (click)="starproject_1=false; starproject_2=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Proyecto Start-Up</button>
+      </div>
+    </div>
+
+    <div *ngIf="starproject_2" class="space-y-6 mt-28">
+      <div class="flex justify-center space-x-4">
+        <button (click)="starproject_2=false; starproject_3=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">US$ 2,500 - 10,000</button>
+        <button (click)="starproject_2=false; starproject_3=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">US$ 10,000 - 30,000</button>
+        <button (click)="starproject_2=false; starproject_3=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">US$ 30,000 -50,000</button>
+      </div>
+      <div class="flex justify-center space-x-4">
+        <button (click)="starproject_2=false; starproject_3=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">US$ 50,000 -75,000</button>
+        <button (click)="starproject_2=false; starproject_3=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">US$ 75,000 +</button>
+      </div>
+    </div>
+
+    <div *ngIf="starproject_3" class="space-y-6 mt-28">
+      <div class="flex justify-center space-x-4">
+        <button (click)="starproject_3=false; starproject_4=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Awwwards</button>
+        <button (click)="starproject_3=false; starproject_4=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">CCL</button>
+        <button (click)="starproject_3=false; starproject_4=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">ADEX</button>
+      </div>
+      <div class="flex justify-center space-x-4">
+        <button (click)="starproject_3=false; starproject_4=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Blog</button>
+        <button (click)="starproject_3=false; starproject_4=true" mat-button style="border-radius: 12px;" class="bg-white w-[17.5rem] h-[5.188rem]">Eventos</button>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div>
+        <div *ngIf="starproject_4" class="w-[61.25rem] mt-6">
+
+          <div class="flex justify-center space-x-4">
+            <mat-form-field appearance="outline" class="w-[30rem]">
+              <mat-label class="text-white"> Nombres </mat-label>
+              <input matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-[30rem]">
+              <mat-label class="text-white"> Apellidos </mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+
+          <div class="flex justify-center space-x-4">
+            <mat-form-field appearance="outline" class="w-[30rem]">
+              <mat-label class="text-white"> Dirección de correo electrónico </mat-label>
+              <input matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-[30rem]">
+              <mat-label class="text-white"> Número de teléfono o celular </mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="flex justify-center space-x-4">
+            <mat-form-field appearance="outline" class="w-[30rem]">
+              <mat-label class="text-white"> Empresa y cargo </mat-label>
+              <input matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-[30rem]">
+              <mat-label class="text-white"> Tiempo de entrega </mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="w-[61.25rem]">
+              <mat-label class="text-white"> Describe tu proyecto aquí... </mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="text-center mt-6 text-white lexend">
+      <div>
+        <span class="text-[1.313rem]">Tambien puedes escribirnos directamente a</span>
+      </div>
+      <div>
+        <u class="text-[0.875rem] cursor-pointer">hola@esedor.com</u>
+      </div>
+    </div>
+    <!--<app-footer></app-footer>-->
+  </div>
+</div>

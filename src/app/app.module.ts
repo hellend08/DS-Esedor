@@ -15,6 +15,9 @@ import { IndexComponent } from './views/index/index.component';
 import {DragScrollModule} from "ngx-drag-scroll";
 import {MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
+import { ProjectsDashboardComponent } from './views/projects-dashboard/projects-dashboard.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
 
 @NgModule({
   declarations: [
@@ -23,19 +26,23 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
     NosotrosComponent,
     ContactComponent,
     IndexComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ProjectsDashboardComponent,
+    ToolbarComponent,
+    NotifaiVista1Component
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatFormFieldModule,
-        MatInputModule,
-        DragScrollModule,
-        MatListModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    DragScrollModule,
+    MatListModule,
+    MatSidenavModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
