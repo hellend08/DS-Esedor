@@ -31,17 +31,18 @@ import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.co
     ToolbarComponent,
     NotifaiVista1Component
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatFormFieldModule,
-        MatInputModule,
-        DragScrollModule,
-        MatListModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    DragScrollModule,
+    MatListModule,
+    MatSidenavModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
