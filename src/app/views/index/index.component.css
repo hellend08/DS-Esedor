@@ -16,6 +16,12 @@ html {
   letter-spacing: 0.19em;
 }
 
+li a{
+  font-size: 14px;
+  font-family: LexendZetta;
+  font-weight: 700;
+}
+
 .section{
   mix-blend-mode: multiply;
   opacity: 0.85;
@@ -46,7 +52,7 @@ html {
 
 .main-header {
   position: fixed;
-  top: 4vh;
+  top: 1.5vh;
   left: 0;
   right: 0;
   display: -webkit-box;
