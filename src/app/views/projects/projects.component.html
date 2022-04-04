@@ -1,12 +1,12 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
-<section class="lg:py-[4rem] lg:px-[6rem] xl:px-[7rem]">
+<section class="lg:py-[4rem] px-4 lg:px-[6rem] xl:px-[7rem]">
   <!-- flex flex-wrap content-around -->
   <!-- <div class="flex justify-center mt-10 lg:mt-0 flex-wrap content-center w-full">
     <img alt="cellphone" class="lg:hidden w-[198px] h-[370px]" src="assets/img/iphone.png">
   </div> -->
-  <div class="flex lg:flex-row items-center justify-between">
+  <div class="flex flex-col-reverse lg:flex-row items-center lg:justify-between">
     <div>
-      <div class="flex items-center space-x-[8rem]">
+      <div class="hidden lg:flex items-center space-x-[8rem]">
         <div>
           <h4 class="text-sm lexendb">FECHA</h4>
           <p class="text-base lexend">2021</p>
@@ -16,10 +16,14 @@
           <p class="text-base lexend">ENERGÍA</p>
         </div>
       </div>
-      <h4 class="text-sm lexendb mt-[6.5rem]">CLIENTE</h4>
-      <p class="text-[#141C26] lg:text-black text-[36px] lg:leading-[7.5rem] lg:text-[96px] lexendzetta -ml-4">Primax
+      <h4 class="text-sm lexendb mt-[4.5rem] lg:mt-[6.5rem]">CLIENTE</h4>
+      <p class="text-[#141C26] lg:text-black text-[36px] lg:leading-[7.5rem] lg:text-[96px] lexendzetta -ml-2 -lg:ml-4">Primax
       </p>
-      <div class="flex pt-[6.5rem] space-x-[8rem]">
+      <div class="block lg:hidden mt-8">
+        <h4 class="text-sm lexendb">FECHA</h4>
+        <p class="text-base lexend">2021</p>
+      </div>
+      <div class="flex mt-[4.5rem] lg:pt-[6.5rem] space-x-4 lg:space-x-[8rem]">
         <div>
           <h4 class="text-sm lexendb">SERVICIOS</h4>
           <p class="text-base lexend">
@@ -39,18 +43,18 @@
         </div>
       </div>
     </div>
-    <img class="w-[400px]" src="assets/img/iphone.png">
+    <img class="w-[400px] mt-[4.5rem]" src="assets/img/iphone.png">
   </div>
-  <div class="grid lg:grid-cols-2 gap-10 lg:gap-[8rem] mt-[5rem]">
+  <div class="grid lg:grid-cols-2 gap-[5.5rem] lg:gap-[8rem] mt-[5rem]">
     <div class="lexend">
-      <p class="text-[16px] pb-8">Primax y el reto</p>
-      <h3 class="text-[36px]">
+      <p class="text-sm lg:text-[16px] pb-8 font-bold lg:font-normal">Primax y el reto</p>
+      <h3 class="text-[21px] lg:text-[36px]">
         Involucrar a todos sus partners dentro de esta tienda virtual y
         crear una plataforma de venta de productos y servicios de marketing </h3>
     </div>
     <div class="lexend">
-      <p class="text-[16px] pb-8">El trabajo de Esedor</p>
-      <h3 class="text-[36px]">
+      <p class="text-sm lg:text-[16px] pb-8 font-bold lg:font-normal">El trabajo de Esedor</p>
+      <h3 class="text-[21px] lg:text-[36px]">
         Definir la nueva generación de productos digitales y crear su primera tienda virtual b2b de productos
         y servicios de marketing que ofrece primax</h3>
     </div>
@@ -77,7 +81,7 @@
     </div> -->
   </div>
   <h2
-    class="lexendb lg:text-[110px] 2xl:text-[128px] lg:leading-[140px] 2xl:leading-[160px] lg:w-[650px] 2xl:w-[49%] ml-auto lg:mt-[8rem]">
+    class="lexendb text-[48px] lg:text-[110px] 2xl:text-[128px] py-[4rem] lg:py-0 leading-[60px] lg:leading-[140px] 2xl:leading-[160px] lg:w-[650px] 2xl:w-[49%] ml-auto lg:mt-[8rem]">
     Nueva experiencia
     ecommerce B2B</h2>
 </section>
@@ -85,9 +89,9 @@
 <section id="parallax" class="h-[80%]">
 </section>
 
-<section class="bg-black lg:py-[12.6rem] lg:px-[6rem] xl:px-[7rem]">
+<section class="bg-black py-[4rem] lg:py-[12.6rem] px-4 lg:px-[6rem] xl:px-[7rem]">
   <div class="grid lg:grid-cols-2 lg:gap-[5rem] xl:gap-[7rem] text-white">
-    <p class="lexendzetta lg:text-[35px] xl:text-[40px] 2xl:text-[49px] lg:leading-[61.5px]">
+    <p class="lexendzetta text-[18px] lg:text-[35px] xl:text-[40px] 2xl:text-[49px] lg:leading-[61.5px]">
       Investigación y arquitectura de información
     </p>
     <div class="mt-[3rem] lg:mt-0 lexend">
@@ -96,24 +100,24 @@
         contextos donde puedan validar features,
         dentro de sesiones cognitivas de nuestros productos.
       </h3>
-      <p class="mt-[2rem] text-[14.5px]">“Sesiones
+      <p class="mt-[2rem] text-[13px] lg:text-[14.5px] font-medium lg:font-normal">“Sesiones
         ludicas y divertidas que puedan romper el hielo en cada usuario que deseamos explorar en las sesiones
         cognitivas“</p>
       <p class="lexendb text-sm mt-[1.5rem]">Cómo empatizar con ellos</p>
     </div>
   </div>
-  <div class="mt-[6rem] h-full bg-[#000000] flex justify-center flex-wrap content-center">
+  <div class="mt-[5rem] lg:mt-[6rem] h-full bg-[#000000] flex justify-center flex-wrap content-center">
     <img class="w-[385px] lg:w-[85%] 2xl:w-[90%]" alt="laptop2" src="assets/img/videollamada.png">
   </div>
 </section>
 
-<section class="lg:px-[6rem] xl:px-[7rem] lg:py-[11rem] bg-[#F2F2F2] h-[1400px]">
+<section class="px-4 lg:px-[6rem] xl:px-[7rem] py-[6rem] lg:py-[11rem] lg:bg-[#F2F2F2] lg:h-[1400px]">
   <h2
-    class="lexendb lg:text-[110px] 2xl:text-[128px] lg:leading-[140px] 2xl:leading-[160px] lg:w-[650px] 2xl:w-[49%] ml-auto">
+    class="lexendb text-[48px] lg:text-[110px] leading-[60px] 2xl:text-[128px] lg:leading-[140px] 2xl:leading-[160px] lg:w-[650px] 2xl:w-[49%] ml-auto">
     Sistema <br>
     de Diseño </h2>
-  <div class="lexend mt-[5rem] flex lg:flex-row justify-between">
-    <div class="space-y-5 mt-4 lg:w-[30%]">
+  <div class="lexend mt-[5rem] flex flex-col-reverse lg:flex-row justify-between">
+    <div class="space-y-5 mt-[5rem] lg:mt-4 lg:w-[30%]">
       <p class="lg:text-sm lexendb"> PRIMERA FASE </p>
       <ul class="lg:text-[14.5px]">
         <li>Principios</li>
@@ -121,40 +125,40 @@
         <li>Componentes</li>
       </ul>
     </div>
-    <h3 class="lg:text-[36px] lg:leading-[53px] 2xl:pr-[9rem] lg:w-[650px] 2xl:w-[49%]">PRIMARY nace por la necesidad de
+    <h3 class="text-[21px] lg:text-[36px] lg:leading-[53px] 2xl:pr-[9rem] lg:w-[650px] 2xl:w-[49%]">PRIMARY nace por la necesidad de
       definir una metología de trabajo entre el equipo de diseño y desarrollo de Primax.</h3>
   </div>
 </section>
 
-<section>
+<section class="px-4 lg:px-0">
   <div>
-    <img class="absolute lg:top-[366rem] xl:top-[380rem] 2xl:top-[387rem] left-[11rem]" src="assets/img/image84.png"
+    <img class="lg:absolute lg:top-[370rem] xl:top-[385rem] 2xl:top-[395rem] left-[11rem]" src="assets/img/image84.png"
+      alt="">
+    <img class="lg:absolute lg:top-[385rem] xl:top-[400rem] 2xl:top-[410rem] left-[0rem]" src="assets/img/image91.png"
       alt="">
     <img class="ml-auto lg:w-[950px] xl:w-[1100px] 2xl:w-auto" src="assets/img/image89.png" alt="">
-    <img class="absolute lg:top-[380rem] xl:top-[394rem] 2xl:top-[401rem] left-[0rem]" src="assets/img/image91.png"
-      alt="">
   </div>
-  <div class="lg:py-[20rem] lg:px-[3rem] xl:px-[5rem] 2xl:px-[7rem] flex lg:flex-row items-center lg:space-x-[0rem] 2xl:space-x-[4rem]">
+  <div class="lg:py-[20rem] lg:px-[3rem] xl:px-[5rem] 2xl:px-[7rem] flex flex-col-reverse lg:flex-row lg:items-center lg:space-x-[0rem] 2xl:space-x-[4rem]">
     <img class="lg:w-[550px] xl:w-[560px] 2xl:w-auto" src="assets/img/market-fit.png" alt="">
     <div>
-      <h2 class="lexendb lg:text-[100px] 2xl:text-[125px] lg:leading-[120px] 2xl:leading-[156px]">Product <br> Market Fit</h2>
-      <h3 class="lexend lg:text-[36px] lg:leading-[53px] mt-[4rem] lg:pr-3 2xl:pr-0 lg:w-[580px] 2xl:w-[620px]">PRIMARY nace por la necesidad de definir una metología de trabajo entre el equipo de diseño  y desarrollo de Primax.</h3>
+      <h2 class="lexendb text-[48px] lg:text-[100px] 2xl:text-[125px] leading-[60px] lg:leading-[120px] 2xl:leading-[156px] mb-[6rem] lg:mb-0 mt-[11rem] lg:mt-0">Product <br> Market Fit</h2>
+      <h3 class="hidden lg:block lexend lg:text-[36px] lg:leading-[53px] mt-[4rem] lg:pr-3 2xl:pr-0 lg:w-[500px] 2xl:w-[620px]">PRIMARY nace por la necesidad de definir una metología de trabajo entre el equipo de diseño  y desarrollo de Primax.</h3>
     </div>
 
   </div>
 </section>
 
-<section class="lg:h-full lg:flex justify-between hidden">
-  <div class="lg:w-[50%] h-full backgroung-gradient flex flex-wrap justify-center content-center">
-    <img class="w-[40%]" alt="cel1" src="assets/img/cel1.png">
+<section class="lg:h-full lg:flex justify-between">
+  <div class="lg:w-[50%] h-full backgroung-gradient flex flex-wrap justify-center content-center py-8 lg:py-0">
+    <img class="lg:w-[800px]" alt="cel1" src="assets/img/phone1.png">
   </div>
-  <div class="lg:w-[50%] h-full bg-[#222DE9] flex flex-wrap justify-center content-center">
-    <img class="w-[40%]" alt="cel2" src="assets/img/cel2.png">
+  <div class="lg:w-[50%] h-full bg-[#0166FF] flex flex-wrap justify-center content-center py-8 lg:py-0">
+    <img class="lg:w-[570px] xl:w-[680px] 2xl:w-[735px]" alt="cel2" src="assets/img/phone2.png">
   </div>
 </section>
 
 <!--Responsive-->
-<section class="h-full lg:hidden">
+<!-- <section class="h-full lg:hidden">
   <div class="w-full h-full bg-gradient flex flex-wrap justify-center content-center">
     <img class="w-[70%]" alt="cel1" src="assets/img/cel1.png">
   </div>
@@ -164,7 +168,7 @@
   <div class="w-full h-full bg-[#222DE9] flex flex-wrap justify-center content-center">
     <img class="w-[53%]" alt="cel2" src="assets/img/cel2.png">
   </div>
-</section>
+</section> -->
 
 <section id="parallax2">
 
@@ -232,10 +236,7 @@
   </div>
 </section>-->
 
-<section class="h-full bg-[#5682FF] flex flex-wrap content-center justify-center">
-  <img alt="laptop" class="lg:w-[871px] lg:h-[438px] 2xl:w-[1371px] 2xl:h-[838px] shadowlap"
-    src="/assets/img/laptop2.png">
-  <!-- ======= -->
+<section class="h-full bg-[#5682FF] hidden lg:flex flex-wrap content-center justify-center">
   <section class="h-full bg-[#222DE9] flex flex-wrap content-center justify-center">
     <img alt="laptop" class="lg:w-[871px] lg:h-[438px] 2xl:w-[1371px] 2xl:h-[838px] shadowlap"
       src="assets/img/laptop2.png">
@@ -307,5 +308,6 @@
       </div>
     </div>
   </section>
+</section>
 
   <!-- -->

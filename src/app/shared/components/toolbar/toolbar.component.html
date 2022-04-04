@@ -1,5 +1,5 @@
 <mat-toolbar class="main-header text-black -mt-6 bg-transparent">
-  <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem] px-4 lg:px-0"
+  <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem] px-2 lg:px-4 lg:px-0"
     [ngClass]="{ 'text-white' : colorWhite}">
     <div class="flex items-center">
       <div>
@@ -8,7 +8,7 @@
       </div>
       <span [class.header_variable]="header_variable" class="text-[1.125rem] lexend ml-4 leading-[22px] lexendzetta font-medium">Esedor</span>
     </div>
-    <div class="flex lg:space-x-10 mt-1">
+    <div class="flex lg:space-x-10">
       <div [class.header_variable]="header_variable"
         class="space-x-10 lg:flex hidden justify-between lg:px-8 xl:px-[5rem] lg:w-[600px] xl:w-[900px] lexendzetta font-bold">
         <span class="cursor-pointer" (click)="redirectProject()">Proyectos</span>
