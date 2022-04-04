@@ -79,7 +79,7 @@ li a{
 
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
   background-color: #e9e3e3a6;
   border-radius: 10px;
 }
@@ -123,6 +123,20 @@ textarea:focus, input:focus {
   background: -moz-linear-gradient(to right, #000000 100%, #626973 100%, #FFFFFF 100%);
   background: -webkit-linear-gradient(to right, #000000 100%, #626973 100%, #FFFFFF 100%);
   background: linear-gradient(to right, #000000 100%, #626973 100%, #FFFFFF 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* PROBANDO */
+
+body {
+  margin: 10px;
+}
+
+.box {
+  display: block;
+}
+
+.pink {
+  background-color: pink;
 }

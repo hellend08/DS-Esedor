@@ -1,6 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {ViewportScroller} from "@angular/common";
+import { Draggable } from 'gsap/Draggable';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { DOCUMENT } from '@angular/common';
+import { ViewChildren } from '@angular/core';
+import { QueryList } from '@angular/core';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export interface Empresas {
   name: string;
@@ -19,6 +27,10 @@ export interface Servicios {
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+
+  @ViewChildren('box') box!: QueryList<ElementRef>;
+  @ViewChild('itemsTex', { static: true }) itemsTex!: ElementRef<HTMLDivElement>;
+  
   paso1 = true;
   paso2 = false;
   paso3 = false;
@@ -58,7 +70,7 @@ export class IndexComponent implements OnInit {
   actualprimero!: string;
   actualsegundo!: string;
 
-  constructor(private router: Router, private _vps: ViewportScroller) { }
+  constructor(private router: Router, private _vps: ViewportScroller, @Inject(DOCUMENT) private document: Document) { }
 
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
@@ -79,6 +91,28 @@ export class IndexComponent implements OnInit {
       this.actualprimero = this.titulos[this.changeCounter].title1;
       this.actualsegundo = this.titulos[this.changeCounter].title2;
     }, 5000);
+
+    this.box.forEach((boxItem: ElementRef<HTMLDivElement>) => {
+      // gsap.to(this.boxItem.nativeElement, {y: 50, duration: 1, delay: 1});
+      // gsap.to(this.boxItem.nativeElement, {x: -100, duration: 1});
+    })
+
+    
+// gsap.to(this.box.nativeElement, {y: 50, duration: 1, delay: 1});      //wait 1 second
+// gsap.utils.toArray(this.box.nativeElement, {
+//   y: 50, duration: 1, delay: 1, x: 100
+
+// }); 
+
+gsap.to(this.itemsTex.nativeElement, {
+  scrollTrigger: {
+    trigger: this.itemsTex.nativeElement
+  },
+  duration: 1,
+  x: 150,
+  scale: 0.9
+})
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   }
 
 //   HideShowTransition = Barba.BaseTransition.extend({
