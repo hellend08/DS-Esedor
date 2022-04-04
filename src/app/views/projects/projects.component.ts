@@ -12,6 +12,8 @@ export class ProjectsComponent implements OnInit {
   paso3 = false;
   formulario = false;
 
+  colorWhite = false;
+
   constructor() { }
 
   ngOnInit(): void {

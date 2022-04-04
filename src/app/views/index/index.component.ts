@@ -1,12 +1,10 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {ViewportScroller} from "@angular/common";
+import { Component, OnInit, Inject, ViewChild, ElementRef, QueryList, AfterViewInit, ViewChildren } from '@angular/core';
+import { Router } from "@angular/router";
+import { ViewportScroller } from "@angular/common";
 import { Draggable } from 'gsap/Draggable';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
-import { ViewChildren } from '@angular/core';
-import { QueryList } from '@angular/core';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,10 +24,12 @@ export interface Servicios {
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements AfterViewInit {
 
   @ViewChildren('box') box!: QueryList<ElementRef>;
   @ViewChild('itemsTex', { static: true }) itemsTex!: ElementRef<HTMLDivElement>;
+
+  colorWhite = true;
   
   paso1 = true;
   paso2 = false;
@@ -80,7 +80,7 @@ export class IndexComponent implements OnInit {
     this._vps.scrollToAnchor(anchor)
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.actualprimero = this.titulos[0].title1;
     this.actualsegundo = this.titulos[0].title2;
     setInterval(() => {
@@ -92,9 +92,13 @@ export class IndexComponent implements OnInit {
       this.actualsegundo = this.titulos[this.changeCounter].title2;
     }, 5000);
 
-    this.box.forEach((boxItem: ElementRef<HTMLDivElement>) => {
-      // gsap.to(this.boxItem.nativeElement, {y: 50, duration: 1, delay: 1});
-      // gsap.to(this.boxItem.nativeElement, {x: -100, duration: 1});
+    // if( )
+
+    console.log(this.box)
+
+    this.box.map((boxItem: ElementRef<HTMLDivElement>) => {
+      gsap.to(boxItem.nativeElement, {y: 50, duration: 1, delay: 1});
+      gsap.to(boxItem.nativeElement, {x: -100, duration: 1});
     })
 
     

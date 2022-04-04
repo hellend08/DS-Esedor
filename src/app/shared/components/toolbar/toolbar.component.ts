@@ -1,5 +1,5 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, HostListener, OnInit, Input} from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -8,11 +8,9 @@ import {Router} from "@angular/router";
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  @Input() colorWhite: any;
 
-  public redirectProject() {
-    this.router.navigateByUrl('/proyectos');
-  }
+  constructor(private router: Router) { }
 
   header_variable=false;
   @HostListener("document:scroll")
@@ -22,6 +20,10 @@ export class ToolbarComponent implements OnInit {
     }else {
       this.header_variable = false;
     }
+  }
+
+  public redirectProject() {
+    this.router.navigateByUrl('/proyectos');
   }
 
   ngOnInit(): void {
