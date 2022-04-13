@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit, Input} from '@angular/core';
+import {Component, HostListener, OnInit, Input, ViewChild, ElementRef} from '@angular/core';
 import { Router } from "@angular/router";
 
 @Component({
@@ -7,6 +7,10 @@ import { Router } from "@angular/router";
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
+
+  @ViewChild('menu', { static: true }) menu!: ElementRef<HTMLDivElement>;
+  @ViewChild('logo', { static: true }) logo!: ElementRef<HTMLDivElement>;
+  @ViewChild('search', { static: true }) search!: ElementRef<HTMLDivElement>;
 
   @Input() colorWhite: any;
 
@@ -27,6 +31,26 @@ export class ToolbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    gsap.from(this.menu.nativeElement.childNodes, {
+      delay: 0.4,
+      duration: 0.4,
+      opacity: 0,
+      y: -20,
+      stagger: 0.15,
+    });
+    gsap.from(this.search.nativeElement.childNodes, {
+      delay: 0.8,
+      duration: 0.4,
+      opacity: 0,
+      y: -20,
+      stagger: 0.15,
+    });
+    gsap.from(this.logo.nativeElement.childNodes, {
+      delay: 0.3,
+      duration: 0.4,
+      opacity: 0,
+      y: -20,
+    });
   }
 
 }

@@ -5,8 +5,9 @@ import { Draggable } from 'gsap/Draggable';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
+// import { Question } from './models/Question';
+// import { questionsList } from './helpers/questionsList';
 
-gsap.registerPlugin(ScrollTrigger);
 
 export interface Empresas {
   name: string;
@@ -26,8 +27,93 @@ export interface Servicios {
 })
 export class IndexComponent implements AfterViewInit {
 
-  @ViewChildren('box') box!: QueryList<ElementRef>;
   @ViewChild('itemsTex', { static: true }) itemsTex!: ElementRef<HTMLDivElement>;
+  @ViewChild('title', { static: true }) title!: ElementRef<HTMLDivElement>;
+  // @ViewChildren('box') box!: QueryList<ElementRef>;
+  @ViewChild('arrow', { static: true }) arrow!: ElementRef<HTMLDivElement>;
+  @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
+
+  @ViewChild('wrapper', {static: true}) wrapper!: ElementRef<HTMLDivElement>;
+  @ViewChildren('itemC') itemC!: QueryList<ElementRef>;
+
+  slides: any;
+  container: any;
+  slider: any;
+  scrubber: any;
+  handle: any;
+ 
+  slideCount: any;
+ 
+  boxWidth: any;
+  sliderWidth: any;
+  targetX = 0;
+  lastTarget = 0;
+  draggable: any;
+ 
+  ratio: any;
+  ratioX: any;
+ 
+  // setProgess() {
+  //   var x = gsap.getProperty("#slider", "x");
+ 
+  //   this.targetX = Math.round((x as number) / this.boxWidth);
+  //   this.targetX =
+  //     this.targetX < -1 * (this.slideCount - 1) ? -1 * (this.slideCount - 1) : this.targetX;
+ 
+  //   gsap.set(this.scrubber, { x: -this.ratioX * this.ratio });
+  //   this.lastTarget = this.targetX;
+ 
+  // }
+ 
+  prevElement() {
+    if (this.targetX < 0) {
+      this.targetX++;
+ 
+      gsap.to(this.slider, {
+        duration: 1,
+        x: this.boxWidth * this.targetX,
+        // onUpdate: this.setProgess
+      });
+    }
+  }
+ 
+  nextElement() {
+    if (this.targetX > -1 * (this.slideCount - 1)) {
+      this.targetX--;
+ 
+      gsap.to(this.slider, {
+        duration: 1,
+        x: this.boxWidth * this.targetX,
+        // onUpdate: this.setProgess
+      });
+    }
+
+    // gsap.to(
+    //   this.title.nativeElement,
+    //   {
+    //    "--width": 800,
+    //    xPercent: 30 * direction
+    //   },
+    //  )
+
+    // gsap.fromTo(
+    //   this.title.nativeElement,
+    //   {
+    //    "--width": 800,
+    //    xPercent: -30 * direction
+    //   },
+    //   {
+    //    "--width": 200,
+    //    xPercent: 0
+    //   },
+      
+    //  )
+  }
+ 
+  updateSlides() {
+    //this.slider = document.querySelector('#slider');
+    gsap.set(this.slider, { x: -this.ratioX / this.ratio });
+  }
 
   colorWhite = true;
   
@@ -50,7 +136,6 @@ export class IndexComponent implements AfterViewInit {
     {name: 'Caja Cusco', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/logoCajaCusco.png'},
   ];
 
-
   dataService: Servicios[] = [
     {title: 'Consultoría estratégica & investigación', description: 'Ayudamos a definir la estrategia para transformar tu negocio y alcanzar la madurez digital.'},
     {title: 'Diseño de productos y servicios', description: 'Soluciones orientadas a mejorar la experiencia de tus clientes en canales digitales y presenciales.'},
@@ -58,7 +143,6 @@ export class IndexComponent implements AfterViewInit {
     {title: 'Innovación y transformación digital', description: 'Ayudamos a definir la estrategia para transformar tu negocio y alcanzar la madurez digital.'},
     {title: 'Desarrollo de software y código creativo', description: 'Implementamos tecnologías emergentes desde la agilidad para generar resultados reales.'},
   ]
-
 
   titulos = [
     {title1: 'PRIMAX', title2: 'SOLUTIONS'},
@@ -80,7 +164,32 @@ export class IndexComponent implements AfterViewInit {
     this._vps.scrollToAnchor(anchor)
   }
 
+  hoverArrow() {
+    gsap.to(this.arrow.nativeElement, {rotation: -15, duration: 1});
+  }
+
+  hoverArrowOut() {
+    gsap.to(this.arrow.nativeElement, {rotation: 0, duration: 1});
+  }
+
+  // hoverArrow() {
+  //   this.arrow.map((arrowItem: ElementRef<HTMLDivElement>) => {
+  //   gsap.to(arrowItem.nativeElement, {rotation: -27, duration: 1});
+  //   })
+  // }
+
+  // hoverArrowOut() {
+  //   this.arrow.map((arrowItem: ElementRef<HTMLDivElement>) => {
+  //     gsap.to(arrowItem.nativeElement, {rotation: 0, duration: 1});
+  //     })
+  // }
+  // public direction: any;
+
+
   ngAfterViewInit(): void {
+    // gsap.registerPlugin(ScrollTrigger);
+
+    gsap.registerPlugin(Draggable);
     this.actualprimero = this.titulos[0].title1;
     this.actualsegundo = this.titulos[0].title2;
     setInterval(() => {
@@ -91,16 +200,61 @@ export class IndexComponent implements AfterViewInit {
       this.actualprimero = this.titulos[this.changeCounter].title1;
       this.actualsegundo = this.titulos[this.changeCounter].title2;
     }, 5000);
+    gsap.from(this.slideContent.nativeElement.childNodes, {
+      delay: 0.6,
+      duration: 0.4,
+      opacity: 0,
+      y: -20,
+      stagger: 0.15,
+    });
 
-    // if( )
+    this.slides = this.document.querySelectorAll('.sliderItem');
+    this.container = this.document.querySelector('#container');
+    this.slider = this.document.querySelector('#slider');
+    // this.scrubber = this.document.querySelector('#scrubber');
+    this.handle = this.document.querySelector('#handle');
+ 
+    this.slideCount = this.document.getElementsByClassName('sliderItem').length;
+ 
+    this.boxWidth = this.container.offsetWidth;
+    this.sliderWidth = this.boxWidth * this.slideCount;
+ 
+    console.log("slides");
+    console.log(this.slider);
+ 
+    for(var i = 0; i < this.slides.length; i++){
+      this.slides[i].style.width = this.boxWidth + "px";
+    }
+ 
+    this.slider.style.width = this.sliderWidth;
+ 
+    Draggable.create(this.container, {
+      type: "x",
+      edgeResistance: 0.6,
+      bounds: "#container",
+      throwProps: true,
+      // onDrag: this.setProgess,
+      // onThrowUpdate: this.setProgess,
+    });
 
-    console.log(this.box)
+  //  let loop= horizontalLoop(this.itemC, {paused: true, draggable: true});
 
-    this.box.map((boxItem: ElementRef<HTMLDivElement>) => {
-      gsap.to(boxItem.nativeElement, {y: 50, duration: 1, delay: 1});
-      gsap.to(boxItem.nativeElement, {x: -100, duration: 1});
-    })
+  //   this.itemC.forEach((box, i) => {
+  //     box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
+  //   } 
+   
+  
+  }
 
+  
+}
+
+  // this.initScrollBar();
+
+    // this.box.map((boxItem: ElementRef<HTMLDivElement>) => {
+    //   gsap.to(boxItem.nativeElement, {y: 50, duration: 1, delay: 1});
+    //   gsap.to(boxItem.nativeElement, {x: -100, duration: 1});
+    // })
     
 // gsap.to(this.box.nativeElement, {y: 50, duration: 1, delay: 1});      //wait 1 second
 // gsap.utils.toArray(this.box.nativeElement, {
@@ -108,24 +262,12 @@ export class IndexComponent implements AfterViewInit {
 
 // }); 
 
-gsap.to(this.itemsTex.nativeElement, {
-  scrollTrigger: {
-    trigger: this.itemsTex.nativeElement
-  },
-  duration: 1,
-  x: 150,
-  scale: 0.9
-})
+    // gsap.to(this.itemsTex.nativeElement, {
+    //   scrollTrigger: {
+    //     trigger: this.itemsTex.nativeElement
+    //   },
+    //   duration: 1,
+    //   x: 150,
+    //   scale: 0.9
+    // })
 // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  }
-
-//   HideShowTransition = Barba.BaseTransition.extend({
-//     start: function() {
-//     this.newContainerLoading.then(this.finish.bind(this));
-//     },
-//     finish: function() {
-//     document.body.scrollTop = 0;
-//     this.done();
-//     }
-// });
-}

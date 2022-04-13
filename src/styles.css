@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: LexendLight;
+  src: url("assets/font/Lexend-Light.ttf");
+}
+
+@font-face {
   font-family: Lexend;
   src: url("assets/font/Lexend.ttf");
 }
@@ -17,6 +22,10 @@
 @font-face {
   font-family: LexendBold;
   src: url("assets/font/Lexend-Bold.ttf");
+}
+
+.lexendli {
+  font-family: LexendLight;
 }
 
 .lexend {

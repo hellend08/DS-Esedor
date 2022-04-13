@@ -1,7 +1,7 @@
 <mat-toolbar class="main-header text-black -mt-6 bg-transparent">
   <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem]"
     [ngClass]="{ 'text-white' : colorWhite}">
-    <div class="flex items-center">
+    <div class="flex items-center" #logo>
       <div>
         <img class="w-[2.313] h-[2rem]" [ngClass]="{ 'hidden' : colorWhite}" src="assets/img/logoE.svg">
         <img class="w-[2.313] h-[2rem]" [ngClass]="{ 'hidden' : !colorWhite}" src="assets/img/logo_white.png">
@@ -9,12 +9,13 @@
       <span [class.header_variable]="header_variable" class="text-[1.125rem] lexend ml-4 leading-[22px] lexendzetta font-medium">Esedor</span>
     </div>
     <div class="flex lg:space-x-10">
-      <div [class.header_variable]="header_variable"
+      <div [class.header_variable]="header_variable" #menu
         class="space-x-10 lg:flex hidden justify-between lg:px-8 xl:px-[5rem] lg:w-[600px] xl:w-[900px] lexendzetta font-bold">
         <span class="cursor-pointer" (click)="redirectProject()">Proyectos</span>
         <span>Nosotros</span>
         <span>Contacto</span>
       </div>
+      <div #search>
       <div [ngClass]="{ 'hidden' : colorWhite}" class="mt-[0.38rem]">
         <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -31,6 +32,7 @@
           <line y1="21" x2="42" y2="21" stroke="#FFFFFF" stroke-width="2" />
         </svg>
       </div>
+    </div>
     </div>
   </div>
 </mat-toolbar>
