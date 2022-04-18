@@ -189,6 +189,8 @@ body {
   margin: 0 auto;
 }
 
+
+
 .controls{
   display: flex;
   overflow: hidden;
@@ -227,3 +229,51 @@ body {
   height: 100%;
   background: #5923a5;
 } */
+
+:host {
+  overflow-x: hidden;
+}
+
+.scrollbar {
+  /* position: fixed; */
+  z-index: 999999;
+  bottom: 10px;
+  left: 14px;
+  background-color: red;
+  width: 150px;
+  height: 15px;
+  border-radius: 25px;
+  cursor: grab;
+}
+
+.gallery {
+  display: flex;
+  place-items: center;
+  /* position: fixed; */
+  /* width: 500vw; */
+  gap: 15px;
+  left: 15px;
+  top: 15px;
+}
+
+.thumbnail {
+  /* width: 95vw;
+  height: 90vh; */
+  /* background-color: hsl(49, 100%, 37%); */
+  /* color: white; */
+  display: grid;
+  place-items: center;
+  cursor: grab;
+  font-size: 15rem;
+}
+
+.scrollbarContainer {
+  background: black;
+  /* position: fixed; */
+  /* z-index: 9999999999; */
+  bottom: 15px;
+  left: 15px;
+  right: 0;
+  /* width: 75vw; */
+  /*   top: 0; */
+}
