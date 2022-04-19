@@ -47,6 +47,19 @@ export class IndexComponent implements AfterViewInit, OnInit {
   trigger!: any;
   galleryAnim!: GSAPTween;
 
+  // const loop = horizontalLoop(this.itemC, {paused: true, draggable: true});
+
+  // boxes.forEach((box, i) => box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
+  
+  // onSelect(itemC: HTMLDivElement) {
+  //     this.itemC.nativeElement.childNodes.forEach((node: HTMLDivElement) => {
+  //       if (node.classList && node.classList.contains('selected')) {
+  //         node.classList.remove('selected');
+  //       }
+  //     });
+  //     itemC.classList.add('selected');
+  //   }
+
   ngOnInit(): void {
     this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
       paused: true,
@@ -101,6 +114,12 @@ export class IndexComponent implements AfterViewInit, OnInit {
     this.updateScrollbar();
   }
 
+  baseTimeline = gsap.timeline({ paused: true });
+
+  animation = gsap
+    .timeline({ repeat: -1, paused: true })
+    .add(this.baseTimeline.tweenFromTo(1, 2, { immediateRender: true }));
+
   slides: any;
   container: any;
   slider: any;
@@ -129,6 +148,8 @@ export class IndexComponent implements AfterViewInit, OnInit {
   //   this.lastTarget = this.targetX;
  
   // }
+
+ 
  
   prevElement() {
     if (this.targetX < 0) {
