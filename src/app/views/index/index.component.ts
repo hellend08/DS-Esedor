@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, QueryList, AfterViewInit, ViewChildren } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, VERSION, QueryList, AfterViewInit, ViewChildren } from '@angular/core';
 import { Router } from "@angular/router";
 import { ViewportScroller } from "@angular/common";
 import { Draggable } from 'gsap/Draggable';
@@ -8,6 +8,7 @@ import { DOCUMENT } from '@angular/common';
 // import { Question } from './models/Question';
 // import { questionsList } from './helpers/questionsList';
 
+gsap.registerPlugin(ScrollTrigger, Draggable);
 
 export interface Empresas {
   name: string;
@@ -25,7 +26,7 @@ export interface Servicios {
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexComponent implements AfterViewInit {
+export class IndexComponent implements AfterViewInit, OnInit {
 
   @ViewChild('itemsTex', { static: true }) itemsTex!: ElementRef<HTMLDivElement>;
   @ViewChild('title', { static: true }) title!: ElementRef<HTMLDivElement>;
@@ -33,8 +34,91 @@ export class IndexComponent implements AfterViewInit {
   @ViewChild('arrow', { static: true }) arrow!: ElementRef<HTMLDivElement>;
   @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
 
-  @ViewChild('wrapper', {static: true}) wrapper!: ElementRef<HTMLDivElement>;
+  // @ViewChild('wrapper', {static: true}) wrapper!: ElementRef<HTMLDivElement>;
   @ViewChildren('itemC') itemC!: QueryList<ElementRef>;
+  @ViewChild("scrollbar", { static: true }) scrollbar!: ElementRef;
+  @ViewChild("scrollbarContainer", { static: true })
+  scrollbarContainer!: ElementRef;
+  @ViewChild("wrapper", { static: true }) wrapper!: ElementRef;
+
+  maxScroll!: number;
+  containerLength!: number;
+  draggable2!: Draggable;
+  trigger!: any;
+  galleryAnim!: GSAPTween;
+
+  // const loop = horizontalLoop(this.itemC, {paused: true, draggable: true});
+
+  // boxes.forEach((box, i) => box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
+
+  // onSelect(itemC: HTMLDivElement) {
+  //     this.itemC.nativeElement.childNodes.forEach((node: HTMLDivElement) => {
+  //       if (node.classList && node.classList.contains('selected')) {
+  //         node.classList.remove('selected');
+  //       }
+  //     });
+  //     itemC.classList.add('selected');
+  //   }
+
+  ngOnInit(): void {
+    this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
+      paused: true,
+      ease: "expo.inOut",
+      x: -300 + "px"
+    });
+
+
+    this.trigger = ScrollTrigger.create({
+      onRefresh: () => this.onResize(),
+      onUpdate: () => this.updateScrollbar()
+    });
+
+    this.draggable = new Draggable(this.scrollbar.nativeElement, {
+      type: "x",
+      bounds: this.scrollbarContainer.nativeElement,
+      onDrag: () => {
+        /*         gsap.to(".gallery", { x: -this.draggable.x });
+         */ this.trigger.scroll(
+          (this.draggable.x / this.containerLength) * this.maxScroll
+        );
+        this.updateGallery();
+        // when dragging, scroll the page to the corresponding ratio
+      }
+    });
+
+    this.onResize();
+  }
+
+  updateGallery() {
+    this.galleryAnim.progress(this.draggable.x / this.draggable.maxX);
+  }
+
+  updateScrollbar() {
+    gsap.set(this.scrollbar.nativeElement, {
+      x: (this.containerLength * this.trigger.scroll()) / this.maxScroll
+    });
+    gsap.timeline({ repeat: 1 })
+    this.draggable.update();
+    this.updateGallery();
+  }
+
+  onResize() {
+    if (!this.trigger) return;
+
+    this.updateScrollbar();
+
+    this.maxScroll = ScrollTrigger.maxScroll(window as any);
+    this.containerLength =
+      this.scrollbarContainer.nativeElement.offsetWidth -
+      this.scrollbar.nativeElement.offsetWidth;
+    this.updateScrollbar();
+  }
+
+  baseTimeline = gsap.timeline({ paused: true });
+
+  animation = gsap
+    .timeline({ repeat: -1, paused: true })
+    .add(this.baseTimeline.tweenFromTo(1, 2, { immediateRender: true }));
 
   slides: any;
   container: any;
@@ -64,6 +148,8 @@ export class IndexComponent implements AfterViewInit {
   //   this.lastTarget = this.targetX;
 
   // }
+
+
 
   prevElement() {
     if (this.targetX < 0) {
@@ -222,6 +308,7 @@ export class IndexComponent implements AfterViewInit {
 
 
     // gsap.registerPlugin(ScrollTrigger);
+    // horizontalLoop(this.container, {paused: true, draggable: true});
 
     gsap.registerPlugin(Draggable);
     this.actualprimero = this.titulos[0].title1;
@@ -246,7 +333,7 @@ export class IndexComponent implements AfterViewInit {
     this.container = this.document.querySelector('#container');
     this.slider = this.document.querySelector('#slider');
     // this.scrubber = this.document.querySelector('#scrubber');
-    this.handle = this.document.querySelector('#handle');
+    // this.handle = this.document.querySelector('#handle');
 
     this.slideCount = this.document.getElementsByClassName('sliderItem').length;
 
@@ -265,10 +352,29 @@ export class IndexComponent implements AfterViewInit {
     Draggable.create(this.container, {
       type: "x",
       edgeResistance: 0.6,
-      bounds: "#container",
+      bounds: { minX: 0, maxX: 5 },
       throwProps: true,
+      trigger: this.container.nativeElement,
       // onDrag: this.setProgess,
       // onThrowUpdate: this.setProgess,
+
+      // trigger: this.containerElement.nativeElement,
+      // throwProps: true,
+      // onDrag: function () {
+      //   self.updateProgress(this);
+      // },
+      // onThrowUpdate: function () {
+      //   self.updateProgress(this);
+      // },
+      // snap: {
+      //   x: function (x) {
+      //     console.log(x);
+      //     return x;
+      //   },
+      // },
+      // onThrowComplete() {
+      //   console.log('onThrowComplete');
+      // },
     });
 
   //  let loop= horizontalLoop(this.itemC, {paused: true, draggable: true});
