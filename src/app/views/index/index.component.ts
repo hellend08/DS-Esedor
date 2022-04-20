@@ -35,22 +35,22 @@ export class IndexComponent implements AfterViewInit, OnInit {
   @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
 
   // @ViewChild('wrapper', {static: true}) wrapper!: ElementRef<HTMLDivElement>;
-  @ViewChildren('itemC') itemC!: QueryList<ElementRef>;
-  @ViewChild("scrollbar", { static: true }) scrollbar!: ElementRef;
-  @ViewChild("scrollbarContainer", { static: true })
-  scrollbarContainer!: ElementRef;
-  @ViewChild("wrapper", { static: true }) wrapper!: ElementRef;
+  // @ViewChildren('itemC') itemC!: QueryList<ElementRef>;
+  // @ViewChild("scrollbar", { static: true }) scrollbar!: ElementRef;
+  // @ViewChild("scrollbarContainer", { static: true })
+  // scrollbarContainer!: ElementRef;
+  // @ViewChild("wrapper", { static: true }) wrapper!: ElementRef;
 
-  maxScroll!: number;
-  containerLength!: number;
-  draggable2!: Draggable;
-  trigger!: any;
-  galleryAnim!: GSAPTween;
+  // maxScroll!: number;
+  // containerLength!: number;
+  // draggable2!: Draggable;
+  // trigger!: any;
+  // galleryAnim!: GSAPTween;
 
   // const loop = horizontalLoop(this.itemC, {paused: true, draggable: true});
 
   // boxes.forEach((box, i) => box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
-  
+
   // onSelect(itemC: HTMLDivElement) {
   //     this.itemC.nativeElement.childNodes.forEach((node: HTMLDivElement) => {
   //       if (node.classList && node.classList.contains('selected')) {
@@ -61,58 +61,58 @@ export class IndexComponent implements AfterViewInit, OnInit {
   //   }
 
   ngOnInit(): void {
-    this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
-      paused: true,
-      ease: "expo.inOut",
-      x: -300 + "px"
-    });
-    
+    // this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
+    //   paused: true,
+    //   ease: "expo.inOut",
+    //   x: -300 + "px"
+    // });
 
-    this.trigger = ScrollTrigger.create({
-      onRefresh: () => this.onResize(),
-      onUpdate: () => this.updateScrollbar()
-    });
 
-    this.draggable = new Draggable(this.scrollbar.nativeElement, {
-      type: "x",
-      bounds: this.scrollbarContainer.nativeElement,
-      onDrag: () => {
-        /*         gsap.to(".gallery", { x: -this.draggable.x });
-         */ this.trigger.scroll(
-          (this.draggable.x / this.containerLength) * this.maxScroll
-        );
-        this.updateGallery();
-        // when dragging, scroll the page to the corresponding ratio
-      }
-    });
+    // this.trigger = ScrollTrigger.create({
+    //   onRefresh: () => this.onResize(),
+    //   onUpdate: () => this.updateScrollbar()
+    // });
 
-    this.onResize();
+    // this.draggable = new Draggable(this.scrollbar.nativeElement, {
+    //   type: "x",
+    //   bounds: this.scrollbarContainer.nativeElement,
+    //   onDrag: () => {
+    //     /*         gsap.to(".gallery", { x: -this.draggable.x });
+    //      */ this.trigger.scroll(
+    //       (this.draggable.x / this.containerLength) * this.maxScroll
+    //     );
+    //     this.updateGallery();
+    //     // when dragging, scroll the page to the corresponding ratio
+    //   }
+    // });
+
+    // this.onResize();
   }
 
-  updateGallery() {
-    this.galleryAnim.progress(this.draggable.x / this.draggable.maxX);
-  }
+  // updateGallery() {
+  //   this.galleryAnim.progress(this.draggable.x / this.draggable.maxX);
+  // }
 
-  updateScrollbar() {
-    gsap.set(this.scrollbar.nativeElement, {
-      x: (this.containerLength * this.trigger.scroll()) / this.maxScroll
-    });
-    gsap.timeline({ repeat: 1 })
-    this.draggable.update();
-    this.updateGallery();
-  }
+  // updateScrollbar() {
+  //   gsap.set(this.scrollbar.nativeElement, {
+  //     x: (this.containerLength * this.trigger.scroll()) / this.maxScroll
+  //   });
+  //   gsap.timeline({ repeat: 1 })
+  //   this.draggable.update();
+  //   this.updateGallery();
+  // }
 
-  onResize() {
-    if (!this.trigger) return;
+  // onResize() {
+  //   if (!this.trigger) return;
 
-    this.updateScrollbar();
+  //   this.updateScrollbar();
 
-    this.maxScroll = ScrollTrigger.maxScroll(window as any);
-    this.containerLength =
-      this.scrollbarContainer.nativeElement.offsetWidth -
-      this.scrollbar.nativeElement.offsetWidth;
-    this.updateScrollbar();
-  }
+  //   this.maxScroll = ScrollTrigger.maxScroll(window as any);
+  //   this.containerLength =
+  //     this.scrollbarContainer.nativeElement.offsetWidth -
+  //     this.scrollbar.nativeElement.offsetWidth;
+  //   this.updateScrollbar();
+  // }
 
   baseTimeline = gsap.timeline({ paused: true });
 
@@ -125,36 +125,36 @@ export class IndexComponent implements AfterViewInit, OnInit {
   slider: any;
   scrubber: any;
   handle: any;
- 
+
   slideCount: any;
- 
+
   boxWidth: any;
   sliderWidth: any;
   targetX = 0;
   lastTarget = 0;
   draggable: any;
- 
+
   ratio: any;
   ratioX: any;
- 
+
   // setProgess() {
   //   var x = gsap.getProperty("#slider", "x");
- 
+
   //   this.targetX = Math.round((x as number) / this.boxWidth);
   //   this.targetX =
   //     this.targetX < -1 * (this.slideCount - 1) ? -1 * (this.slideCount - 1) : this.targetX;
- 
+
   //   gsap.set(this.scrubber, { x: -this.ratioX * this.ratio });
   //   this.lastTarget = this.targetX;
- 
+
   // }
 
- 
- 
+
+
   prevElement() {
     if (this.targetX < 0) {
       this.targetX++;
- 
+
       gsap.to(this.slider, {
         duration: 1,
         x: this.boxWidth * this.targetX,
@@ -162,11 +162,11 @@ export class IndexComponent implements AfterViewInit, OnInit {
       });
     }
   }
- 
+
   nextElement() {
     if (this.targetX > -1 * (this.slideCount - 1)) {
       this.targetX--;
- 
+
       gsap.to(this.slider, {
         duration: 1,
         x: this.boxWidth * this.targetX,
@@ -192,21 +192,22 @@ export class IndexComponent implements AfterViewInit, OnInit {
     //    "--width": 200,
     //    xPercent: 0
     //   },
-      
+
     //  )
   }
- 
+
   updateSlides() {
     //this.slider = document.querySelector('#slider');
     gsap.set(this.slider, { x: -this.ratioX / this.ratio });
   }
 
   colorWhite = true;
-  
+
   paso1 = true;
   paso2 = false;
   paso3 = false;
   formulario = false;
+  quote_variable=false;
 
   dataEmpresa: Empresas[] = [
     {name: 'Niubiz(Ex VisanetPerú)', description: 'Clients worldwide entrust Locomotive with the design, development and management of their websites.', image: 'assets/img/empresa/logoniubiz.png'},
@@ -272,7 +273,40 @@ export class IndexComponent implements AfterViewInit, OnInit {
   // public direction: any;
 
 
+
+  scrollFuntion(){
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 2000){
+      this.quote_variable = true;
+    }else {
+      this.quote_variable = false;
+    }
+  }
+
+
+
   ngAfterViewInit(): void {
+
+
+
+    var tl = gsap.timeline({});
+
+    tl.from(".quote",1.5,{duration: 0.8,
+      opacity: 0,
+      scale: 0,
+      y: 80,
+      rotationX: 180,
+      transformOrigin: "0% 50% -50",
+      ease: "back",
+      stagger: 0.01})
+
+    //
+    //
+    var tl = gsap.timeline({});
+
+    tl.from(".hidentext", 1.5, {y:"100%", ease:Power4.easeOut},0.15)
+
+
+
     // gsap.registerPlugin(ScrollTrigger);
     // horizontalLoop(this.container, {paused: true, draggable: true});
 
@@ -300,21 +334,21 @@ export class IndexComponent implements AfterViewInit, OnInit {
     this.slider = this.document.querySelector('#slider');
     // this.scrubber = this.document.querySelector('#scrubber');
     // this.handle = this.document.querySelector('#handle');
- 
+
     this.slideCount = this.document.getElementsByClassName('sliderItem').length;
- 
+
     this.boxWidth = this.container.offsetWidth;
     this.sliderWidth = this.boxWidth * this.slideCount;
- 
+
     console.log("slides");
     console.log(this.slider);
- 
+
     for(var i = 0; i < this.slides.length; i++){
       this.slides[i].style.width = this.boxWidth + "px";
     }
- 
+
     this.slider.style.width = this.sliderWidth;
- 
+
     Draggable.create(this.container, {
       type: "x",
       edgeResistance: 0.6,
@@ -347,12 +381,12 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   //   this.itemC.forEach((box, i) => {
   //     box.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
-  //   } 
-   
-  
+  //   }
+
+
   }
 
-  
+
 }
 
   // this.initScrollBar();
@@ -361,12 +395,12 @@ export class IndexComponent implements AfterViewInit, OnInit {
     //   gsap.to(boxItem.nativeElement, {y: 50, duration: 1, delay: 1});
     //   gsap.to(boxItem.nativeElement, {x: -100, duration: 1});
     // })
-    
+
 // gsap.to(this.box.nativeElement, {y: 50, duration: 1, delay: 1});      //wait 1 second
 // gsap.utils.toArray(this.box.nativeElement, {
 //   y: 50, duration: 1, delay: 1, x: 100
 
-// }); 
+// });
 
     // gsap.to(this.itemsTex.nativeElement, {
     //   scrollTrigger: {

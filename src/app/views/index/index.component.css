@@ -219,7 +219,7 @@ body {
   height: 10px;
   border: solid 1px #aaa;
   margin: 0 auto;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 #handle{
@@ -229,6 +229,14 @@ body {
   height: 100%;
   background: #5923a5;
 } */
+
+.hidentext{
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+
+}
+
 
 :host {
   overflow-x: hidden;

@@ -4,7 +4,8 @@
   <section #slideContent class="pt-28 px-4 h-full flex justify-center lg:block"
     style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 720px;">
     <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
-    <div class="flex items-center pt-[2rem] pb-[2.5rem] justify-between w-full" id="container">
+    <!-- <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block" #title>Primax</h1> -->
+    <div class="flex items-center pt-[1rem] pb-[2.5rem] justify-between w-full h-full" id="container">
       <div id="slider">
         <div>
           <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block" #title>Primax</h1>
@@ -25,7 +26,7 @@
           </div>
         </div>
         <div>
-          <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block" #title>Redebannn</h1>
+          <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block" #title>Redeban</h1>
           <div class="slide one sliderItem">
             <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
               <!-- #itemsTex -->
@@ -73,7 +74,7 @@
             </div>
             <div class="flex justify-center">
               <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-              <img class="absolute top-[320px] lg:top-[220px] w-[138px] lg:w-auto" src="assets/img/phone.png" alt="">
+              <!-- <img class="absolute top-[320px] lg:top-[220px] w-[138px] lg:w-auto" src="assets/img/phone.png" alt=""> -->
             </div>
             <div class="w-[30%]"></div>
           </div>
@@ -85,7 +86,7 @@
       <button id="prev" (click)="prevElement()"
         class="py-3 px-4 text-white border-b-[1px] border-white focus:border-b-[2px] w-[100px] text-left">01</button>
       <button id="next" (click)="nextElement()"
-        class="py-3 px-4 text-white border-b-[1px] border-white focus:border-b-[2px] w-[100px] text-right">04</button>
+        class="py-3 px-4 text-white border-b-[1px] border-white focus:border-b-[2px] w-[100px] text-right">02</button>
     </div>
   </section>
 
@@ -103,10 +104,10 @@
         <a class="text-[21px] lg:text-[36px] lexend text-white ml-5">Quienes somos</a>
       </div>
       <div class="lg:w-[65%] space-y-5 lg:space-y-8">
-        <h1 class="text-[18px] lg:text-[40px] 2xl:text-[49px] lexendzetta text-white">Creamos experiencias. Generando
+        <h1 class=" quote text-[18px] lg:text-[40px] 2xl:text-[49px] lexendzetta text-white" >Creamos experiencias. Generando
           impacto. <br>
           Para marcas ambiciosas.</h1>
-        <h4 class="text-[14.5px] lg:text-[21px] lexendli text-white lg:w-[85%]">Colaboramos en compañías ambiciosas para
+        <h4 class="hidentext text-[14.5px] lg:text-[21px] lexendli text-white lg:w-[85%]">Colaboramos en compañías ambiciosas para
           crear experiencias <br>
           digitales en millones de usuarios de todo el mundo.</h4>
       </div>
@@ -121,8 +122,8 @@
         <p class="text-[21px] lg:text-[36px] lexend text-white ml-5">Ver proyectos</p>
       </div>
     </div>
-    <div class="py-[7rem] flex space-x-4 relative overflow-hidden gallery" #wrapper>
-      <div class="lg:w-[32%] cursor-pointer relative thumbnail" style="flex-shrink: 0;" #itemC>
+    <div class="py-[7rem] flex space-x-4 relative overflow-hidden" #wrapper>
+      <div class="lg:w-[32%] cursor-pointer relative" style="flex-shrink: 0;" #itemC>
         <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
           <img src="assets/img/phone-right.png" alt="">
         </div>
@@ -137,7 +138,7 @@
           <img src="assets/img/short-arrow-right.png" alt="">
         </div>
       </div>
-      <div class="lg:w-[32%] cursor-pointer relative thumbnail" style="flex-shrink: 0;" #itemC>
+      <div class="lg:w-[32%] cursor-pointer relative" style="flex-shrink: 0;" #itemC>
         <div class="h-[500px] bg-[#454C59] flex items-center justify-center">
           <img class="w-[370px]" src="assets/img/proyects.png" alt="">
         </div>
@@ -152,7 +153,7 @@
           <img src="assets/img/short-arrow-right.png" alt="">
         </div>
       </div>
-      <div class="lg:w-[32%] cursor-pointer relative thumbnail" style="flex-shrink: 0;" #itemC>
+      <div class="lg:w-[32%] cursor-pointer relative" style="flex-shrink: 0;" #itemC>
         <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
           <img src="assets/img/proyect-laptop.png" alt="">
         </div>
@@ -167,7 +168,7 @@
           <img src="assets/img/short-arrow-right.png" alt="">
         </div>
       </div>
-      <div class="lg:w-[32%] cursor-pointer relative thumbnail" style="flex-shrink: 0;" #itemC>
+      <div class="lg:w-[32%] cursor-pointer relative" style="flex-shrink: 0;" #itemC>
         <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
           <img src="assets/img/proyect-laptop.png" alt="">
         </div>
@@ -182,9 +183,6 @@
           <img src="assets/img/short-arrow-right.png" alt="">
         </div>
       </div>
-    </div>
-    <div #scrollbarContainer class="scrollbarContainer">
-      <div #scrollbar class="scrollbar"></div>
     </div>
   </section>
 
