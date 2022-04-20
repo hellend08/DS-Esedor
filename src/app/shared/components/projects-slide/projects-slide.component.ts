@@ -1,0 +1,53 @@
+import { Component, AfterViewInit, ViewChild, ChangeDetectorRef, ViewChildren } from '@angular/core';
+import { NguCarousel, NguCarouselConfig } from '@ngu/carousel';
+
+@Component({
+  selector: 'app-projects-slide',
+  templateUrl: './projects-slide.component.html',
+  styleUrls: ['./projects-slide.component.css']
+})
+export class ProjectsSlideComponent implements AfterViewInit {
+
+  slideNo = 1;
+  withAnim = true;
+  resetAnim = true; 
+
+  @ViewChild('myCarousel') myCarousel!: NguCarousel<any>;
+
+  @ViewChildren('linkRef') linkRefs: any;
+
+  carouselConfig: NguCarouselConfig = {
+    grid: { xs: 2, sm: 2, md: 2, lg: 3, all: 0 },
+    load: 3,
+    slide: 1,
+    interval: {timing: 5000, initialDelay: 1000},
+    loop: false,
+    touch: true,
+    velocity: 0.2
+  }
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngAfterViewInit() {
+    this.cdr.detectChanges();0
+  }
+
+  reset() {
+    this.myCarousel.reset(!this.resetAnim);
+  }
+
+  moveTo(slide: any) {
+    this.myCarousel.moveTo(slide, !this.withAnim);
+  }
+
+  items = [
+    { title: 'Slide One', state: 'small' },
+    { title: 'Slide Two', state: 'small' },
+    { title: 'Slide Three', state: 'small' },
+    { title: 'Slide Three', state: 'small' },
+    { title: 'Slide Three', state: 'small' },
+    { title: 'Slide Three', state: 'small' },
+    { title: 'Slide Three', state: 'small' },
+  ];
+
+}

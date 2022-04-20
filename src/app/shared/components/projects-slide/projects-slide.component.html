@@ -1,0 +1,151 @@
+<!-- <div class="py-[7rem] flex space-x-4 relative overflow-hidden" #wrapper>
+   
+            <div class="lg:w-[32%] cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+                <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
+                    <img src="assets/img/proyect-laptop.png" alt="">
+                </div>
+                <div class="flex flex-wrap items-start py-2 justify-between">
+                    <div class="w-[85%] space-y-3">
+                        <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Redeban</p>
+                        <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                            y
+                            estrategía - Definición
+                            de producto - Sistema de diseño - Experiencia de usuario </p>
+                    </div>
+                    <img src="assets/img/short-arrow-right.png" alt="">
+                </div>
+            </div>
+</div> -->
+<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth, fifth, sixth, seventh]">
+	<div *nguCarouselDef="let item;" class="item">
+		<div class="tile">
+			<ng-container *ngTemplateOutlet="item"></ng-container>
+		</div>
+	</div>
+	<ng-template #first>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img src="assets/img/phone-right.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Primax</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+            </div>
+        </div>
+	</ng-template>
+
+	<ng-template #second>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class="h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img class="w-[370px]" src="assets/img/proyects.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Niubiz</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+            </div>
+        </div>
+	</ng-template>
+
+	<ng-template #third>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img src="assets/img/proyect-laptop.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Redeban</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+            </div>
+        </div>
+	</ng-template>
+
+    <ng-template #fourth>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img src="assets/img/proyect-laptop.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">CML</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+            </div>
+        </div>
+	</ng-template>
+
+    <ng-template #fifth>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img src="assets/img/phone-right.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Caja Cusco</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+
+            </div>
+        </div>
+	</ng-template>
+
+    <ng-template #sixth>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class="h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img class="w-[370px]" src="assets/img/proyects.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Niubiz</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+            </div>
+        </div>
+	</ng-template>
+
+    <ng-template #seventh>
+        <div class="cursor-pointer relative" style="flex-shrink: 0;" #itemC>
+            <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
+                <img src="assets/img/proyect-laptop.png" alt="">
+            </div>
+            <div class="flex flex-wrap items-start py-2 justify-between">
+                <div class="w-[85%] space-y-3">
+                    <p class="text-[28px] lg:text-[34.5px] lexendzetta text-[#626973]">Redeban</p>
+                    <p class="text-[13px] lg:text-[14.5px] lexendzetta text-[#626973] tracking-[0.005em]">Investigación
+                        y
+                        estrategía - Definición
+                        de producto - Sistema de diseño - Experiencia de usuario </p>
+                </div>
+                <img src="assets/img/short-arrow-right.png" alt="">
+            </div>
+        </div>
+	</ng-template>
+</ngu-carousel>

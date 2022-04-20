@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { DragScrollModule } from "ngx-drag-scroll";
+import { MatListModule } from '@angular/material/list';
+import { NguCarouselModule } from '@ngu/carousel';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { NosotrosComponent } from './views/nosotros/nosotros.component';
 import { ContactComponent } from './views/contact/contact.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from "@angular/material/icon";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
+
 import { IndexComponent } from './views/index/index.component';
-import {DragScrollModule} from "ngx-drag-scroll";
-import {MatListModule} from '@angular/material/list';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { ProjectsDashboardComponent } from './views/projects-dashboard/projects-dashboard.component';
-import {MatSidenavModule} from "@angular/material/sidenav";
+import { MatSidenavModule } from "@angular/material/sidenav";
 import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { ProjectsSlideComponent } from './shared/components/projects-slide/projects-slide.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.co
     ToolbarComponent,
     ProjectsDashboardComponent,
     ToolbarComponent,
-    NotifaiVista1Component
+    NotifaiVista1Component,
+    FooterComponent,
+    ProjectsSlideComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,8 @@ import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.co
     MatInputModule,
     DragScrollModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
