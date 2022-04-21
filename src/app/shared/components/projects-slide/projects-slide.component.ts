@@ -8,6 +8,15 @@ import { NguCarousel, NguCarouselConfig } from '@ngu/carousel';
 })
 export class ProjectsSlideComponent implements AfterViewInit {
 
+  bgColor: boolean = true;
+  bgColorTwo: boolean = true;
+  bgColorThree: boolean = true;
+  bgColorFourth: boolean = true;
+  bgColorFifth: boolean = true;
+  bgColorSixth: boolean = true;
+  bgColorSeventh: boolean = true;
+
+
   slideNo = 1;
   withAnim = true;
   resetAnim = true; 
@@ -17,7 +26,7 @@ export class ProjectsSlideComponent implements AfterViewInit {
   @ViewChildren('linkRef') linkRefs: any;
 
   carouselConfig: NguCarouselConfig = {
-    grid: { xs: 2, sm: 2, md: 2, lg: 3, all: 0 },
+    grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
     load: 3,
     slide: 1,
     interval: {timing: 5000, initialDelay: 1000},
@@ -29,8 +38,17 @@ export class ProjectsSlideComponent implements AfterViewInit {
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
-    this.cdr.detectChanges();0
+    this.cdr.detectChanges();
+
   }
+
+  // probandoClor() {
+  //   this.bgColor = false
+  // }
+
+  // probandoClor2() {
+  //   this.bgColor = true
+  // }
 
   reset() {
     this.myCarousel.reset(!this.resetAnim);

@@ -2,7 +2,91 @@
     padding: 10px;
     box-sizing: border-box;
     padding-block: 2rem;
-  }
+}
+
+.bg-standar {
+    background: #454C59;
+    transition: all .4s ease-in;
+    /* transform: translateY(50%); */
+    /* opacity: 0; */
+    /* transition: opacity .6s cubic-bezier(.55,.055,.675,.19),transform .6s cubic-bezier(.55,.055,.675,.19); */
+}
+
+.arrow-rotate {
+  transform: rotate(-45deg);
+  transition: transform .6s cubic-bezier(.4,0,0,1);
+}
+
+.img-project {
+  transform: scale(.9);
+  transition: transform .6s cubic-bezier(.4,0,0,1);
+}
+
+.bg-color::before {
+  transition: all .3s linear;
+}
+
+.bg-two::before{
+  transition: all 1s ease;
+}
+
+.bg-three::before {
+  transition: all 1s ease;
+}
+
+.bg-color:hover{
+    background: #0166FF;
+    color: #FFFFFF;
+    transition: 0.5s linear 0.1s;
+}
+
+.bg-two:hover{
+  background: #E84545;
+  color: #FFFFFF;
+  transition: 0.5s linear 0.2s;
+  
+}
+
+.bg-three:hover{
+  background: #8B90F5;
+  color: #FFFFFF;
+  transition: 0.5s ease 0.1s;
+  /* transform: none; */
+  /* transition-delay: .1s;
+  transition-duration: .75s;
+  transition-timing-function: cubic-bezier(.215,.61,.355,1); */
+}
+
+.bg-fourth:hover{
+  background: #FFD4D4;
+  color: #FFFFFF;
+  transition: 0.5s linear 0.1s;
+}
+
+.bg-fifth:hover{
+  background: #2B2E4A;
+  color: #FFFFFF;
+  transition: 0.5s linear 0.1s;
+}
+
+.bg-sixth:hover{
+  background: #4F57EB;
+  color: #FFFFFF;
+  transition: 0.5s linear 0.1s;
+}
+
+.bg-seventh:hover{
+  background: #F2F2F2;
+  color: #FFFFFF;
+  transition: 0.5s linear 0.1s;
+}
+
+
+
+/* .bg-content {
+  background: red;
+} */
+
   
 /*   .tile {
     min-height: 200px;

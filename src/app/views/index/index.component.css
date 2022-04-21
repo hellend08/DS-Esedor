@@ -144,6 +144,7 @@ body {
 /* PROBANDO */
 #container {
   position: relative;
+  min-height: 500px;
   /* height: 50vh; */
   width: 100%;
   /* background-color: #111; */
