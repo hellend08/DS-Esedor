@@ -16,18 +16,22 @@
                 </div>
             </div>
 </div> -->
-<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth, fifth, sixth, seventh]">
-	<div *nguCarouselDef="let item;" class="item">
-		<div class="tile">
-			<ng-container *ngTemplateOutlet="item"></ng-container>
-		</div>
-	</div>
-	<ng-template #first>
-        <div class="cursor-pointer relative bg-color" style="flex-shrink: 0;" #itemC (mouseover)="bgColor = false" (mouseout)="bgColor = true">
-            <div class="h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColor }">
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/phone-right.png" alt="" [ngClass]="{ 'img-project' : !bgColor }">
+<ngu-carousel #myCarousel [inputs]="carouselConfig"
+    [dataSource]="[first, second, third, fourth, fifth, sixth, seventh]">
+    <div *nguCarouselDef="let item;" class="item py-4">
+        <div class="tile">
+            <ng-container *ngTemplateOutlet="item"></ng-container>
+        </div>
+    </div>
+    <ng-template #first>
+        <div class="cursor-pointer relative" (mouseover)="bgColor = false" (mouseout)="bgColor = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]" [ngClass]="{ 'bg-color' : !bgColor }">
+                <div class="h-[455px] absolute top-0 flex justify-center items-center">
+                    <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/phone-right.png"
+                        alt="" [ngClass]="{ 'img-project' : !bgColor }">
+                </div>
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">Primax</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -35,17 +39,19 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }">
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 
-	<ng-template #second>
-        <div class="cursor-pointer relative bg-two" style="flex-shrink: 0;" #itemC (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true">
-            <div class="h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColorTwo }">
-                <img class="w-[370px] translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorTwo }">
+    <ng-template #second>
+        <div class="cursor-pointer relative" (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]" [ngClass]="{ 'bg-two' : !bgColorTwo }">
+                <img class="w-[350px] translate-x-0 transition duration-700 ease-in-out absolute top-[10px]"
+                    src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorTwo }">
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">Niubiz</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -53,17 +59,22 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColorTwo }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColorTwo }">
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 
-	<ng-template #third>
-        <div class="cursor-pointer relative bg-three" style="flex-shrink: 0;" #itemC (mouseover)="bgColorThree = false" (mouseout)="bgColorThree = true">
-            <div class=" h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColorThree }">
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png" alt="" [ngClass]="{ 'img-project' : !bgColorThree }">
+    <ng-template #third>
+        <div class="cursor-pointer relative" (mouseover)="bgColorThree = false" (mouseout)="bgColorThree = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]"
+                [ngClass]="{ 'bg-three' : !bgColorThree }">
+                <div class="h-[455px] absolute top-0 flex justify-center items-center">
+                    <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png"
+                        alt="" [ngClass]="{ 'img-project' : !bgColorThree }">
+                </div>
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">Redeban</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -71,17 +82,22 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColorThree }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColorThree }">
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 
     <ng-template #fourth>
-        <div class="cursor-pointer relative bg-fourth" style="flex-shrink: 0;" #itemC (mouseover)="bgColorFourth = false" (mouseout)="bgColorFourth = true">
-            <div class=" h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColorFourth }">
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png" alt="" [ngClass]="{ 'img-project' : !bgColorFourth }">
+        <div class="cursor-pointer relative" (mouseover)="bgColorFourth = false" (mouseout)="bgColorFourth = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]"
+                [ngClass]="{ 'bg-fourth' : !bgColorFourth }">
+                <div class="h-[455px] absolute top-0 flex justify-center items-center">
+                    <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png"
+                        alt="" [ngClass]="{ 'img-project' : !bgColorFourth }">
+                </div>
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">CML</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -89,17 +105,22 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColorFourth }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColorFourth }">
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 
     <ng-template #fifth>
-        <div class="cursor-pointer relative bg-fifth" style="flex-shrink: 0;" #itemC (mouseover)="bgColorFifth = false" (mouseout)="bgColorFifth = true">
-            <div class=" h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColorFifth }">
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/phone-right.png" alt="" [ngClass]="{ 'img-project' : !bgColorFifth }">
+        <div class="cursor-pointer relative" (mouseover)="bgColorFifth = false" (mouseout)="bgColorFifth = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]"
+                [ngClass]="{ 'bg-fifth' : !bgColorFifth }">
+                <div class="h-[455px] absolute top-0 flex justify-center items-center">
+                    <img class="translate-x-0 transition duration-700 ease-in-out"
+                        src="assets/img/phone-right.png" alt="" [ngClass]="{ 'img-project' : !bgColorFifth }">
+                </div>
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">Caja Cusco</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -107,18 +128,21 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColorFifth }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColorFifth }">
 
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 
     <ng-template #sixth>
-        <div class="cursor-pointer relative bg-sixth" style="flex-shrink: 0;" #itemC (mouseover)="bgColorSixth = false" (mouseout)="bgColorSixth = true">
-            <div class="h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColorSixth }">
-                <img class="w-[370px] translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorSixth }">
+        <div class="cursor-pointer relative" (mouseover)="bgColorSixth = false" (mouseout)="bgColorSixth = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]"
+                [ngClass]="{ 'bg-sixth' : !bgColorSixth }">
+                <img class="w-[350px] translate-x-0 transition duration-700 ease-in-out absolute top-[10px]"
+                    src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorSixth }">
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">Niubiz</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -126,17 +150,22 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColorSixth }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColorSixth }">
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 
     <ng-template #seventh>
-        <div class="cursor-pointer relative bg-seventh" style="flex-shrink: 0;" #itemC (mouseover)="bgColorSeventh = false" (mouseout)="bgColorSeventh = true">
-            <div class=" h-[500px] flex items-center justify-center" [ngClass]="{ 'bg-standar' : bgColorSeventh }">
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png" alt="" [ngClass]="{ 'img-project' : !bgColorSeventh }">
+        <div class="cursor-pointer relative" (mouseover)="bgColorSeventh = false" (mouseout)="bgColorSeventh = true">
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59]"
+                [ngClass]="{ 'bg-seventh' : !bgColorSeventh }">
+                <div class="h-[455px] absolute top-0 flex justify-center items-center">
+                    <img class="translate-x-0 transition duration-700 ease-in-out"
+                        src="assets/img/proyect-laptop.png" alt="" [ngClass]="{ 'img-project' : !bgColorSeventh }">
+                </div>
             </div>
-            <div class="flex flex-wrap items-start p-2 justify-between">
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[31rem]">
                 <div class="w-[85%] space-y-3">
                     <p class="text-[28px] lg:text-[34.5px] lexendzetta text-white">Redeban</p>
                     <p class="text-[13px] lg:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
@@ -144,8 +173,9 @@
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
                 </div>
-                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : !bgColorSeventh }">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+                    alt="" [ngClass]="{ 'arrow-rotate' : !bgColorSeventh }">
             </div>
         </div>
-	</ng-template>
+    </ng-template>
 </ngu-carousel>

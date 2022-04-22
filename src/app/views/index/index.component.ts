@@ -5,10 +5,13 @@ import { Draggable } from 'gsap/Draggable';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
+// import { SplitText } from "gsap/SplitText";
+
 // import { Question } from './models/Question';
 // import { questionsList } from './helpers/questionsList';
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
+// gsap.registerPlugin(SplitText);
 
 export interface Empresas {
   name: string;
@@ -34,11 +37,15 @@ export class IndexComponent implements AfterViewInit, OnInit {
   @ViewChild('arrow', { static: true }) arrow!: ElementRef<HTMLDivElement>;
   @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
 
+// document.getElementById("animate").onclick = function () {
+//   tl.restart();
+// };
+
   // @ViewChild('wrapper', {static: true}) wrapper!: ElementRef<HTMLDivElement>;
   // @ViewChildren('itemC') itemC!: QueryList<ElementRef>;
   // @ViewChild("scrollbar", { static: true }) scrollbar!: ElementRef;
   // @ViewChild("scrollbarContainer", { static: true })
-  // scrollbarContainer!: ElementRef;
+  // scrollbarContainer!: ElementRef; 
   // @ViewChild("wrapper", { static: true }) wrapper!: ElementRef;
 
   // maxScroll!: number;
@@ -60,7 +67,29 @@ export class IndexComponent implements AfterViewInit, OnInit {
   //     itemC.classList.add('selected');
   //   }
 
+ 
+
   ngOnInit(): void {
+
+//   let texto = gsap.timeline(), 
+//   mySplitText = new SplitText(this.textoDinamico.nativeElement, { type: "words,chars" }),
+//   chars = mySplitText.chars; 
+
+//   gsap.set(this.textoDinamico.nativeElement, { perspective: 400 });
+
+// // console.log(chars);
+
+//   texto.from(chars, {
+//     duration: 0.8,
+//     opacity: 0,
+//     scale: 0,
+//     y: 80,
+//     rotationX: 180,
+//     transformOrigin: "0% 50% -50",
+//     ease: "back",
+//     stagger: 0.01
+//   });
+
     // this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
     //   paused: true,
     //   ease: "expo.inOut",

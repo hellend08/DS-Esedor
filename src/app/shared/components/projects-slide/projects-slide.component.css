@@ -2,15 +2,20 @@
     padding: 10px;
     box-sizing: border-box;
     padding-block: 2rem;
+    height: 700px;
 }
 
-.bg-standar {
-    background: #454C59;
+.bg-color {
+    background: #0166FF;
     transition: all .4s ease-in;
-    /* transform: translateY(50%); */
-    /* opacity: 0; */
-    /* transition: opacity .6s cubic-bezier(.55,.055,.675,.19),transform .6s cubic-bezier(.55,.055,.675,.19); */
+    height: 700px;
 }
+
+/* .bg-standar:hover {
+  background: #0166FF;
+  transition: all .4s ease-in;
+ 
+} */
 
 .arrow-rotate {
   transform: rotate(-45deg);
@@ -22,63 +27,59 @@
   transition: transform .6s cubic-bezier(.4,0,0,1);
 }
 
-.bg-color::before {
+/* .bg-color::before {
   transition: all .3s linear;
-}
+  transform-origin: top;
+} */
 
-.bg-two::before{
+/* .bg-two::before{
   transition: all 1s ease;
 }
 
 .bg-three::before {
   transition: all 1s ease;
-}
+} */
 
-.bg-color:hover{
+/* .bg-color:hover{
     background: #0166FF;
     color: #FFFFFF;
     transition: 0.5s linear 0.1s;
-}
+} */
 
-.bg-two:hover{
+.bg-two{
   background: #E84545;
-  color: #FFFFFF;
-  transition: 0.5s linear 0.2s;
-  
+  transition: all .4s ease-in;
+  height: 700px;
 }
 
-.bg-three:hover{
+.bg-three{
   background: #8B90F5;
-  color: #FFFFFF;
-  transition: 0.5s ease 0.1s;
-  /* transform: none; */
-  /* transition-delay: .1s;
-  transition-duration: .75s;
-  transition-timing-function: cubic-bezier(.215,.61,.355,1); */
+  transition: all .4s ease-in;
+  height: 700px;
 }
 
-.bg-fourth:hover{
+.bg-fourth{
   background: #FFD4D4;
-  color: #FFFFFF;
-  transition: 0.5s linear 0.1s;
+  transition: all .4s ease-in;
+  height: 700px;
 }
 
-.bg-fifth:hover{
+.bg-fifth{
   background: #2B2E4A;
-  color: #FFFFFF;
-  transition: 0.5s linear 0.1s;
+  transition: all .4s ease-in;
+  height: 700px;
 }
 
-.bg-sixth:hover{
+.bg-sixth{
   background: #4F57EB;
-  color: #FFFFFF;
-  transition: 0.5s linear 0.1s;
+  transition: all .4s ease-in;
+  height: 700px;
 }
 
-.bg-seventh:hover{
+.bg-seventh{
   background: #F2F2F2;
-  color: #FFFFFF;
-  transition: 0.5s linear 0.1s;
+  transition: all .4s ease-in;
+  height: 700px;
 }
 
 
@@ -98,3 +99,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
   }
    */
+/*   
+  .menu[data-animation="center"] a::before {
+    transform-origin: center;
+  } */
