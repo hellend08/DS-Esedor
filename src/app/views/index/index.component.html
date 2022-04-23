@@ -5,91 +5,13 @@
     style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 720px;">
     <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
     <!-- <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block" #title>Primax</h1> -->
-    <div class="flex items-start py-[1rem] justify-between w-full h-full" id="container">
-      <!-- pb-[2.5rem] -->
-      <div id="slider">
-        <div>
-          <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-8 hidden lg:block" #title>Primax</h1>
-          <div class="slide one sliderItem">
-            <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-              <!-- #itemsTex -->
-              <p>2021</p>
-              <p>Marketplace</p>
-              <p>Experiencia de usuario</p>
-              <p>Sisema de diseño</p>
-              <p>Definición de producto</p>
-            </div>
-            <div class="flex justify-center">
-              <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-              <img class="absolute top-[-10px] w-[138px] lg:w-[180px] 2xl:w-[200px]" src="assets/img/phone.png" alt="">
-              <!-- top-[320px] lg:top-[220px] -->
-            </div>
-            <div class="w-[30%]"></div>
-          </div>
-        </div>
-        <div>
-          <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-8 hidden lg:block" #title>Redeban</h1>
-          <div class="slide one sliderItem">
-            <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-              <!-- #itemsTex -->
-              <p>2021</p>
-              <p>Marketplace</p>
-              <p>Experiencia de usuario</p>
-              <p>Sisema de diseño</p>
-              <p>Definición de producto</p>
-            </div>
-            <div class="flex justify-center">
-              <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-              <img class="absolute top-[-10px] w-[138px] lg:w-[180px] 2xl:w-[200px]" src="assets/img/phone.png" alt="">
-            </div>
-            <div class="w-[30%]"></div>
-          </div>
-        </div>
-        <div>
-          <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-8 hidden lg:block" #title>Niubiz</h1>
-          <div class="slide one sliderItem">
-            <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-              <!-- #itemsTex -->
-              <p>2021</p>
-              <p>Marketplace</p>
-              <p>Experiencia de usuario</p>
-              <p>Sisema de diseño</p>
-              <p>Definición de producto</p>
-            </div>
-            <div class="flex justify-center">
-              <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-              <img class="absolute top-[-10px] w-[138px] lg:w-[180px] 2xl:w-[200px]" src="assets/img/phone.png" alt="">
-            </div>
-            <div class="w-[30%]"></div>
-          </div>
-        </div>
-        <div>
-          <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-8 hidden lg:block" #title>CML</h1>
-          <div class="slide one sliderItem">
-            <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-              <!-- #itemsTex -->
-              <p>2021</p>
-              <p>Marketplace</p>
-              <p>Experiencia de usuario</p>
-              <p>Sisema de diseño</p>
-              <p>Definición de producto</p>
-            </div>
-            <div class="flex justify-center">
-              <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-              <img class="absolute top-[-10px] w-[138px] lg:w-[180px] 2xl:w-[200px]" src="assets/img/phone.png" alt="">
-            </div>
-            <div class="w-[30%]"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="w-full hidden lg:flex justify-center pb-[4rem]">
+    <app-main-slider></app-main-slider>
+    <!-- <div class="w-full hidden lg:flex justify-center pb-[4rem]">
       <button id="prev" (click)="prevElement()"
         class="py-3 px-4 text-white border-b-[1px] border-white focus:border-b-[2px] w-[100px] text-left">01</button>
       <button id="next" (click)="nextElement()"
         class="py-3 px-4 text-white border-b-[1px] border-white focus:border-b-[2px] w-[100px] text-right">02</button>
-    </div>
+    </div> -->
   </section>
 
   <section class="bg-[#EE6F57] h-[800px] flex justify-center items-center">
@@ -99,7 +21,7 @@
   <div class="box grey">bye</div> -->
   </section>
 
-  <section class="bg-[#141C26] pt-[9rem] lg:pt-[5rem] px-4">
+  <section class="bg-[#141C26] pt-[9rem] lg:pt-[20rem] px-4">
     <div class="border-b-[1px] border-white pb-2 flex flex-col-reverse md:flex-row lg:items-end justify-between">
       <div class="flex items-center pt-12 lg:pt-0" (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()">
         <img #arrow class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
@@ -149,7 +71,7 @@
   </section>
 
   <section
-    class="bg-[#000000] h-[700px] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4">
+    class="bg-[#000000] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-4">
     <div class="inline-block">
       <p class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
     </div>

@@ -5,13 +5,11 @@ import { Draggable } from 'gsap/Draggable';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
-// import { SplitText } from "gsap/SplitText";
 
 // import { Question } from './models/Question';
 // import { questionsList } from './helpers/questionsList';
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
-// gsap.registerPlugin(SplitText);
 
 export interface Empresas {
   name: string;
@@ -36,6 +34,10 @@ export class IndexComponent implements AfterViewInit, OnInit {
   // @ViewChildren('box') box!: QueryList<ElementRef>;
   @ViewChild('arrow', { static: true }) arrow!: ElementRef<HTMLDivElement>;
   @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
+
+  @ViewChild('textoDinamico', {static: true}) textoDinamico!: ElementRef<HTMLDivElement>;
+
+
 
 // document.getElementById("animate").onclick = function () {
 //   tl.restart();
@@ -67,28 +69,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
   //     itemC.classList.add('selected');
   //   }
 
- 
-
   ngOnInit(): void {
-
-//   let texto = gsap.timeline(), 
-//   mySplitText = new SplitText(this.textoDinamico.nativeElement, { type: "words,chars" }),
-//   chars = mySplitText.chars; 
-
-//   gsap.set(this.textoDinamico.nativeElement, { perspective: 400 });
-
-// // console.log(chars);
-
-//   texto.from(chars, {
-//     duration: 0.8,
-//     opacity: 0,
-//     scale: 0,
-//     y: 80,
-//     rotationX: 180,
-//     transformOrigin: "0% 50% -50",
-//     ease: "back",
-//     stagger: 0.01
-//   });
 
     // this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
     //   paused: true,
@@ -150,15 +131,15 @@ export class IndexComponent implements AfterViewInit, OnInit {
     .add(this.baseTimeline.tweenFromTo(1, 2, { immediateRender: true }));
 
   slides: any;
-  container: any;
-  slider: any;
+  // container: any;
+  // slider: any;
   scrubber: any;
   handle: any;
 
   slideCount: any;
 
   boxWidth: any;
-  sliderWidth: any;
+  // sliderWidth: any;
   targetX = 0;
   lastTarget = 0;
   draggable: any;
@@ -180,28 +161,28 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
 
 
-  prevElement() {
-    if (this.targetX < 0) {
-      this.targetX++;
+  // prevElement() {
+  //   if (this.targetX < 0) {
+  //     this.targetX++;
 
-      gsap.to(this.slider, {
-        duration: 1,
-        x: this.boxWidth * this.targetX,
-        // onUpdate: this.setProgess
-      });
-    }
-  }
+  //     gsap.to(this.slider, {
+  //       duration: 1,
+  //       x: this.boxWidth * this.targetX,
+  //       // onUpdate: this.setProgess
+  //     });
+  //   }
+  // }
 
-  nextElement() {
-    if (this.targetX > -1 * (this.slideCount - 1)) {
-      this.targetX--;
+  // nextElement() {
+  //   if (this.targetX > -1 * (this.slideCount - 1)) {
+  //     this.targetX--;
 
-      gsap.to(this.slider, {
-        duration: 1,
-        x: this.boxWidth * this.targetX,
-        // onUpdate: this.setProgess
-      });
-    }
+  //     gsap.to(this.slider, {
+  //       duration: 1,
+  //       x: this.boxWidth * this.targetX,
+  //       // onUpdate: this.setProgess
+  //     });
+  //   }
 
     // gsap.to(
     //   this.title.nativeElement,
@@ -223,12 +204,12 @@ export class IndexComponent implements AfterViewInit, OnInit {
     //   },
 
     //  )
-  }
+  // }
 
-  updateSlides() {
-    //this.slider = document.querySelector('#slider');
-    gsap.set(this.slider, { x: -this.ratioX / this.ratio });
-  }
+  // updateSlides() {
+  //   //this.slider = document.querySelector('#slider');
+  //   gsap.set(this.slider, { x: -this.ratioX / this.ratio });
+  // }
 
   colorWhite = true;
 
@@ -276,9 +257,9 @@ export class IndexComponent implements AfterViewInit, OnInit {
     this.router.navigateByUrl('/proyectos');
   }
 
-  scrollFn(anchor: string): void{
-    this._vps.scrollToAnchor(anchor)
-  }
+  // scrollFn(anchor: string): void{
+  //   this._vps.scrollToAnchor(anchor)
+  // }
 
   hoverArrow() {
     gsap.to(this.arrow.nativeElement, {rotation: -15, duration: 1});
@@ -315,8 +296,6 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit(): void {
 
-
-
     var tl = gsap.timeline({});
 
     tl.from(".quote",1.5,{duration: 0.8,
@@ -328,13 +307,9 @@ export class IndexComponent implements AfterViewInit, OnInit {
       ease: "back",
       stagger: 0.01})
 
-    //
-    //
     var tl = gsap.timeline({});
 
     tl.from(".hidentext", 1.5, {y:"100%", ease:Power4.easeOut},0.15)
-
-
 
     // gsap.registerPlugin(ScrollTrigger);
     // horizontalLoop(this.container, {paused: true, draggable: true});
@@ -358,32 +333,32 @@ export class IndexComponent implements AfterViewInit, OnInit {
       stagger: 0.15,
     });
 
-    this.slides = this.document.querySelectorAll('.sliderItem');
-    this.container = this.document.querySelector('#container');
-    this.slider = this.document.querySelector('#slider');
+    // this.slides = this.document.querySelectorAll('.sliderItem');
+    // this.container = this.document.querySelector('#container');
+    // this.slider = this.document.querySelector('#slider');
     // this.scrubber = this.document.querySelector('#scrubber');
     // this.handle = this.document.querySelector('#handle');
 
-    this.slideCount = this.document.getElementsByClassName('sliderItem').length;
+    // this.slideCount = this.document.getElementsByClassName('sliderItem').length;
 
-    this.boxWidth = this.container.offsetWidth;
-    this.sliderWidth = this.boxWidth * this.slideCount;
+    // this.boxWidth = this.container.offsetWidth;
+    // this.sliderWidth = this.boxWidth * this.slideCount;
 
-    console.log("slides");
-    console.log(this.slider);
+    // console.log("slides");
+    // console.log(this.slider);
 
-    for(var i = 0; i < this.slides.length; i++){
-      this.slides[i].style.width = this.boxWidth + "px";
-    }
+    // for(var i = 0; i < this.slides.length; i++){
+    //   this.slides[i].style.width = this.boxWidth + "px";
+    // }
 
-    this.slider.style.width = this.sliderWidth;
+    // this.slider.style.width = this.sliderWidth;
 
-    Draggable.create(this.container, {
-      type: "x",
-      edgeResistance: 0.6,
-      bounds: { minX: 0, maxX: 5 },
-      throwProps: true,
-      trigger: this.container.nativeElement,
+    // Draggable.create(this.container, {
+    //   type: "x",
+    //   edgeResistance: 0.6,
+    //   bounds: { minX: 0, maxX: 5 },
+    //   throwProps: true,
+    //   trigger: this.container.nativeElement,
       // onDrag: this.setProgess,
       // onThrowUpdate: this.setProgess,
 
@@ -404,7 +379,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
       // onThrowComplete() {
       //   console.log('onThrowComplete');
       // },
-    });
+    // });
 
   //  let loop= horizontalLoop(this.itemC, {paused: true, draggable: true});
 

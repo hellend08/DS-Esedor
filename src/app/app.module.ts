@@ -23,6 +23,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProjectsSlideComponent } from './shared/components/projects-slide/projects-slide.component';
+import { MainSliderComponent } from './shared/components/main-slider/main-slider.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProjectsSlideComponent } from './shared/components/projects-slide/proje
     ToolbarComponent,
     NotifaiVista1Component,
     FooterComponent,
-    ProjectsSlideComponent
+    ProjectsSlideComponent,
+    MainSliderComponent
   ],
   imports: [
     BrowserModule,
