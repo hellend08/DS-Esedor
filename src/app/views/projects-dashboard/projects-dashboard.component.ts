@@ -1,5 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+// import AOS from 'aos';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-projects-dashboard',
@@ -60,6 +62,7 @@ export class ProjectsDashboardComponent implements OnInit {
   starproject_4 = false;
 
   ngOnInit(): void {
+    AOS.init()
   }
 
 }
