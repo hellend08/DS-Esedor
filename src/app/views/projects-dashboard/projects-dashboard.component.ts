@@ -8,13 +8,23 @@ import {Router} from "@angular/router";
 })
 export class ProjectsDashboardComponent implements OnInit {
 
+  colorWhite = false;
+
+  bgColor: boolean = true;
+  bgColorTwo: boolean = true;
+  bgColorThree: boolean = true;
+  bgColorFourth: boolean = true;
+  bgColorFifth: boolean = true;
+  bgColorSixth: boolean = true;
+  bgColorSeventh: boolean = true;
+
   empresas = [
-    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/project/project01.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax'},
-    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos/primax'},
-    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project03.png', alt: 'Niubiz', tipo: 'ecomerce', ruta: '/proyectos/primax'},
-    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecomerce', ruta: '/proyectos/primax'},
-    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecomerce', ruta: '/proyectos/primax'},
-    {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos/primax'}
+    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/project/project01.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax', background: 'bgColor'},
+    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos/primax', background: 'bgColorTwo'},
+    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project03.png', alt: 'Niubiz', tipo: 'ecomerce', ruta: '/proyectos/primax', background: 'bgColorThree'},
+    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecomerce', ruta: '/proyectos/primax', background: 'bgColorFourth'},
+    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecomerce', ruta: '/proyectos/primax', background: 'bgColorFifth'},
+    {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos/primax', background: 'bgColorSixth'}
   ]
 
   filtrado = this.empresas;

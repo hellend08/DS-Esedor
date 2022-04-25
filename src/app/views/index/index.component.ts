@@ -37,6 +37,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   @ViewChild('textoDinamico', {static: true}) textoDinamico!: ElementRef<HTMLDivElement>;
 
+  probar!: boolean;
 
 
 // document.getElementById("animate").onclick = function () {

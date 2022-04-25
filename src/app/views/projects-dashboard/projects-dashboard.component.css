@@ -38,3 +38,56 @@ textarea:focus, input:focus {
   -o-transition: all .2s;
   transition: all .2s;
 }
+
+.bg-color {
+  background: #0166FF;
+  transition: all .4s ease-in;
+  height: 650px;
+}
+
+.text-color {
+  color: white;
+  transition: all .4s ease-in;
+}
+
+.img-project {
+transform: scale(.9);
+transition: transform .6s cubic-bezier(.4,0,0,1);
+}
+
+.bg-two{
+background: #E84545;
+transition: all .4s ease-in;
+height: 650px;
+}
+
+.bg-three{
+background: #8B90F5;
+transition: all .4s ease-in;
+height: 650px;
+}
+
+.bg-fourth{
+background: #FFD4D4;
+transition: all .4s ease-in;
+height: 650px;
+}
+
+.bg-fifth{
+background: #2B2E4A;
+transition: all .4s ease-in;
+height: 650px;
+}
+
+.bg-sixth{
+background: #4F57EB;
+transition: all .4s ease-in;
+height: 650px;
+}
+
+.bg-seventh{
+background: #F2F2F2;
+transition: all .4s ease-in;
+height: 650px;
+}
+

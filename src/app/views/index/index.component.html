@@ -4,8 +4,9 @@
   <section #slideContent class="pt-28 px-4 h-full flex justify-center lg:block"
     style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 720px;">
     <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
-    <!-- <h1 class="text-center text-[49px] lexendzetta text-[#D8D8D8] mb-4 hidden lg:block" #title>Primax</h1> -->
-    <app-main-slider></app-main-slider>
+    <div>
+      <app-main-slider></app-main-slider>
+    </div>
     <!-- <div class="w-full hidden lg:flex justify-center pb-[4rem]">
       <button id="prev" (click)="prevElement()"
         class="py-3 px-4 text-white border-b-[1px] border-white focus:border-b-[2px] w-[100px] text-left">01</button>
@@ -61,17 +62,27 @@
       </div>
     </div>
     <div class="h-[400px] flex flex-wrap justify-between items-center">
-      <img src="assets/img/logo_empresa/niubiz.png" alt="">
+      <div class="contenedor" (mouseover)="probar = true" (mouseout)="probar = false">
+        <img src="assets/img/logo_empresa/niubiz.png" alt="" [ngClass]="{'bottom' : probar}">
+        <img src="assets/img/logo_empresa/caja-cusco.png" alt="" [ngClass]="{'top' : !probar}">
+      </div>
+     
       <img src="assets/img/logo_empresa/primax.png" alt="">
       <img src="assets/img/logo_empresa/redeban.png" alt="">
       <img src="assets/img/logo_empresa/ripley.png" alt="">
       <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
 
     </div>
+<!-- 
+    <div class="contenedor">
+      <img src="http://programandoointentandolo.com/ejemplos/imagenes/cubo/img1.png" />
+      <img class="top" src="http://programandoointentandolo.com/ejemplos/imagenes/cubo/img6.png" />
+  </div> -->
   </section>
 
   <section
     class="bg-[#000000] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-4">
+    <!-- id="parallax" -->
     <div class="inline-block">
       <p class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
     </div>

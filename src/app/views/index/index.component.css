@@ -76,8 +76,6 @@ li a{
   left: 3vw;
 }
 
-
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
   background-color: #e9e3e3a6;
@@ -181,6 +179,13 @@ body {
   background-position: center center; */
 }
 
+#parallax{
+  width: 100%;
+  height: 110vh;
+  padding:7rem 0;
+  background:url('https://firma.esedor.com/portafolio1.jpeg') center center / cover no-repeat fixed;
+}
+
 /* #progress {
   display: block;
   position: relative;
@@ -189,8 +194,6 @@ body {
   background-color: #fff;
   margin: 0 auto;
 }
-
-
 
 .controls{
   display: flex;
@@ -238,51 +241,44 @@ body {
 
 }
 
-
 :host {
   overflow-x: hidden;
 }
 
-.scrollbar {
-  /* position: fixed; */
-  z-index: 999999;
-  bottom: 10px;
-  left: 14px;
-  background-color: red;
-  width: 150px;
-  height: 15px;
-  border-radius: 25px;
-  cursor: grab;
-}
-
-.gallery {
+.contenedor {
+  /* position: relative; */
+  /* height: 290px; */
+  width: 200px;
   display: flex;
-  place-items: center;
-  /* position: fixed; */
-  /* width: 500vw; */
-  gap: 15px;
-  left: 15px;
-  top: 15px;
+  justify-content: center;
+  align-items: center;
+  /* margin: 50px 20px; */
+  /* float: left; */
 }
 
-.thumbnail {
-  /* width: 95vw;
-  height: 90vh; */
-  /* background-color: hsl(49, 100%, 37%); */
-  /* color: white; */
-  display: grid;
-  place-items: center;
-  cursor: grab;
-  font-size: 15rem;
+.contenedor img {
+  position: absolute;
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+
+
+  /* left: 0; */
+  transition: opacity 1.5s ease-in-out;
 }
 
-.scrollbarContainer {
-  background: black;
-  /* position: fixed; */
-  /* z-index: 9999999999; */
-  bottom: 15px;
-  left: 15px;
-  right: 0;
-  /* width: 75vw; */
-  /*   top: 0; */
+.top {
+  opacity: 0;
 }
+
+.bottom {
+  opacity: 0;
+}
+
+/* .contenedor img.bottom:hover {
+  opacity: 0;
+}  */
+
+/* .contenedor img.top:hover {
+  opacity: 1;
+} */
