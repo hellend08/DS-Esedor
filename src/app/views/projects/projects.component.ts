@@ -14,6 +14,9 @@ export class ProjectsComponent implements OnInit {
   paso3 = false;
   formulario = false;
 
+  bgHover!: boolean;
+  bgHoverTwo!: boolean;
+
   colorWhite = false;
 
   constructor() { }
