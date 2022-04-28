@@ -83,6 +83,17 @@ textarea:focus, input:focus {
   text-indent: 0rem;
 }
 
+.bg-hover, .bg-hover2 {
+  height: 200px;
+  background: #0166FF;
+  transition: all .4s ease-in;
+}
+
+.probando:hover {
+  height: 200px;
+  background: #0166FF;
+}
+
 @media screen and (min-width: 1024px) {
   .indent {
     text-indent: 15rem;
