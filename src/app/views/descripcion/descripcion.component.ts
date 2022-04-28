@@ -9,6 +9,7 @@ import * as AOS from 'aos';
 })
 export class DescripcionComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
