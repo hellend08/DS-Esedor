@@ -6,6 +6,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
 
+import * as AOS from 'aos';
+
 // import { Question } from './models/Question';
 // import { questionsList } from './helpers/questionsList';
 
@@ -48,7 +50,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
   // @ViewChildren('itemC') itemC!: QueryList<ElementRef>;
   // @ViewChild("scrollbar", { static: true }) scrollbar!: ElementRef;
   // @ViewChild("scrollbarContainer", { static: true })
-  // scrollbarContainer!: ElementRef; 
+  // scrollbarContainer!: ElementRef;
   // @ViewChild("wrapper", { static: true }) wrapper!: ElementRef;
 
   // maxScroll!: number;
@@ -71,6 +73,8 @@ export class IndexComponent implements AfterViewInit, OnInit {
   //   }
 
   ngOnInit(): void {
+
+    AOS.init()
 
     // this.galleryAnim = gsap.to(this.wrapper.nativeElement, {
     //   paused: true,
