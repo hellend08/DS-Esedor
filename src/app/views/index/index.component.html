@@ -1,6 +1,5 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
 <div>
-  <!-- FIN DE PRUEBA -->
   <section #slideContent class="pt-28 px-4 lg:h-screen flex justify-center lg:block"
     style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 720px;">
     <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
@@ -15,8 +14,8 @@
     </div> -->
   </section>
 
-  <section class="bg-[#EE6F57] h-screen flex justify-center items-center">
-    <mat-icon class="text-white text-[84px]">play_circle</mat-icon>
+  <section class="bg-[#EE6F57] h-screen flex justify-center items-center icon-video">
+    <mat-icon class="text-white text-[84px] w-[84px] h-[84px]">play_circle</mat-icon>
     <!-- <div class="box green" #box> hola</div>
   <div class="box orange">que</div>
   <div class="box grey">bye</div> -->
@@ -24,7 +23,8 @@
 
   <section class="bg-[#141C26] pt-[9rem] lg:pt-[20rem] px-4">
     <div class="border-b-[1px] border-white pb-2 flex flex-col-reverse md:flex-row lg:items-end justify-between">
-      <div class="flex items-center pt-12 lg:pt-0" (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()">
+      <div class="flex items-center pt-12 lg:pt-0">
+        <!-- (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()" -->
         <img #arrow class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
         <a class="text-[21px] lg:text-[36px] lexend text-white ml-5">Quienes somos</a>
       </div>
@@ -50,8 +50,8 @@
         <div data-aos="fade-down-right" data-aos-duration="1800" class="absolute lg:block hidden left-[27%]" >e</div>
         <div data-aos="fade-down-right" data-aos-duration="1600" class="absolute lg:block hidden left-[20%]" >y</div>
         <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute lg:block hidden left-[13%]" >o</div>
-        <div data-aos="fade-down-right" data-aos-duration="1200" class="absolute lg:block hidden left-[8%]" >r</div>
-        <div data-aos="fade-down-right" data-aos-duration="1000" >P</div>
+        <div data-aos="fade-down-right" data-aos-duration="1200" class="absolute lg:block hidden left-[7.5%]" >r</div>
+        <div data-aos="fade-down-right" data-aos-duration="1000" class="ml-[-15px]" >P</div>
 
 
       </div>
@@ -60,7 +60,7 @@
         <p class="text-[21px] lg:text-[36px] lexend text-white ml-5">Ver proyectos</p>
       </div>
     </div>
-    <div class="pt-[5rem] pb-[20rem]">
+    <div class="pt-[5rem] pb-[20rem] ml-[-10px]">
       <app-projects-slide></app-projects-slide>
     </div>
   </section>
@@ -96,29 +96,38 @@
   <section
     class="bg-[#000000] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-40">
     <!-- id="parallax" -->
-    <div class="inline-block">
+    <div class="inline-block ml-[-15px]">
       <p class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
     </div>
     <div class="inline-block lg:w-[40%] space-y-24 pt-8">
-      <div class="border-l border-white px-4" (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()">
-        <div class="flex justify-between text-sm text-white">
-          <p class="lexendb">01.10.21</p>
-          <p class="lexend">Ver más</p>
-        </div>
-        <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design
-          Systems”</h3>
-        <img #arrow class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
-      </div>
 
-      <div class="border-l border-white px-4">
-        <div class="flex justify-between text-sm text-white">
-          <p class="lexendb">01.10.21</p>
-          <p class="lexend">Ver más</p>
+      <div class="relative flex cursor-pointer" (mouseover)="bgBlog = true" (mouseout)="bgBlog = false">
+        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear" [ngClass]="{ 'bg-blog' : bgBlog}"></div>
+        <div class="border-l border-white px-4 py-2 absolute">
+          <div class="flex justify-between text-sm text-white">
+            <p class="lexendb">01.10.21</p>
+            <p class="lexend">Ver más</p>
+          </div>
+          <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design
+            Systems”</h3>
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlog }">
         </div>
-        <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los chatbots
-        </h3>
-        <img #arrow class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
+        <!--  (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()" -->
       </div>
+      
+      <div class="relative flex cursor-pointer" (mouseover)="bgBlogTwo = true" (mouseout)="bgBlogTwo = false">
+        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear" [ngClass]="{ 'bg-blog' : bgBlogTwo}"></div>
+        <div class="border-l border-white px-4 py-2 absolute">
+          <div class="flex justify-between text-sm text-white">
+            <p class="lexendb">01.10.21</p>
+            <p class="lexend">Ver más</p>
+          </div>
+          <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los chatbots
+          </h3>
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlogTwo }">
+        </div>
+      </div>
+      
     </div>
   </section>
 

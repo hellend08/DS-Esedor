@@ -1,3 +1,20 @@
+.icon-video ::ng-deep .mat-icon {
+    width: 84px;
+    height: 84px;
+}
+
+.bg-blog {
+  width: 100%;
+  background: #141C26;
+  transition: all .4s linear;
+}
+
+.arrow-rotate {
+  transform: rotate(-45deg);
+  transition: transform .6s cubic-bezier(.4,0,0,1);
+}
+
+
 body{
   font-family: 'Lexend', sans-serif !important;
   scroll-behavior: smooth;

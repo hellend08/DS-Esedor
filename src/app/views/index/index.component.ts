@@ -34,12 +34,15 @@ export class IndexComponent implements AfterViewInit, OnInit {
   @ViewChild('itemsTex', { static: true }) itemsTex!: ElementRef<HTMLDivElement>;
   @ViewChild('title', { static: true }) title!: ElementRef<HTMLDivElement>;
   // @ViewChildren('box') box!: QueryList<ElementRef>;
-  @ViewChild('arrow', { static: true }) arrow!: ElementRef<HTMLDivElement>;
+  // @ViewChild('arrow', { static: true }) arrow!: ElementRef<HTMLDivElement>;
   @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
 
   @ViewChild('textoDinamico', {static: true}) textoDinamico!: ElementRef<HTMLDivElement>;
 
   probar!: boolean;
+
+  bgBlog!: boolean;
+  bgBlogTwo!: boolean;
 
 
 // document.getElementById("animate").onclick = function () {
@@ -266,13 +269,13 @@ export class IndexComponent implements AfterViewInit, OnInit {
   //   this._vps.scrollToAnchor(anchor)
   // }
 
-  hoverArrow() {
-    gsap.to(this.arrow.nativeElement, {rotation: -15, duration: 1});
-  }
+  // hoverArrow() {
+  //   gsap.to(this.arrow.nativeElement, {rotation: -15, duration: 1});
+  // }
 
-  hoverArrowOut() {
-    gsap.to(this.arrow.nativeElement, {rotation: 0, duration: 1});
-  }
+  // hoverArrowOut() {
+  //   gsap.to(this.arrow.nativeElement, {rotation: 0, duration: 1});
+  // }
 
   // hoverArrow() {
   //   this.arrow.map((arrowItem: ElementRef<HTMLDivElement>) => {
