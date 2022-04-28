@@ -1,7 +1,7 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
 <div>
   <!-- FIN DE PRUEBA -->
-  <section #slideContent class="pt-28 px-4 h-full flex justify-center lg:block"
+  <section #slideContent class="pt-28 px-4 lg:h-screen flex justify-center lg:block"
     style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 720px;">
     <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
     <div>
@@ -15,7 +15,7 @@
     </div> -->
   </section>
 
-  <section class="bg-[#EE6F57] h-[800px] flex justify-center items-center">
+  <section class="bg-[#EE6F57] h-screen flex justify-center items-center">
     <mat-icon class="text-white text-[84px]">play_circle</mat-icon>
     <!-- <div class="box green" #box> hola</div>
   <div class="box orange">que</div>
@@ -65,7 +65,7 @@
     </div>
   </section>
 
-  <section class="bg-[#5682FF] px-4">
+  <section class="bg-[#5682FF] px-4 lg:h-screen">
     <div class="flex items-end h-[450px]">
       <div class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0">
         <p class="text-[22px] lg:text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
@@ -123,7 +123,7 @@
   </section>
 
   <!--Seccion Start project-->
-  <footer class="section py-2 px-4 flex flex-col content-center justify-between lg:h-full"
+  <footer class="section py-2 px-4 flex flex-col content-center justify-between lg:h-screen"
     style="background: linear-gradient(to top, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
     <div class="pt-40" *ngIf="paso1">
       <h1

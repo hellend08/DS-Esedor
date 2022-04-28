@@ -58,14 +58,14 @@
 
         <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-color' : emp.background }">
+            [ngClass]="{ 'bg-color' : emp.state }">
             <div class="h-[455px] absolute top-0 flex justify-center items-center">
               <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
-                [ngClass]="{ 'img-project' : emp.background }" style="max-width: 350px;">
+                [ngClass]="{ 'img-project' : emp.state }" style="max-width: 350px;">
             </div>
           </div>
           <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : emp.background }">
+            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : emp.state }">
               <p class="text-[28px] lg:text-[34.5px] lexendzetta">{{emp.name}}</p>
               <p class="text-[13px] lg:text-[13.5px] lexend tracking-[0.005em]">{{emp.descripcion}}</p>
             </div>

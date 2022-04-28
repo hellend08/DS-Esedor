@@ -27,14 +27,16 @@ img {
  
 } */
 
+
+
 .arrow-rotate {
-  transform: rotate(-45deg);
-  transition: transform .6s cubic-bezier(.4,0,0,1);
+  transform: rotate(0);
+  transition: none;
 }
 
 .img-project {
   transform: scale(.9);
-  transition: transform .6s cubic-bezier(.4,0,0,1);
+  transition: none;
 }
 
 /* .bg-color::before {
@@ -92,7 +94,17 @@ img {
   height: 700px;
 }
 
-
+@media screen and (min-width: 1024px) {
+  .arrow-rotate {
+    transform: rotate(-45deg);
+    transition: transform .6s cubic-bezier(.4,0,0,1);
+  }
+  
+  .img-project {
+    transform: scale(.9);
+    transition: transform .6s cubic-bezier(.4,0,0,1);
+  }
+}
 
 /* .bg-content {
   background: red;

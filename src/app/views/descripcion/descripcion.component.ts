@@ -9,6 +9,8 @@ import * as AOS from 'aos';
 })
 export class DescripcionComponent implements OnInit {
 
+  colorWhite = false;
+
   constructor() { }
 
   ngOnInit(): void {

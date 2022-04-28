@@ -34,7 +34,6 @@ import { MainSliderComponent } from './shared/components/main-slider/main-slider
     IndexComponent,
     ToolbarComponent,
     ProjectsDashboardComponent,
-    ToolbarComponent,
     NotifaiVista1Component,
     FooterComponent,
     ProjectsSlideComponent,
