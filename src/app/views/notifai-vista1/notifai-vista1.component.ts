@@ -8,6 +8,7 @@ import * as AOS from 'aos';
   styleUrls: ['./notifai-vista1.component.css']
 })
 export class NotifaiVista1Component implements OnInit {
+  colorWhite = false;
 
   constructor() { }
 
