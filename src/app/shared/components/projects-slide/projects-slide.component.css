@@ -6,7 +6,13 @@ img {
     padding: 10px;
     box-sizing: border-box;
     padding-block: 2rem;
+    height: 550px;
+}
+
+@media screen and (min-width: 1024px) {
+  .item {
     height: 700px;
+}
 }
 
 .bg-color {

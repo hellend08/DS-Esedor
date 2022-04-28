@@ -56,23 +56,47 @@
           <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
         </div> -->
 
-        <!-- <div *ngFor="let emp of filtrado" class="cursor-pointer h-[620px]">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59]"
+        <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]">
+          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
             [ngClass]="{ 'bg-color' : emp.background }">
-            <div class="h-[455px] flex justify-center items-center">
-              <img class="translate-x-0 transition duration-700 ease-in-out w-[350px]" src="{{emp.img}}" alt=""
-                [ngClass]="{ 'img-project' : emp.background }">
+            <div class="h-[455px] absolute top-0 flex justify-center items-center">
+              <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
+                [ngClass]="{ 'img-project' : emp.background }" style="max-width: 350px;">
             </div>
           </div>
-          <div class="flex flex-wrap items-start p-2 justify-between ">
-            <div class="w-[85%] space-y-3">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta text-black">{{emp.name}}</p>
-              <p class="text-[13px] lg:text-[14.5px] lexendzetta text-black tracking-[0.005em]">{{emp.descripcion}}</p>
+          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
+            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : emp.background }">
+              <p class="text-[28px] lg:text-[34.5px] lexendzetta">{{emp.name}}</p>
+              <p class="text-[13px] lg:text-[13.5px] lexend tracking-[0.005em]">{{emp.descripcion}}</p>
             </div>
+            <!-- <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+            alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }"> -->
           </div>
-        </div> -->
+        </div>
 
-        <div data-aos="fade-down-right" class="cursor-pointer relative h-[650px]" (mouseover)="bgColor = false" (mouseout)="bgColor = true">
+        <!-- <div (mouseover)="bgColor = false" (mouseout)="bgColor = true"> -->
+          <!-- <div 
+            [ngClass]="{ 'bg-color' : !bgColor }">
+            <div >
+              <img  src="assets/img/phone-right.png" alt=""
+                [ngClass]="{ 'img-project' : !bgColor }">
+            </div>
+          </div> -->
+          <!-- <div >
+            <div 
+              [ngClass]="{ 'text-color' : !bgColor }">
+              <p >Primax</p>
+              <p >Investigación
+                y
+                estrategía - Definición
+                de producto - Sistema de diseño - Experiencia de usuario </p>
+            </div>
+            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+            alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }">
+          </div> -->
+        <!-- </div> -->
+
+        <!-- <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColor = false" (mouseout)="bgColor = true">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
             [ngClass]="{ 'bg-color' : !bgColor }">
             <div class="h-[455px] absolute top-0 flex justify-center items-center">
@@ -83,7 +107,6 @@
           <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
             <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
               [ngClass]="{ 'text-color' : !bgColor }">
-              <!-- w-[85%]  -->
               <p class="text-[28px] lg:text-[34.5px] lexendzetta">Primax</p>
               <p class="text-[13px] lg:text-[13.5px] lexend tracking-[0.005em]">Investigación
                 y
@@ -115,7 +138,7 @@
           </div>
         </div>
 
-        <div data-aos="zoom-out-down" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorThree = false"
+        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorThree = false"
           (mouseout)="bgColorThree = true">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
             [ngClass]="{ 'bg-three' : !bgColorThree }">
@@ -138,7 +161,7 @@
           </div>
         </div>
 
-        <div data-aos="zoom-out-down" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorFourth = false"
+        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorFourth = false"
           (mouseout)="bgColorFourth = true">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
             [ngClass]="{ 'bg-fourth' : !bgColorFourth }">
@@ -161,7 +184,7 @@
           </div>
         </div>
 
-        <div data-aos="fade-down" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorFifth = false"
+        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorFifth = false"
           (mouseout)="bgColorFifth = true">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
             [ngClass]="{ 'bg-fifth' : !bgColorFifth }">
@@ -184,7 +207,7 @@
           </div>
         </div>
 
-        <div data-aos="fade-down" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorSixth = false"
+        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorSixth = false"
           (mouseout)="bgColorSixth = true">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
             [ngClass]="{ 'bg-sixth' : !bgColorSixth }">
@@ -203,7 +226,7 @@
             <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
             alt="" [ngClass]="{ 'arrow-rotate' : !bgColorSixth }">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </mat-drawer-content>

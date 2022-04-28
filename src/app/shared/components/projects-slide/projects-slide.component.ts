@@ -26,7 +26,7 @@ export class ProjectsSlideComponent implements AfterViewInit {
   @ViewChildren('linkRef') linkRefs: any;
 
   carouselConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
+    grid: { xs: 1.2, sm: 1.2, md: 2, lg: 3.2, all: 0 },
     load: 3,
     slide: 1,
     interval: {timing: 5000, initialDelay: 1000},
