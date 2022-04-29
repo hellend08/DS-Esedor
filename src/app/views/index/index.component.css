@@ -12,6 +12,33 @@
 .arrow-rotate {
   transform: rotate(-45deg);
   transition: transform .6s cubic-bezier(.4,0,0,1);
+  
+}
+
+.vamo {
+  display: block;
+    position: relative;
+    transition: color .3s cubic-bezier(.4,0,0,1);
+    background: transparent;
+}
+
+.vamo .probando-bg:hover:before {
+  transform: scaleX(1);
+}
+
+.vamo .probando-bg:before {
+  background: red;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /* transition: all .4s ease-in-out; */
+  transform-origin: center top;
+    /* background-color: #1e1f21; */
+    transform: scaleY(0);
+    transition: transform .3s cubic-bezier(.4,0,0,1);
 }
 
 
