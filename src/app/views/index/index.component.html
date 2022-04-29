@@ -41,31 +41,36 @@
     </div>
     <div
       class=" border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[300px] lg:h-[600px]">
-      <div class="text-[42px] lg:text-[96px] lexendzetta text-white">
+      <div class="flex items-center justify-between w-full">
+        <div class="text-[42px] lg:text-[96px] lexendzetta text-white">
 
-        <div data-aos="fade-down-right" data-aos-duration="2600" class="absolute lg:block hidden left-[53%]" >s</div>
-        <div data-aos="fade-down-right" data-aos-duration="2400" class="absolute lg:block hidden left-[46%]" >o</div>
-        <div data-aos="fade-down-right" data-aos-duration="2200" class="absolute lg:block hidden left-[41%]" >t</div>
-        <div data-aos="fade-down-right" data-aos-duration="2000" class="absolute lg:block hidden left-[34%]" >c</div>
-        <div data-aos="fade-down-right" data-aos-duration="1800" class="absolute lg:block hidden left-[27%]" >e</div>
-        <div data-aos="fade-down-right" data-aos-duration="1600" class="absolute lg:block hidden left-[20%]" >y</div>
-        <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute lg:block hidden left-[13%]" >o</div>
-        <div data-aos="fade-down-right" data-aos-duration="1200" class="absolute lg:block hidden left-[7.5%]" >r</div>
-        <div data-aos="fade-down-right" data-aos-duration="1000" class="ml-[-15px]" >P</div>
+          <div data-aos="fade-down-right" data-aos-duration="2600" class="absolute lg:block hidden left-[53%]">s</div>
+          <div data-aos="fade-down-right" data-aos-duration="2400" class="absolute lg:block hidden left-[46%]">o</div>
+          <div data-aos="fade-down-right" data-aos-duration="2200" class="absolute lg:block hidden left-[41%]">t</div>
+          <div data-aos="fade-down-right" data-aos-duration="2000" class="absolute lg:block hidden left-[34%]">c</div>
+          <div data-aos="fade-down-right" data-aos-duration="1800" class="absolute lg:block hidden left-[27%]">e</div>
+          <div data-aos="fade-down-right" data-aos-duration="1600" class="absolute lg:block hidden left-[20%]">y</div>
+          <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute lg:block hidden left-[13%]">o</div>
+          <div data-aos="fade-down-right" data-aos-duration="1200" class="absolute lg:block hidden left-[7.5%]">r</div>
+          <div data-aos="fade-down-right" data-aos-duration="1000" class="ml-[-15px]">P</div>
 
 
+        </div>
+        <div class="flex items-center lg:justify-end pb-4 lg:pb-1" (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
+          <!-- w-[48px] lg:w-auto -->
+          <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p>
+        </div>
       </div>
-      <div class="flex items-center lg:justify-end pb-4 lg:pb-1">
-        <img class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
-        <p class="text-[21px] lg:text-[36px] lexend text-white ml-5">Ver proyectos</p>
-      </div>
+      
     </div>
     <div class="pt-[5rem] pb-[20rem] ml-[-10px]">
       <app-projects-slide></app-projects-slide>
     </div>
   </section>
 
-  <section class="bg-[#5682FF] px-4 lg:h-screen">
+  <section class="bg-[#5682FF] px-4">
+    <!-- lg:h-screen -->
     <div class="flex items-end h-[450px]">
       <div class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0">
         <p class="text-[22px] lg:text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
@@ -86,7 +91,7 @@
       <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
 
     </div>
-<!--
+    <!--
     <div class="contenedor">
       <img src="http://programandoointentandolo.com/ejemplos/imagenes/cubo/img1.png" />
       <img class="top" src="http://programandoointentandolo.com/ejemplos/imagenes/cubo/img6.png" />
@@ -102,7 +107,8 @@
     <div class="inline-block lg:w-[40%] space-y-24 pt-8">
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlog = true" (mouseout)="bgBlog = false">
-        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear" [ngClass]="{ 'bg-blog' : bgBlog}"></div>
+        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
+          [ngClass]="{ 'bg-blog' : bgBlog}"></div>
         <div class="border-l border-white px-4 py-2 absolute">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
@@ -110,24 +116,28 @@
           </div>
           <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design
             Systems”</h3>
-          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlog }">
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
+            [ngClass]="{ 'arrow-rotate' : bgBlog }">
         </div>
         <!--  (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()" -->
       </div>
-      
+
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogTwo = true" (mouseout)="bgBlogTwo = false">
-        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear" [ngClass]="{ 'bg-blog' : bgBlogTwo}"></div>
+        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
+          [ngClass]="{ 'bg-blog' : bgBlogTwo}"></div>
         <div class="border-l border-white px-4 py-2 absolute">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
           </div>
-          <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los chatbots
+          <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los
+            chatbots
           </h3>
-          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlogTwo }">
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
+            [ngClass]="{ 'arrow-rotate' : bgBlogTwo }">
         </div>
       </div>
-      
+
     </div>
   </section>
 

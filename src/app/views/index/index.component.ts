@@ -44,6 +44,8 @@ export class IndexComponent implements AfterViewInit, OnInit {
   bgBlog!: boolean;
   bgBlogTwo!: boolean;
 
+  arrowRotate!: boolean;
+
 
 // document.getElementById("animate").onclick = function () {
 //   tl.restart();
