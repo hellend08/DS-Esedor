@@ -35,10 +35,10 @@ export class DescripcionComponent implements OnInit {
     'DESIGN',
   ]
 
-  title: Array<String> = [
-    'Data Driven',
-    ' y producto',
-    ' digital',
+  animatedTitle: Array<{aos: number, label:String}> = [
+    {aos: 1000, label: 'Data Driven'},
+    {aos: 1100, label: ' y producto'},
+    {aos: 1200, label: ' digital'},
   ]
 
   constructor() { }

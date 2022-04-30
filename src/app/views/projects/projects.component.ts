@@ -41,11 +41,18 @@ export class ProjectsComponent implements OnInit {
     'PRODUCTION',
   ]
 
-  title: Array<String> = [
-    'Nueva',
-    'experiencia',
-    'ecommerce',
-    'B2B',
+  // title: Array<String> = [
+  //   ,
+  //   'experiencia',
+  //   'ecommerce',
+  //   'B2B',
+  // ]
+
+  animatedTitle: Array<{aos: number, label: String}> = [
+    {aos: 1000, label: 'Nueva'},
+    {aos: 1000, label: 'experiencia'},
+    {aos: 1000, label: 'ecommerce'},
+    {aos: 1000, label: 'B2B'},
   ]
 
   constructor() { }

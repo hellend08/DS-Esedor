@@ -64,8 +64,8 @@
           <!-- <h2 data-aos="fade-right" data-aos-duration="1000">Data Driven</h2>
           <h2 data-aos="fade-right" data-aos-duration="1100"> y producto</h2>
           <h2 data-aos="fade-right" data-aos-duration="1200"> digital</h2> -->
-          <h2 data-aos="fade-right" data-aos-duration="1000" *ngFor="let text of title">
-              {{text}}
+          <h2 data-aos="fade-right" data-aos-duration="{{item.aos}}" *ngFor="let item of animatedTitle">
+              {{item.label}}
           </h2>
         </div>
       </div>

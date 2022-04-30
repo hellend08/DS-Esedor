@@ -19,7 +19,7 @@ export class FirstSectionComponent implements OnInit {
 
   @Input() serviceList!: Array<String>;
   @Input() definitionsList!: Array<String>;
-  @Input() title!: Array<String>;
+  @Input() animatedTitle!: Array<{aos: number, label:String}>;
   constructor() { }
 
   ngOnInit(): void {
