@@ -16,9 +16,6 @@
 
   <section class="bg-[#EE6F57] h-screen flex justify-center items-center icon-video">
     <mat-icon class="text-white text-[84px] w-[84px] h-[84px]">play_circle</mat-icon>
-    <!-- <div class="box green" #box> hola</div>
-  <div class="box orange">que</div>
-  <div class="box grey">bye</div> -->
   </section>
 
   <section class="bg-[#141C26] pt-[9rem] lg:pt-[20rem] px-4">
@@ -41,7 +38,7 @@
     </div>
     <div
       class=" border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[300px] lg:h-[600px]">
-      <div class="flex items-center justify-between w-full">
+      <div class="flex items-end justify-between w-full">
         <div class="text-[42px] lg:text-[96px] lexendzetta text-white">
 
           <div data-aos="fade-down-right" data-aos-duration="2600" class="absolute lg:block hidden left-[53%]">s</div>
@@ -56,12 +53,14 @@
 
 
         </div>
-        <div class="flex items-center lg:justify-end pb-4 lg:pb-1" (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
-          <!-- vamo probando-bg -->
+        <!-- <div >
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
-          <!-- w-[48px] lg:w-auto -->
           <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p>
-        </div>
+        </div> -->
+        <button class="flex items-center lg:justify-end pb-4 lg:p-[15px] transition duration-700 ease-in-out btn-hover" (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
+          <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p>
+        </button>
       </div>
       
     </div>
@@ -100,7 +99,7 @@
   </section>
 
   <section
-    class="bg-[#000000] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-40">
+    class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-40">
     <!-- id="parallax" -->
     <div class="inline-block ml-[-15px]">
       <p class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]">Blog</p>
@@ -120,7 +119,6 @@
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
             [ngClass]="{ 'arrow-rotate' : bgBlog }">
         </div>
-        <!--  (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()" -->
       </div>
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogTwo = true" (mouseout)="bgBlogTwo = false">

@@ -46,7 +46,6 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   arrowRotate!: boolean;
 
-
 // document.getElementById("animate").onclick = function () {
 //   tl.restart();
 // };

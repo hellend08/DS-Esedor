@@ -1,82 +1,8 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
-<section class="lg:py-[4rem] px-4 lg:px-[6rem] xl:px-[7rem]">
-  <div class="flex flex-col-reverse lg:flex-row items-center lg:justify-between">
-    <div>
-
-      <div data-aos="fade-up" data-aos-duration="1000" class="hidden lg:flex items-center space-x-[8rem]">
-        <div>
-          <h4 class="text-sm lexendb">FECHA</h4>
-          <p class="text-base lexend">2021</p>
-        </div>
-        <div>
-          <h4 class="text-sm lexendb">INDUSTRIA</h4>
-          <p class="text-base lexend">ENERGÍA</p>
-        </div>
-      </div>
-
-
-      <h4 class="text-sm lexendb mt-[4.5rem] lg:mt-[6.5rem]">CLIENTE</h4>
-      <p data-aos="fade-up" data-aos-duration="1000"
-        class="text-[#141C26] lg:text-black text-[36px] lg:leading-[7.5rem] lg:text-[96px] lexendzetta -ml-2 lg:ml-[-1rem]">
-        Primax
-      </p>
-      <div class="block lg:hidden mt-8">
-        <h4 class="text-sm lexendb">FECHA</h4>
-        <p class="text-base lexend">2021</p>
-      </div>
-      <div data-aos="fade-up" data-aos-duration="2000"
-        class="flex mt-[4.5rem] lg:pt-[6.5rem] space-x-4 lg:space-x-[8rem]">
-        <div>
-          <h4 class="text-sm lexendb">SERVICIOS</h4>
-          <p class="text-base lexend">
-            RESEARCH & ESTRATEGÍA</p>
-          <p>DEFINICIÓN DE PRODUCTO</p>
-          <p>DESIGN SYSTEM</p>
-        </div>
-        <div>
-          <h4 class="text-sm lexendb">DEFINICIONES</h4>
-          <p class="text-base lexend">
-            STRATEGY</p>
-          <p>CONCEPT</p>
-          <p>ART DIRECTION</p>
-          <p>DESIGN</p>
-          <p> PRODUCTION
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-    <div data-aos="flip-right" data-aos-duration="1000">
-      <img class="w-[200px] lg:w-[400px] mt-[6rem] lg:mt-[4.5rem]" src="assets/img/iphone.png">
-    </div>
-
-  </div>
-  <div class="grid lg:grid-cols-2 gap-[5.5rem] lg:gap-[8rem] mt-[5rem]">
-    <div data-aos="fade-up" data-aos-duration="2000" class="lexend">
-      <p class="text-sm lg:text-[16px] pb-8 font-bold lg:font-normal">Primax y el reto</p>
-      <h3 class="text-[21px] lg:text-[36px]">
-        Involucrar a todos sus partners dentro de esta tienda virtual y
-        crear una plataforma de venta de productos y servicios de marketing </h3>
-    </div>
-    <div data-aos="fade-up" data-aos-duration="2000" class="lexend">
-      <p class="text-sm lg:text-[16px] pb-8 font-bold lg:font-normal">El trabajo de Esedor</p>
-      <h3 class="text-[21px] lg:text-[36px]">
-        Definir la nueva generación de productos digitales y crear su primera tienda virtual b2b de productos
-        y servicios de marketing que ofrece primax</h3>
-    </div>
-  </div>
-  <h2
-    class="lexendb text-[48px] lg:text-[110px] 2xl:text-[128px] py-[4rem] lg:py-0 leading-[60px] lg:leading-[140px] 2xl:leading-[160px] lg:w-[650px] 2xl:w-[49%] ml-auto lg:mt-[8rem]">
-    <div data-aos="fade-right" data-aos-duration="1000">Nueva</div>
-    <div data-aos="fade-right" data-aos-duration="1000">experiencia</div>
-    <div data-aos="fade-right" data-aos-duration="1000"> ecommerce</div>
-    <div data-aos="fade-right" data-aos-duration="1000">B2B</div>
-  </h2>
-</section>
+<app-first-section [date]="date" [industry]="industry" [client]="client" [image]="image" [styles]="styles" [display]="display"
+  [paragraphOne]="paragraphOne" [paragraphTwo]="paragraphTwo" [serviceList]="serviceList" [definitionsList]="definitionsList" [title]="title"></app-first-section>
 
 <section id="parallax" class="h-[80%]">
-
 </section>
 
 <section class="bg-black py-[4rem] lg:py-[12.6rem] px-4 lg:px-[6rem] xl:px-[7rem]">
@@ -241,7 +167,8 @@
   <p class="lexend hidden lg:block">Transformando el presente</p>
   <div class="flex justify-between flex-col h-[50%] lg:h-[700px] px-[4rem]">
     <div class="relative">
-      <div class="w-full h-[10px] transition-all duration-700 ease-in-out mt-[7.5rem]" [ngClass]="{ 'bg-hover' : bgHover }">
+      <div class="w-full h-[10px] transition-all duration-700 ease-in-out mt-[7.5rem]"
+        [ngClass]="{ 'bg-hover' : bgHover }">
       </div>
       <div (mouseover)="bgHover = true" (mouseout)="bgHover = false"
         class="flex lg:flex-row items-center lg:h-[200px] w-full lg:border-t-[1px] lg:border-b-[1px] border-white justify-between lg:justify-start absolute top-[7.5rem]">
@@ -249,7 +176,8 @@
         <p class="lexend text-[21px] ml-auto mr-[6rem] hidden lg:block">Ir a proyecto</p>
         <img class="mr-4" src="assets/img/arrow-footer.png" alt="" srcset="">
       </div>
-      <div class="w-full h-[10px] transition-all duration-700 ease-in-out mt-[12rem]" [ngClass]="{ 'bg-hover2' : bgHoverTwo }">
+      <div class="w-full h-[10px] transition-all duration-700 ease-in-out mt-[12rem]"
+        [ngClass]="{ 'bg-hover2' : bgHoverTwo }">
       </div>
       <div (mouseover)="bgHoverTwo = true" (mouseout)="bgHoverTwo = false"
         class="flex lg:flex-row items-center lg:h-[200px] w-full lg:border-b-[1px] border-white justify-between lg:justify-start absolute top-[20.2rem]">
@@ -260,10 +188,32 @@
         <!-- </div> -->
       </div>
     </div>
-    <div class="flex lg:justify-end mt-auto lg:mr-[7rem]">
+    <div class="flex lg:justify-between mt-auto pb-[2rem]">
+      <!-- lg:mr-[7rem] -->
+      <div class="flex justify-between w-[30%]">
+        <div class="text-white lexend text-[13px] flex flex-col justify-end ml-[-4rem]">
+          <p>Ubicación</p>
+          <p class="leading-[16px] pt-4 ">
+            <!-- pb-8 -->
+            Swiss Tower <br>
+            Av. Alfredo Benavides <br>
+            #1944 – Piso 9 <br>
+            Miraflores, Lima
+          </p>
+          <!-- <p>Esedor © 2022</p> -->
+        </div>
+        <div class="text-[13px] lexend font-medium text-white space-y-2 flex flex-col justify-end">
+          <!-- pb-2  -->
+          <p>LINKEDIN</p>
+          <p>FACEBOOK</p>
+          <p>INSTAGRAM</p>
+          <p>YOUTUBE</p>
+        </div>
+      </div>
       <button mat-raised-button class="bg-[#FFFFFF] text-black w-[250px] rounded-[12px] h-[70px]">Conversemos</button>
     </div>
   </div>
+
   <div>
     <p class="lexend text-[13px] font-medium ">Esedor © 2022</p>
     <ul class="ml-auto text-white text-sm lexend flex justify-between w-[55%] pr-[14rem]">
