@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,9 +21,11 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
 import { ProjectsDashboardComponent } from './views/projects-dashboard/projects-dashboard.component';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
+import { DescripcionComponent } from './views/descripcion/descripcion.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProjectsSlideComponent } from './shared/components/projects-slide/projects-slide.component';
 import { MainSliderComponent } from './shared/components/main-slider/main-slider.component';
+import { FirstSectionComponent } from './shared/components/project-internals/first-section/first-section.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { MainSliderComponent } from './shared/components/main-slider/main-slider
     NotifaiVista1Component,
     FooterComponent,
     ProjectsSlideComponent,
-    MainSliderComponent
+    MainSliderComponent,
+    DescripcionComponent,
+    FirstSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ import { MainSliderComponent } from './shared/components/main-slider/main-slider
     NguCarouselModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }

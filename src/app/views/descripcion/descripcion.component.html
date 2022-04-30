@@ -1,95 +1,11 @@
-<!-- <app-toolbar [colorWhite]="colorWhite"></app-toolbar> -->
-<section class="py-10 flex flex-wrap content-around px-4 lg:px-[5rem] xl:px-[6rem]">
-  <div class="flex justify-center w-full lg:hidden">
-    <img src="assets/img/iphoneinit.png">
-  </div>
-  <div data-aos="fade-up" data-aos-duration="1000"
-    class="px-4 lg:px-[0%] grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-20 content-start mt-5 lg:mt-[13%] 2xl:mt-[10%] text-[14px] tracking-wider lexendb">
-    <div>
-      <h4>CLIENTE</h4>
-      <span class="lg:hidden lexendzetta text-[36px]">Redeban </span>
-    </div>
-    <div class="flex justify-between text-[14px]">
-      <div>
-        <h4>FECHA</h4>
-        <span class="lexend">2021</span>
-      </div>
-
-      <div class="lg:hidden">
-        <h4>PAÍS</h4>
-        <span class="lexend">COLOMBIA</span>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div data-aos="fade-up" data-aos-duration="1000" class="mt-[26%] 2xl:mt-[22%] lg:ml-[-365px] w-[-420px] lg:block hidden lg:px-[12%] 2xl:px-[7.5%]">
-    <span class="lg:text-[88px] 2xl:leading-[7.25rem] 2xl:text-[100px] w-[20px] lexendzetta ">Redeban</span>
-  </div>
-  <div class=" mt-[1%]">
-    <!-- lg:px-32 px-4 -->
-    <div data-aos="fade-up" data-aos-duration="2000"
-      class="flex mt-[4.5rem] lg:pt-[6.5rem] space-x-4 lg:space-x-[8rem]">
-      <div>
-        <h4 class="text-sm lexendb">ENTREGABLES</h4>
-        <p class="text-base lexend">
-          INTEGRATED </p>
-        <p>CAMPAIGN</p>
-        <p>HYPE FILM</p>
-        <p>TECH FILM</p>
-        <p> KEY VISUAL</p>
-        <p>SOCIAL TEASERS</p>
-      </div>
-      <div>
-        <h4 class="text-sm lexendb">ROLE</h4>
-        <p class="text-base lexend">
-          STRATEGY</p>
-        <p>CONCEPT</p>
-        <p>ART DIRECTION</p>
-        <p>DESIGN</p>
-        <p> PRODUCTION
-        </p>
-      </div>
-    </div>
-
-    <img data-aos="fade-left" data-aos-duration="1500"
-      class="absolute lg:block hidden lg:w-[40%] lg:h-[35%] xl:w-[45%] xl:h-[55%] 2xl:h-[50%] right-[4rem] 2xl:right-[13rem] top-[16rem] 2xl:top-[15rem] "
-      src="assets/img/laptop-estadisticas.png">
-
-    <div class="grid lg:grid-cols-2 gap-[5.5rem] lg:gap-[8rem] xl:mt-[5rem] lg:mt-[7rem] ">
-      <div data-aos="fade-up" data-aos-duration="2000" class="lexend">
-        <p class="text-sm lg:text-[10px] 2xl:text-[16px] pb-8 font-bold lg:font-normal">Redeban y el reto</p>
-        <h3 class="text-[21px] lg:text-[25px] 2xl:text-[36px]">
-          During these uncertain times, many of us find ourselves in introspection mode,
-          with new ideas and resolving to do better. We wish we could help everyone and fix everything. </h3>
-      </div>
-      <div data-aos="fade-up" data-aos-duration="2000" class="lexend">
-        <p class="text-sm lg:text-[16px] 2xl:text-[16px] pb-8 font-bold lg:font-normal">El trabajo de Esedor</p>
-        <h3 class="text-[21px] lg:text-[25px] 2xl:text-[36px]">
-          During these uncertain times, many of us find ourselves in introspection mode,
-          with new ideas and resolving to do better. </h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-wrap justify-between w-full pt-[4rem] lg:pt-[8rem] space-y-[2rem] lg:space-y-0">
-    <div class="w-[175px] lg:w-[400px] xl:w-[440px] 2xl:w-[470px]" data-aos="zoom-in-up" data-aos-duration="1000">
-      <img src="assets/img/Redeban-logo.png" alt="logo-redeban">
-    </div>
-    <div
-      class="text-[48px] lg:text-[80px] xl:text-[100px] 2xl:text-[128px] leading-[60px] lg:leading-[120px] xl:leading-[140px] 2xl:leading-[160px] 2xl:w-[800px] lexendb">
-      <h2 data-aos="fade-right" data-aos-duration="1000">Data Driven</h2>
-      <h2 data-aos="fade-right" data-aos-duration="1100"> y producto</h2>
-      <h2 data-aos="fade-right" data-aos-duration="1200"> digital</h2>
-    </div>
-  </div>
-
-</section>
+<app-toolbar [colorWhite]="colorWhite"></app-toolbar>
+<app-first-section [date]="date" [industry]="industry" [client]="client" [image]="image" [styles]="styles"
+  [paragraphOne]="paragraphOne" [paragraphTwo]="paragraphTwo" [serviceList]="serviceList"
+  [definitionsList]="definitionsList" [animatedTitle]="animatedTitle"></app-first-section>
 
 <section class="h-[100%] lg:mt-80 ">
-
   <div class="w-full h-screen bg-no-repeat bg-cover bg-fixed "
     style="background-image: url(/assets/img/estadisticas.png);">
-
   </div>
 </section>
 
@@ -209,9 +125,16 @@
 
   <div class="flex flex-wrap justify-between 2xl:px-[120px] xl:px-[100px] lg:px-[80px] mt-[30%]">
 
+<<<<<<< HEAD
     <div class="lexendb 2xl:w-[618px] leading-[60px] lg:leading-[140px] 2xl:text-[128px] xl:text-[122px] lg:text-[95px] text-[48px]  ">
       <h2 data-aos="fade-right" data-aos-duration="1000">Desarrollo</h2>
       <h2 data-aos="fade-right" data-aos-duration="1000">front-end</h2>
+=======
+    <div
+      class="lexendb 2xl:w-[618px] leading-[60px] lg:leading-[140px] 2xl:text-[128px] xl:text-[122px] lg:text-[95px] text-[48px]  ">
+      <h2>Desarrollo</h2>
+      <h2>front-end</h2>
+>>>>>>> b068e523bffc475b5fdcfcf83c21c263e018ac93
     </div>
 
     <div data-aos="fade-left" data-aos-duration="1000" class="2xl:mr-[-4%]
@@ -223,13 +146,14 @@
       <h3>Este sistema nace con el proposito de crear valor a todos los stakeholder b2b de la empresa, administrando
         diferentes entornos dentro de la organización</h3>
 
-        <div class="lg:w-[150px] lexendb lg:text-[8px] xl:text-[14px] lg:absolute mt-[20%] text-[14px] lg:mt-20 px-0">
-          <p data-aos="fade-up" data-aos-duration="1900" class="mb-4 lg:mb-2 lg:text-[13px] xl:text-[21px] text-[36px] lexend">Tecnologías
-          </p>
-          <p data-aos="fade-up" data-aos-duration="2000">Angular</p>
-          <p data-aos="fade-up" data-aos-duration="2100">Tailwind CSS</p>
-          <p data-aos="fade-up" data-aos-duration="2200">Material</p>
-        </div>
+      <div class="lg:w-[150px] lexendb lg:text-[8px] xl:text-[14px] lg:absolute mt-[20%] text-[14px] lg:mt-20 px-0">
+        <p data-aos="fade-up" data-aos-duration="1900"
+          class="mb-4 lg:mb-2 lg:text-[13px] xl:text-[21px] text-[36px] lexend">Tecnologías
+        </p>
+        <p data-aos="fade-up" data-aos-duration="2000">Angular</p>
+        <p data-aos="fade-up" data-aos-duration="2100">Tailwind CSS</p>
+        <p data-aos="fade-up" data-aos-duration="2200">Material</p>
+      </div>
 
 
     </div>
