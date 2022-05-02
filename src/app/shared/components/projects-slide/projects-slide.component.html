@@ -1,5 +1,5 @@
 <!-- <div class="py-[7rem] flex space-x-4 relative overflow-hidden" #wrapper>
-   
+
             <div class="lg:w-[32%] cursor-pointer relative" style="flex-shrink: 0;" #itemC>
                 <div class=" h-[500px] bg-[#454C59] flex items-center justify-center">
                     <img src="assets/img/proyect-laptop.png" alt="">
@@ -23,8 +23,8 @@
             <ng-container *ngTemplateOutlet="item"></ng-container>
         </div>
     </div>
-    <ng-template #first>
-        <div class="cursor-pointer relative" (mouseover)="bgColor = false" (mouseout)="bgColor = true">
+    <ng-template #first >
+        <div data-aos="fade-down-left" data-aos-duration="700" class="cursor-pointer relative" (mouseover)="bgColor = false" (mouseout)="bgColor = true">
             <div class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out" [ngClass]="{ 'bg-color' : !bgColor }">
                 <div class="h-[380px] lg:h-[455px] absolute top-0 flex justify-center items-center">
                     <img class="translate-x-0 transition duration-700 ease-in-out w-[85%] lg:w-auto" src="assets/img/phone-right.png"
@@ -33,8 +33,8 @@
             </div>
             <div class="flex flex-wrap items-start p-2 justify-between absolute top-[24rem] lg:top-[30.5rem] xl:top-[30rem] 2xl:top-[31rem]">
                 <div class="w-[77%] lg:w-[80%] xl:w-[85%] space-y-3">
-                    <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">Primax</p>
-                    <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">Primax</p>
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
                         y
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
@@ -46,15 +46,15 @@
     </ng-template>
 
     <ng-template #second>
-        <div class="cursor-pointer relative" (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true">
+        <div data-aos="fade-down-left" data-aos-duration="800" class="cursor-pointer relative" (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true">
             <div class="h-[700px] lg:h-[480px] flex items-center justify-center bg-[#E84545] lg:bg-[#454C59] transition-all duration-700 ease-in-out" [ngClass]="{ 'bg-two' : !bgColorTwo }">
                 <img class="w-[350px] lg:translate-x-0 lg:transition lg:duration-700 ease-in-out absolute top-[10px]"
                     src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorTwo }">
             </div>
             <div class="flex flex-wrap items-start p-2 justify-between absolute top-[24rem] lg:top-[30.5rem] xl:top-[30rem] 2xl:top-[31rem]">
                 <div class="w-[77%] lg:w-[80%] xl:w-[85%] space-y-3">
-                    <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">Niubiz</p>
-                    <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">Niubiz</p>
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
                         y
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
@@ -66,7 +66,7 @@
     </ng-template>
 
     <ng-template #third>
-        <div class="cursor-pointer relative" (mouseover)="bgColorThree = false" (mouseout)="bgColorThree = true">
+        <div data-aos="fade-down-left" data-aos-duration="900" class="cursor-pointer relative" (mouseover)="bgColorThree = false" (mouseout)="bgColorThree = true">
             <div class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
                 [ngClass]="{ 'bg-three' : !bgColorThree }">
                 <div class="h-[380px] lg:h-[455px] absolute top-0 flex justify-center items-center">
@@ -76,8 +76,8 @@
             </div>
             <div class="flex flex-wrap items-start p-2 justify-between absolute top-[24rem] lg:top-[30.5rem] xl:top-[30rem] 2xl:top-[31rem]">
                 <div class="w-[77%] lg:w-[80%] xl:w-[85%] space-y-3">
-                    <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">Redeban</p>
-                    <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">Redeban</p>
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
                         y
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>
@@ -89,7 +89,7 @@
     </ng-template>
 
     <ng-template #fourth>
-        <div class="cursor-pointer relative" (mouseover)="bgColorFourth = false" (mouseout)="bgColorFourth = true">
+        <div data-aos="fade-down-left" data-aos-duration="900" class="cursor-pointer relative" (mouseover)="bgColorFourth = false" (mouseout)="bgColorFourth = true">
             <div class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
                 [ngClass]="{ 'bg-fourth' : !bgColorFourth }">
                 <div class="h-[380px] lg:h-[455px] absolute top-0 flex justify-center items-center">
@@ -99,8 +99,8 @@
             </div>
             <div class="flex flex-wrap items-start p-2 justify-between absolute top-[24rem] lg:top-[30.5rem] xl:top-[30rem] 2xl:top-[31rem]">
                 <div class="w-[77%] lg:w-[80%] xl:w-[85%] space-y-3">
-                    <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">CML</p>
-                    <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta text-white">CML</p>
+                    <p data-aos="fade-up" data-aos-duration="900" class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta text-white tracking-[0.005em]">Investigación
                         y
                         estrategía - Definición
                         de producto - Sistema de diseño - Experiencia de usuario </p>

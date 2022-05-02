@@ -9,6 +9,7 @@ import {IndexComponent} from "./views/index/index.component";
 import { DescripcionComponent } from './views/descripcion/descripcion.component';
 import {ProjectsDashboardComponent} from "./views/projects-dashboard/projects-dashboard.component";
 import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
+import { NotifaiComponent } from './views/notifai/notifai.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'descripcion', component: DescripcionComponent},
   { path: 'proyectos', component: ProjectsDashboardComponent},
   // { path: 'descripcion', component: DescripcionComponent},
-  { path: 'notifai-vista1', component: NotifaiVista1Component}
+  { path: 'notifai-vista1', component: NotifaiVista1Component},
+  { path: 'notifai', component: NotifaiComponent}
 ]
 
 @NgModule({
