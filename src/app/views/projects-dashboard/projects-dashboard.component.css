@@ -54,43 +54,43 @@ transition: transform .6s cubic-bezier(.4,0,0,1);
   transition: transform .6s cubic-bezier(.4,0,0,1);
 }
 
-.bg-color {
+.bg-color:hover {
   background: #0166FF;
   transition: all .4s ease-in;
   height: 650px;
 }
 
-.bg-two{
+.bg-two:hover{
 background: #E84545;
 transition: all .4s ease-in;
 height: 650px;
 }
 
-.bg-three{
+.bg-three:hover{
 background: #8B90F5;
 transition: all .4s ease-in;
 height: 650px;
 }
 
-.bg-fourth{
+.bg-fourth:hover{
 background: #FFD4D4;
 transition: all .4s ease-in;
 height: 650px;
 }
 
-.bg-fifth{
+.bg-fifth:hover{
 background: #2B2E4A;
 transition: all .4s ease-in;
 height: 650px;
 }
 
-.bg-sixth{
+.bg-sixth:hover{
 background: #4F57EB;
 transition: all .4s ease-in;
 height: 650px;
 }
 
-.bg-seventh{
+.bg-seventh:hover{
 background: #F2F2F2;
 transition: all .4s ease-in;
 height: 650px;

@@ -56,12 +56,13 @@
           <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
         </div> -->
 
-        <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-color' : emp.state }">
+        <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="probando(emp)" >
+          <!-- (mouseout)="" -->
+          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
+           <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->
             <div class="h-[455px] absolute top-0 flex justify-center items-center">
               <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
-                [ngClass]="{ 'img-project' : emp.state }" style="max-width: 350px;">
+                [ngClass]="{ 'img-project' : emp.state}" style="max-width: 350px;">
             </div>
           </div>
           <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">

@@ -21,9 +21,12 @@ export class ProjectsDashboardComponent implements OnInit {
   bgColorSeventh: boolean = true;
 
   empresas = [
-    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/phone-right.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax', state: 'bgColor', background: 'bg-color'},
-    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyects.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos/primax', state: 'bgColorTwo', background: 'bg-two'},
-    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyect-laptop.png', alt: 'Niubiz', tipo: 'ecomerce', ruta: '/proyectos/primax', state: 'bgColorThree', background: 'bg-three'},
+    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/phone-right.png', alt: 'Primax', tipo: 'automotriz', 
+    ruta: '/proyectos/primax', state: 'bgColor', background: 'bg-color'},
+    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyects.png', alt: 'Redeban', tipo: 'banca', 
+    ruta: '/proyectos/primax', state: 'bgColorTwo', background: 'bg-two'},
+    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyect-laptop.png', alt: 'Niubiz', tipo: 'ecomerce',
+     ruta: '/proyectos/primax', state: 'bgColorThree', background: 'bg-three'},
     {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecomerce', ruta: '/proyectos/primax', state: 'bgColorFourth', background: 'bg-fourth'},
     {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecomerce', ruta: '/proyectos/primax', state: 'bgColorFifth', background: 'bg-color'},
     {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos/primax', state: 'bgColorSixth', background: 'bg-fifth'}
@@ -42,6 +45,18 @@ export class ProjectsDashboardComponent implements OnInit {
       this.filtrado = this.empresas.filter(empresa => empresa.tipo === value);
       console.log(this.filtrado);
     }
+  }
+
+  moco!: boolean;
+
+  probando(value:any): void {
+  //  return value.state;
+  console.log(value.state)
+  // if(value.state == 'bgColor') {
+  //   this.moco = true;
+  // } else {
+  //   this.moco = false;
+  // }
   }
 
   header_variable=false;
