@@ -24,8 +24,8 @@
   </div>
 </mat-toolbar> -->
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
-<mat-drawer-container class="w-full mt-20 min-h-full px-24 bg-white">
-  <mat-drawer mode="side" class="w-[250px] flex justify-end" opened>
+<mat-drawer-container class="w-full mt-20 min-h-full px-4 lg:px-24 bg-white">
+  <mat-drawer mode="side" class="lg:w-[250px] flex justify-end hidden lg:block" opened>
     <div class="border-l border-black">
       <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem]">
         <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('todos')">Todos</mat-list-item>
@@ -41,21 +41,28 @@
     </div>
   </mat-drawer>
   <mat-drawer-content class="flex bg-white justify-center flex-wrap content-center">
-    <div class="overflow-hidden pt-[6rem]">
-      <span style="line-height: 17px; letter-spacing: 0.0015em" class="text-[0.875rem] Lexend-Bold">Proyectos
-        recientes</span>
-      <h2 style="line-height: 44px;" class="lexend text-[2.188rem]">
+    <div class="overflow-hidden lg:pt-[6rem]">
+      <p style="line-height: 17px; letter-spacing: 0.0015em" class="text-sm lexendb pb-5">Proyectos
+        recientes</p>
+      <h3 class="lexend text-[14.5px] lg:text-[2.188rem] leading-[18.13px] lg:leading-[53.3px]">
         Every project is a chance to try something new. Look at something with a fresh
         perspective. Do something for the first time.
-      </h2>
+      </h3>
+      <!-- <mat-tab-group>
+        <mat-tab label="First"> Content 1 </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+      </mat-tab-group> -->
+      <div class="my-[2rem] flex overflow-x-auto border-b border-black space-x-4 btn-list lg:hidden">
+        <button (click)="filterEmpresas('todos')">Todos</button>
+        <button (click)="filterEmpresas('banca')">Banca</button>
+        <button (click)="filterEmpresas('educación')">Educación</button>
+        <button (click)="filterEmpresas('salud')">Salud</button>
+        <button (click)="filterEmpresas('automotriz')">Automotriz</button>
+        <button (click)="filterEmpresas('ecomerce')">Ecommerce</button>
+      </div>
 
-      <div class="grid grid-cols-2 gap-10 my-16">
-        <!-- <div *ngFor="let emp of filtrado" (click)="redirectInternas(emp.ruta)">
-          <img alt="{{emp.alt}}" src="{{emp.img}}">
-          <span class="text-[1.125rem]">{{emp.descripcion}}</span>
-          <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
-        </div> -->
-
+      <div class="grid lg:grid-cols-2 gap-10 my-[3rem] lg:my-16">
         <div *ngFor="let emp of filtrado" >
           <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="emp.state = false" (mouseout)="emp.state = true">
             <!-- (mouseout)=""  (mouseover)="probando(emp)"  -->

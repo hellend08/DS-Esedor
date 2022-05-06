@@ -7,6 +7,10 @@
   border-radius: 5px;
 }
 
+:host ::ng-deep.mat-drawer {
+  display: none;
+}
+
 input, select, textarea{
   color: #ffffff;
 }
@@ -15,12 +19,24 @@ textarea:focus, input:focus {
   color: #ffffff;
 }
 
-/*Toolbar*/
-.header_variable{
-  display: none;
+img {
+  pointer-events: none;
 }
 
-.main-header{
+.btn-list button {
+  /* width: 100px; */
+  display: inline;
+  text-align: left;
+  font-size: 15.5px;
+  font-family: Lexend;
+}
+
+/*Toolbar*/
+/* .header_variable{
+  display: none;
+} */
+
+/* .main-header{
   position: fixed;
   top: 4vh;
   left: 0;
@@ -37,62 +53,68 @@ textarea:focus, input:focus {
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
-}
+} */
 
-.text-color {
-  color: white;
-  transition: all .4s ease-in;
-}
+@media screen and (min-width: 1024px ) {
 
-.img-project {
-transform: scale(.9);
-transition: transform .6s cubic-bezier(.4,0,0,1);
-}
+  :host ::ng-deep.mat-drawer {
+    display: block;
+  }
 
-.arrow-rotate {
-  transform: rotate(-45deg);
+  .text-color {
+    color: white;
+    transition: all .4s ease-in;
+  }
+  
+  .img-project {
+  transform: scale(.9);
   transition: transform .6s cubic-bezier(.4,0,0,1);
-}
-
-.bg-color:hover {
-  background: #0166FF;
+  }
+  
+  .arrow-rotate {
+    transform: rotate(-45deg);
+    transition: transform .6s cubic-bezier(.4,0,0,1);
+  }
+  
+  .bg-color:hover {
+    background: #0166FF;
+    transition: all .4s ease-in;
+    height: 650px;
+  }
+  
+  .bg-two:hover{
+  background: #E84545;
   transition: all .4s ease-in;
   height: 650px;
+  }
+  
+  .bg-three:hover{
+  background: #8B90F5;
+  transition: all .4s ease-in;
+  height: 650px;
+  }
+  
+  .bg-fourth:hover{
+  background: #FFD4D4;
+  transition: all .4s ease-in;
+  height: 650px;
+  }
+  
+  .bg-fifth:hover{
+  background: #2B2E4A;
+  transition: all .4s ease-in;
+  height: 650px;
+  }
+  
+  .bg-sixth:hover{
+  background: #4F57EB;
+  transition: all .4s ease-in;
+  height: 650px;
+  }
+  
+  .bg-seventh:hover{
+  background: #F2F2F2;
+  transition: all .4s ease-in;
+  height: 650px;
+  }
 }
-
-.bg-two:hover{
-background: #E84545;
-transition: all .4s ease-in;
-height: 650px;
-}
-
-.bg-three:hover{
-background: #8B90F5;
-transition: all .4s ease-in;
-height: 650px;
-}
-
-.bg-fourth:hover{
-background: #FFD4D4;
-transition: all .4s ease-in;
-height: 650px;
-}
-
-.bg-fifth:hover{
-background: #2B2E4A;
-transition: all .4s ease-in;
-height: 650px;
-}
-
-.bg-sixth:hover{
-background: #4F57EB;
-transition: all .4s ease-in;
-height: 650px;
-}
-
-.bg-seventh:hover{
-background: #F2F2F2;
-transition: all .4s ease-in;
-height: 650px;
-}
-
