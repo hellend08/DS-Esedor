@@ -56,10 +56,29 @@
           <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
         </div> -->
 
-        <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="probando(emp)" >
-          <!-- (mouseout)="" -->
+        <div *ngFor="let emp of filtrado" >
+          <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="emp.state = false" (mouseout)="emp.state = true">
+            <!-- (mouseout)=""  (mouseover)="probando(emp)"  -->
+            <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
+             <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->
+              <div class="h-[455px] absolute top-[10px] flex justify-center items-center">
+                <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
+                  [ngClass]="{ 'img-project' : !emp.state}" style="max-width: 350px;">
+              </div>
+            </div>
+            <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem] w-full">
+              <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : !emp.state }">
+                <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta">{{emp.name}}</p>
+                <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta tracking-[0.005em]">{{emp.descripcion}}</p>
+              </div>
+              <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+              alt="" [ngClass]="{ 'arrow-rotate' : !emp.state }">
+            </div>
+          </div>
+        </div>
+
+        <!-- <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]">
           <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
-           <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->
             <div class="h-[455px] absolute top-0 flex justify-center items-center">
               <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
                 [ngClass]="{ 'img-project' : emp.state}" style="max-width: 350px;">
@@ -67,13 +86,13 @@
           </div>
           <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
             <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : emp.state }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">{{emp.name}}</p>
-              <p class="text-[13px] lg:text-[13.5px] lexend tracking-[0.005em]">{{emp.descripcion}}</p>
+              <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta">{{emp.name}}</p>
+              <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta tracking-[0.005em]">{{emp.descripcion}}</p>
             </div>
-            <!-- <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }"> -->
+            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
+            alt="" [ngClass]="{ 'arrow-rotate' : emp.state }">
           </div>
-        </div>
+        </div> -->
 
         <!-- <div (mouseover)="bgColor = false" (mouseout)="bgColor = true"> -->
           <!-- <div 
