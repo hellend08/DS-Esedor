@@ -1,4 +1,9 @@
+
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
+
+
+<app-loader></app-loader>
+
 <div>
   <section #slideContent class="lg:pt-28 px-4 h-screen flex flex-col justify-center"
     style="background: linear-gradient(to bottom, #193EFF 0%, #8B99E4 100%); min-height: 720px;">
@@ -96,15 +101,11 @@
     class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-40">
     <!-- id="parallax" -->
     <div class="inline-block ml-[-15px]">
-      <div class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]">
-
-
-        <div data-aos="fade-down-right" data-aos-duration="1000" >B</div>
-        <div data-aos="fade-down-right" data-aos-duration="1100"  class="absolute lg:block hidden left-[7%] top-[777%]">l</div>
-        <div data-aos="fade-down-right" data-aos-duration="1200"  class="absolute lg:block hidden left-[11%] top-[777%]">o</div>
-        <div data-aos="fade-down-right" data-aos-duration="1300"  class="absolute lg:block hidden left-[18%] top-[777%]">g</div>
-
-
+      <div class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]" style="display: flex; text-align: left;">
+        <div data-aos="fade-down-right" data-aos-duration="1000">B</div>
+        <div data-aos="fade-down-right" data-aos-duration="1100">l</div>
+        <div data-aos="fade-down-right" data-aos-duration="1200">o</div>
+        <div data-aos="fade-down-right" data-aos-duration="1300">g</div>
         </div>
     </div>
     <div class="inline-block lg:w-[40%] space-y-24 pt-8">
