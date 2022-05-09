@@ -23,6 +23,33 @@
   transition: all .2s;
 }
 
+.open-menu li{
+  color: white;
+  font-size: 40px;
+  font-family: LexendZetta;
+  font-weight: 300;
+  line-height: 53.3px;
+  display: inline;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.open-menu li img{
+  display: inline;
+}
+@media screen and (min-width: 1450px) {
+  .open-menu li{
+    color: white;
+    font-size: 64px;
+    font-family: LexendZetta;
+    font-weight: 300;
+    line-height: 53.3px;
+    display: inline;
+    margin-right: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
 /* .open-nav {
   height: 100vh;
   transition-delay: 0s;

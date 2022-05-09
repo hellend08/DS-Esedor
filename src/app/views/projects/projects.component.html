@@ -1,4 +1,5 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
+
 <app-first-section [date]="date" [industry]="industry" [client]="client" [image]="image" [styles]="styles"
   [display]="display" [paragraphOne]="paragraphOne" [paragraphTwo]="paragraphTwo" [serviceList]="serviceList"
   [definitionsList]="definitionsList" [animatedTitle]="animatedTitle"></app-first-section>
@@ -6,7 +7,10 @@
 <section id="parallax" class="h-[80%]">
 </section>
 
-<section class="bg-black py-[4rem] lg:py-[12.6rem] px-4 lg:px-[6rem] xl:px-[7rem]">
+<app-second-section [firstText]="firstText" [secondText]="secondText" [displayContent]="displayContent" [imageSection]="imageSection">
+</app-second-section>
+
+<!-- <section class="bg-black py-[4rem] lg:py-[12.6rem] px-4 lg:px-[6rem] xl:px-[7rem]">
   <div class="grid lg:grid-cols-2 lg:gap-[5rem] xl:gap-[7rem] text-white">
     <p data-aos="fade-up" data-aos-duration="2000"
       class="lexendzetta text-[18px] lg:text-[35px] xl:text-[40px] 2xl:text-[49px] lg:leading-[61.5px]">
@@ -30,7 +34,7 @@
     <img data-aos="zoom-out" data-aos-duration="1000" class="lg:w-[85%] 2xl:w-[90%]" alt="laptop2"
       src="assets/img/videollamada.png">
   </div>
-</section>
+</section> -->
 
 <section class="px-4 lg:px-[6rem] xl:px-[7rem] py-[6rem] lg:py-[11rem] lg:bg-[#F2F2F2] lg:h-[1210px]">
   <h2

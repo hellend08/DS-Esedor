@@ -27,6 +27,7 @@ import { ProjectsSlideComponent } from './shared/components/projects-slide/proje
 import { MainSliderComponent } from './shared/components/main-slider/main-slider.component';
 import { FirstSectionComponent } from './shared/components/project-internals/first-section/first-section.component';
 import { NotifaiComponent } from './views/notifai/notifai.component';
+import { SecondSectionComponent } from './shared/components/project-internals/second-section/second-section.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NotifaiComponent } from './views/notifai/notifai.component';
     MainSliderComponent,
     DescripcionComponent,
     FirstSectionComponent,
-    NotifaiComponent
+    NotifaiComponent,
+    SecondSectionComponent
   ],
   imports: [
     BrowserModule,

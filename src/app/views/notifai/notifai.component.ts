@@ -32,17 +32,17 @@ export class NotifaiComponent implements OnInit {
     'PRODUCTION',
   ]
 
-  // title: Array<String> = [
-  //   ,
-  //   'experiencia',
-  //   'ecommerce',
-  //   'B2B',
-  // ]
-
   animatedTitle: Array<{aos: number, label: String}> = [
     {aos: 1000, label: 'Brading y'},
     {aos: 1000, label: 'Design system'},
   ]
+
+  firstText: string = 'Investigación y definición de experiencia de cliente (CX)';
+  secondText: string = 'During these uncertain times, many of us find ourselves in introspection mode, with new ideas and resolving to do better. We wish we could help everyone and fix everything.';
+  thirdText: string = ' “During these uncertain times, many of us find ourselves in introspection mode, with new ideas and resolving to do better. We wish we could help everyone and fix everything. “ ';
+  // fourthText: string = 'Cómo empatizar con ellos';
+  displayContent: any = 'block';
+  imageSection: any = '../../../assets/img/img-notifai.png';
 
   constructor() { }
 
