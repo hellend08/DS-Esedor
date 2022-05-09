@@ -11,7 +11,7 @@ export class NotifaiComponent implements OnInit {
 
   date: number = 2021;
   industry: string = 'ENERGÍA';
-  client: string = 'notifai';
+  client: string = 'Notifai';
   styles: string = 'w-[100%] '
   display: string = 'hidden'
   image: string = 'assets/img/laptop-notifai.png';

@@ -12,7 +12,7 @@
 .arrow-rotate {
   transform: rotate(-45deg);
   transition: transform .6s cubic-bezier(.4,0,0,1);
-  
+
 }
 
 .btn-hover:hover {
@@ -39,7 +39,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  transition: all .4s ease-in-out; 
+  transition: all .4s ease-in-out;
   transform-origin: center top;
     transform: scaleY(0);
     transition: transform .3s cubic-bezier(.4,0,0,1);
@@ -330,3 +330,4 @@ body {
 /* .contenedor img.top:hover {
   opacity: 1;
 } */
+
