@@ -1,7 +1,6 @@
 
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
 
-
 <app-loader></app-loader>
 
 <div>
@@ -54,9 +53,9 @@
         </div>
         <!-- <div >
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
-          <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p>
+          <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p> routerLink="/proyectos"
         </div> -->
-        <button routerLink="/proyectos" class="flex items-center lg:justify-end pb-4 lg:p-[15px] transition duration-700 ease-in-out btn-hover" (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
+        <button (click)="redirectProject()" class="flex items-center lg:justify-end pb-4 lg:p-[15px] transition duration-700 ease-in-out btn-hover" (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
           <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p>
         </button>

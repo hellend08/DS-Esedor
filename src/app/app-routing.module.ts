@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'proyectos', component: ProjectsDashboardComponent},
   // { path: 'descripcion', component: DescripcionComponent},
   { path: 'notifai-vista1', component: NotifaiVista1Component},
-  { path: 'notifai', component: NotifaiComponent}
+  { path: 'proyectos/notifai', component: NotifaiComponent}
 ]
 
 @NgModule({
