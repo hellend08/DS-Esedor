@@ -1,16 +1,16 @@
 <mat-toolbar class="main-header text-black -mt-6 bg-transparent">
   <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem]" [ngClass]="{ 'text-white' : colorWhite}">
-    <div class="flex items-center w-[30%]" #logo>
+    <div class="flex items-center w-full lg:w-[30%]" #logo>
       <div class="cursor-pointer" routerLink="/index">
         <img class="w-[2.313] h-[2rem]" [ngClass]="{ 'hidden' : colorWhite}" src="assets/img/logoE.svg">
         <img class="w-[2.313] h-[2rem]" [ngClass]="{ 'hidden' : !colorWhite}" src="assets/img/logo_white.png">
       </div>
       <span [class.header_variable]="header_variable" routerLink="/index"
-        class="text-[1.125rem] lexend ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">Esedor</span>
+        class="text-sm lg:text-[1.125rem] lexend ml-2 lg:ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">Esedor</span>
     </div>
-    <div #menu class="lg:flex hidden justify-end w-full lexendzetta font-bold">
+    <div #menu class="flex justify-end w-full lexendzetta font-bold">
       <div [class.header_variable]="header_variable"
-        class="grid grid-cols-6 gap-4 space-x-10 justify-between w-full lexendzetta font-bold">
+        class="lg:grid grid-cols-6 gap-4 hidden space-x-10 justify-between w-full lexendzetta font-bold">
         <span class="cursor-pointer col-span-2" (click)="redirectProject()">Proyectos</span>
         <span class="col-span-2">Nosotros</span>
         <span class="col-span-2">Contacto</span>
