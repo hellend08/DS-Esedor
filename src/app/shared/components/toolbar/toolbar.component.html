@@ -8,29 +8,30 @@
       <span [class.header_variable]="header_variable" routerLink="/index"
         class="text-[1.125rem] lexend ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">Esedor</span>
     </div>
-    <div class="flex lg:space-x-10 w-[70%]">
-      <div [class.header_variable]="header_variable" #menu
-        class="space-x-10 lg:flex hidden justify-between w-full lexendzetta font-bold">
-        <span class="cursor-pointer" (click)="redirectProject()">Proyectos</span>
-        <span>Nosotros</span>
-        <span>Contacto</span>
-        <div #search (click)="openMenu = true">
-          <div [ngClass]="{ 'hidden' : colorWhite}" class="mt-[0.38rem]">
-            <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <line y1="1" x2="42" y2="1" stroke="#000000" stroke-width="2" />
-              <path d="M0 11L23 11" stroke="#000000" stroke-width="2" />
-              <line y1="21" x2="42" y2="21" stroke="#000000" stroke-width="2" />
-            </svg>
-          </div>
-          <div [ngClass]="{ 'hidden' : !colorWhite}" class="mt-[0.38rem]">
-            <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <line y1="1" x2="42" y2="1" stroke="#FFFFFF" stroke-width="2" />
-              <path d="M0 11L23 11" stroke="#FFFFFF" stroke-width="2" />
-              <line y1="21" x2="42" y2="21" stroke="#FFFFFF" stroke-width="2" />
-            </svg>
-          </div>
+    <div #menu class="lg:flex hidden justify-end w-full lexendzetta font-bold">
+      <div [class.header_variable]="header_variable"
+        class="grid grid-cols-6 gap-4 space-x-10 justify-between w-full lexendzetta font-bold">
+        <span class="cursor-pointer col-span-2" (click)="redirectProject()">Proyectos</span>
+        <span class="col-span-2">Nosotros</span>
+        <span class="col-span-2">Contacto</span>
+      </div>
+
+      <div #search (click)="openMenu = true">
+        <div [ngClass]="{ 'hidden' : colorWhite}" class="mt-[0.38rem]">
+          <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="42" y2="1" stroke="#000000" stroke-width="2" />
+            <path d="M0 11L23 11" stroke="#000000" stroke-width="2" />
+            <line y1="21" x2="42" y2="21" stroke="#000000" stroke-width="2" />
+          </svg>
+        </div>
+        <div [ngClass]="{ 'hidden' : !colorWhite}" class="mt-[0.38rem]">
+          <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="42" y2="1" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M0 11L23 11" stroke="#FFFFFF" stroke-width="2" />
+            <line y1="21" x2="42" y2="21" stroke="#FFFFFF" stroke-width="2" />
+          </svg>
         </div>
       </div>
     </div>

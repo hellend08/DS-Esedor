@@ -18,7 +18,7 @@ export class ToolbarComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  header_variable=false;
+  header_variable = false;
   @HostListener("document:scroll")
   scrollFuntion(){
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
