@@ -5,8 +5,23 @@
 /* Font*/
 
 @font-face {
+  font-family: LexendZettaLight;
+  src: url("assets/font/LexendZetta-Light.ttf");
+}
+
+@font-face {
   font-family: LexendZetta;
   src: url("assets/font/LexendZetta.ttf");
+}
+
+@font-face {
+  font-family: LexendZettaMedium;
+  src: url("assets/font/LexendZetta-Medium.ttf");
+}
+
+@font-face {
+  font-family: LexendZettaBold;
+  src: url("assets/font/LexendZetta-Bold.ttf");
 }
 
 @font-face {
@@ -36,8 +51,16 @@
   font-family: LexendBold;
 }
 
+.lexendzettali {
+  font-family: LexendZettaLight;
+}
+
 .lexendzetta {
   font-family: LexendZetta;
+}
+
+.lexendzettabd {
+  font-family: LexendZettaBold;
 }
 
 

@@ -14,6 +14,8 @@ export class ToolbarComponent implements OnInit {
 
   @Input() colorWhite: any;
 
+  openMenu!: boolean;
+
   constructor(private router: Router) { }
 
   header_variable=false;
