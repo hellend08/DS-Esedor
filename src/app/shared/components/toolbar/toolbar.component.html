@@ -42,10 +42,13 @@
 
 </div> -->
 <div class="h-screen w-full top-0 fixed bg-black z-50" *ngIf="openMenu">
-  <div class="h-[30%] bg-[#5682FF] text-white flex justify-between pb-[3rem] p-4 relative" style="min-height: 220px;">
+  <div class="h-[30%] bg-[#5682FF] text-white flex justify-between lg:pb-[1.5rem] 2xl:pb-[3rem] p-4 relative"
+    style="min-height: 220px;">
     <div class="flex">
-      <img class="w-[2.313] h-[2rem]" src="assets/img/logo_white.png">
-      <p>Esedor</p>
+      <img routerLink="/index" class="w-[2.313] h-[2rem] cursor-pointer" src="assets/img/logo_white.png">
+      <p routerLink="/index"
+        class="text-sm lg:text-[1.125rem] lexend ml-2 lg:ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">
+        Esedor</p>
     </div>
     <!-- space-y-[3.5rem] -->
     <div class="flex flex-col justify-between pr-[6rem]">
@@ -54,7 +57,7 @@
         <p class="lexend text-[14.5px]">¿Qué proyecto podemos construir para ti?</p>
       </div>
       <button
-        class="h-[65px] w-[236px] rounded-[50px] bg-white text-[15.5px] text-black flex justify-center items-center p-4">
+        class="h-[50px] 2xl:h-[65px] w-[236px] rounded-[50px] bg-white text-[15.5px] text-black flex justify-center items-center p-4">
         <img class="pr-5" src="../../../../assets/img/arrow-black.png" alt="">
         Conversemos
       </button>
@@ -66,33 +69,13 @@
       </button>
     </div>
   </div>
-  <!-- <p>Hola</p> -->
-  <div class="h-[60%] px-4 pt-4 pb-2 flex flex-col justify-end">
-    <!-- <div>
-      
-    </div> -->
+  <div class="h-[70%] px-4 pt-4 pb-2 flex flex-col justify-end">
     <ul class="open-menu flex flex-wrap">
-      <li>Servicios
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="">
-        <!-- [ngClass]="{ 'arrow-rotate' : !bgColor }" -->
+      <li class="cursor-pointer" *ngFor="let list of listGroup" (click)="redirectInternas(list.ruta)"
+        (mouseover)="list.state = false" (mouseout)="list.state = true">{{list.name}}
+        <img [ngClass]="{ 'arrow-rotate' : !list.state }" class="translate-x-0 transition duration-700 ease-in-out"
+          src="assets/img/short-arrow-right.png" alt="">
       </li>
-      <li>Proyectos
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="">
-        <!-- [ngClass]="{ 'arrow-rotate' : !bgColor }" -->
-      </li>
-      <li>Nosotros
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="">
-      </li>
-      <li>Talento
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="">
-      </li>
-      <li>Contacto
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="">
-      </li>
-      <li>Blog
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="">
-      </li>
-
     </ul>
     <div class="flex justify-between items-end">
       <p class="lexend text-[13px] font-medium text-white">Esedor © 2022</p>
@@ -114,6 +97,5 @@
         </li>
       </ul>
     </div>
-
   </div>
 </div>
