@@ -14,9 +14,25 @@ export class ToolbarComponent implements OnInit {
 
   @Input() colorWhite: any;
 
+  openMenu!: boolean;
+  arrowRoate!: boolean;
+
   constructor(private router: Router) { }
 
-  header_variable=false;
+  listGroup = [
+    {name: 'Servicios', ruta: '/services', state: true},
+    {name: 'Proyectos', ruta: '/proyectos', state: true},
+    {name: 'Nosotros', ruta: '/', state: true},
+    {name: 'Talento', ruta: '/', state: true},
+    {name: 'Contacto', ruta: '/', state: true},
+    {name: 'Blog', ruta: '/', state: true},
+  ]
+
+  public redirectInternas(ruta: string) {
+    this.router.navigateByUrl(ruta);
+  }
+
+  header_variable = false;
   @HostListener("document:scroll")
   scrollFuntion(){
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){

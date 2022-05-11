@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, VERSION, QueryList, AfterViewInit, ViewChildren } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { ViewportScroller } from "@angular/common";
 import { Draggable } from 'gsap/Draggable';
@@ -7,9 +7,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
 
 import * as AOS from 'aos';
-
-// import { Question } from './models/Question';
-// import { questionsList } from './helpers/questionsList';
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
 

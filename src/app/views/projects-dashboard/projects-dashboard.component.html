@@ -1,29 +1,5 @@
-<!-- <mat-toolbar class="main-header text-[#D8D8D8] -mt-6 bg-transparent">
-  <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem]">
-    <div class="flex">
-      <div>
-        <img class="w-[2.313] h-[2rem]" src="assets/img/logo.svg">
-      </div>
-      <span [class.header_variable]="header_variable" style="line-height: 22px;" class="-ml-16 text-[1.125rem] lexend">Esedor</span>
-    </div>
-    <div class="flex space-x-10">
-      <div [class.header_variable]="header_variable" class="space-x-10">
-        <span  class="cursor-pointer">Proyectos</span>
-        <span>Nosotros</span>
-        <span>Contacto2</span>
-      </div>
-      <div>
-        <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="1" x2="42" y2="1" stroke="#D8D8D8" stroke-width="2"/>
-          <path d="M0 11L23 11" stroke="#D8D8D8" stroke-width="2"/>
-          <line y1="21" x2="42" y2="21" stroke="#D8D8D8" stroke-width="2"/>
-        </svg>
-      </div>
-    </div>
-
-  </div>
-</mat-toolbar> -->
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
+
 <mat-drawer-container class="w-full mt-20 min-h-full px-4 lg:px-24 bg-white">
   <mat-drawer mode="side" class="lg:w-[250px] flex justify-end hidden lg:block" opened>
     <div class="border-l border-black">
@@ -64,7 +40,7 @@
 
       <div class="grid lg:grid-cols-2 gap-10 my-[3rem] lg:my-16">
         <div *ngFor="let emp of filtrado" >
-          <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="emp.state = false" (mouseout)="emp.state = true">
+          <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (click)="redirectInternas(emp.ruta)" (mouseover)="emp.state = false" (mouseout)="emp.state = true">
             <!-- (mouseout)=""  (mouseover)="probando(emp)"  -->
             <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
              <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->

@@ -26,27 +26,50 @@
 .open-menu li{
   color: white;
   font-size: 40px;
-  font-family: LexendZetta;
+  font-family: LexendZettaLight;
   font-weight: 300;
   line-height: 53.3px;
   display: inline;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.open-menu li:hover {
+  color: #626973;
 }
 
 .open-menu li img{
   display: inline;
 }
-@media screen and (min-width: 1450px) {
+
+.arrow-rotate{
+  transform: rotate(-45deg);
+  transition: transform .6s cubic-bezier(.4,0,0,1);
+}
+
+@media screen and (min-width: 1280px) {
   .open-menu li{
-    color: white;
-    font-size: 64px;
-    font-family: LexendZetta;
-    font-weight: 300;
-    line-height: 53.3px;
-    display: inline;
-    margin-right: 3rem;
+    font-size: 43px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .open-menu li{
+    font-size: 48px;
     margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1505px) {
+  .open-menu li{
+    font-size: 53px;
+    margin-right: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1670px) {
+  .open-menu li{
+    font-size: 60px;
   }
 }
 

@@ -1,36 +1,37 @@
 <mat-toolbar class="main-header text-black -mt-6 bg-transparent">
   <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem]" [ngClass]="{ 'text-white' : colorWhite}">
-    <div class="flex items-center w-[30%]" #logo >
+    <div class="flex items-center w-full lg:w-[30%]" #logo>
       <div class="cursor-pointer" routerLink="/index">
         <img class="w-[2.313] h-[2rem]" [ngClass]="{ 'hidden' : colorWhite}" src="assets/img/logoE.svg">
         <img class="w-[2.313] h-[2rem]" [ngClass]="{ 'hidden' : !colorWhite}" src="assets/img/logo_white.png">
       </div>
       <span [class.header_variable]="header_variable" routerLink="/index"
-        class="text-[1.125rem] lexend ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">Esedor</span>
+        class="text-sm lg:text-[1.125rem] lexend ml-2 lg:ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">Esedor</span>
     </div>
-    <div class="flex lg:space-x-10 w-[70%]">
-      <div [class.header_variable]="header_variable" #menu
-        class="space-x-10 lg:flex hidden justify-between w-full lexendzetta font-bold">
-        <span class="cursor-pointer" (click)="redirectProject()">Proyectos</span>
-        <span>Nosotros</span>
-        <span>Contacto</span>
-        <div #search>
-          <div [ngClass]="{ 'hidden' : colorWhite}" class="mt-[0.38rem]">
-            <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <line y1="1" x2="42" y2="1" stroke="#000000" stroke-width="2" />
-              <path d="M0 11L23 11" stroke="#000000" stroke-width="2" />
-              <line y1="21" x2="42" y2="21" stroke="#000000" stroke-width="2" />
-            </svg>
-          </div>
-          <div [ngClass]="{ 'hidden' : !colorWhite}" class="mt-[0.38rem]">
-            <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <line y1="1" x2="42" y2="1" stroke="#FFFFFF" stroke-width="2" />
-              <path d="M0 11L23 11" stroke="#FFFFFF" stroke-width="2" />
-              <line y1="21" x2="42" y2="21" stroke="#FFFFFF" stroke-width="2" />
-            </svg>
-          </div>
+    <div #menu class="flex justify-end w-full lexendzetta font-bold">
+      <div [class.header_variable]="header_variable"
+        class="lg:grid grid-cols-6 gap-4 hidden space-x-10 justify-between w-full lexendzetta font-bold">
+        <span class="cursor-pointer col-span-2" (click)="redirectProject()">Proyectos</span>
+        <span class="col-span-2">Nosotros</span>
+        <span class="col-span-2">Contacto</span>
+      </div>
+
+      <div #search (click)="openMenu = true" class="pb-2">
+        <div [ngClass]="{ 'hidden' : colorWhite}" class="mt-[0.38rem]">
+          <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="42" y2="1" stroke="#000000" stroke-width="2" />
+            <path d="M0 11L23 11" stroke="#000000" stroke-width="2" />
+            <line y1="21" x2="42" y2="21" stroke="#000000" stroke-width="2" />
+          </svg>
+        </div>
+        <div [ngClass]="{ 'hidden' : !colorWhite}" class="mt-[0.38rem]">
+          <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="42" y2="1" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M0 11L23 11" stroke="#FFFFFF" stroke-width="2" />
+            <line y1="21" x2="42" y2="21" stroke="#FFFFFF" stroke-width="2" />
+          </svg>
         </div>
       </div>
     </div>
@@ -40,57 +41,45 @@
   <div class="bg-nav"></div>
 
 </div> -->
-<div class="h-screen w-full top-0 fixed bg-black z-50 hidden">
-  <div class="h-[30%] bg-[#5682FF] text-white flex justify-between pb-[3rem] p-4" style="min-height: 220px;">
-    <div>
-      <p>Esedor</p>
+<div class="h-screen w-full top-0 fixed bg-black z-50" *ngIf="openMenu">
+  <div class="h-[30%] bg-[#5682FF] text-white flex justify-between lg:pb-[1.5rem] 2xl:pb-[3rem] p-4 relative"
+    style="min-height: 220px;">
+    <div class="flex">
+      <img routerLink="/index" class="w-[2.313] h-[2rem] cursor-pointer" src="assets/img/logo_white.png">
+      <p routerLink="/index"
+        class="text-sm lg:text-[1.125rem] lexend ml-2 lg:ml-4 leading-[22px] lexendzetta font-medium cursor-pointer">
+        Esedor</p>
     </div>
     <!-- space-y-[3.5rem] -->
-    <div class="flex flex-col justify-between">
-    <h4 class="lexendli text-[21px]">Trabajar con Esedor es optimizar tus oportunidades.</h4>
-    <p class="lexend text-[14.5px]">¿Qué proyecto podemos construir para ti?</p>
-    <button class="h-[65px] w-[236px] rounded-[50px] bg-white text-[15.5px] text-black">
-      Conversemos
-    </button>
+    <div class="flex flex-col justify-between pr-[6rem]">
+      <div class="w-[500px]">
+        <h4 class="lexendli text-[21px]">Trabajar con Esedor es optimizar tus oportunidades.</h4>
+        <p class="lexend text-[14.5px]">¿Qué proyecto podemos construir para ti?</p>
+      </div>
+      <button
+        class="h-[50px] 2xl:h-[65px] w-[236px] rounded-[50px] bg-white text-[15.5px] text-black flex justify-center items-center p-4">
+        <img class="pr-5" src="../../../../assets/img/arrow-black.png" alt="">
+        Conversemos
+      </button>
+    </div>
+    <div class="absolute bottom-[-3.5rem] right-4" (click)="openMenu = false">
+      <!-- top-[16rem] -->
+      <button class="w-[102px] h-[102px] rounded-[50%] bg-[#141C26] text-white flex justify-center items-center">
+        <img src="../../../../assets/img/closer.png" alt="">
+      </button>
+    </div>
   </div>
-  </div>
-  <!-- <p>Hola</p> -->
-  <div class="h-[60%] px-4 pt-4 pb-2 flex flex-col justify-end">
-    <!-- <div>
-      
-    </div> -->
+  <div class="h-[70%] px-4 pt-4 pb-2 flex flex-col justify-end">
     <ul class="open-menu flex flex-wrap">
-      <li>Servicios
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-                    alt="" >
-                    <!-- [ngClass]="{ 'arrow-rotate' : !bgColor }" -->
+      <li class="cursor-pointer" *ngFor="let list of listGroup" (click)="redirectInternas(list.ruta)"
+        (mouseover)="list.state = false" (mouseout)="list.state = true">{{list.name}}
+        <img [ngClass]="{ 'arrow-rotate' : !list.state }" class="translate-x-0 transition duration-700 ease-in-out"
+          src="assets/img/short-arrow-right.png" alt="">
       </li>
-      <li>Proyectos
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-                    alt="" >
-                    <!-- [ngClass]="{ 'arrow-rotate' : !bgColor }" -->
-      </li>
-      <li>Nosotros
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-                    alt="" >
-      </li>
-      <li>Talento
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-                    alt="" >
-      </li>
-      <li>Contacto
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-                    alt="" >
-      </li>
-      <li>Blog
-        <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-                    alt="" >
-      </li>
-     
     </ul>
     <div class="flex justify-between items-end">
       <p class="lexend text-[13px] font-medium text-white">Esedor © 2022</p>
-      <ul class="space-y-[2rem]">
+      <ul class="space-y-[1.2rem]">
         <li>
           <a class="block" href="">
             <img src="assets/img/Linkedin.png" alt="">
@@ -108,6 +97,5 @@
         </li>
       </ul>
     </div>
-
   </div>
 </div>

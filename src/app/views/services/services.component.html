@@ -1,0 +1,92 @@
+<app-toolbar [colorWhite]="colorWhite"></app-toolbar>
+<div>
+    <section class="bg-image h-screen text-white grid grid-cols-3 py-8 2xl:py-[4rem]">
+        <!-- py-[6rem]  2xl:grid-cols-2-->
+        <div class="flex flex-col justify-end col-span-2 pr-[7.5rem]">
+            <!-- 2xl:w-[60%] -->
+            <h5 class="lexendzettali text-[70px] 2xl:text-[86px] leading-[80px] 2xl:leading-[107px]">Soluciones a medida
+                para su negocio</h5>
+            <h3 class="lexendli text-[30px] 2xl:text-[36px] leading-[40px] 2xl:leading-[53.3px]">Permítenos ayudarte a
+                cumplir tus objetivos con nuestras
+                habilidades y servicios especializados, los
+                acompañaremos en todas las etapas del servicio.</h3>
+        </div>
+    </section>
+    <section class="flex flex-col w-full p-4">
+        <div class="tab-header">
+            <div class="tab-label" *ngFor="let item of labelGroup">
+                <p class="text-label">{{item.label}}</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-[5rem] py-[4rem]">
+            <h1 class="col-span-2 text-[46px] lexendzettali">Dale forma a tu idea
+                de producto. </h1>
+            <h3 class="col-span-2 text-[36px] lexendli">Planifique y evalúe las características esenciales de su
+                producto para lograr sus objetivos comerciales
+                y eliminar posibles errores.</h3>
+            <p class="lexend col-span-4">LOS ENTREGABLES INCLUYEN </p>
+            <div *ngFor="let item of detailsGroup" class="space-y-[1.5rem]">
+                <img src="{{item.img}}" alt="">
+                <h4 class="lexendzettali text-[24px] leading-[35.8px]">{{item.title}}</h4>
+                <p class="lexendli text-[21px]">{{item.text}}</p>
+            </div>
+            <div class="border-t border-black col-span-3 col-end-5 py-[7.5rem] pr-[8rem] grid grid-cols-2 gap-[4rem]">
+                <h1 class="lexendzettali text-[46px] leading-[57px] col-span-2">Productos excepcionales con soporte de inicio a fin y orientación experta</h1>
+                <div class="lexendli space-y-4" *ngFor="let item of paragraphGroup">
+                    <h4 class="text-[21px] leading-[26px]">{{item.text}}</h4>
+                    <h3 class="text-[36px] leading-[53.3px]">{{item.secondText}}</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#5682FF] py-[8rem] space-y-[8rem]">
+        <h4 class="lexendli text-[21px] leading-[26px] text-white">Confían en nosotros</h4>
+        <div class="grid grid-cols-5 gap-4">
+            <img src="assets/img/logo_empresa/niubiz.png" alt="">
+            <img src="assets/img/logo_empresa/primax.png" alt="">
+            <img src="assets/img/logo_empresa/redeban.png" alt="">
+            <img src="assets/img/logo_empresa/ripley.png" alt="">
+            <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
+        </div>
+    </section>
+    <section class="bg-[#141C26]">
+        <div class="pt-[3rem] pb-2 border-b border-white">
+            <h5 class="lexendzettali text-[86px] text-white">Proyectos</h5>
+        </div>
+        <div class="pt-[2rem] pb-[10rem] ml-[-10px]">
+            <app-projects-slide></app-projects-slide>
+        </div>
+    </section>
+    <footer class="bg-[#F2F4F5]">
+        <h5 class="lexendzettali text-[86px]">Programe una sesión gratuita con uno de nuestros expertos</h5>
+        <button>
+            <img class="pr-5" src="../../../../assets/img/arrow-black.png" alt="">
+            Conversemos
+        </button>
+        <div class="flex mt-auto lg:pl-[4rem] lg:pr-4 items-end relative">
+            <p class="lexend text-[13px] font-medium ">Esedor © 2022</p>
+        
+            <ul class="ml-auto text-black text-xs lg:text-sm lexend flex flex-col lg:flex-row items-end justify-between w-[55%] lg:pr-[9rem] space-y-[1.5rem] lg:space-y-0">
+              <!-- text-right lg:text-left -->
+              <li>Proyectos</li>
+              <li>Services</li>
+              <li>Who we are</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+            <div class="space-y-[2rem] absolute lg:relative bottom-[2.5rem] lg:bottom-0">
+              <a class="block" href="">
+                <img src="assets/img/Linkedin.png" alt="">
+              </a>
+              <a class="block" href="">
+                <img src="assets/img/Facebook.png" alt="">
+              </a>
+              <a class="block" href="">
+                <img src="assets/img/Instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+
+    </footer>
+</div>
