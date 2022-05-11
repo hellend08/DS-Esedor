@@ -41,6 +41,11 @@ export class DescripcionComponent implements OnInit {
     {aos: 1200, label: ' digital'},
   ]
 
+  firstText: string = 'Visualización de datos P2P y P2M';
+  secondText: string = 'During these uncertain times, many of us find ourselves in introspection mode, with new ideas and resolving to do better. We wish we could help everyone and fix everything. ';
+  // thirdText: string = '“Sesiones ludicas y divertidas que puedan romper el hielo en cada usuario que deseamos explorar en las sesiones cognitivas“';
+  // fourthText: string = 'Cómo empatizar con ellos';
+
   constructor() { }
 
   ngOnInit(): void {
