@@ -12,6 +12,7 @@ export class SecondSectionComponent implements OnInit {
   @Input() thirdText!: string;
   // @Input() fourthText!: string;
   @Input() displayContent!: any;
+  @Input() displayImage!: any;
   @Input() imageSection!: any;
   // @Input() aosText!: any;
   // @Input() aosImage!: any;
