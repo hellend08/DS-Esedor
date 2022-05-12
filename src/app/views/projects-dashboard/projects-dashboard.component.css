@@ -31,6 +31,15 @@ img {
   font-family: Lexend;
 }
 
+.sidebar mat-list-item:hover {
+  color: #5682FF;
+}
+
+.sidebar .selected {
+  color: #000000;
+  font-weight: bold;
+}
+
 /*Toolbar*/
 /* .header_variable{
   display: none;

@@ -9,6 +9,7 @@ import { MatInputModule } from "@angular/material/input";
 import { DragScrollModule } from "ngx-drag-scroll";
 import { MatListModule } from '@angular/material/list';
 import { NguCarouselModule } from '@ngu/carousel';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -60,7 +61,8 @@ import { ServicesComponent } from './views/services/services.component';
     DragScrollModule,
     MatListModule,
     MatSidenavModule,
-    NguCarouselModule
+    NguCarouselModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
