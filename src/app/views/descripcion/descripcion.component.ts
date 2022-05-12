@@ -45,7 +45,7 @@ export class DescripcionComponent implements OnInit {
   secondText: string = 'During these uncertain times, many of us find ourselves in introspection mode, with new ideas and resolving to do better. We wish we could help everyone and fix everything. ';
   // thirdText: string = '“Sesiones ludicas y divertidas que puedan romper el hielo en cada usuario que deseamos explorar en las sesiones cognitivas“';
   // fourthText: string = 'Cómo empatizar con ellos';
-
+  imageSection: any = 'assets/img/videollamada.png';
   constructor() { }
 
   ngOnInit(): void {
