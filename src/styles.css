@@ -5,6 +5,11 @@
 /* Font*/
 
 @font-face {
+  font-family: LexendZettaExtraLight;
+  src: url("assets/font/LexendZetta-ExtraLight.ttf");
+}
+
+@font-face {
   font-family: LexendZettaLight;
   src: url("assets/font/LexendZetta-Light.ttf");
 }
@@ -49,6 +54,10 @@
 
 .lexendb {
   font-family: LexendBold;
+}
+
+.lexendzettaextrali {
+  font-family: LexendZettaExtraLight;
 }
 
 .lexendzettali {
