@@ -26,7 +26,6 @@
         </div> -->
         <mat-tab-group>
             <!-- <mat-tab-header (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'"></mat-tab-header> -->
-            <!--  -->
             <mat-tab label="Descubrimiento de producto">
                 <div class="grid grid-cols-4 gap-[2.5rem] lg:gap-[5rem] py-[2.5rem] lg:py-[4rem]">
                     <h1 class="col-span-4 lg:col-span-2 lg:ml-[-8px] lg:text-[46px] lexendzettali">Dale forma a tu idea
@@ -38,8 +37,9 @@
                         y eliminar posibles errores.</h3>
                     <p class="lexend col-span-4 text-sm lg:text-base">LOS ENTREGABLES INCLUYEN </p>
                     <div
-                        class="col-span-4 flex lg:grid grid-cols-4 gap-[2.5rem] lg:gap-[5rem] overflow-x-auto lg:overflow-hidden py-[2rem] lg:py-0">
-                        <div *ngFor="let item of detailsGroup" class="space-y-[1.5rem] min-w-[250px]">
+                        class="col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-[3.5rem] lg:gap-[5rem] py-[2rem] lg:py-0">
+                        <!-- overflow-x-auto lg:overflow-hidden -->
+                        <div *ngFor="let item of detailsGroup" class="space-y-4 lg:space-y-[1.5rem] min-w-[250px]">
                             <img src="{{item.img}}" alt="">
                             <h4 class="lexendzettali text-[17px] 2xl:text-[24px] leading-[35.8px]">{{item.title}}</h4>
                             <p class="lexendli text-[18px] 2xl:text-[21px]">{{item.text}}</p>
@@ -96,10 +96,8 @@
         </button>
         <div class="flex mt-auto lg:pl-[4rem] lg:pr-4 items-end relative">
             <p class="lexend text-[13px] font-medium ">Esedor © 2022</p>
-
             <ul
                 class="ml-auto text-black text-xs lg:text-sm lexend flex flex-col lg:flex-row items-end justify-between w-[55%] lg:pr-[9rem] space-y-[1.5rem] lg:space-y-0">
-                <!-- text-right lg:text-left -->
                 <li>Proyectos</li>
                 <li>Services</li>
                 <li>Who we are</li>

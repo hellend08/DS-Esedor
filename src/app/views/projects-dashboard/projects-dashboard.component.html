@@ -10,24 +10,6 @@
         <mat-list-item *ngFor="let list of listGroup" class="cursor-pointer" role="listitem" (click)="filterEmpresas(list.types); list.state = true" [ngClass]="{ 'item-focus' : list.state }">
           <mat-icon>arrow_right</mat-icon>
           {{list.name}}</mat-list-item>
-        <!-- <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('banca')">
-          <mat-icon>arrow_right</mat-icon>
-          Banca</mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('educacion')">
-          <mat-icon>arrow_right</mat-icon>
-          Educación
-        </mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('salud')">
-          <mat-icon>arrow_right</mat-icon>
-          Salud</mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('automotriz')">
-          <mat-icon>arrow_right</mat-icon>
-          Automotriz
-        </mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('ecomerce')">
-          <mat-icon>arrow_right</mat-icon>
-          Ecommerce
-        </mat-list-item> -->
       </mat-list>
     </div>
   </mat-drawer>

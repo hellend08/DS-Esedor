@@ -12,22 +12,48 @@
   </section>
 
   <section class="py-[13rem] px-4 bg-white">
-    <div class="grid grid-cols-3 gap-x-[5rem] border-b border-black pb-[13rem]">
+    <div class="grid lg:grid-cols-3 xl:gap-x-[5rem] border-b border-black pb-[13rem]">
       <h4 class="text-[21px] lexendli">Conócenos</h4>
       <div class="col-span-2 space-y-[3rem]">
-        <h1 class="text-[46px] lexendzettali leading-[57.5px]">Generamos impacto y experiencias increíbles para marcas ambiciosas.</h1>
-        <h3 class="text-[36px] lexendli leading-[53.3px]">Esedor es una compañía que te acompaña en todas las etapas de tu proyecto, maximizando tus objetivos de negocio.</h3>
+        <h1 class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generamos
+          impacto y experiencias increíbles para marcas
+          ambiciosas.</h1>
+        <h3 class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[53.3px]">Esedor es una compañía que te
+          acompaña en todas las etapas de
+          tu proyecto, maximizando tus objetivos de negocio.</h3>
       </div>
     </div>
-    <div class="grid grid-cols-3 gap-x-[5rem] pt-[13rem]">
-      <div class="border-b border-black col-span-2 col-end-4 pb-[13rem] space-y-[3rem]">
-        <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
-        <h1 class="text-[46px] lexendzettali leading-[57.5px]">¿Cuál es tu objetivo final? </h1>
-        <h3 class="text-[36px] lexendli leading-[53.3px]">Permítenos ayudarte a cumplirlo con nuestras habilidades y servicios especializados los acompañaremos en todas las etapas del servicio.</h3>
-    </div>
 
-    </div>
+    <div class="grid grid-cols-3 xl:gap-x-[5rem] pt-[13rem]">
+      <div class="border-b border-black col-span-2 col-end-4 pb-[13rem] space-y-[3rem] xl:pr-[4rem] 2xl:pr-[6rem]">
+        <div class="flex space-x-4 items-center">
+          <div class="border-b border-black w-[43px]"></div>
+          <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
+        </div>
+        <h1 class="text-[40px] xl:text-[46px] lexendzettali leading-[57.5px]">¿Cuál es tu objetivo final? </h1>
+        <h3 class="text-[30px] xl:text-[36px] lexendli leading-[53.3px]">Permítenos ayudarte a cumplirlo con nuestras
+          habilidades y
+          servicios especializados los acompañaremos en todas las etapas del servicio.</h3>
+      </div>
 
+      <div class="col-span-2 col-end-4 grid grid-cols-2 gap-[.5rem] pt-[5rem] xl:pr-[2rem] 2xl:pr-[3rem]">
+        <div [ngClass]="{ 'service-shadow' : item.state}" class="flex flex-col justify-between py-[3rem] px-5 xl:p-[3rem]"
+          *ngFor="let item of servicesItems" (mouseover)="item.state = true" (mouseout)="item.state = false">
+          <!-- max-w-[400px] h-[270px]  h-[330px]-->
+          <div class="space-y-[2rem]">
+            <p class="lexendzettali text-[24px] leading-[35.8px]">{{item.title}}</p>
+            <h4 class="lexendli text-[21px] leading-[33.6px]">{{item.text}}</h4>
+          </div>
+          <button class="lexendli text-[21px] flex items-center mt-auto pt-6"
+            [ngClass]="{ 'text-[#5682FF] font-bold' : item.state}">
+            <img [ngClass]="{ 'arrow-rotate' : item.state}"
+              class="w-[31px] mr-5 translate-x-0 transition duration-700 ease-in-out" src="assets/img/arrow-black.png"
+              alt="">
+            Saber más
+          </button>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- <section class="bg-[#EE6F57] h-screen flex justify-center items-center icon-video">
@@ -89,13 +115,14 @@
   <section class="bg-[#5682FF] px-4">
     <!-- lg:h-screen -->
     <!-- <div class="flex items-end h-[450px]"> -->
-      <div class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0 pt-[8rem] pb-[6.5rem]">
-        <p data-aos="fade-up" data-aos-duration="1000"
-          class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">Confían en nosotros</p>
-        <h1 data-aos="fade-up" data-aos-duration="1000"
-          class="text-[28px] lg:text-[46px] lexendzettali text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">
-          Nos sentimos orgullosos de nuestros proyectos y de los clientes que confían en nosotros </h1>
-      </div>
+    <div
+      class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0 pt-[8rem] pb-[6.5rem]">
+      <p data-aos="fade-up" data-aos-duration="1000" class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">
+        Confían en nosotros</p>
+      <h1 data-aos="fade-up" data-aos-duration="1000"
+        class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">
+        Nos sentimos orgullosos de nuestros proyectos y de los clientes que confían en nosotros </h1>
+    </div>
     <!-- </div> -->
     <div class="h-[400px] flex flex-wrap justify-between items-center">
       <div class="contenedor" (mouseover)="probar = true" (mouseout)="probar = false">
@@ -109,25 +136,21 @@
       <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
 
     </div>
-    <!--
-    <div class="contenedor">
-      <img src="http://programandoointentandolo.com/ejemplos/imagenes/cubo/img1.png" />
-      <img class="top" src="http://programandoointentandolo.com/ejemplos/imagenes/cubo/img6.png" />
-  </div> -->
   </section>
 
   <section
     class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 py-[12rem]">
     <!-- id="parallax"pt-[20rem] -->
     <div class="inline-block ml-[-15px]">
-      <div class="text-[64px] lg:text-[96px] lexendzettaextrali text-[#FFFFFF]" style="display: flex; text-align: left;">
+      <div class="text-[64px] lg:text-[96px] lexendzettaextrali text-[#FFFFFF]"
+        style="display: flex; text-align: left;">
         <div data-aos="fade-down-right" data-aos-duration="1000">B</div>
         <div data-aos="fade-down-right" data-aos-duration="1100">l</div>
         <div data-aos="fade-down-right" data-aos-duration="1200">o</div>
         <div data-aos="fade-down-right" data-aos-duration="1300">g</div>
       </div>
     </div>
-    <div class="inline-block lg:w-[40%] space-y-24 pt-8">
+    <div class="inline-block lg:w-[50%] xl:w-[40%] space-y-24 pt-8">
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlog = true" (mouseout)="bgBlog = false">
         <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
@@ -137,7 +160,8 @@
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
           </div>
-          <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design
+          <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La democratización del diseño:
+            “Design
             Systems”</h3>
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
             [ngClass]="{ 'arrow-rotate' : bgBlog }">

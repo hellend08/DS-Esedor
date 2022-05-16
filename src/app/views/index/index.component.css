@@ -15,6 +15,11 @@
 
 }
 
+.service-shadow {
+  /* padding: 3rem 3rem 3rem .5rem; */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
 .btn-hover:hover {
   background: #000000;
   transition: all .4s linear;
