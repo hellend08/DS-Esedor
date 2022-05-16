@@ -32,18 +32,19 @@ export class ProjectsDashboardComponent implements OnInit {
   //   }
   // }
 
-  @HostListener('click')
-  clickInside() {
-    this.clickListGroup.map(item => item.state = true)
-    // this.wasInside = true;
-  }
+  // @HostListener('click')
+  // clickInside() {
+  //   this.clickListGroup.map(item => item.state = true)
+  //   // this.wasInside = true;
+  // }
   
   // @HostListener('document:click')
   // clickout() {
-  //   if (!this.wasInside) {
-  //     this.text = "clicked outside";
-  //   }
-  //   this.wasInside = false;
+  //   this.clickListGroup.map(item => item.state = true)
+  //   // if (!this.wasInside) {
+  //   //   this.text = "clicked outside";
+  //   // }
+  //   // this.wasInside = false;
   // }
 
 

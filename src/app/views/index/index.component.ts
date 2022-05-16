@@ -40,6 +40,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   bgBlog!: boolean;
   bgBlogTwo!: boolean;
+  bgBlogThree!: boolean;
 
   arrowRotate!: boolean;
 

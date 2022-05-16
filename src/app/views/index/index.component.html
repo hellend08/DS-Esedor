@@ -11,14 +11,33 @@
     </div>
   </section>
 
-  <section class="bg-[#EE6F57] h-screen flex justify-center items-center icon-video">
-    <mat-icon class="text-white text-[84px] w-[84px] h-[84px]">play_circle</mat-icon>
+  <section class="py-[13rem] px-4 bg-white">
+    <div class="grid grid-cols-3 gap-x-[5rem] border-b border-black pb-[13rem]">
+      <h4 class="text-[21px] lexendli">Conócenos</h4>
+      <div class="col-span-2 space-y-[3rem]">
+        <h1 class="text-[46px] lexendzettali leading-[57.5px]">Generamos impacto y experiencias increíbles para marcas ambiciosas.</h1>
+        <h3 class="text-[36px] lexendli leading-[53.3px]">Esedor es una compañía que te acompaña en todas las etapas de tu proyecto, maximizando tus objetivos de negocio.</h3>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-x-[5rem] pt-[13rem]">
+      <div class="border-b border-black col-span-2 col-end-4 pb-[13rem] space-y-[3rem]">
+        <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
+        <h1 class="text-[46px] lexendzettali leading-[57.5px]">¿Cuál es tu objetivo final? </h1>
+        <h3 class="text-[36px] lexendli leading-[53.3px]">Permítenos ayudarte a cumplirlo con nuestras habilidades y servicios especializados los acompañaremos en todas las etapas del servicio.</h3>
+    </div>
+
+    </div>
+
   </section>
 
-  <section class="bg-[#141C26] pt-[9rem] lg:pt-[20rem] px-4">
-    <div class="border-b-[1px] border-white pb-2 flex flex-col-reverse md:flex-row lg:items-end justify-between">
+  <!-- <section class="bg-[#EE6F57] h-screen flex justify-center items-center icon-video">
+    <mat-icon class="text-white text-[84px] w-[84px] h-[84px]">play_circle</mat-icon>
+  </section> -->
+
+  <section class="bg-[#141C26] px-4">
+    <!-- pt-[9rem] lg:pt-[20rem] -->
+    <!-- <div class="border-b-[1px] border-white pb-2 flex flex-col-reverse md:flex-row lg:items-end justify-between">
       <div class="flex items-center pt-12 lg:pt-0">
-        <!-- (mouseover)="hoverArrow()" (mouseout)="hoverArrowOut()" -->
         <img #arrow class="w-[48px] lg:w-auto" src="assets/img/arrow-right.png" alt="">
         <a class="text-[21px] lg:text-[36px] lexend text-white ml-5">Quienes somos</a>
       </div>
@@ -32,11 +51,12 @@
           crear experiencias <br>
           digitales en millones de usuarios de todo el mundo.</h4>
       </div>
-    </div>
+    </div> -->
     <div
-      class=" border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[300px] lg:h-[600px]">
+      class=" border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[250px]">
+      <!-- lg:h-[600px] -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full">
-        <div class="text-[42px] lg:text-[96px] lexendzetta text-white">
+        <div class="text-[42px] lg:text-[96px] lexendzettaextrali text-white">
           <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute left-[53%]">s</div>
           <div data-aos="fade-down-right" data-aos-duration="1350" class="absolute left-[46%]">o</div>
           <div data-aos="fade-down-right" data-aos-duration="1300" class="absolute left-[41%]">t</div>
@@ -56,7 +76,7 @@
           (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
             [ngClass]="{ 'arrow-rotate' : arrowRotate}">
-          <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p>
+          <p class="text-[21px] lg:text-[21px] lexendli text-white ml-5">Ver proyectos</p>
         </button>
       </div>
 
@@ -68,16 +88,15 @@
 
   <section class="bg-[#5682FF] px-4">
     <!-- lg:h-screen -->
-    <div class="flex items-end h-[450px]">
-      <div class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0">
+    <!-- <div class="flex items-end h-[450px]"> -->
+      <div class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0 pt-[8rem] pb-[6.5rem]">
         <p data-aos="fade-up" data-aos-duration="1000"
-          class="text-[22px] lg:text-[28px] lexendzetta text-[#FFFFFF] mt-3">Nuestros <br> clientes</p>
+          class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">Confían en nosotros</p>
         <h1 data-aos="fade-up" data-aos-duration="1000"
-          class="text-[28px] lg:text-[46px] lexendzetta text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">
-          Amet minim mollit non deserunt ullamco
-          est sit aliqua dolor do </h1>
+          class="text-[28px] lg:text-[46px] lexendzettali text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">
+          Nos sentimos orgullosos de nuestros proyectos y de los clientes que confían en nosotros </h1>
       </div>
-    </div>
+    <!-- </div> -->
     <div class="h-[400px] flex flex-wrap justify-between items-center">
       <div class="contenedor" (mouseover)="probar = true" (mouseout)="probar = false">
         <img src="assets/img/logo_empresa/niubiz.png" alt="" [ngClass]="{'bottom' : probar}">
@@ -98,10 +117,10 @@
   </section>
 
   <section
-    class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pt-[20rem] pb-40">
-    <!-- id="parallax" -->
+    class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 py-[12rem]">
+    <!-- id="parallax"pt-[20rem] -->
     <div class="inline-block ml-[-15px]">
-      <div class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]" style="display: flex; text-align: left;">
+      <div class="text-[64px] lg:text-[96px] lexendzettaextrali text-[#FFFFFF]" style="display: flex; text-align: left;">
         <div data-aos="fade-down-right" data-aos-duration="1000">B</div>
         <div data-aos="fade-down-right" data-aos-duration="1100">l</div>
         <div data-aos="fade-down-right" data-aos-duration="1200">o</div>
@@ -118,7 +137,7 @@
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
           </div>
-          <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design
+          <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La democratización del diseño: “Design
             Systems”</h3>
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
             [ngClass]="{ 'arrow-rotate' : bgBlog }">
@@ -133,11 +152,27 @@
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
           </div>
-          <h3 class="text-[16px] lg:text-[36px] lexend text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los
+          <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los
             chatbots
           </h3>
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
             [ngClass]="{ 'arrow-rotate' : bgBlogTwo }">
+        </div>
+      </div>
+
+      <div class="relative flex cursor-pointer" (mouseover)="bgBlogThree = true" (mouseout)="bgBlogThree = false">
+        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
+          [ngClass]="{ 'bg-blog' : bgBlogThree}"></div>
+        <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
+          <div class="flex justify-between text-sm text-white">
+            <p class="lexendb">01.10.21</p>
+            <p class="lexend">Ver más</p>
+          </div>
+          <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los
+            chatbots
+          </h3>
+          <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
+            [ngClass]="{ 'arrow-rotate' : bgBlogThree }">
         </div>
       </div>
 
