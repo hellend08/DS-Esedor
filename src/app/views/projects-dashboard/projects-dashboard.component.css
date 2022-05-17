@@ -94,43 +94,43 @@ img {
     transition: transform .6s cubic-bezier(.4,0,0,1);
   }
   
-  .bg-color:hover {
+  .bg-color {
     background: #0166FF;
     transition: all .4s ease-in;
     height: 650px;
   }
   
-  .bg-two:hover{
+  .bg-two{
   background: #E84545;
   transition: all .4s ease-in;
   height: 650px;
   }
   
-  .bg-three:hover{
+  .bg-three{
   background: #8B90F5;
   transition: all .4s ease-in;
   height: 650px;
   }
   
-  .bg-fourth:hover{
+  .bg-fourth{
   background: #FFD4D4;
   transition: all .4s ease-in;
   height: 650px;
   }
   
-  .bg-fifth:hover{
+  .bg-fifth{
   background: #2B2E4A;
   transition: all .4s ease-in;
   height: 650px;
   }
   
-  .bg-sixth:hover{
+  .bg-sixth{
   background: #4F57EB;
   transition: all .4s ease-in;
   height: 650px;
   }
   
-  .bg-seventh:hover{
+  .bg-seventh{
   background: #F2F2F2;
   transition: all .4s ease-in;
   height: 650px;

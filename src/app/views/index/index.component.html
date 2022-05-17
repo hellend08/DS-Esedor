@@ -47,7 +47,7 @@
       <div
         class="col-span-2 col-end-4 grid grid-cols-1 lg:grid-cols-2 gap-[.5rem] pt-[5rem] xl:pr-[2rem] 2xl:pr-[3rem]">
         <div [ngClass]="{ 'service-shadow' : item.state}"
-          class="flex flex-col justify-between cursor-pointer py-[3rem] px-5 xl:p-[3rem]"
+          class="flex flex-col justify-between cursor-pointer py-[3rem] px-5 xl:p-[3rem] mobile-shadow"
           *ngFor="let item of servicesItems" (mouseover)="item.state = true" (mouseout)="item.state = false">
           <!-- max-w-[400px] h-[270px]  h-[330px]-->
           <div class="space-y-[2rem]">
@@ -55,7 +55,7 @@
             <h4 class="lexendli text-[21px] leading-[33.6px]">{{item.text}}</h4>
           </div>
           <button class="lexendli text-[21px] flex items-center mt-auto pt-6"
-            [ngClass]="{ 'text-[#5682FF] font-bold' : item.state}">
+            [ngClass]="{ 'lg:text-[#5682FF] lg:font-bold' : item.state}">
             <img [ngClass]="{ 'arrow-rotate' : item.state}"
               class="w-[31px] mr-5 translate-x-0 transition duration-700 ease-in-out" src="assets/img/arrow-black.png"
               alt="">
@@ -104,17 +104,17 @@
      <!-- class="border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[190px] lg:h-[250px]">
        lg:h-[600px]
       <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full space-y-[1.5rem] lg:space-y-0">
-        <div class="text-[42px] lg:text-[96px] lexendzettaextrali text-white">
-          <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute left-[53%]">s</div>
-          <div data-aos="fade-down-right" data-aos-duration="1350" class="absolute left-[46%]">o</div>
-          <div data-aos="fade-down-right" data-aos-duration="1300" class="absolute left-[41%]">t</div>
-          <div data-aos="fade-down-right" data-aos-duration="1250" class="absolute left-[34%]">c</div>
-          <div data-aos="fade-down-right" data-aos-duration="1200" class="absolute left-[27%]">e</div>
-          <div data-aos="fade-down-right" data-aos-duration="1150" class="absolute left-[20%]">y</div>
-          <div data-aos="fade-down-right" data-aos-duration="1100" class="absolute left-[13%]">o</div>
-          <div data-aos="fade-down-right" data-aos-duration="1050" class="absolute left-[7.5%]">r</div>
+        <div class="text-[42px] lg:text-[96px] type-family text-white">
+          <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute left-[80%] lg:left-[53%]">s</div>
+          <div data-aos="fade-down-right" data-aos-duration="1350" class="absolute left-[68%] lg:left-[46%]">o</div>
+          <div data-aos="fade-down-right" data-aos-duration="1300" class="absolute left-[61%] lg:left-[41%]">t</div>
+          <div data-aos="fade-down-right" data-aos-duration="1250" class="absolute left-[52%] lg:left-[34%]">c</div>
+          <div data-aos="fade-down-right" data-aos-duration="1200" class="absolute left-[42%] lg:left-[27%]">e</div>
+          <div data-aos="fade-down-right" data-aos-duration="1150" class="absolute left-[32%] lg:left-[20%]">y</div>
+          <div data-aos="fade-down-right" data-aos-duration="1100" class="absolute left-[22%] lg:left-[13%]">o</div>
+          <div data-aos="fade-down-right" data-aos-duration="1050" class="absolute left-[13%] lg:left-[7.5%]">r</div>
           <div data-aos="fade-down-right" data-aos-duration="1000" class="ml-[-5px] lg:ml-[-15px]">P</div>-->
-        </div>
+        </div> 
         <!-- <div >
           <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
           <p class="text-[21px] lg:text-[21px] lexend text-white ml-5">Ver proyectos</p> routerLink="/proyectos"
@@ -173,7 +173,7 @@
     class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pb-[5rem] lg:py-[12rem]">
     <!-- id="parallax"pt-[20rem] -->
     <div class="inline-block ml-[-15px]">
-      <div class="text-[64px] lg:text-[96px] lexendzetta text-[#FFFFFF]"
+      <div class="text-[64px] lg:text-[96px] type-family text-[#FFFFFF]"
         style="display: flex; text-align: left;">
         <div data-aos="fade-down-right" data-aos-duration="1000">B</div>
         <div data-aos="fade-down-right" data-aos-duration="1100">l</div>

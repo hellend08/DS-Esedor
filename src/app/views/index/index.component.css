@@ -1,55 +1,44 @@
-.icon-video ::ng-deep .mat-icon {
+/* .icon-video ::ng-deep .mat-icon {
     width: 84px;
     height: 84px;
-}
-
-.bg-blog {
-  width: 100%;
-  background: #000000;
-  transition: all .4s linear;
-}
-
-.arrow-rotate {
-  transform: rotate(-45deg);
-  transition: transform .6s cubic-bezier(.4,0,0,1);
-
-}
-
-.service-shadow {
-  /* padding: 3rem 3rem 3rem .5rem; */
+} */
+.mobile-shadow {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.type-family {
+  font-family: LexendZetta;
+}
+
+@media screen and (min-width: 1024px) {
+  .arrow-rotate {
+    transform: rotate(-45deg);
+    transition: transform .6s cubic-bezier(.4,0,0,1);
+  }
+
+  .mobile-shadow {
+    box-shadow: inherit;
+  }
+
+  .service-shadow {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .type-family {
+    font-family: LexendZettaExtraLight;
+  }
+
+  .bg-blog {
+    width: 100%;
+    background: #000000;
+    transition: all .4s linear;
+  }
 }
 
 .btn-hover:hover {
   background: #000000;
   transition: all .4s linear;
 }
-
-/* .vamo {
-  display: block;
-    position: relative;
-    transition: color .3s cubic-bezier(.4,0,0,1);
-    background: transparent;
-}
-
-.vamo .probando-bg:hover:before {
-  transform: scaleX(1);
-}
-
-.vamo .probando-bg:before {
-  background: red;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  transition: all .4s ease-in-out;
-  transform-origin: center top;
-    transform: scaleY(0);
-    transition: transform .3s cubic-bezier(.4,0,0,1);
-} */
-
 
 body{
   font-family: 'Lexend', sans-serif !important;
