@@ -11,37 +11,47 @@
     </div>
   </section>
 
-  <section class="py-[13rem] px-4 bg-white">
-    <div class="grid lg:grid-cols-3 xl:gap-x-[5rem] border-b border-black pb-[13rem]">
-      <h4 class="text-[21px] lexendli">Conócenos</h4>
+  <section class="py-[5rem] lg:py-[13rem] px-4 bg-white">
+    <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] border-b border-black pb-[5rem] lg:pb-[13rem]">
+      <div
+        class="flex flex-row-reverse lg:flex-col justify-between items-center lg:items-start pt-[4rem] lg:pt-0 lg:py-4 pr-[2.5rem] lg:pr-0 order-last lg:order-none">
+        <h4 class="text-[21px] lexendli">Conócenos</h4>
+        <img class="max-w-[102px] ml-[-1rem]" src="assets/img/video_play.png" alt="">
+      </div>
       <div class="col-span-2 space-y-[3rem]">
         <h1 class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generamos
           impacto y experiencias increíbles para marcas
           ambiciosas.</h1>
-        <h3 class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[53.3px]">Esedor es una compañía que te
+        <h3 class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Esedor es
+          una compañía que te
           acompaña en todas las etapas de
           tu proyecto, maximizando tus objetivos de negocio.</h3>
       </div>
     </div>
 
-    <div class="grid grid-cols-3 xl:gap-x-[5rem] pt-[13rem]">
-      <div class="border-b border-black col-span-2 col-end-4 pb-[13rem] space-y-[3rem] xl:pr-[4rem] 2xl:pr-[6rem]">
+    <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] pt-[5rem] lg:pt-[13rem]">
+      <div
+        class="border-b border-black col-span-2 col-end-4 pb-[5rem] lg:pb-[13rem] space-y-[3rem] xl:pr-[4rem] 2xl:pr-[6rem]">
         <div class="flex space-x-4 items-center">
           <div class="border-b border-black w-[43px]"></div>
           <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
         </div>
-        <h1 class="text-[40px] xl:text-[46px] lexendzettali leading-[57.5px]">¿Cuál es tu objetivo final? </h1>
-        <h3 class="text-[30px] xl:text-[36px] lexendli leading-[53.3px]">Permítenos ayudarte a cumplirlo con nuestras
+        <h1 class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">¿Cuál es
+          tu objetivo final? </h1>
+        <h3 class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Permítenos
+          ayudarte a cumplirlo con nuestras
           habilidades y
           servicios especializados los acompañaremos en todas las etapas del servicio.</h3>
       </div>
 
-      <div class="col-span-2 col-end-4 grid grid-cols-2 gap-[.5rem] pt-[5rem] xl:pr-[2rem] 2xl:pr-[3rem]">
-        <div [ngClass]="{ 'service-shadow' : item.state}" class="flex flex-col justify-between py-[3rem] px-5 xl:p-[3rem]"
+      <div
+        class="col-span-2 col-end-4 grid grid-cols-1 lg:grid-cols-2 gap-[.5rem] pt-[5rem] xl:pr-[2rem] 2xl:pr-[3rem]">
+        <div [ngClass]="{ 'service-shadow' : item.state}"
+          class="flex flex-col justify-between cursor-pointer py-[3rem] px-5 xl:p-[3rem]"
           *ngFor="let item of servicesItems" (mouseover)="item.state = true" (mouseout)="item.state = false">
           <!-- max-w-[400px] h-[270px]  h-[330px]-->
           <div class="space-y-[2rem]">
-            <p class="lexendzettali text-[24px] leading-[35.8px]">{{item.title}}</p>
+            <p class="lexendzettali text-[24px] leading-[35.8px] {{item.length}}">{{item.title}}</p>
             <h4 class="lexendli text-[21px] leading-[33.6px]">{{item.text}}</h4>
           </div>
           <button class="lexendli text-[21px] flex items-center mt-auto pt-6"
@@ -79,9 +89,9 @@
       </div>
     </div> -->
     <div
-      class=" border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[250px]">
+      class="border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[190px] lg:h-[250px]">
       <!-- lg:h-[600px] -->
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full space-y-[1.5rem] lg:space-y-0">
         <div class="text-[42px] lg:text-[96px] lexendzettaextrali text-white">
           <div data-aos="fade-down-right" data-aos-duration="1400" class="absolute left-[53%]">s</div>
           <div data-aos="fade-down-right" data-aos-duration="1350" class="absolute left-[46%]">o</div>
@@ -112,11 +122,11 @@
     </div>
   </section>
 
-  <section class="bg-[#5682FF] px-4">
+  <section class="bg-[#5682FF] px-4 pb-[9rem]">
     <!-- lg:h-screen -->
     <!-- <div class="flex items-end h-[450px]"> -->
     <div
-      class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-24 lg:space-y-0 pt-[8rem] pb-[6.5rem]">
+      class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 py-[5rem] lg:pt-[8rem] lg:pb-[6.5rem]">
       <p data-aos="fade-up" data-aos-duration="1000" class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">
         Confían en nosotros</p>
       <h1 data-aos="fade-up" data-aos-duration="1000"
@@ -124,7 +134,7 @@
         Nos sentimos orgullosos de nuestros proyectos y de los clientes que confían en nosotros </h1>
     </div>
     <!-- </div> -->
-    <div class="h-[400px] flex flex-wrap justify-between items-center">
+    <!-- <div class="h-[400px] flex flex-wrap justify-between items-center">
       <div class="contenedor" (mouseover)="probar = true" (mouseout)="probar = false">
         <img src="assets/img/logo_empresa/niubiz.png" alt="" [ngClass]="{'bottom' : probar}">
         <img src="assets/img/logo_empresa/caja-cusco.png" alt="" [ngClass]="{'top' : !probar}">
@@ -135,11 +145,20 @@
       <img src="assets/img/logo_empresa/ripley.png" alt="">
       <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
 
+    </div> -->
+    <div
+      class="grid grid-cols-3 lg:grid-cols-6 gap-y-[6rem] items-center justify-items-center lg:justify-items-start ml-[-1rem] lg:ml-0 gap-4 lg:pt-[6.5rem]">
+      <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/niubiz.png" alt="">
+      <img class="max-w-[93px] lg:max-w-full" src="assets/img/logo_empresa/primax.png" alt="">
+      <img class="max-w-[84px] lg:max-w-full" src="assets/img/logo_empresa/redeban.png" alt="">
+      <img class="max-w-[65px] lg:max-w-full" src="assets/img/logo_empresa/caja-cusco.png" alt="">
+      <img class="max-w-[66px] lg:max-w-full" src="assets/img/logo_empresa/cml.png" alt="">
+      <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/ripley.png" alt="">
     </div>
   </section>
 
   <section
-    class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 py-[12rem]">
+    class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pb-[5rem] lg:py-[12rem]">
     <!-- id="parallax"pt-[20rem] -->
     <div class="inline-block ml-[-15px]">
       <div class="text-[64px] lg:text-[96px] lexendzettaextrali text-[#FFFFFF]"
@@ -150,10 +169,10 @@
         <div data-aos="fade-down-right" data-aos-duration="1300">g</div>
       </div>
     </div>
-    <div class="inline-block lg:w-[50%] xl:w-[40%] space-y-24 pt-8">
 
+    <div class="inline-block lg:w-[50%] xl:w-[40%] space-y-[2.5rem] lg:space-y-24 lg:pt-8">
       <div class="relative flex cursor-pointer" (mouseover)="bgBlog = true" (mouseout)="bgBlog = false">
-        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
+        <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlog}"></div>
         <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
           <div class="flex justify-between text-sm text-white">
@@ -169,7 +188,7 @@
       </div>
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogTwo = true" (mouseout)="bgBlogTwo = false">
-        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
+        <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlogTwo}"></div>
         <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
           <div class="flex justify-between text-sm text-white">
@@ -185,7 +204,7 @@
       </div>
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogThree = true" (mouseout)="bgBlogThree = false">
-        <div class="w-[10px] h-[222px] bg-transparent transition-all duration-500 ease-linear"
+        <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlogThree}"></div>
         <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
           <div class="flex justify-between text-sm text-white">
