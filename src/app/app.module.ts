@@ -30,6 +30,7 @@ import { FirstSectionComponent } from './shared/components/project-internals/fir
 import { NotifaiComponent } from './views/notifai/notifai.component';
 import { SecondSectionComponent } from './shared/components/project-internals/second-section/second-section.component';
 import { ServicesComponent } from './views/services/services.component';
+import { RipleyComponent } from './views/ripley/ripley.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ServicesComponent } from './views/services/services.component';
     FirstSectionComponent,
     NotifaiComponent,
     SecondSectionComponent,
-    ServicesComponent
+    ServicesComponent,
+    RipleyComponent
   ],
   imports: [
     BrowserModule,

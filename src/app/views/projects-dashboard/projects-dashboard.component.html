@@ -41,7 +41,7 @@
             (mouseover)="emp.state = false" (mouseout)="emp.state = true">
             <!-- (mouseout)=""  (mouseover)="probando(emp)"  -->
             <div
-              class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
+              class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out" [ngClass]="{'bg-color':!emp.state}">
               <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->
               <div class="h-[455px] absolute top-[10px] flex justify-center items-center">
                 <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
