@@ -1,18 +1,15 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
+<section class="bg-image h-[760px] text-white flex justify-center items-center py-8 2xl:py-[4rem]">
+  <h1 class="text-[130px] xl:text-[160px] 2xl:text-[180px] lexendzettaextrali leading-[125px]">Proyectos</h1>
+</section>
 
-<mat-drawer-container class="w-full mt-20 min-h-full px-4 lg:px-24 bg-white">
+<mat-drawer-container class="w-full mt-12 min-h-full px-4 lg:px-24 bg-white">
   <mat-drawer mode="side" class="lg:w-[250px] flex justify-end hidden lg:block" opened>
     <div class="border-l border-black">
-      <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem]">
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('todos')">Todos</mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('banca')">Banca</mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('educacion')">Educación
-        </mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('salud')">Salud</mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('automotriz')">Automotriz
-        </mat-list-item>
-        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('ecomerce')">Ecommerce
-        </mat-list-item>
+      <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem] sidebar">
+        <mat-list-item *ngFor="let list of listGroup" class="cursor-pointer" role="listitem" (click)="filterEmpresas(list.types); list.state = true" [ngClass]="{ 'item-focus' : list.state }">
+          <mat-icon>arrow_right</mat-icon>
+          {{list.name}}</mat-list-item>
       </mat-list>
     </div>
   </mat-drawer>
@@ -24,7 +21,7 @@
         Every project is a chance to try something new. Look at something with a fresh
         perspective. Do something for the first time.
       </h3>
-      <!-- <mat-tab-group>
+      <!-- <mat-tab-group>  [ngClass]="{ 'selected'}"
         <mat-tab label="First"> Content 1 </mat-tab>
         <mat-tab label="Second"> Content 2 </mat-tab>
         <mat-tab label="Third"> Content 3 </mat-tab>
@@ -38,199 +35,32 @@
         <button (click)="filterEmpresas('ecomerce')">Ecommerce</button>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-10 my-[3rem] lg:my-16">
-        <div *ngFor="let emp of filtrado" >
-          <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (click)="redirectInternas(emp.ruta)" (mouseover)="emp.state = false" (mouseout)="emp.state = true">
+      <section class="grid lg:grid-cols-2 gap-10 my-[3rem] lg:my-16">
+        <div *ngFor="let emp of filtrado">
+          <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (click)="redirectInternas(emp.ruta)"
+            (mouseover)="emp.state = false" (mouseout)="emp.state = true">
             <!-- (mouseout)=""  (mouseover)="probando(emp)"  -->
-            <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
-             <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->
+            <div
+              class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
+              <!-- [ngClass]="{ '{{emp.background}}' : emp.state }" -->
               <div class="h-[455px] absolute top-[10px] flex justify-center items-center">
                 <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
                   [ngClass]="{ 'img-project' : !emp.state}" style="max-width: 350px;">
               </div>
             </div>
             <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem] w-full">
-              <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : !emp.state }">
+              <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
+                [ngClass]="{ 'text-color' : !emp.state }">
                 <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta">{{emp.name}}</p>
-                <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta tracking-[0.005em]">{{emp.descripcion}}</p>
+                <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta tracking-[0.005em]">
+                  {{emp.descripcion}}</p>
               </div>
               <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-              alt="" [ngClass]="{ 'arrow-rotate' : !emp.state }">
+                alt="" [ngClass]="{ 'arrow-rotate' : !emp.state }">
             </div>
           </div>
         </div>
-
-        <!-- <div *ngFor="let emp of filtrado"  data-aos="fade-down-left" class="cursor-pointer relative h-[650px]">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out {{emp.background}}">
-            <div class="h-[455px] absolute top-0 flex justify-center items-center">
-              <img class="translate-x-0 transition duration-700 ease-in-out" src="{{emp.img}}" alt=""
-                [ngClass]="{ 'img-project' : emp.state}" style="max-width: 350px;">
-            </div>
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out" [ngClass]="{ 'text-color' : emp.state }">
-              <p class="text-[24px] lg:text-[30.5px] xl:text-[34.5px] lexendzetta">{{emp.name}}</p>
-              <p class="text-[9.5px] lg:text-[13.5px] xl:text-[14.5px] lexendzetta tracking-[0.005em]">{{emp.descripcion}}</p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : emp.state }">
-          </div>
-        </div> -->
-
-        <!-- <div (mouseover)="bgColor = false" (mouseout)="bgColor = true"> -->
-          <!-- <div 
-            [ngClass]="{ 'bg-color' : !bgColor }">
-            <div >
-              <img  src="assets/img/phone-right.png" alt=""
-                [ngClass]="{ 'img-project' : !bgColor }">
-            </div>
-          </div> -->
-          <!-- <div >
-            <div 
-              [ngClass]="{ 'text-color' : !bgColor }">
-              <p >Primax</p>
-              <p >Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }">
-          </div> -->
-        <!-- </div> -->
-
-        <!-- <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColor = false" (mouseout)="bgColor = true">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-color' : !bgColor }">
-            <div class="h-[455px] absolute top-0 flex justify-center items-center">
-              <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/phone-right.png" alt=""
-                [ngClass]="{ 'img-project' : !bgColor }">
-            </div>
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
-              [ngClass]="{ 'text-color' : !bgColor }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">Primax</p>
-              <p class="text-[13px] lg:text-[13.5px] lexend tracking-[0.005em]">Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColor }">
-          </div>
-        </div>
-
-        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-two' : !bgColorTwo }">
-            <img class="w-[350px] translate-x-0 transition duration-700 ease-in-out absolute top-[10px]"
-              src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorTwo }">
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
-              [ngClass]="{ 'text-color' : !bgColorTwo }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">Niubiz</p>
-              <p class="text-[13px] lg:text-[14.5px] lexendzetta tracking-[0.005em]">Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColorTwo }">
-          </div>
-        </div>
-
-        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorThree = false"
-          (mouseout)="bgColorThree = true">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-three' : !bgColorThree }">
-            <div class="h-[455px] absolute top-0 flex justify-center items-center">
-              <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png" alt=""
-                [ngClass]="{ 'img-project' : !bgColorThree }">
-            </div>
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
-              [ngClass]="{ 'text-color' : !bgColorThree }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">Redeban</p>
-              <p class="text-[13px] lg:text-[14.5px] lexendzetta tracking-[0.005em]">Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColorThree }">
-          </div>
-        </div>
-
-        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorFourth = false"
-          (mouseout)="bgColorFourth = true">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-fourth' : !bgColorFourth }">
-            <div class="h-[455px] absolute top-0 flex justify-center items-center">
-              <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/proyect-laptop.png" alt=""
-                [ngClass]="{ 'img-project' : !bgColorFourth }">
-            </div>
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
-              [ngClass]="{ 'text-color' : !bgColorFourth }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">CML</p>
-              <p class="text-[13px] lg:text-[14.5px] lexendzetta tracking-[0.005em]">Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColorFourth }">
-          </div>
-        </div>
-
-        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorFifth = false"
-          (mouseout)="bgColorFifth = true">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-fifth' : !bgColorFifth }">
-            <div class="h-[455px] absolute top-0 flex justify-center items-center">
-              <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/phone-right.png" alt=""
-                [ngClass]="{ 'img-project' : !bgColorFifth }">
-            </div>
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
-              [ngClass]="{ 'text-color' : !bgColorFifth }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">Caja Cusco</p>
-              <p class="text-[13px] lg:text-[14.5px] lexendzetta tracking-[0.005em]">Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColorFifth }">
-          </div>
-        </div>
-
-        <div data-aos="fade-down-left" class="cursor-pointer relative h-[650px]" (mouseover)="bgColorSixth = false"
-          (mouseout)="bgColorSixth = true">
-          <div class="h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
-            [ngClass]="{ 'bg-sixth' : !bgColorSixth }">
-            <img class="w-[350px] translate-x-0 transition duration-700 ease-in-out absolute top-[10px]"
-              src="assets/img/proyects.png" alt="" [ngClass]="{ 'img-project' : !bgColorSixth }">
-          </div>
-          <div class="flex flex-wrap items-start p-2 justify-between absolute top-[30rem]">
-            <div class="w-[85%] space-y-3 text-black transition-all duration-700 ease-in-out"
-              [ngClass]="{ 'text-color' : !bgColorSixth }">
-              <p class="text-[28px] lg:text-[34.5px] lexendzetta">Niubiz</p>
-              <p class="text-[13px] lg:text-[14.5px] lexendzetta tracking-[0.005em]">Investigación
-                y
-                estrategía - Definición
-                de producto - Sistema de diseño - Experiencia de usuario </p>
-            </div>
-            <img class="translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png"
-            alt="" [ngClass]="{ 'arrow-rotate' : !bgColorSixth }">
-          </div>
-        </div> -->
-      </div>
+      </section>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>

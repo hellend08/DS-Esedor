@@ -1,92 +1,121 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
 <div>
-    <section class="bg-image h-screen text-white grid grid-cols-3 py-8 2xl:py-[4rem]">
-        <!-- py-[6rem]  2xl:grid-cols-2-->
-        <div class="flex flex-col justify-end col-span-2 pr-[7.5rem]">
+    <section class="bg-image h-[310px] lg:h-[760px] text-white flex justify-center items-center py-8 2xl:py-[4rem]">
+        <!-- py-[6rem]  h-screen 2xl:grid-cols-2-->
+        <h1 class="text-[45px] lg:text-[140px] xl:text-[180px] lexendzettaextrali leading-[125px]">Servicios</h1>
+
+    </section>
+    <section class="flex flex-col w-full p-4 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-[5rem] py-[2rem] lg:py-[9rem]">
             <!-- 2xl:w-[60%] -->
-            <h5 class="lexendzettali text-[70px] 2xl:text-[86px] leading-[80px] 2xl:leading-[107px]">Soluciones a medida
+            <h5
+                class="lexendzettali lg:ml-[-15px] text-[24px] lg:text-[55px] xl:text-[60px] 2xl:text-[86px] leading-[30px] lg:leading-[80px] 2xl:leading-[107px]">
+                Soluciones a medida
                 para su negocio</h5>
-            <h3 class="lexendli text-[30px] 2xl:text-[36px] leading-[40px] 2xl:leading-[53.3px]">Permítenos ayudarte a
+            <h3
+                class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[32.8px] lg:leading-[40px] 2xl:leading-[53.3px] pt-[1.5rem]">
+                Permítenos ayudarte a
                 cumplir tus objetivos con nuestras
                 habilidades y servicios especializados, los
                 acompañaremos en todas las etapas del servicio.</h3>
         </div>
-    </section>
-    <section class="flex flex-col w-full p-4">
-        <div class="tab-header">
+        <!-- <div class="tab-header">
             <div class="tab-label" *ngFor="let item of labelGroup">
                 <p class="text-label">{{item.label}}</p>
             </div>
-        </div>
-        <div class="grid grid-cols-4 gap-[5rem] py-[4rem]">
-            <h1 class="col-span-2 text-[46px] lexendzettali">Dale forma a tu idea
-                de producto. </h1>
-            <h3 class="col-span-2 text-[36px] lexendli">Planifique y evalúe las características esenciales de su
-                producto para lograr sus objetivos comerciales
-                y eliminar posibles errores.</h3>
-            <p class="lexend col-span-4">LOS ENTREGABLES INCLUYEN </p>
-            <div *ngFor="let item of detailsGroup" class="space-y-[1.5rem]">
-                <img src="{{item.img}}" alt="">
-                <h4 class="lexendzettali text-[24px] leading-[35.8px]">{{item.title}}</h4>
-                <p class="lexendli text-[21px]">{{item.text}}</p>
-            </div>
-            <div class="border-t border-black col-span-3 col-end-5 py-[7.5rem] pr-[8rem] grid grid-cols-2 gap-[4rem]">
-                <h1 class="lexendzettali text-[46px] leading-[57px] col-span-2">Productos excepcionales con soporte de inicio a fin y orientación experta</h1>
-                <div class="lexendli space-y-4" *ngFor="let item of paragraphGroup">
-                    <h4 class="text-[21px] leading-[26px]">{{item.text}}</h4>
-                    <h3 class="text-[36px] leading-[53.3px]">{{item.secondText}}</h3>
-                </div>
+        </div> -->
+        <mat-tab-group>
+            <!-- <mat-tab-header (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'"></mat-tab-header> -->
+            <mat-tab label="Descubrimiento de producto">
+                <div class="grid grid-cols-4 gap-[2.5rem] lg:gap-[5rem] py-[2.5rem] lg:py-[4rem]">
+                    <h1 class="col-span-4 lg:col-span-2 lg:ml-[-8px] lg:text-[46px] lexendzettali">Dale forma a tu idea
+                        de producto. </h1>
+                    <h3
+                        class="col-span-4 lg:col-span-2 text-[18px] text-[22px] xl:text-[30px] 2xl:text-[36px] lexendli">
+                        Planifique y evalúe las características esenciales de su
+                        producto para lograr sus objetivos comerciales
+                        y eliminar posibles errores.</h3>
+                    <p class="lexend col-span-4 text-sm lg:text-base">LOS ENTREGABLES INCLUYEN </p>
+                    <div
+                        class="col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-[3.5rem] lg:gap-[5rem] py-[2rem] lg:py-0">
+                        <!-- overflow-x-auto lg:overflow-hidden -->
+                        <div *ngFor="let item of detailsGroup" class="space-y-4 lg:space-y-[1.5rem] min-w-[250px]">
+                            <img src="{{item.img}}" alt="">
+                            <h4 class="lexendzettali text-[17px] 2xl:text-[24px] leading-[35.8px]">{{item.title}}</h4>
+                            <p class="lexendli text-[18px] 2xl:text-[21px]">{{item.text}}</p>
+                        </div>
+                    </div>
+                    <div
+                        class="border-t border-black col-span-4 lg:col-span-3 lg:col-end-5 py-[2rem] lg:py-[7.5rem] lg:pr-[5rem] xl:pr-[8rem] grid gap-[4rem]">
+                        <h1 class="lexendzettali lg:text-[46px] leading-[20px] lg:leading-[57px]">Productos
+                            excepcionales con
+                            soporte de
+                            inicio a fin y orientación experta</h1>
+                        <div class="flex lg:grid grid-cols-2 gap-[4rem] overflow-x-auto lg:overflow-hidden py-[2rem] lg:py-0">
+                            <div class="lexendli space-y-4 min-w-[235px]" *ngFor="let item of paragraphGroup">
+                                <h4 class="text-sm lg:text-[21px] leading-[17px] lg:leading-[26px]">{{item.text}}</h4>
+                                <h3 class="text-[21px] lg:text-[30px] 2xl:text-[36px] leading-[26px] lg:leading-[53.3px]">{{item.secondText}}</h3>
+                            </div>
+                        </div>
 
-            </div>
-        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Diseño UX/UI"> Content 2 </mat-tab>
+            <mat-tab label="Desarrollo de software"> Content 3 </mat-tab>
+            <mat-tab label="Sistemas de diseño"> Content 3 </mat-tab>
+            <mat-tab label="Validación  Cuantitativa"> Content 3 </mat-tab>
+            <mat-tab label="Transformación Cultural"> Content 3 </mat-tab>
+        </mat-tab-group>
     </section>
-    <section class="bg-[#5682FF] py-[8rem] space-y-[8rem]">
-        <h4 class="lexendli text-[21px] leading-[26px] text-white">Confían en nosotros</h4>
-        <div class="grid grid-cols-5 gap-4">
-            <img src="assets/img/logo_empresa/niubiz.png" alt="">
-            <img src="assets/img/logo_empresa/primax.png" alt="">
-            <img src="assets/img/logo_empresa/redeban.png" alt="">
-            <img src="assets/img/logo_empresa/ripley.png" alt="">
-            <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
+    <section class="bg-[#5682FF] py-[4rem] lg:py-[8rem] space-y-[6rem] lg:space-y-[8rem]">
+        <h4 class="lexendli text-[17px] lg:text-[21px] leading-[26px] text-white">Confían en nosotros</h4>
+        <div class="grid grid-cols-3 lg:grid-cols-5 gap-y-[6rem] items-center justify-items-center lg:justify-items-start ml-[-1rem] lg:ml-0 gap-4">
+            <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/niubiz.png" alt="">
+            <img class="max-w-[93px] lg:max-w-full" src="assets/img/logo_empresa/primax.png" alt="">
+            <img class="max-w-[84px] lg:max-w-full" src="assets/img/logo_empresa/redeban.png" alt="">
+            <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/ripley.png" alt="">
+            <img class="max-w-[65px] lg:max-w-full" src="assets/img/logo_empresa/caja-cusco.png" alt="">
+            <img class="max-w-[66px] lg:max-w-full lg:hidden" src="assets/img/logo_empresa/niubiz.png" alt="">
+
         </div>
     </section>
     <section class="bg-[#141C26]">
         <div class="pt-[3rem] pb-2 border-b border-white">
-            <h5 class="lexendzettali text-[86px] text-white">Proyectos</h5>
+            <h5 class="lexendzettaextrali lg:ml-[-15px] text-[32px] lg:text-[86px] text-white">Proyectos</h5>
         </div>
         <div class="pt-[2rem] pb-[10rem] ml-[-10px]">
             <app-projects-slide></app-projects-slide>
         </div>
     </section>
-    <footer class="bg-[#F2F4F5]">
+    <footer class="bg-[#F2F4F5] hidden">
         <h5 class="lexendzettali text-[86px]">Programe una sesión gratuita con uno de nuestros expertos</h5>
         <button>
-            <img class="pr-5" src="../../../../assets/img/arrow-black.png" alt="">
+            <img class="pr-5" src="assets/img/arrow-black.png" alt="">
             Conversemos
         </button>
         <div class="flex mt-auto lg:pl-[4rem] lg:pr-4 items-end relative">
             <p class="lexend text-[13px] font-medium ">Esedor © 2022</p>
-        
-            <ul class="ml-auto text-black text-xs lg:text-sm lexend flex flex-col lg:flex-row items-end justify-between w-[55%] lg:pr-[9rem] space-y-[1.5rem] lg:space-y-0">
-              <!-- text-right lg:text-left -->
-              <li>Proyectos</li>
-              <li>Services</li>
-              <li>Who we are</li>
-              <li>Blog</li>
-              <li>Careers</li>
+            <ul
+                class="ml-auto text-black text-xs lg:text-sm lexend flex flex-col lg:flex-row items-end justify-between w-[55%] lg:pr-[9rem] space-y-[1.5rem] lg:space-y-0">
+                <li>Proyectos</li>
+                <li>Services</li>
+                <li>Who we are</li>
+                <li>Blog</li>
+                <li>Careers</li>
             </ul>
             <div class="space-y-[2rem] absolute lg:relative bottom-[2.5rem] lg:bottom-0">
-              <a class="block" href="">
-                <img src="assets/img/Linkedin.png" alt="">
-              </a>
-              <a class="block" href="">
-                <img src="assets/img/Facebook.png" alt="">
-              </a>
-              <a class="block" href="">
-                <img src="assets/img/Instagram.png" alt="">
-              </a>
+                <a class="block" href="">
+                    <img src="assets/img/Linkedin.png" alt="">
+                </a>
+                <a class="block" href="">
+                    <img src="assets/img/Facebook.png" alt="">
+                </a>
+                <a class="block" href="">
+                    <img src="assets/img/Instagram.png" alt="">
+                </a>
             </div>
-          </div>
+        </div>
 
     </footer>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 
 import * as AOS from 'aos';
 
@@ -9,12 +9,28 @@ import * as AOS from 'aos';
 })
 export class ServicesComponent implements OnInit {
 
+  navbarfixed:boolean = false;
+
+  @ViewChild('.mat-tab-header') headerTab: any;
+
+  @HostListener('window:scroll',['$event']) onscroll(){
+    if(window.scrollY > 1370)
+    {
+      this.headerTab = '.fixed';
+    }
+    else
+    {
+      this.headerTab = '.nofixed';
+    }
+  }
+
   colorWhite = true;
 
   constructor() { }
 
   ngOnInit(): void {
     AOS.init()
+    console.log(this.headerTab = 'hola')
   }
 
   labelGroup = [

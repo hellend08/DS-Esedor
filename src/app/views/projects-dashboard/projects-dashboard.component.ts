@@ -9,7 +9,44 @@ import * as AOS from 'aos';
 })
 export class ProjectsDashboardComponent implements OnInit {
 
-  colorWhite = false;
+  colorWhite = true;
+  itemFocus!: any;
+
+  listGroup = [
+    {types: 'todos', name: 'Todos', state: false},
+    {types: 'banca', name: 'Banca', state: false},
+    {types: 'educacion', name: 'Educación', state: false},
+    {types: 'salud', name: 'Salud', state: false},
+    {types: 'automotriz', name: 'Automotriz', state: false},
+    {types: 'ecommerce', name: 'Ecommerce', state: false},
+  ]
+
+  clickListGroup = this.listGroup;
+
+  // @HostListener("document:click")
+  // clickToggle(){
+  //   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
+  //     this.header_variable = true;
+  //   }else {
+  //     this.header_variable = false;
+  //   }
+  // }
+
+  // @HostListener('click')
+  // clickInside() {
+  //   this.clickListGroup.map(item => item.state = true)
+  //   // this.wasInside = true;
+  // }
+  
+  // @HostListener('document:click')
+  // clickout() {
+  //   this.clickListGroup.map(item => item.state = true)
+  //   // if (!this.wasInside) {
+  //   //   this.text = "clicked outside";
+  //   // }
+  //   // this.wasInside = false;
+  // }
+
 
   bgColor: boolean = true;
   bgColorTwo: boolean = true;
@@ -22,9 +59,9 @@ export class ProjectsDashboardComponent implements OnInit {
   empresas = [
     {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/phone-right.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax', state: true, background: 'bg-color'},
     {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyects.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-two'},
-    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyect-laptop.png', alt: 'Niubiz', tipo: 'ecomerce', ruta: '/proyectos', state: true, background: 'bg-three'},
-    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecomerce', ruta: '/proyectos', state: true, background: 'bg-fourth'},
-    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecomerce', ruta: '/proyectos/notifai', state: true, background: 'bg-color'},
+    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyect-laptop.png', alt: 'Niubiz', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-three'},
+    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-fourth'},
+    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecommerce', ruta: '/proyectos/notifai', state: true, background: 'bg-color'},
     {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-fifth'}
   ]
 
@@ -42,26 +79,6 @@ export class ProjectsDashboardComponent implements OnInit {
       console.log(this.filtrado);
     }
   }
-
-  // moco!: boolean;
-  // hola!: any;
-
-  // probando(value:any): void {
-  // //  return value.state;
-  // this.hola = this.filtrado.map(item => item.state == value.state)
-  // console.log(this.hola)
-  // if ( this.hola = true) {
-  //   console.log(value.state = this.hola)
-  // }
-  // for(let i = 0; i = value.state; i++) {
-  // console.log(i == value.state)
-  // }
-  // if(value.state == 'bgColor') {
-  //   this.moco = true;
-  // } else {
-  //   this.moco = false;
-  // }
-  // }
 
   header_variable=false;
   @HostListener("document:scroll")
