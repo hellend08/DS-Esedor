@@ -22,7 +22,7 @@ export class ToolbarComponent implements OnInit {
   listGroup = [
     {name: 'Servicios', ruta: '/services', state: true},
     {name: 'Proyectos', ruta: '/proyectos', state: true},
-    {name: 'Nosotros', ruta: '/', state: true},
+    {name: 'Nosotros', ruta: '/nosotros', state: true},
     {name: 'Talento', ruta: '/', state: true},
     {name: 'Contacto', ruta: '/', state: true},
     {name: 'Blog', ruta: '/', state: true},
@@ -44,6 +44,10 @@ export class ToolbarComponent implements OnInit {
 
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
+  }
+
+  public redirectUs() {
+    this.router.navigateByUrl('/nosotros');
   }
 
   ngOnInit(): void {
