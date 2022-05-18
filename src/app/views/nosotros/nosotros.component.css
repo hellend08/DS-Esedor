@@ -1,0 +1,29 @@
+.bg-image {
+    background-image: url('../../../assets/img/bg_us.png');
+    background-repeat: no-repeat;
+}
+
+.bg-image2 {
+    background-image: url('../../../assets/img/bg-image2.png');
+    background-repeat: no-repeat;
+}
+
+.bg-image3 {
+    background-image: url('../../../assets/img/bg-image3.png');
+    background-repeat: no-repeat;
+}
+
+.us-shadow {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bg-blue {
+    background: #5682FF;
+    transition: all .4s ease-in-out;
+}
+
+.style-hover {
+    border-color: #000000;
+    width: 135px;
+    transition: all .6s ease-in-out;
+}

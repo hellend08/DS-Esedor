@@ -12,7 +12,7 @@
       <div [class.header_variable]="header_variable"
         class="lg:grid grid-cols-6 gap-4 hidden space-x-10 justify-between w-full lexendzetta font-bold">
         <span class="cursor-pointer col-span-2" (click)="redirectProject()">Proyectos</span>
-        <span class="col-span-2">Nosotros</span>
+        <span class="col-span-2" (click)="redirectUs()">Nosotros</span>
         <span class="col-span-2">Contacto</span>
       </div>
 
@@ -57,7 +57,7 @@
       </div>
       <button
         class="h-[46px] lg:h-[50px] 2xl:h-[65px] w-[192px] lg:w-[236px] rounded-[50px] bg-white text-[15.5px] text-black flex justify-center items-center p-4">
-        <img class="pr-5" src="assets/img/arrow-black.png" alt="">
+        <img class="pr-5 w-[42px] xl:w-auto" src="assets/img/arrow-black.png" alt="">
         Conversemos
       </button>
     </div>
@@ -72,7 +72,7 @@
     <ul class="open-menu lg:flex flex-wrap">
       <li class="cursor-pointer" *ngFor="let list of listGroup" (click)="redirectInternas(list.ruta)"
         (mouseover)="list.state = false" (mouseout)="list.state = true">{{list.name}}
-        <img [ngClass]="{ 'arrow-rotate' : !list.state }" class="translate-x-0 transition duration-700 ease-in-out w-[24px] lg:w-[60px]"
+        <img [ngClass]="{ 'arrow-rotate' : !list.state }" class="translate-x-0 transition duration-700 ease-in-out w-[31px] lg:w-[42px] xl:w-auto"
           src="assets/img/short-arrow-right.png" alt="">
       </li>
     </ul>
