@@ -27,3 +27,8 @@
     width: 135px;
     transition: all .6s ease-in-out;
 }
+
+h5 {
+    font-size: 42px;
+    line-height: 55px;
+}
