@@ -10,6 +10,14 @@
   font-family: LexendZetta;
 }
 
+g:hover circle{
+    fill: #5682FF;
+  }
+
+  g:hover  path{
+    fill: #FFFFFF;
+  }
+
 @media screen and (min-width: 1024px) {
   .arrow-rotate {
     transform: rotate(-45deg);

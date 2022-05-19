@@ -6,15 +6,15 @@
     </section>
     <section class="px-4 pt-[5rem] pb-[7rem]">
         <div class="grid grid-cols-4 ">
-            <h3 class="lexendli text-[36px] leading-[53.3px]">Propósito</h3>
+            <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[53.3px]">Propósito</h3>
             <div class="col-span-3 grid grid-cols-3 border-b border-black pb-[10rem]">
-                <h5 class="lexendzettaextrali text-[86px] leading-[107.5px] col-span-2 pb-[8rem]">Humanizar la
+                <h5 class="lexendzettaextrali text-[24px] lg:text-[55px] xl:text-[60px] 2xl:text-[86px] leading-[30px] lg:leading-[80px] 2xl:leading-[107.5px] col-span-2 pb-[8rem]">Humanizar la
                     tecnología para hacer un mundo mejor</h5>
-                <h3 class="lexendli text-[36px] leading-[53.3px] col-span-2 pb-[4rem]">Esedor crea productos digitales
+                <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[32.8px] lg:leading-[40px] 2xl:leading-[53.3px] col-span-2 pb-[4rem]">Esedor crea productos digitales
                     que permiten a las personas realizar las cosas de manera diferente.
                     Comparte tu desafío con nuestro equipo y trabajaremos contigo para ofrecerte un producto digital
                     revolucionario.</h3>
-                <h3 class="lexendli text-[36px] leading-[53.3px] col-span-2">Nuestros clientes han optimizado la forma
+                <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[32.8px] lg:leading-[40px] 2xl:leading-[53.3px] col-span-2">Nuestros clientes han optimizado la forma
                     en que sus usuarios realizan operaciones bancarias,
                     compran productos, ofrecen servicios y alquilan propiedades.</h3>
             </div>
@@ -24,7 +24,7 @@
             <img class="2xl:col-start-2 col-span-2 w-[322px]" src="assets/img/iphone.png" alt="">
             <div class="2xl:col-start-4 col-span-5 2xl:col-span-4 space-y-[3rem] pl-[3rem] xl:pl-[6rem] 2xl:pl-0">
                 <h1
-                    class="lexendzettali text-[36px] xl:text-[40px] 2xl:text-[46px] leading-[53.5px] 2xl:leading-[84.5px]">
+                    class="lexendzettali text-[36px] xl:text-[40px] 2xl:text-[46px] leading-[56px] 2xl:leading-[70px] 3xl:leading-[84.5px]">
                     Durante los últimos años, hemos ayudado a nuestros clientes a entregar productos para múltiples
                     plataformas.
                 </h1>
@@ -37,11 +37,11 @@
     </section>
 
     <section class="bg-[#F2F4F5] h-[367px]">
-
+        
     </section>
 
     <section class="bg-image2 h-[612px] flex items-center">
-        <h5 class="lexendzettaextrali text-[86px] leading-[107.5px] text-white w-[50%]">Nuestra
+        <h5 class="lexendzettaextrali text-[80px] 2xl:text-[86px] leading-[107.5px] text-white w-[50%]">Nuestra
             Cultura</h5>
     </section>
 
@@ -53,21 +53,21 @@
         <div
             class="col-start-2 col-span-3 grid grid-cols-2 gap-x-[4.5rem] gap-y-[6.5rem] py-[8rem] pr-[8rem] border-t border-b border-black">
             <div class="lexendli space-y-[2.5rem]" *ngFor="let item of featureGroup">
-                <h4 class="text-[21px] leading-[33.6px]">{{item.title}}</h4>
-                <h3 class="text-[36px] leading-[53.3px]">{{item.text}}</h3>
+                <h4 class="text-[18px] xl:text-[21px] leading-[33.6px]">{{item.title}}</h4>
+                <h3 class="lg:text-[26px] xl:text-[30px] 2xl:text-[36px] leading-[53.3px]">{{item.text}}</h3>
             </div>
         </div>
         <div class="col-start-2 col-span-3 pt-[10rem] space-y-[5rem] pr-[13rem]">
-            <h1 class="lexendzettali text-[46px] leading-[84.5px]">Hacedor de una visión, entregando software, creando
+            <h1 class="lexendzettali text-[36px] xl:text-[40px] 2xl:text-[46px] leading-[53.5px] 2xl:leading-[84.5px]">Hacedor de una visión, entregando software, creando
                 experiencias de clase mundial</h1>
-            <h3 class="lexendli text-[36px] leading-[53.3px]">Colaborar con Esedor ha tenido un impacto duradero en
+            <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[53.3px]">Colaborar con Esedor ha tenido un impacto duradero en
                 nuestra capacidad de ser innovadores y ejecutar a un ritmo. El equipo allí tiene un fuerte enfoque en no
                 solo hacer lo que pides.</h3>
         </div>
     </section>
 
     <section class="grid grid-cols-4 pb-[10rem]">
-        <div class="px-4 py-8 2xl:p-8 us-shadow transition-all duration-700 ease-in-out cursor-pointer"
+        <div class="px-4 py-8 us-shadow transition-all duration-700 ease-in-out cursor-pointer"
             *ngFor="let item of steps" [ngClass]="{ 'bg-blue' : item.state }" (mouseover)="item.state = true"
             (mouseout)="item.state = false">
             <h5 class="lexendzettaextrali text-[86px] leading-[107.5px] text-[#D8D8D8] border-t lg:pt-[5rem] xl:pt-[6rem] pb-[9rem] xl:pb-[11rem] transition-all duration-700 ease-in-out"
@@ -75,9 +75,9 @@
             <div class="xl:space-y-[3rem] transition-all duration-700 ease-in-out"
                 [ngClass]="{ 'text-white transition-all duration-700 ease-in-out' : item.state }">
                 <h1
-                    class="lexendzettali text-[26px] xl:text-[36px] 2xl:text-[46px] leading-[55px] xlleading-[65px] 2xl:leading-[84.5px] h-[169px]">
+                    class="lexendzettali text-[26px] xl:text-[34px] 2xl:text-[40px] 3xl:text-[46px] leading-[55px] xl:leading-[65px] 2xl:leading-[84.5px] h-[169px]">
                     {{item.title}}</h1>
-                <h4 class="lexendli text-[18px] 2xl:text-[21px] leading-[30.6px] leading-[33.6px]">{{item.text}}</h4>
+                <h4 class="lexendli text-[18px] 2xl:text-[21px] leading-[30.6px] 2xl:leading-[33.6px]">{{item.text}}</h4>
             </div>
         </div>
     </section>
@@ -88,44 +88,44 @@
             Nuestro éxito es gracias a las personas que integran Esedor.
         </h1>
         <div>
-            <h3 class="lexendli text-[36px] leading-[53.3px]"></h3>
+            <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[53.3px]"></h3>
             <p class="lexendb text-sm"></p>
         </div>
     </section>
 
     <section class="bg-image3 h-[612px] flex items-center">
-        <h5 class="lexendzettaextrali text-[86px] leading-[107.5px] text-white w-[50%]">Visión Responsable</h5>
+        <h5 class="lexendzettaextrali text-[80px] 2xl:text-[86px] leading-[107.5px] text-white w-[50%]">Visión Responsable</h5>
     </section>
 
     <section class="grid grid-cols-4 py-[5.5rem]">
         <div class="col-start-2 col-span-3 pr-[18rem] space-y-[2rem]">
-            <h1 class="lexendzettali text-[46px] leading-[84.5px]">Esedor apoya los Principios del Pacto Mundial de las
+            <h1 class="lexendzettali text-[36px] xl:text-[40px] 2xl:text-[46px] leading-[53.5px] 2xl:leading-[84.5px]">Esedor apoya los Principios del Pacto Mundial de las
                 Naciones Unidas sobre derechos humanos, trabajo,
                 medio ambiente y lucha contra la corrupción.</h1>
-            <h4 class="lexendli text-[21px] leading-[33.6px]">Estamos comprometidos a hacer del Pacto Mundial de las
+            <h4 class="lexendli text-[18px] 2xl:text-[21px] leading-[30.6px] 2xl:leading-[33.6px]">Estamos comprometidos a hacer del Pacto Mundial de las
                 Naciones Unidas y sus principios parte de la
                 estrategia, la cultura y las operaciones cotidianas de nuestra empresa, y a participar en proyectos de
                 colaboración que promuevan los objetivos de desarrollo más amplios de las Naciones Unidas, en particular
                 los Objetivos de Desarrollo Sostenible.</h4>
         </div>
         <div class="col-start-2 col-span-3 pt-[5.5rem]">
-            <div class="p-[3rem] flex items-center space-x-[5.5rem] us-shadow" *ngFor="let item of principles">
+            <div class="p-[3rem] flex items-center space-x-[3.5rem] 2xl:space-x-[5.5rem] us-shadow" *ngFor="let item of principles">
                 <img src="{{item.image}}" alt="">
                 <div class="space-y-2">
                     <p class="lexendb">{{item.title}}</p>
-                    <h3 class="lexendli text-[36px] leading-[53.3px]">{{item.text}}</h3>
+                    <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[43.3px] 2xl:leading-[53.3px]">{{item.text}}</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-black pl-4 pr-[10.5rem] flex justify-between items-center h-[950px]">
-        <h1 class="lexendzettali text-[46px] leading-[84.5px] text-white w-[44%]">“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.”</h1>
+    <section class="bg-black pl-4 lg:pr-[5rem] xl:pr-[6rem] 2xl:pr-[10.5rem] flex justify-between items-center h-[950px]">
+        <h1 class="lexendzettali text-[36px] xl:text-[40px] 2xl:text-[46px] leading-[53.5px] 2xl:leading-[84.5px] text-white w-[44%]">“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.”</h1>
         <img src="assets/img/present.png" alt="">
     </section>
 
     <section class="bg-[#E8E8E8] p-4 h-[550px] grid grid-cols-3 items-center">
-        <h3 class="lexendli text-[36px] leading-[53.3px]">Aliados</h3>
+        <h3 class="lexendli lg:text-[22px] xl:text-[30px] 2xl:text-[36px] leading-[53.3px]">Aliados</h3>
         <div class="col-start-2 col-span-2 grid grid-cols-4 gap-[3rem] items-center">
             <img src="assets/img/aws.png" alt="">
             <img src="assets/img/microsoft.png" alt="">
