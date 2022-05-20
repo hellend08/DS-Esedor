@@ -31,6 +31,7 @@ import { NotifaiComponent } from './views/notifai/notifai.component';
 import { SecondSectionComponent } from './shared/components/project-internals/second-section/second-section.component';
 import { ServicesComponent } from './views/services/services.component';
 import { RipleyComponent } from './views/ripley/ripley.component';
+import { WorkersSlideComponent } from './shared/components/workers-slide/workers-slide.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { RipleyComponent } from './views/ripley/ripley.component';
     NotifaiComponent,
     SecondSectionComponent,
     ServicesComponent,
-    RipleyComponent
+    RipleyComponent,
+    WorkersSlideComponent
   ],
   imports: [
     BrowserModule,
