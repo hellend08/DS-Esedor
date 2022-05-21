@@ -14,7 +14,7 @@ g:hover circle{
     fill: #5682FF;
   }
 
-  g:hover  path{
+g:hover  path{
     fill: #FFFFFF;
   }
 

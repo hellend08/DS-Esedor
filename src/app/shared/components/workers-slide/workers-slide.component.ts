@@ -11,7 +11,7 @@ export class WorkersSlideComponent implements AfterViewInit {
   @ViewChild('myCarousel') myCarousel!: NguCarousel<any>;
 
   carouselConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 1, lg: 3, all: 0 },
+    grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
     load: 3,
     slide: 1,
     interval: {timing: 5000, initialDelay: 1000},

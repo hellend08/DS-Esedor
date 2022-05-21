@@ -11,6 +11,7 @@ import { ProjectsDashboardComponent } from "./views/projects-dashboard/projects-
 import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.component';
 import { NotifaiComponent } from './views/notifai/notifai.component';
 import { ServicesComponent } from './views/services/services.component';
+import { TalentComponent } from './views/talent/talent.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'proyectos/primax', component: ProjectsComponent },
   { path: 'descripcion', component: DescripcionComponent},
   { path: 'proyectos', component: ProjectsDashboardComponent},
-  { path: 'services', component: ServicesComponent},
+  { path: 'servicios', component: ServicesComponent},
+  { path: 'talento', component:TalentComponent },
   // { path: 'descripcion', component: DescripcionComponent},
   { path: 'notifai-vista1', component: NotifaiVista1Component},
   { path: 'proyectos/notifai', component: NotifaiComponent}

@@ -32,6 +32,7 @@ import { SecondSectionComponent } from './shared/components/project-internals/se
 import { ServicesComponent } from './views/services/services.component';
 import { RipleyComponent } from './views/ripley/ripley.component';
 import { WorkersSlideComponent } from './shared/components/workers-slide/workers-slide.component';
+import { TalentComponent } from './views/talent/talent.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { WorkersSlideComponent } from './shared/components/workers-slide/workers
     SecondSectionComponent,
     ServicesComponent,
     RipleyComponent,
-    WorkersSlideComponent
+    WorkersSlideComponent,
+    TalentComponent
   ],
   imports: [
     BrowserModule,
