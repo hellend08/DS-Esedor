@@ -25,6 +25,20 @@ export class ServicesComponent implements OnInit {
   }
 
   colorWhite = true;
+  bgTab: boolean = true;
+  bgTab2!: boolean;
+
+  test(a: any){
+    if(a.index == 0) {
+      this.bgTab = true;
+      this.bgTab2 = false;
+
+    } else if (a.index == 1 ) {
+      this.bgTab2 = true;
+      this.bgTab = false;
+    } 
+    console.log(a.index)
+  }
 
   constructor() { }
 

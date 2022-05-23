@@ -24,6 +24,14 @@ g:hover  path{
     transition: transform .6s cubic-bezier(.4,0,0,1);
   }
 
+  .arrow:hover g line {
+    stroke: #5682FF;
+  }
+
+  .arrow:hover g path {
+    stroke: #5682FF;
+  }
+
   .mobile-shadow {
     box-shadow: inherit;
   }

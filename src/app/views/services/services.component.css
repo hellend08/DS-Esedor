@@ -1,5 +1,10 @@
 .bg-image {
-    background-image: url('../../../assets/img/bg-services.png');
+    background-image: url('../../../assets/img/bg-services.svg');
+    background-repeat: no-repeat;
+}
+
+.bg-tab2 {
+    background-image: url('../../../assets/img/bg-tab2.svg');
     background-repeat: no-repeat;
 }
 
