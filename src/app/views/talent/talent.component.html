@@ -8,14 +8,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 space-y-[3rem] lg:space-y-0">
             <h3 class="lexendli text-[18px] lg:text-[21px] lg:leading-[53.3px]">Buscamos talento</h3>
             <div class="col-span-3 lg:pb-[9rem] lg:pr-[5rem] 2xl:pr-[10rem]">
-                <!-- grid grid-cols-1 lg:grid-cols-3 -->
                 <h1
                     class="text-[28px] lg:text-[36px] xl:text-[46px] leading-[35px] lg:leading-[57.5px] pb-8 lg:pb-[5rem] 2x:pb-[6rem]">
                     No solo ofrecemos trabajos; ofrecemos un lugar para crecer</h1>
                 <h3 class="lexendli text-[18px] lg:text-[21px] pb-[3rem]">En nuestro constante crecimiento y evolución,
                     buscamos profesionales que se identifiquen con nuestra
                     cultura y nuestros valores, explore nuestras principales vacantes:</h3>
-                <!-- col-span-2  -->
             </div>
 
             <div class="lg:col-start-2 col-span-3 pb-[4rem] lg:pb-[9rem] border-t border-black">
@@ -25,7 +23,6 @@
                     <h3 class="lexendli text-[14.5px] lg:text-[30px] 2xl:text-[36px]">{{item.text}}</h3>
                     <div class="lg:col-start-3 col-span-1 grid grid-cols-2 justify-items-end items-center">
                         <h3 class="lexendli text-[14.5px] lg:text-[30px] 2xl:text-[36px]">Remoto</h3>
-                        <!-- text-[18px] lg:pl-[3rem]-->
                         <svg [ngClass]="{ 'arrow-rotate' : item.state}" class="transition duration-700 ease-in-out w-[20px] lg:w-auto"
                             width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -36,11 +33,9 @@
                             </g>
                         </svg>
                     </div>
-
                 </div>
             </div>
         </div>
-
     </section>
 
     <section class="grid grid-cols-1 lg:grid-cols-4 items-center h-[1024px] bg-[#141C26] px-4 lg:px-0">
@@ -60,18 +55,21 @@
 
             </div>
             <p class="lexendzettali text-[32px] pt-[2rem] col-span-2 hidden lg:block">talento@esedor.com</p>
-
         </div>
     </section>
 
-    <section class="grid grid-cols-1 lg:grid-cols-4 pt-[10rem] lg:pt-[20rem] items-center pb-[20rem] lg:pb-[40rem] px-4">
-        <h5 class="col-span-3 lexendzettaextrali text-[24px] lg:text-[86px] leading-[30px] lg:leading-[107.5px]">¿Tienes un proyecto
-            en mente?</h5>
-        <div>
-            <img class="w-[77px] lg:w-auto" src="assets/img/tube_long.png" alt="">
-            <img class="w-[129px] lg:w-auto"  src="assets/img/circle_3d.png" alt="">
-            <img class="w-[70px] lg:w-auto"  src="assets/img/tube.png" alt="">
+    <section class="grid grid-cols-1 lg:grid-cols-4 pt-[10rem] lg:pt-[20rem] pb-[20rem] lg:pb-[40rem] px-4">
+        <div class="col-span-4 flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 items-center">
+            <h1 class="lg:col-span-1 xl:col-span-2 text-[28px] lg:text-[36px] xl:text-[46px] leading-[35px] lg:leading-[57.5px]">¿Tienes un proyecto
+                en mente?</h1>
+            <div class="col-span-2 h-[300px] lg:h-[500px] pb-[5rem] lg:pb-0 flex justify-between w-full lg:w-auto">
+                <img class="w-[77px] lg:w-auto mb-auto" src="assets/img/tube_long.png" alt="">
+                <img class="w-[70px] lg:w-auto mt-auto"  src="assets/img/tube.png" alt="">
+                <img class="w-[129px] lg:w-auto my-auto pb-[5rem]"  src="assets/img/circle_3d.png" alt="">
+    
+            </div>
         </div>
+        
         <div class="lg:col-start-2 col-span-3 grid grid-cols-1 lg:grid-cols-3 border-t border-black mt-[2.5rem] lg:mt-[10rem]">
             <h4
                 class="col-span-2 lexendli text-[18px] xl:text-[21px] leading-[28.6px] lg:leading-[33.6px] py-[2.5rem] lg:py-[5rem]">
@@ -79,11 +77,13 @@
                 ayudar a jóvenes con trabajo digno que les permita desarrollar sus habilidades y generar un impacto en
                 su sociedad, ponte en contacto con nosotros y se parte de este programa</h4>
             <button
-                class="col-span-2 lexendli text-[21px] flex items-center justify-center talent-shadow w-full lg:w-[235px] h-[65px] px-2 lg:p-4 rounded-[20px]">
-                <img class="pr-5" src="assets/img/arrow-black.png" alt="">
+                class="col-span-2 lexendli text-[21px] flex items-center justify-start lg:justify-center talent-shadow w-full lg:w-[235px] h-[65px] px-5 lg:p-4 rounded-[20px]">
+                <svg class="mr-12 lg:mr-4 w-[24px] lg:w-auto" width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black" stroke-width="2"/>
+                    <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2"/>
+                    </svg>
                 Quiero Ayudar
             </button>
-
         </div>
     </section>
 </div>

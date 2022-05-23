@@ -1,6 +1,8 @@
 .bg-image {
     background-image: url('../../../assets/img/bg-talent.png');
     background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
 }
 
 h1 {
@@ -11,22 +13,20 @@ h1 {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
- /* g line {
-    stroke: #5682FF;
-  }
-
-g path {
-    stroke: #5682FF;
-  } */
-
 @media screen and (min-width: 1024px) {
+
+    .bg-image {
+        background-position-x: inherit;
+        background-position-y: inherit;
+    }
+
     .arrow:hover g line {
         stroke: #5682FF;
-      }
+    }
     
     .arrow:hover g path {
         stroke: #5682FF;
-      }
+    }
     
     .font-color {
        color: #5682FF;
@@ -35,5 +35,5 @@ g path {
     .arrow-rotate {
         transform: rotate(-45deg);
         transition: transform .6s cubic-bezier(.4,0,0,1);
-      }
+    }
 }
