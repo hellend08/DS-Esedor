@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'talento', component:TalentComponent },
   // { path: 'descripcion', component: DescripcionComponent},
   { path: 'notifai-vista1', component: NotifaiVista1Component},
-  { path: 'proyectos/notifai', component: NotifaiComponent}
+  { path: 'proyectos/notifai', component: NotifaiComponent},
 ]
 
 @NgModule({
