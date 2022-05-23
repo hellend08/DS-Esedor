@@ -24,7 +24,7 @@ export class ToolbarComponent implements OnInit {
     {name: 'Proyectos', ruta: '/proyectos', state: true},
     {name: 'Nosotros', ruta: '/nosotros', state: true},
     {name: 'Talento', ruta: '/talento', state: true},
-    {name: 'Contacto', ruta: '/', state: true},
+    {name: 'Contacto', ruta: '/contacto', state: true},
     {name: 'Blog', ruta: '/', state: true},
   ]
 
@@ -48,6 +48,10 @@ export class ToolbarComponent implements OnInit {
 
   public redirectUs() {
     this.router.navigateByUrl('/nosotros');
+  }
+
+  public redirectContact() {
+    this.router.navigateByUrl('/contacto');
   }
 
   ngOnInit(): void {

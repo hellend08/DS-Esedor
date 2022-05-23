@@ -51,9 +51,9 @@
                     <p data-aos="fade-up" data-aos-duration="1500" class="lexend col-span-4 text-sm lg:text-base">LOS
                         ENTREGABLES INCLUYEN </p>
                     <div
-                        class="col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-[3.5rem] lg:gap-[5rem] py-[2rem] lg:py-0">
+                        class="col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-[3.5rem] lg:gap-[4rem] xl:gap-[5rem] py-[2rem] lg:py-0">
                         <!-- overflow-x-auto lg:overflow-hidden -->
-                        <div *ngFor="let item of detailsGroup" class="space-y-4 lg:space-y-[1.5rem] min-w-[250px]">
+                        <div *ngFor="let item of detailsGroup" class="space-y-4 lg:space-y-[1.5rem] xl:min-w-[250px]">
                             <img src="{{item.img}}" alt="">
                             <h4 class="lexendzettali text-[17px] 2xl:text-[24px] leading-[35.8px]">{{item.title}}</h4>
                             <p class="lexendli text-[18px] 2xl:text-[21px]">{{item.text}}</p>
@@ -107,7 +107,8 @@
             <app-projects-slide></app-projects-slide>
         </div>
     </section>
-    <footer class="bg-[#F2F4F5] hidden">
+    <app-footer></app-footer>
+    <!-- <footer class="bg-[#F2F4F5] hidden">
         <h5 class="lexendzettali text-[86px]">Programe una sesión gratuita con uno de nuestros expertos</h5>
         <button>
             <img class="pr-5" src="assets/img/arrow-black.png" alt="">
@@ -136,5 +137,5 @@
             </div>
         </div>
 
-    </footer>
+    </footer> -->
 </div>
