@@ -34,6 +34,7 @@ import { RipleyComponent } from './views/ripley/ripley.component';
 import { WorkersSlideComponent } from './shared/components/workers-slide/workers-slide.component';
 import { TalentComponent } from './views/talent/talent.component';
 import { AlliesComponent } from './shared/components/allies/allies.component';
+import { LetsTalkComponent } from './shared/components/lets-talk/lets-talk.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AlliesComponent } from './shared/components/allies/allies.component';
     RipleyComponent,
     WorkersSlideComponent,
     TalentComponent,
-    AlliesComponent
+    AlliesComponent,
+    LetsTalkComponent
   ],
   imports: [
     BrowserModule,
