@@ -1,0 +1,25 @@
+.bg-image {
+  background-image: url('../../../assets/img/contacto.png');
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: LexendZettaExtraLight;
+  /* font-size: 46px;
+  line-height: 55px; */
+}
+
+.btn-1{
+  padding: 15px 25px;
+  text-align: center;
+  background-color: white ;
+  border-radius: 60px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.bg-mitad{
+  background-image: url('../../../assets/img/img-mar.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
