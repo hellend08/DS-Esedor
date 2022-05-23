@@ -34,13 +34,12 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   @ViewChild('textoDinamico', {static: true}) textoDinamico!: ElementRef<HTMLDivElement>;
 
-  probar!: boolean;
-
   bgBlog!: boolean;
   bgBlogTwo!: boolean;
   bgBlogThree!: boolean;
 
   arrowRotate!: boolean;
+  displayElement: boolean = true;
 
   servicesItems = [
     {title: 'Descubrimiento de producto', text: 'Planifique y evalúe las características esenciales de su producto para lograr sus objetivos comerciales y eliminar posibles errores.', state: false, length: '2xl:w-auto'},

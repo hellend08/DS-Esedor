@@ -35,13 +35,16 @@
           </defs>
         </svg> -->
         <!-- <img class="max-w-[102px] ml-[-1rem]" src="assets/img/video_play.png" alt=""> -->
-        <lottie-player class="ml-[-4rem]" src="https://assets10.lottiefiles.com/packages/lf20_getcwdyd.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;" hover   ></lottie-player>
+        <lottie-player class="ml-[-4rem]" src="https://assets10.lottiefiles.com/packages/lf20_getcwdyd.json"
+          background="transparent" speed="1" style="width: 200px; height: 200px;" hover></lottie-player>
       </div>
       <div class="col-span-2 space-y-[3rem]">
-        <h1 data-aos="fade-up" data-aos-duration="1500" class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generamos
+        <h1 data-aos="fade-up" data-aos-duration="1500"
+          class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generamos
           impacto y experiencias increíbles para marcas
           ambiciosas.</h1>
-        <h3 data-aos="fade-up" data-aos-duration="1500" class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Esedor es
+        <h3 data-aos="fade-up" data-aos-duration="1500"
+          class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Esedor es
           una compañía que te
           acompaña en todas las etapas de
           tu proyecto, maximizando tus objetivos de negocio.</h3>
@@ -53,11 +56,13 @@
         class="border-b border-black col-span-2 col-end-4 pb-[5rem] lg:pb-[13rem] space-y-[3rem] xl:pr-[4rem] 2xl:pr-[6rem]">
         <div data-aos="fade-right" data-aos-duration="1500" class="flex space-x-4 items-center">
           <div class="border-b border-black w-[43px]"></div>
-          <p  class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
+          <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
         </div>
-        <h1 data-aos="fade-up" data-aos-duration="1500" class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">¿Cuál es
+        <h1 data-aos="fade-up" data-aos-duration="1500"
+          class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">¿Cuál es
           tu objetivo final? </h1>
-        <h3 data-aos="fade-up" data-aos-duration="1500" class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Permítenos
+        <h3 data-aos="fade-up" data-aos-duration="1500"
+          class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Permítenos
           ayudarte a cumplirlo con nuestras
           habilidades y
           servicios especializados los acompañaremos en todas las etapas del servicio.</h3>
@@ -66,7 +71,7 @@
       <div
         class="col-span-2 col-end-4 grid grid-cols-1 lg:grid-cols-2 gap-[.5rem] pt-[5rem] xl:pr-[2rem] 2xl:pr-[3rem]">
         <div [ngClass]="{ 'service-shadow' : item.state}"
-          class="flex flex-col justify-between cursor-pointer py-[3rem] px-5 xl:p-[3rem] mobile-shadow"
+          class="flex flex-col justify-between cursor-pointer py-[3rem] px-5 xl:p-[3rem] mobile-shadow arrow"
           *ngFor="let item of servicesItems" (mouseover)="item.state = true" (mouseout)="item.state = false">
           <!-- max-w-[400px] h-[270px]  h-[330px]-->
           <div data-aos="fade-up" data-aos-duration="1500" class="space-y-[2rem]">
@@ -75,9 +80,17 @@
           </div>
           <button class="lexendli text-[21px] flex items-center mt-auto pt-6"
             [ngClass]="{ 'lg:text-[#5682FF] lg:font-bold' : item.state}">
-            <img [ngClass]="{ 'arrow-rotate' : item.state}"
+            <svg [ngClass]="{ 'arrow-rotate' : item.state}"
+              class="transition duration-700 ease-in-out w-[20px] lg:w-auto mr-5" width="33" height="31"
+              viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black" stroke-width="2" />
+                <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2" />
+              </g>
+            </svg>
+            <!-- <img [ngClass]="{ 'arrow-rotate' : item.state}"
               class="w-[31px] mr-5 translate-x-0 transition duration-700 ease-in-out" src="assets/img/arrow-black.png"
-              alt="">
+              alt=""> -->
             Saber más
           </button>
         </div>
@@ -111,16 +124,16 @@
       class=" border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[190px] lg:h-[250px]">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full space-y-[2rem] lg:space-y-0">
         <div class="text-[42px] lg:text-[96px] type-family text-white flex textleft">
-          <div data-aos="fade-down-right" data-aos-duration="1000" >P</div>
-          <div data-aos="fade-down-right" data-aos-duration="1050" >r</div>
-          <div data-aos="fade-down-right" data-aos-duration="1100" >o</div>
-          <div data-aos="fade-down-right" data-aos-duration="1150" >y</div>
-          <div data-aos="fade-down-right" data-aos-duration="1200" >e</div>
-          <div data-aos="fade-down-right" data-aos-duration="1250" >c</div>
-          <div data-aos="fade-down-right" data-aos-duration="1300" >t</div>
-          <div data-aos="fade-down-right" data-aos-duration="1350" >o</div>
-          <div data-aos="fade-down-right" data-aos-duration="1400" >s</div>
-     <!-- class="border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[190px] lg:h-[250px]">
+          <div data-aos="fade-down-right" data-aos-duration="1000">P</div>
+          <div data-aos="fade-down-right" data-aos-duration="1050">r</div>
+          <div data-aos="fade-down-right" data-aos-duration="1100">o</div>
+          <div data-aos="fade-down-right" data-aos-duration="1150">y</div>
+          <div data-aos="fade-down-right" data-aos-duration="1200">e</div>
+          <div data-aos="fade-down-right" data-aos-duration="1250">c</div>
+          <div data-aos="fade-down-right" data-aos-duration="1300">t</div>
+          <div data-aos="fade-down-right" data-aos-duration="1350">o</div>
+          <div data-aos="fade-down-right" data-aos-duration="1400">s</div>
+          <!-- class="border-b-[1px] border-white space-y-7 lg:space-y-0 flex flex-col lg:flex-row items-start lg:items-end justify-end lg:justify-between h-[190px] lg:h-[250px]">
        lg:h-[600px]
       <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full space-y-[1.5rem] lg:space-y-0">
         <div class="text-[42px] lg:text-[96px] type-family text-white">
@@ -141,8 +154,8 @@
         <button (click)="redirectProject()"
           class="flex items-center lg:justify-end pb-4 lg:p-[15px] transition duration-700 ease-in-out btn-hover"
           (mouseover)="arrowRotate = true" (mouseout)="arrowRotate = false">
-          <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
-            [ngClass]="{ 'arrow-rotate' : arrowRotate}">
+          <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out"
+            src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : arrowRotate}">
           <p class="text-[21px] lg:text-[21px] lexendli text-white ml-5">Ver proyectos</p>
         </button>
       </div>
@@ -153,11 +166,11 @@
     </div>
   </section>
 
-  <section class="bg-[#5682FF] px-4 pb-[9rem]">
+  <section class="bg-[#5682FF] pb-[9rem]">
     <!-- lg:h-screen -->
     <!-- <div class="flex items-end h-[450px]"> -->
     <div
-      class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 py-[5rem] lg:pt-[8rem] lg:pb-[6.5rem]">
+      class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 px-4 py-[5rem] lg:pt-[8rem] lg:pb-[6.5rem]">
       <p data-aos="fade-up" data-aos-duration="1000" class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">
         Confían en nosotros</p>
       <h1 data-aos="fade-up" data-aos-duration="1000"
@@ -177,7 +190,8 @@
       <img src="assets/img/logo_empresa/caja-cusco.png" alt="">
 
     </div> -->
-    <div
+    <app-allies [displayElement]="displayElement"></app-allies>
+    <!-- <div
       class="grid grid-cols-3 lg:grid-cols-6 gap-y-[6rem] items-center justify-items-center lg:justify-items-start ml-[-1rem] lg:ml-0 gap-4 lg:pt-[6.5rem]">
       <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/niubiz.png" alt="">
       <img class="max-w-[93px] lg:max-w-full" src="assets/img/logo_empresa/primax.png" alt="">
@@ -185,7 +199,7 @@
       <img class="max-w-[65px] lg:max-w-full" src="assets/img/logo_empresa/caja-cusco.png" alt="">
       <img class="max-w-[66px] lg:max-w-full" src="assets/img/logo_empresa/cml.png" alt="">
       <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/ripley.png" alt="">
-    </div>
+    </div> -->
   </section>
 
   <section
@@ -204,7 +218,8 @@
       <div class="relative flex cursor-pointer" (mouseover)="bgBlog = true" (mouseout)="bgBlog = false">
         <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlog}"></div>
-        <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="border-l border-white px-4 py-2 absolute lg:h-[222px] flex flex-col">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
@@ -212,15 +227,24 @@
           <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La democratización del diseño:
             “Design
             Systems”</h3>
-          <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
-            [ngClass]="{ 'arrow-rotate' : bgBlog }">
+          <svg [ngClass]="{ 'arrow-rotate' : bgBlog}"
+            class="transition duration-700 ease-in-out w-[31px] lg:w-[52px] lg:h-[46px] mt-auto" width="33" height="31"
+            viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="white" stroke-width="2" />
+              <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="white" stroke-width="2" />
+            </g>
+          </svg>
+          <!-- <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out"
+            src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlog }"> -->
         </div>
       </div>
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogTwo = true" (mouseout)="bgBlogTwo = false">
         <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlogTwo}"></div>
-        <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="border-l border-white px-4 py-2 absolute lg:h-[222px] flex flex-col">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
@@ -228,15 +252,24 @@
           <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los
             chatbots
           </h3>
-          <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
-            [ngClass]="{ 'arrow-rotate' : bgBlogTwo }">
+          <svg [ngClass]="{ 'arrow-rotate' : bgBlogTwo}"
+            class="transition duration-700 ease-in-out w-[31px] lg:w-[52px] lg:h-[46px] mt-auto" width="33" height="31"
+            viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="white" stroke-width="2" />
+              <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="white" stroke-width="2" />
+            </g>
+          </svg>
+          <!-- <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out"
+            src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlogTwo }"> -->
         </div>
       </div>
 
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogThree = true" (mouseout)="bgBlogThree = false">
         <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlogThree}"></div>
-        <div data-aos="fade-right" data-aos-duration="1000" class="border-l border-white px-4 py-2 absolute">
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="border-l border-white px-4 py-2 absolute lg:h-[222px] flex flex-col">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
             <p class="lexend">Ver más</p>
@@ -244,8 +277,16 @@
           <h3 class="text-[16px] lg:text-[36px] lexendli text-[#FFFFFF] pt-5 pb-3">La experiencia de usuario en los
             chatbots
           </h3>
-          <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out" src="assets/img/short-arrow-right.png" alt=""
-            [ngClass]="{ 'arrow-rotate' : bgBlogThree }">
+          <svg [ngClass]="{ 'arrow-rotate' : bgBlogThree}"
+            class="transition duration-700 ease-in-out w-[31px] lg:w-[52px] lg:h-[46px] mt-auto" width="33" height="31"
+            viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="white" stroke-width="2" />
+              <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="white" stroke-width="2" />
+            </g>
+          </svg>
+          <!-- <img class="w-[31px] lg:w-auto translate-x-0 transition duration-700 ease-in-out"
+            src="assets/img/short-arrow-right.png" alt="" [ngClass]="{ 'arrow-rotate' : bgBlogThree }"> -->
         </div>
       </div>
 

@@ -13,7 +13,7 @@
         class="lg:grid grid-cols-6 gap-4 hidden space-x-10 justify-between w-full lexendzetta font-bold">
         <span class="cursor-pointer col-span-2" (click)="redirectProject()">Proyectos</span>
         <span class="cursor-pointer col-span-2" (click)="redirectUs()">Nosotros</span>
-        <span class="col-span-2">Contacto</span>
+        <span class="col-span-2" (click)="redirectContact()">Contacto</span>
       </div>
 
       <div #search (click)="openMenu = true" class="pb-2">
@@ -68,7 +68,7 @@
       </button>
     </div>
   </div>
-  <div class="h-[75%] lg:h-[70%] px-4 pt-4 pb-2 flex flex-col lg:justify-end">
+  <div class="h-[75%] lg:h-[70%] px-4 pt-4 lg:pt-[13rem] pb-2 flex flex-col lg:justify-between">
     <ul class="open-menu lg:flex flex-wrap">
       <li class="cursor-pointer" *ngFor="let list of listGroup" (click)="redirectInternas(list.ruta)"
         (mouseover)="list.state = false" (mouseout)="list.state = true">{{list.name}}

@@ -1,9 +1,21 @@
 <app-toolbar [colorWhite]="colorWhite"></app-toolbar>
 <div>
-    <section class="bg-image h-[310px] lg:h-[760px] text-white flex justify-center items-center py-8 2xl:py-[4rem]">
+    <section class="bg-image h-[310px] lg:h-[760px] text-white flex justify-center items-center py-8 2xl:py-[4rem]"
+        *ngIf="bgTab">
         <!-- py-[6rem]  h-screen 2xl:grid-cols-2-->
-        <h1 data-aos="fade-down" data-aos-duration="2500" class="text-[36px] lg:text-[140px] xl:text-[180px] lexendzettaextrali leading-[125px]">Servicios</h1>
+        <h1 data-aos="fade-down" data-aos-duration="2500"
+            class="text-[36px] lg:text-[140px] xl:text-[180px] lexendzettaextrali leading-[125px]">Servicios</h1>
 
+    </section>
+    <section class="bg-tab2 h-[310px] lg:h-[760px] text-white flex flex-col justify-end py-8 2xl:py-[4rem]"
+        *ngIf="bgTab2">
+        <h5
+            class="lexendzettali w-[70%] lg:ml-[-15px] text-[24px] lg:text-[55px] xl:text-[60px] 2xl:text-[86px] leading-[30px] lg:leading-[80px] 2xl:leading-[107px] pb-[4rem]">
+            Soluciones a
+            medida para su negocio</h5>
+        <h4 class="lexendzettali w-[70%] text-[17px] 2xl:text-[24px] leading-[35.8px]">Permítenos ayudarte con nuestras
+            habilidades y servicios especializados, los acompañaremos en todas las
+            etapas del servicio.</h4>
     </section>
     <section class="flex flex-col w-full p-4 relative">
         <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-[5rem] py-[2rem] lg:py-[9rem]">
@@ -24,22 +36,24 @@
                 <p class="text-label">{{item.label}}</p>
             </div>
         </div> -->
-        <mat-tab-group>
+        <mat-tab-group (selectedTabChange)="test($event)">
             <!-- <mat-tab-header (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'"></mat-tab-header> -->
             <mat-tab label="Descubrimiento de producto">
                 <div class="grid grid-cols-4 gap-[2.5rem] lg:gap-[5rem] py-[2.5rem] lg:py-[4rem]">
-                    <h1 data-aos="fade-up" data-aos-duration="1500" class="col-span-4 lg:col-span-2 lg:ml-[-8px] lg:text-[46px] lexendzettali">Dale forma a tu idea
+                    <h1 data-aos="fade-up" data-aos-duration="1500"
+                        class="col-span-4 lg:col-span-2 lg:ml-[-8px] lg:text-[46px] lexendzettali">Dale forma a tu idea
                         de producto. </h1>
                     <h3 data-aos="fade-up" data-aos-duration="1500"
                         class="col-span-4 lg:col-span-2 text-[18px] text-[22px] xl:text-[30px] 2xl:text-[36px] lexendli">
                         Planifique y evalúe las características esenciales de su
                         producto para lograr sus objetivos comerciales
                         y eliminar posibles errores.</h3>
-                    <p data-aos="fade-up" data-aos-duration="1500" class="lexend col-span-4 text-sm lg:text-base">LOS ENTREGABLES INCLUYEN </p>
+                    <p data-aos="fade-up" data-aos-duration="1500" class="lexend col-span-4 text-sm lg:text-base">LOS
+                        ENTREGABLES INCLUYEN </p>
                     <div
-                        class="col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-[3.5rem] lg:gap-[5rem] py-[2rem] lg:py-0">
+                        class="col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-[3.5rem] lg:gap-[4rem] xl:gap-[5rem] py-[2rem] lg:py-0">
                         <!-- overflow-x-auto lg:overflow-hidden -->
-                        <div *ngFor="let item of detailsGroup" class="space-y-4 lg:space-y-[1.5rem] min-w-[250px]">
+                        <div *ngFor="let item of detailsGroup" class="space-y-4 lg:space-y-[1.5rem] xl:min-w-[250px]">
                             <img src="{{item.img}}" alt="">
                             <h4 class="lexendzettali text-[17px] 2xl:text-[24px] leading-[35.8px]">{{item.title}}</h4>
                             <p class="lexendli text-[18px] 2xl:text-[21px]">{{item.text}}</p>
@@ -47,14 +61,18 @@
                     </div>
                     <div
                         class="border-t border-black col-span-4 lg:col-span-3 lg:col-end-5 py-[2rem] lg:py-[7.5rem] lg:pr-[5rem] xl:pr-[8rem] grid gap-[4rem]">
-                        <h1 data-aos="fade-up" data-aos-duration="1500" class="lexendzettali lg:text-[46px] leading-[20px] lg:leading-[84.5px]">Productos
+                        <h1 data-aos="fade-up" data-aos-duration="1500"
+                            class="lexendzettali lg:text-[46px] leading-[20px] lg:leading-[84.5px]">Productos
                             excepcionales con
                             soporte de
                             inicio a fin y orientación experta</h1>
-                        <div class="flex lg:grid grid-cols-2 gap-[4rem] overflow-x-auto lg:overflow-hidden py-[2rem] lg:py-0">
+                        <div
+                            class="flex lg:grid grid-cols-2 gap-[4rem] overflow-x-auto lg:overflow-hidden py-[2rem] lg:py-0">
                             <div class="lexendli space-y-4 min-w-[235px]" *ngFor="let item of paragraphGroup">
                                 <h4 class="text-sm lg:text-[21px] leading-[17px] lg:leading-[26px]">{{item.text}}</h4>
-                                <h3 class="text-[21px] lg:text-[30px] 2xl:text-[36px] leading-[26px] lg:leading-[53.3px]">{{item.secondText}}</h3>
+                                <h3
+                                    class="text-[21px] lg:text-[30px] 2xl:text-[36px] leading-[26px] lg:leading-[53.3px]">
+                                    {{item.secondText}}</h3>
                             </div>
                         </div>
 
@@ -68,9 +86,11 @@
             <mat-tab label="Transformación Cultural"> Content 3 </mat-tab>
         </mat-tab-group>
     </section>
-    <section class="bg-[#5682FF] py-[4rem] lg:py-[8rem] space-y-[6rem] lg:space-y-[8rem]">
+    <app-allies></app-allies>
+    <!-- <section class="bg-[#5682FF] py-[4rem] lg:py-[8rem] space-y-[6rem] lg:space-y-[8rem]">
         <h4 class="lexendli text-[17px] lg:text-[21px] leading-[26px] text-white">Confían en nosotros</h4>
-        <div class="grid grid-cols-3 lg:grid-cols-5 gap-y-[6rem] items-center justify-items-center lg:justify-items-start ml-[-1rem] lg:ml-0 gap-4">
+        <div
+            class="grid grid-cols-3 lg:grid-cols-5 gap-y-[6rem] items-center justify-items-center lg:justify-items-start ml-[-1rem] lg:ml-0 gap-4">
             <img class="max-w-[67px] lg:max-w-full" src="assets/img/logo_empresa/niubiz.png" alt="">
             <img class="max-w-[93px] lg:max-w-full" src="assets/img/logo_empresa/primax.png" alt="">
             <img class="max-w-[84px] lg:max-w-full" src="assets/img/logo_empresa/redeban.png" alt="">
@@ -79,7 +99,7 @@
             <img class="max-w-[66px] lg:max-w-full lg:hidden" src="assets/img/logo_empresa/niubiz.png" alt="">
 
         </div>
-    </section>
+    </section> -->
     <section class="bg-[#141C26]">
         <div class="pt-[3rem] pb-2 border-b border-white">
             <h5 class="lexendzettaextrali lg:ml-[-15px] text-[32px] lg:text-[86px] text-white">Proyectos</h5>
@@ -88,7 +108,8 @@
             <app-projects-slide></app-projects-slide>
         </div>
     </section>
-    <footer class="bg-[#F2F4F5] hidden">
+    <app-footer></app-footer>
+    <!-- <footer class="bg-[#F2F4F5] hidden">
         <h5 class="lexendzettali text-[86px]">Programe una sesión gratuita con uno de nuestros expertos</h5>
         <button>
             <img class="pr-5" src="assets/img/arrow-black.png" alt="">
@@ -117,5 +138,5 @@
             </div>
         </div>
 
-    </footer>
+    </footer> -->
 </div>

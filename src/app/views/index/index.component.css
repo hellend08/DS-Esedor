@@ -14,7 +14,7 @@ g:hover circle{
     fill: #5682FF;
   }
 
-  g:hover  path{
+g:hover  path{
     fill: #FFFFFF;
   }
 
@@ -22,6 +22,14 @@ g:hover circle{
   .arrow-rotate {
     transform: rotate(-45deg);
     transition: transform .6s cubic-bezier(.4,0,0,1);
+  }
+
+  .arrow:hover g line {
+    stroke: #5682FF;
+  }
+
+  .arrow:hover g path {
+    stroke: #5682FF;
   }
 
   .mobile-shadow {
