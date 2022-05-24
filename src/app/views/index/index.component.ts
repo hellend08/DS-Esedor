@@ -74,7 +74,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
   ratio: any;
   ratioX: any;
 
-  colorWhite = true;
+  colorWhite = false;
 
   paso1 = true;
   paso2 = false;

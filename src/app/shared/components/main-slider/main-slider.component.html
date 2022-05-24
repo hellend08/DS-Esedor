@@ -1,32 +1,52 @@
-<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth]">
+<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth, fifth]">
     <div *nguCarouselDef="let item;" class="item py-4">
         <div class="tile">
             <ng-container *ngTemplateOutlet="item"></ng-container>
         </div>
     </div>
     <ng-template #first>
-        <div class="flex flex-col justify-center">
-            <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>Primax</h1>
-            <div class="slide one sliderItem flex items-center py-[5rem]">
-                <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
+        <div class="grid grid-cols-8 gap-[4rem] items-center">
+            <div class="text-[#141C26] space-y-4 pb-[10rem] w-[100px]">
+                <p class="lexendb leading-[20px]">Niubiz</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">Diseño de producto de la pasarela de pagos más grande del Perú</p>
+            </div>
+            <div class="col-span-6 grid grid-cols-2 items-center justify-items-center">
+              <img src="assets/img/main-slide.svg" alt="">
+                <div class="space-y-[2.5rem]">
+                    <h5 class="lexendzettaextrali text-[66px] leading-[82.5px] text-[#5682FF]">Acelera.
+                        Diseña.
+                        Desarrolla.</h5>
+                    <p class="lexendb text-sm leading-[17.5px] text-[#141C26]">En Esedor podemos ofrecerte equipos de producto de clase global para crear proyectos hermosos de forma eficiente y ágil.</p>
+                </div>
+
+            </div>
+            <div class="text-[#141C26] space-y-4 text-right pb-[10rem] w-[100px] ml-auto">
+                <p class="lexendb leading-[20px]">Primax</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">La primera tienda virtual b2b regional</p>
+            </div>
+        </div>
+        <!-- <div class="flex flex-col justify-center"> -->
+        <!-- <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>Primax</h1> -->
+        <!-- <div class="slide one sliderItem flex items-center py-[5rem]"> -->
+        <!-- <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
                     <p>2021</p>
                     <p>Marketplace</p>
                     <p>Experiencia de usuario</p>
                     <p>Sisema de diseño</p>
                     <p>Definición de producto</p>
-                </div>
-                <div class="flex justify-center">
+                </div> -->
+        <!-- <div class="flex justify-center">
                     <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
                     <div class="absolute bottom-[15px] flex justify-center items-center">
                         <img class="w-[138px] lg:w-[225px] 2xl:w-[250px]" src="assets/img/phone.png" alt="">
                     </div>
-                </div>
-                <div class="hidden lg:block w-[30%]"></div>
-            </div>
-        </div>
+                </div> -->
+        <!-- <div class="hidden lg:block w-[30%]"></div> -->
+        <!-- </div> -->
+        <!-- </div> -->
     </ng-template>
     <ng-template #second>
-        <div class="flex flex-col justify-center">
+        <!-- <div class="flex flex-col justify-center">
             <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>Redeban</h1>
             <div class="slide one sliderItem flex items-center py-[5rem]">
                 <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
@@ -44,58 +64,35 @@
                 </div>
                 <div class="hidden lg:block w-[30%]"></div>
             </div>
-        </div>
-    </ng-template>
-    <ng-template #third>
-        <div class="flex flex-col justify-center">
-            <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>Niubiz</h1>
-            <div class="slide one sliderItem flex items-center py-[5rem]">
-                <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-                    <p>2021</p>
-                    <p>Marketplace</p>
-                    <p>Experiencia de usuario</p>
-                    <p>Sisema de diseño</p>
-                    <p>Definición de producto</p>
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-                    <div class="absolute bottom-[15px] flex justify-center items-center w-full">
-                        <img class="w-[138px] lg:w-[225px] 2xl:w-[250px]" src="assets/img/phone.png" alt="">
-                    </div>
-                </div>
-                <div class="hidden lg:block w-[30%]"></div>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template #fourth>
-        <div class="flex flex-col justify-center">
-            <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>CML</h1>
-            <div class="slide one sliderItem flex items-center py-[5rem]">
-                <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-                    <p>2021</p>
-                    <p>Marketplace</p>
-                    <p>Experiencia de usuario</p>
-                    <p>Sisema de diseño</p>
-                    <p>Definición de producto</p>
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-                    <div class="absolute bottom-[15px] flex justify-center items-center w-full">
-                        <img class="w-[138px] lg:w-[225px] 2xl:w-[250px]" src="assets/img/phone.png" alt="">
-                    </div>
-                </div>
-                <div class="hidden lg:block w-[30%]"></div>
-            </div>
-        </div>
+        </div> -->
     </ng-template>
 
-    <!-- <button NguCarouselNext class="rightRs">></button>
-	<button NguCarouselPrev class="leftRs"><</button> -->
+    <ng-template #third>
+    </ng-template>
+
+    <ng-template #fourth>
+    </ng-template>
+
+    <ng-template #fifth>
+    </ng-template>
+
+    <button NguCarouselNext class="rightRs">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5601 24L23.0601 12.5L11.5601 1" stroke="black" />
+            <line x1="23.0601" y1="13.0898" x2="-6.67135e-05" y2="13.0898" stroke="black" />
+        </svg>
+    </button>
+    <button NguCarouselPrev class="leftRs">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.5 1L1 12.5L12.5 24" stroke="black" />
+            <line x1="1" y1="11.9102" x2="24.0601" y2="11.9102" stroke="black" />
+        </svg>
+    </button>
     <ul class="myPoint" NguCarouselPoint>
-        <span class="text-white text-sm lexendzetta pr-2">01</span>
+        <span class="text-[#141C26] text-sm lexendzetta pr-2">01</span>
         <li *ngFor="let i of myCarousel.pointNumbers; let ind = index" [class.active]="i==myCarousel.activePoint"
             (click)="myCarousel.moveTo(i)"></li>
-        <span class="text-white text-sm lexendzetta pl-2">04</span>
+        <span class="text-[#141C26] text-sm lexendzetta pl-2">05</span>
 
     </ul>
 </ngu-carousel>
