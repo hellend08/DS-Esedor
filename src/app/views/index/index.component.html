@@ -14,7 +14,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] border-b border-black pb-[5rem] lg:pb-[13rem]">
       <div
         class="flex flex-row-reverse lg:flex-col justify-between items-center lg:items-start pt-[4rem] lg:pt-0 lg:py-4 pr-[2.5rem] lg:pr-0 order-last lg:order-none">
-        <h4 class="text-[21px] lexendli">Conócenos</h4>
+        <h4 data-aos="fade-right" data-aos-duration="500" class="text-[21px] lexendli">Conócenos</h4>
         <!-- <svg class="ml-[-1rem]" width="102" height="102" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_3214_14929)">
           <circle cx="71" cy="66" r="51" fill="white"/>
@@ -38,11 +38,10 @@
           background="transparent" speed="1" style="width: 200px; height: 200px;" hover></lottie-player>
       </div>
       <div class="col-span-2 space-y-[3rem]">
-        <h1 data-aos="fade-up" data-aos-duration="1500"
-          class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generamos
-          impacto y experiencias increíbles para marcas
-          ambiciosas.</h1>
-        <h3 data-aos="fade-up" data-aos-duration="1500"
+        <h1 data-aos="fade-up" data-aos-duration="500"
+          class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generando
+          valor y experiencias increíbles para negocios ambiciosos.</h1>
+        <h3 data-aos="fade-up" data-aos-duration="500"
           class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Esedor es
           una compañía que te
           acompaña en todas las etapas de
@@ -53,14 +52,14 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] pt-[5rem] lg:pt-[13rem]">
       <div
         class="border-b border-black col-span-2 col-end-4 pb-[5rem] lg:pb-[13rem] space-y-[3rem] xl:pr-[4rem] 2xl:pr-[6rem]">
-        <div data-aos="fade-right" data-aos-duration="1500" class="flex space-x-4 items-center">
+        <div data-aos="fade-right" data-aos-duration="500" class="flex space-x-4 items-center">
           <div class="border-b border-black w-[43px]"></div>
           <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
         </div>
-        <h1 data-aos="fade-up" data-aos-duration="1500"
+        <h1 data-aos="fade-up-right" data-aos-duration="500"
           class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">¿Cuál es
           tu objetivo final? </h1>
-        <h3 data-aos="fade-up" data-aos-duration="1500"
+        <h3 data-aos="fade-up" data-aos-duration="500"
           class="text-[21px] lg:text-[30px] xl:text-[36px] lexendli leading-[33.5px] lg:leading-[53.3px]">Permítenos
           ayudarte a cumplirlo con nuestras
           habilidades y
@@ -73,11 +72,12 @@
           class="flex flex-col justify-between cursor-pointer py-[3rem] px-5 xl:p-[3rem] mobile-shadow arrow"
           *ngFor="let item of servicesItems" (mouseover)="item.state = true" (mouseout)="item.state = false">
           <!-- max-w-[400px] h-[270px]  h-[330px]-->
-          <div data-aos="fade-up" data-aos-duration="1500" class="space-y-[2rem]">
+          <div data-aos="fade-up" data-aos-duration="500" class="space-y-[2rem]">
             <p class="lexendzettali text-[24px] leading-[35.8px] {{item.length}}">{{item.title}}</p>
             <h4 class="lexendli text-[21px] leading-[33.6px]">{{item.text}}</h4>
           </div>
-          <button class="lexendli text-[21px] flex items-center mt-auto pt-6"
+          <button data-aos="fade-right" data-aos-duration="500"
+            class="lexendli text-[21px] flex items-center mt-auto pt-6"
             [ngClass]="{ 'lg:text-[#5682FF] lg:font-bold' : item.state}">
             <svg [ngClass]="{ 'arrow-rotate' : item.state}"
               class="transition duration-700 ease-in-out w-[20px] lg:w-auto mr-5" width="33" height="31"
@@ -168,11 +168,11 @@
   <section class="bg-[#5682FF] pb-[9rem]">
     <div
       class="lg:border-b-[1px] border-white flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 px-4 py-[5rem] lg:pt-[8rem] lg:pb-[6.5rem]">
-      <p data-aos="fade-up" data-aos-duration="1000" class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">
+      <p data-aos="fade-right" data-aos-duration="500" class="text-[22px] lg:text-[28px] lexendli text-[#FFFFFF] mt-3">
         Confían en nosotros</p>
-      <h1 data-aos="fade-up" data-aos-duration="1000"
+      <h1 data-aos="fade-up" data-aos-duration="500"
         class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">
-        Nos sentimos orgullosos de nuestros proyectos y de los clientes que confían en nosotros </h1>
+        Esedor te acompaña en todas las etapas de tu proyecto, maximizando tus objetivos de negocio. </h1>
     </div>
     <app-allies [displayElement]="displayElement"></app-allies>
   </section>
@@ -192,7 +192,7 @@
       <div class="relative flex cursor-pointer" (mouseover)="bgBlog = true" (mouseout)="bgBlog = false">
         <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlog}"></div>
-        <div data-aos="fade-right" data-aos-duration="1000"
+        <div data-aos="fade-right" data-aos-duration="500"
           class="border-l border-white px-4 py-2 absolute lg:h-[222px] flex flex-col">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
@@ -215,7 +215,7 @@
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogTwo = true" (mouseout)="bgBlogTwo = false">
         <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlogTwo}"></div>
-        <div data-aos="fade-right" data-aos-duration="1000"
+        <div data-aos="fade-right" data-aos-duration="500"
           class="border-l border-white px-4 py-2 absolute lg:h-[222px] flex flex-col">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
@@ -238,7 +238,7 @@
       <div class="relative flex cursor-pointer" (mouseover)="bgBlogThree = true" (mouseout)="bgBlogThree = false">
         <div class="w-[10px] h-[165px] lg:h-[222px] bg-transparent transition-all duration-500 ease-linear"
           [ngClass]="{ 'bg-blog' : bgBlogThree}"></div>
-        <div data-aos="fade-right" data-aos-duration="1000"
+        <div data-aos="fade-right" data-aos-duration="500"
           class="border-l border-white px-4 py-2 absolute lg:h-[222px] flex flex-col">
           <div class="flex justify-between text-sm text-white">
             <p class="lexendb">01.10.21</p>
