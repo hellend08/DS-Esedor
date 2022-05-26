@@ -4,7 +4,7 @@
 
 <div>
   <section #slideContent class="lg:pt-28 px-4 flex flex-col justify-center bg-[#F2F4F5]">
-    <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p>
+    <!-- <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p> -->
     <div>
       <app-main-slider></app-main-slider>
     </div>
@@ -257,261 +257,268 @@
           </svg>
         </div>
       </div>
-
     </div>
   </section>
-  <app-lets-talk></app-lets-talk>
+
+  <app-lets-talk (letsForm)="showFormEvent()"></app-lets-talk>
+
   <app-footer></app-footer>
 
-  <!--Seccion Start project-->
-  <footer class="section py-2 px-4 flex flex-col content-center justify-between lg:h-screen"
-    style="background: linear-gradient(to top, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
-    <div class="pt-40" *ngIf="paso1">
-      <h1
-        class="text-center text-[24px] lg:text-[49px] lexendzetta text-[#FFFFFF] lg:w-[70%] mx-auto leading-[30px] lg:leading-[61px]">
-        Iniciemos un
-        proyecto</h1>
-      <div>
-        <div class="flex flex-wrap lg:justify-center space-y-4 lg:space-y-0 lg:space-x-4 mt-20">
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Diseño de una web</span>
-          </div>
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Un sistema completo</span>
-          </div>
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Sistema de diseño</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap justify-center mt-4 space-y-4 lg:space-y-0 lg:space-x-4">
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Branding</span>
-          </div>
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Proyecto Start-Up</span>
-          </div>
-        </div>
-      </div>
-      <p class="text-center lexend text-sm text-white pt-12">También puedes escribirnos directamente a</p>
-      <p class="text-center lexendb text-sm text-white">hola@esedor.com</p>
-
-    </div>
+  <div *ngIf="showForm">
+    <app-contact-dashboard (closeForm)="closeFormEvent()"></app-contact-dashboard>
+  </div>
 
 
-    <!--Paso1-->
-    <!-- <div class="w-full mt-10" *ngIf="paso1">
-      <div class="flex justify-center">
-        <div class="text-white w-[36rem]">
-          <p style="letter-spacing: 0.0015rem;" class="text-center text-[0.875rem] lexendb mb-10">Iniciemos un proyecto
-          </p>
-          <h2 style="font-size: 35px;line-height: 44px;font-family: Lexend; text-align: center">Conversemos, selecciona
-            una de las opciones y te tomemos un café</h2>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex justify-center space-x-4 mt-20">
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Diseño de una web</span>
-          </div>
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Un sistema completo</span>
-          </div>
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Sistema de diseño</span>
-          </div>
-        </div>
-        <div class="flex justify-center mt-4 space-x-4">
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Branding</span>
-          </div>
-          <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">Proyecto Start-Up</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="Lexend text-white text-center mt-10">
-        <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
-        <p>hola@esedor.com</p>
-      </div>
-    </div> -->
-
-    <!--Paso2-->
-    <div class="w-full" *ngIf="paso2">
-      <div class="flex justify-center">
-        <div class="text-white w-[36rem]">
-          <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
-          <h2 style="font-size: 35px;line-height: 44px;font-family: Lexend; text-align: center">Conversemos, selecciona
-            una de las opciones y te tomemos un café</h2>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-center space-x-4 mt-20">
-          <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">US$ 2,500 - 10,000</span>
-          </div>
-          <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">US$ 10,000 - 30,000</span>
-          </div>
-          <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">US$ 30,000 -50,000</span>
-          </div>
-        </div>
-
-        <div class="flex justify-center mt-4 space-x-4">
-          <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">US$ 50,000 -75,000</span>
-          </div>
-          <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] lexend">US$ 75,000 +</span>
-          </div>
-        </div>
-      </div>
-      <div class="Lexend text-white text-center mt-10">
-        <p class="text-[1.3rem] lexend">Tambien puedes escribirnos directamente a</p>
-        <p class="lexend">hola@esedor.com</p>
-      </div>
-    </div>
-
-    <!--Paso3-->
-    <div class="w-full" *ngIf="paso3">
-      <div class="flex justify-center">
-        <div class="text-white w-[36rem]">
-          <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
-          <h2 style="font-size: 35px;line-height: 44px;font-family: 'Lexend', sans-serif; text-align: center">Por donde
-            esuchaste sobre Esedor</h2>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-center space-x-4 mt-20">
-          <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] Lexend">Awwwards</span>
-          </div>
-          <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] Lexend">CCL</span>
-          </div>
-          <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] Lexend">ADEX</span>
-          </div>
-        </div>
-
-        <div class="flex justify-center mt-4 space-x-4">
-          <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] Lexend">Blog</span>
-          </div>
-          <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-            class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-            <span class="text[#626973] Lexend">Eventos</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="Lexend text-white text-center mt-10">
-        <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
-        <p>hola@esedor.com</p>
-      </div>
-    </div>
-
-    <!--Formulario-->
-    <div class="w-full" *ngIf="formulario">
-      <div class="flex justify-center">
-        <div class="text-white w-[36rem]">
-          <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
-          <h2 style="font-size: 35px;line-height: 44px;font-family: 'Lexend', sans-serif; text-align: center">Por donde
-            esuchaste sobre Esedor</h2>
-        </div>
-      </div>
-      <div class="flex justify-center">
-        <div class="">
-
-          <div class="flex justify-between space-x-4">
-            <mat-form-field appearance="outline" class="w-[20rem]">
-              <mat-label class="text-white"> Nombres </mat-label>
-              <input matInput>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="w-[20rem]">
-              <mat-label class="text-white"> Apellidos </mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-
-          <div class="flex justify-between">
-            <mat-form-field appearance="outline" class="w-[20rem]">
-              <mat-label class="text-white"> Dirección de correo electrónico </mat-label>
-              <input matInput>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="w-[20rem]">
-              <mat-label class="text-white"> Número de teléfono o celular </mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-
-          <div class="flex justify-between">
-            <mat-form-field appearance="outline" class="w-[20rem]">
-              <mat-label class="text-white"> Empresa y cargo </mat-label>
-              <input matInput>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="w-[20rem]">
-              <mat-label class="text-white"> Tiempo de entrega </mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-          <div class="col-start-1 col-end-2 w-full">
-            <mat-form-field appearance="outline" class="w-full">
-              <mat-label class="text-white"> Describe tu proyecto aquí... </mat-label>
-              <textarea matInput></textarea>
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-
-      <div class="Lexend text-white text-center mt-10">
-        <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
-        <p>hola@esedor.com</p>
-      </div>
-    </div>
-
-    <div class="flex justify-between">
-      <div class="text-white lexend text-[13px]">
-        <p>Ubicación</p>
-        <p class="leading-[16px] pt-4 pb-8">
-          Swiss Tower <br>
-          Av. Alfredo Benavides <br>
-          #1944 – Piso 9 <br>
-          Miraflores, Lima
-        </p>
-        <p>Esedor © 2022</p>
-      </div>
-      <div class="text-[13px] lexend font-medium text-white space-y-2 pb-2 flex flex-col justify-end">
-        <p>LINKEDIN</p>
-        <p>FACEBOOK</p>
-        <p>INSTAGRAM</p>
-        <p>YOUTUBE</p>
-      </div>
-    </div>
-
-  </footer>
 </div>
+
+<!--Seccion Start project-->
+<!-- <footer class="section py-2 px-4 flex flex-col content-center justify-between lg:h-screen"
+ style="background: linear-gradient(to top, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
+ <div class="pt-40" *ngIf="paso1">
+   <h1
+     class="text-center text-[24px] lg:text-[49px] lexendzetta text-[#FFFFFF] lg:w-[70%] mx-auto leading-[30px] lg:leading-[61px]">
+     Iniciemos un
+     proyecto</h1>
+   <div>
+     <div class="flex flex-wrap lg:justify-center space-y-4 lg:space-y-0 lg:space-x-4 mt-20">
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Diseño de una web</span>
+       </div>
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Un sistema completo</span>
+       </div>
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Sistema de diseño</span>
+       </div>
+     </div>
+     <div class="flex flex-wrap justify-center mt-4 space-y-4 lg:space-y-0 lg:space-x-4">
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Branding</span>
+       </div>
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Proyecto Start-Up</span>
+       </div>
+     </div>
+   </div>
+   <p class="text-center lexend text-sm text-white pt-12">También puedes escribirnos directamente a</p>
+   <p class="text-center lexendb text-sm text-white">hola@esedor.com</p>
+
+ </div> -->
+
+
+<!--Paso1-->
+<!-- <div class="w-full mt-10" *ngIf="paso1">
+   <div class="flex justify-center">
+     <div class="text-white w-[36rem]">
+       <p style="letter-spacing: 0.0015rem;" class="text-center text-[0.875rem] lexendb mb-10">Iniciemos un proyecto
+       </p>
+       <h2 style="font-size: 35px;line-height: 44px;font-family: Lexend; text-align: center">Conversemos, selecciona
+         una de las opciones y te tomemos un café</h2>
+     </div>
+   </div>
+
+   <div>
+     <div class="flex justify-center space-x-4 mt-20">
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Diseño de una web</span>
+       </div>
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Un sistema completo</span>
+       </div>
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Sistema de diseño</span>
+       </div>
+     </div>
+     <div class="flex justify-center mt-4 space-x-4">
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Branding</span>
+       </div>
+       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">Proyecto Start-Up</span>
+       </div>
+     </div>
+   </div>
+
+   <div class="Lexend text-white text-center mt-10">
+     <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
+     <p>hola@esedor.com</p>
+   </div>
+ </div> -->
+
+<!--Paso2-->
+<!-- <div class="w-full" *ngIf="paso2">
+   <div class="flex justify-center">
+     <div class="text-white w-[36rem]">
+       <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
+       <h2 style="font-size: 35px;line-height: 44px;font-family: Lexend; text-align: center">Conversemos, selecciona
+         una de las opciones y te tomemos un café</h2>
+     </div>
+   </div>
+   <div>
+     <div class="flex justify-center space-x-4 mt-20">
+       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">US$ 2,500 - 10,000</span>
+       </div>
+       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">US$ 10,000 - 30,000</span>
+       </div>
+       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">US$ 30,000 -50,000</span>
+       </div>
+     </div>
+
+     <div class="flex justify-center mt-4 space-x-4">
+       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">US$ 50,000 -75,000</span>
+       </div>
+       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] lexend">US$ 75,000 +</span>
+       </div>
+     </div>
+   </div>
+   <div class="Lexend text-white text-center mt-10">
+     <p class="text-[1.3rem] lexend">Tambien puedes escribirnos directamente a</p>
+     <p class="lexend">hola@esedor.com</p>
+   </div>
+ </div> -->
+
+<!--Paso3-->
+<!-- <div class="w-full" *ngIf="paso3">
+   <div class="flex justify-center">
+     <div class="text-white w-[36rem]">
+       <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
+       <h2 style="font-size: 35px;line-height: 44px;font-family: 'Lexend', sans-serif; text-align: center">Por donde
+         esuchaste sobre Esedor</h2>
+     </div>
+   </div>
+   <div>
+     <div class="flex justify-center space-x-4 mt-20">
+       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] Lexend">Awwwards</span>
+       </div>
+       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] Lexend">CCL</span>
+       </div>
+       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] Lexend">ADEX</span>
+       </div>
+     </div>
+
+     <div class="flex justify-center mt-4 space-x-4">
+       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] Lexend">Blog</span>
+       </div>
+       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
+         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
+         <span class="text[#626973] Lexend">Eventos</span>
+       </div>
+     </div>
+   </div>
+
+   <div class="Lexend text-white text-center mt-10">
+     <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
+     <p>hola@esedor.com</p>
+   </div>
+ </div> -->
+
+<!--Formulario-->
+<!-- <div class="w-full" *ngIf="formulario">
+   <div class="flex justify-center">
+     <div class="text-white w-[36rem]">
+       <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
+       <h2 style="font-size: 35px;line-height: 44px;font-family: 'Lexend', sans-serif; text-align: center">Por donde
+         esuchaste sobre Esedor</h2>
+     </div>
+   </div>
+   <div class="flex justify-center">
+     <div class="">
+
+       <div class="flex justify-between space-x-4">
+         <mat-form-field appearance="outline" class="w-[20rem]">
+           <mat-label class="text-white"> Nombres </mat-label>
+           <input matInput>
+         </mat-form-field>
+
+         <mat-form-field appearance="outline" class="w-[20rem]">
+           <mat-label class="text-white"> Apellidos </mat-label>
+           <input matInput>
+         </mat-form-field>
+       </div>
+
+       <div class="flex justify-between">
+         <mat-form-field appearance="outline" class="w-[20rem]">
+           <mat-label class="text-white"> Dirección de correo electrónico </mat-label>
+           <input matInput>
+         </mat-form-field>
+
+         <mat-form-field appearance="outline" class="w-[20rem]">
+           <mat-label class="text-white"> Número de teléfono o celular </mat-label>
+           <input matInput>
+         </mat-form-field>
+       </div>
+
+       <div class="flex justify-between">
+         <mat-form-field appearance="outline" class="w-[20rem]">
+           <mat-label class="text-white"> Empresa y cargo </mat-label>
+           <input matInput>
+         </mat-form-field>
+
+         <mat-form-field appearance="outline" class="w-[20rem]">
+           <mat-label class="text-white"> Tiempo de entrega </mat-label>
+           <input matInput>
+         </mat-form-field>
+       </div>
+       <div class="col-start-1 col-end-2 w-full">
+         <mat-form-field appearance="outline" class="w-full">
+           <mat-label class="text-white"> Describe tu proyecto aquí... </mat-label>
+           <textarea matInput></textarea>
+         </mat-form-field>
+       </div>
+     </div>
+   </div>
+
+   <div class="Lexend text-white text-center mt-10">
+     <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
+     <p>hola@esedor.com</p>
+   </div>
+ </div>
+
+ <div class="flex justify-between">
+   <div class="text-white lexend text-[13px]">
+     <p>Ubicación</p>
+     <p class="leading-[16px] pt-4 pb-8">
+       Swiss Tower <br>
+       Av. Alfredo Benavides <br>
+       #1944 – Piso 9 <br>
+       Miraflores, Lima
+     </p>
+     <p>Esedor © 2022</p>
+   </div>
+   <div class="text-[13px] lexend font-medium text-white space-y-2 pb-2 flex flex-col justify-end">
+     <p>LINKEDIN</p>
+     <p>FACEBOOK</p>
+     <p>INSTAGRAM</p>
+     <p>YOUTUBE</p>
+   </div>
+ </div>
+
+</footer> -->

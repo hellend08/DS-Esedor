@@ -10,6 +10,9 @@ import { DragScrollModule } from "ngx-drag-scroll";
 import { MatListModule } from '@angular/material/list';
 import { NguCarouselModule } from '@ngu/carousel';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatRippleModule } from '@angular/material/core';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +38,8 @@ import { WorkersSlideComponent } from './shared/components/workers-slide/workers
 import { TalentComponent } from './views/talent/talent.component';
 import { AlliesComponent } from './shared/components/allies/allies.component';
 import { LetsTalkComponent } from './shared/components/lets-talk/lets-talk.component';
+import { ContactDashboardComponent } from './views/contact-dashboard/contact-dashboard.component';
+import { ServicesTabComponent } from './shared/components/services-tab/services-tab.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +63,9 @@ import { LetsTalkComponent } from './shared/components/lets-talk/lets-talk.compo
     WorkersSlideComponent,
     TalentComponent,
     AlliesComponent,
-    LetsTalkComponent
+    LetsTalkComponent,
+    ContactDashboardComponent,
+    ServicesTabComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +79,10 @@ import { LetsTalkComponent } from './shared/components/lets-talk/lets-talk.compo
     MatListModule,
     MatSidenavModule,
     NguCarouselModule,
-    MatTabsModule
+    MatTabsModule,
+    MatRippleModule,
+    MatStepperModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

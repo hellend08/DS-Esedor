@@ -34,6 +34,16 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   @ViewChild('textoDinamico', {static: true}) textoDinamico!: ElementRef<HTMLDivElement>;
 
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
+
   bgBlog!: boolean;
   bgBlogTwo!: boolean;
   bgBlogThree!: boolean;

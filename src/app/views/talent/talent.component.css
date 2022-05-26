@@ -28,6 +28,14 @@ h1 {
         stroke: #5682FF;
     }
     
+    .arrow-btn:hover g line {
+        stroke: #FFFFFF;
+    }
+    
+    .arrow-btn:hover g path {
+        stroke: #FFFFFF;
+    }
+
     .font-color {
        color: #5682FF;
     }
