@@ -3,6 +3,12 @@
   background-repeat: no-repeat;
 }
 
+.bg-responsive{
+  background-image: url('../../../assets/img/contacto.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 h1 {
   font-family: LexendZettaExtraLight;
   /* font-size: 46px;
@@ -12,13 +18,31 @@ h1 {
 .btn-1{
   padding: 15px 25px;
   text-align: center;
-  background-color: white ;
+  background-color: #FFFFFF ;
   border-radius: 60px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 
 }
 
+.btn-responsive{
+  padding: 15px 25px;
+  width: 100%;
+  height:65px;
+  text-align: center;
+  background-color: #FFFFFF ;
+  border-radius: 60px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 .bg-mitad{
   background-image: url('../../../assets/img/img-mar.png');
   background-repeat: no-repeat;
+}
+
+.bg-mitad-responsive{
+  background-image: url('../../../assets/img/img-mitad-responsive.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
