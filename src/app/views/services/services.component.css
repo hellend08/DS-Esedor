@@ -1,10 +1,20 @@
-.bg-image {
-    background-image: url('../../../assets/img/bg-services.svg');
+.bg-tab {
+    background-image: url('../../../assets/img/bg-tab.svg');
     background-repeat: no-repeat;
 }
 
 .bg-tab2 {
     background-image: url('../../../assets/img/bg-tab2.svg');
+    background-repeat: no-repeat;
+}
+
+.bg-tab3 {
+    background-image: url('../../../assets/img/bg-tab3.svg');
+    background-repeat: no-repeat;
+}
+
+.bg-tab4 {
+    background-image: url('../../../assets/img/bg-tab4.svg');
     background-repeat: no-repeat;
 }
 
@@ -92,6 +102,12 @@ section {
     :host ::ng-deep.mat-tab-label:hover {
         color: #5682FF;
     }
+
+    :host ::ng-deep.mat-tab-body-content {
+        overflow-x: hidden;
+    }
+
+
     
 }
 

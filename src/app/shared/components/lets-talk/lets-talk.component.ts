@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-lets-talk',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lets-talk.component.css']
 })
 export class LetsTalkComponent implements OnInit {
+
+  btnStyle!: boolean;
+
+  @Output() letsForm = new EventEmitter<any>();
 
   constructor() { }
 

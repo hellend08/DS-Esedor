@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TalentComponent implements OnInit {
 
   colorWhite = true;
+  btnStyle!: boolean;
 
   talentGroup = [
     {text: 'Front-end Developer', state: false},
