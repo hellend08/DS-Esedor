@@ -12,6 +12,8 @@ export class MainSliderComponent implements AfterViewInit {
   withAnim = true;
   resetAnim = true; 
 
+  btnStyle!: boolean;
+
   @ViewChild('myCarousel') myCarousel!: NguCarousel<any>;
 
   @ViewChildren('linkRef') linkRefs: any;
