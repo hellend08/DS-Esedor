@@ -19,26 +19,30 @@ export class ProjectsComponent implements OnInit {
   colorWhite = false;
 
   date: number = 2021;
-  industry: string = 'ENERGÍA';
+  industry: string = 'Energética';
   client: string = 'Primax';
   styles: string = 'w-[40%]'
   display: string = 'hidden'
   image: string = 'assets/img/iphone.png';
-  paragraphOne: string = 'Involucrar a todos sus partners dentro de esta tienda virtual y crear una plataforma de venta de productos y servicios de marketing';
+  paragraphOne: string = 'Nuestro cliente tenía la necesidad de  involucrar a todos sus equipos dentro de esta tienda virtual y crear una plataforma de venta de productos y servicios de marketing.';
   paragraphTwo: string = 'Definir la nueva generación de productos digitales y crear su primera tienda virtual b2b de productos y servicios de marketing que ofrece primax';
 
   serviceList: Array<String> = [
-    'RESEARCH & ESTRATEGÍA',
-    'DEFINICIÓN DE PRODUCTO',
+    'INVESTIGACIÓN Y CONSULTORÍA',
+    'DESCUBRIMIENTO DE PRODUCTO',
+    'DISEÑO DE PRODUCTO',
     'DESIGN SYSTEM',
   ];
 
   definitionsList: Array<String> = [
-    'STRATEGY',
-    'CONCEPT',
-    'ART DIRECTION',
-    'DESIGN',
-    'PRODUCTION',
+    'SESIÓN DE ALCANCE',
+    'AUDITORÍA UX/UI',
+    'COMPORATAMIENTO DE USUARIOS',
+    'SESIÓN DE ALCANCE',
+    'DISEÑO VISUAL',
+    'SESIONES DE EQUIPO',
+    'IU/BIBLIOTECA DE PATRONES',
+    'ESTRUCTURA DEL SITIO WEB',
   ]
 
   animatedTitle: Array<{aos: number, label: String}> = [
@@ -49,12 +53,12 @@ export class ProjectsComponent implements OnInit {
   ]
 
   firstText: string = 'Investigación y arquitectura de información';
-  secondText: string = ' La busqueda del insight de ux al entender a nuestros usuarios empatizando con ellos y creando escenario y contextos donde puedan validar features, dentro de sesiones cognitivas de nuestros productos.';
-  // thirdText: string = '“Sesiones ludicas y divertidas que puedan romper el hielo en cada usuario que deseamos explorar en las sesiones cognitivas“';
-  // fourthText: string = 'Cómo empatizar con ellos';
+  secondText: string = 'La búsqueda queda del insight de ux al entender a nuestros usuarios empatizando con ellos y creando escenarios y contextos donde puedan validar features, dentro de sesiones cognitivas de nuestros productos.  ';
+  thirdText: string = '““Sesiones lúdicas y divertidas que puedan romper el hielo en cada usuario que deseamos explorar en las sesiones cognitivas“  “';
+  fourthText: string = 'Cómo empatizar con ellos';
   displayContent: any = 'hidden';
   imageSection: any = 'assets/img/videollamada.png';
-  
+
 
   constructor() { }
 
