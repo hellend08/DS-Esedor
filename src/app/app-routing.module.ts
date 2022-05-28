@@ -12,6 +12,7 @@ import { NotifaiVista1Component } from './views/notifai-vista1/notifai-vista1.co
 import { NotifaiComponent } from './views/notifai/notifai.component';
 import { ServicesComponent } from './views/services/services.component';
 import { TalentComponent } from './views/talent/talent.component';
+import { RipleyComponent } from './views/ripley/ripley.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const routes: Routes = [
   // { path: 'descripcion', component: DescripcionComponent},
   { path: 'notifai-vista1', component: NotifaiVista1Component},
   { path: 'proyectos/notifai', component: NotifaiComponent},
+  { path: 'proyectos/ripley', component: RipleyComponent},
 ]
 
 @NgModule({
