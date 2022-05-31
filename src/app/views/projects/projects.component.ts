@@ -17,6 +17,15 @@ export class ProjectsComponent implements OnInit {
   bgHoverTwo!: boolean;
 
   colorWhite = false;
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
 
   date: number = 2021;
   industry: string = 'Energética';

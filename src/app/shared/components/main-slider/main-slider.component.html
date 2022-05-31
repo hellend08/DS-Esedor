@@ -1,22 +1,24 @@
 <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth, fifth]">
-    <div *nguCarouselDef="let item;" class="item py-4">
+    <div *nguCarouselDef="let item;" class="item pb-0 2xl:py-4">
         <div class="tile">
             <ng-container *ngTemplateOutlet="item"></ng-container>
         </div>
     </div>
     <ng-template #first>
-        <div class="grid grid-cols-8 gap-[4rem] items-center">
-            <div class="text-[#141C26] space-y-4 pb-[1rem] w-[100px]">
-                <p class="lexendb leading-[20px]">Niubiz</p>
-                <p class="lexend text-[11.5px] leading-[14.38px]">Diseño de producto de la pasarela de pagos más grande
-                    del Perú</p>
+        <div class="grid grid-cols-1 lg:grid-cols-8 lg:gap-4 xl:gap-[2.5rem] 2xl:gap-[4rem] items-center">
+            <div class="hidden lg:block text-[#141C26] space-y-4 pb-[4.5rem] w-[100px]">
+                <p class="lexendb leading-[20px]">Notifai</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">Voice Bot con Machine Learning</p>
             </div>
-            <div class="col-span-6 grid grid-cols-2 items-center justify-items-center">
-                <!-- <img src="assets/img/main-slide.svg" alt=""> -->
+            <div
+                class="col-span-6 flex flex-col-reverse lg:grid grid-cols-2 items-center justify-items-center xl:pr-[8rem] px-[3rem] lg:px-0 pt-[4rem] lg:pt-[2rem]">
                 <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_uzamaojr.json"
-                    background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></lottie-player>
-                <div class="space-y-[2.5rem]">
-                    <h5 class="lexendzettaextrali text-[66px] leading-[82.5px] text-[#5682FF]">Acelera.
+                    background="transparent" speed="1" class="w-[200px] lg:w-[300px] h-[200px] lg:h-[300px]" autoplay>
+                </lottie-player>
+                <div class="space-y-4 lg:space-y-[2.5rem]">
+                    <h5
+                        class="lexendzettaextrali text-[26px] lg:text-[42px] xl:text-[66px] leading-[32.5px] lg:leading-[53.3px] xl:leading-[82.5px] text-[#5682FF]">
+                        Acelera.
                         Diseña.
                         Desarrolla.</h5>
                     <p class="lexendb text-sm leading-[17.5px] text-[#141C26]">En Esedor podemos ofrecerte equipos de
@@ -24,64 +26,194 @@
                 </div>
 
             </div>
-            <div class="text-[#141C26] space-y-4 text-right pb-[1rem] w-[100px] ml-auto">
+            <div class="hidden lg:block text-[#141C26] space-y-4 text-right pb-[4.5rem] w-[100px] ml-auto">
+                <!-- lg:mr-8 xl:mr-4 2xl:mr-0 -->
                 <p class="lexendb leading-[20px]">Primax</p>
                 <p class="lexend text-[11.5px] leading-[14.38px]">La primera tienda virtual b2b regional</p>
             </div>
         </div>
-        <!-- <div class="flex flex-col justify-center"> -->
-        <!-- <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>Primax</h1> -->
-        <!-- <div class="slide one sliderItem flex items-center py-[5rem]"> -->
-        <!-- <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-                    <p>2021</p>
-                    <p>Marketplace</p>
-                    <p>Experiencia de usuario</p>
-                    <p>Sisema de diseño</p>
-                    <p>Definición de producto</p>
-                </div> -->
-        <!-- <div class="flex justify-center">
-                    <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-                    <div class="absolute bottom-[15px] flex justify-center items-center">
-                        <img class="w-[138px] lg:w-[225px] 2xl:w-[250px]" src="assets/img/phone.png" alt="">
-                    </div>
-                </div> -->
-        <!-- <div class="hidden lg:block w-[30%]"></div> -->
-        <!-- </div> -->
-        <!-- </div> -->
     </ng-template>
+
     <ng-template #second>
-        <!-- <div class="flex flex-col justify-center">
-            <h1 class="text-center text-[46px] lexendzettali text-[#D8D8D8] mb-8 hidden lg:block" #title>Redeban</h1>
-            <div class="slide one sliderItem flex items-center py-[5rem]">
-                <div class="lexendzetta text-[12.5px] text-[#FFFFFF] w-[30%] hidden lg:block">
-                    <p>2021</p>
-                    <p>Marketplace</p>
-                    <p>Experiencia de usuario</p>
-                    <p>Sisema de diseño</p>
-                    <p>Definición de producto</p>
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-[371px] lg:w-auto" src="assets/img/rectangle.png" alt="">
-                    <div class="absolute bottom-[15px] flex justify-center items-center w-full">
-                        <img class="w-[138px] lg:w-[225px] 2xl:w-[250px]" src="assets/img/phone.png" alt="">
-                    </div>
-                </div>
-                <div class="hidden lg:block w-[30%]"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-8 lg:gap-4 xl:gap-[2.5rem] 2xl:gap-[4rem] items-center">
+            <div class="hidden lg:block text-[#141C26] space-y-4 pb-[9.5rem] w-[100px]">
+                <p class="lexendb leading-[20px]">Esedor</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">Diseño de producto de la pasarela de pagos más grande
+                    del Perú</p>
             </div>
-        </div> -->
+            <div
+                class="col-span-6 flex flex-col-reverse lg:grid grid-cols-2 items-center justify-items-center xl:pr-[8rem] px-[3rem] lg:px-0 pt-[4rem] lg:pt-[2rem]">
+                <img src="assets/img/main-slide2.svg" alt="">
+                <div class="space-y-4 lg:space-y-[2.5rem]">
+                    <h5
+                        class="lexendzettaextrali text-[26px] lg:text-[42px] xl:text-[66px] leading-[32.5px] lg:leading-[53.3px] xl:leading-[82.5px] text-[#5682FF]">
+                        Primax</h5>
+                    <p class="lexendb text-sm leading-[17.5px] text-[#141C26]">En Esedor podemos ofrecerte equipos de
+                        producto de clase global para crear proyectos de forma eficiente y ágil.</p>
+                    <!-- <button class="lexend text-[15.5px] w-[159px] h-[60px] rounded-[50px] bg-white shadow">
+                        Ver caso
+                    </button> -->
+                    <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false"
+                        [ngClass]="{ 'arrow' : btnStyle}" routerLink="/proyectos/primax"
+                        class="lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[159px] h-[60px] lg:ml-4 px-6 lg:p-4 rounded-[50px]">
+                        <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33"
+                            height="31" viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g class="text-white">
+                                <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black"
+                                    stroke-width="2" />
+                                <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black"
+                                    stroke-width="2" />
+                            </g>
+                        </svg>
+                        Ver caso
+                    </button>
+                </div>
+
+            </div>
+            <div class="hidden lg:block text-[#141C26] space-y-4 text-right pb-[9.5rem] w-[100px] ml-auto">
+                <p class="lexendb leading-[20px]">Redeban</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">La primera tienda virtual b2b regional</p>
+            </div>
+        </div>
     </ng-template>
 
     <ng-template #third>
+        <div class="grid grid-cols-1 lg:grid-cols-8 lg:gap-4 xl:gap-[2.5rem] 2xl:gap-[4rem] items-center">
+            <div class="hidden lg:block text-[#141C26] space-y-4 pb-[4.5rem] w-[100px]">
+                <p class="lexendb leading-[20px]">Primax</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">Diseño de producto de la pasarela de pagos más grande
+                    del Perú</p>
+            </div>
+            <div
+                class="col-span-6 flex flex-col-reverse lg:grid grid-cols-2 items-center justify-items-center pr-[5rem] 2xl:pr-[8rem] px-[3rem] lg:px-0 pt-[4rem] lg:pt-[2rem] lg:min-h-[350px]">
+                <img src="assets/img/main-slide3.svg" alt="">
+
+                <div class="space-y-4 lg:space-y-[2.5rem] pl-[2rem] 2xl:pl-0">
+                    <h5
+                        class="lexendzettaextrali text-[26px] lg:text-[42px] xl:text-[66px] leading-[32.5px] lg:leading-[53.3px] xl:leading-[82.5px] text-[#5682FF]">
+                        Redeban</h5>
+                    <p class="lexendb text-sm leading-[17.5px] text-[#141C26]">En Esedor podemos ofrecerte equipos de
+                        producto de clase global para crear proyectos de forma eficiente y ágil.</p>
+                    <!-- <button class="lexend text-[15.5px] w-[159px] h-[60px] rounded-[50px] bg-white shadow">
+                        Ver caso
+                    </button> -->
+                    <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false"
+                        [ngClass]="{ 'arrow' : btnStyle}" routerLink="/proyectos"
+                        class="lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[159px] h-[60px] lg:ml-4 px-6 lg:p-4 rounded-[50px]">
+                        <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33"
+                            height="31" viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g class="text-white">
+                                <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black"
+                                    stroke-width="2" />
+                                <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black"
+                                    stroke-width="2" />
+                            </g>
+                        </svg>
+                        Ver caso
+                    </button>
+                </div>
+
+            </div>
+            <div class="hidden lg:block text-[#141C26] space-y-4 text-right pb-[4.5rem] w-[100px] ml-auto">
+                <p class="lexendb leading-[20px]">Ripley</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">La primera tienda virtual b2b regional</p>
+            </div>
+        </div>
     </ng-template>
 
     <ng-template #fourth>
+        <div class="grid grid-cols-1 lg:grid-cols-8 lg:gap-4 xl:gap-[2.5rem] 2xl:gap-[4rem] items-center">
+            <div class="hidden lg:block text-[#141C26] space-y-4 pb-[4.5rem] w-[100px]">
+                <p class="lexendb leading-[20px]">Redeban</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">Diseño de producto de la pasarela de pagos más grande
+                    del Perú</p>
+            </div>
+            <div
+                class="col-span-6 flex flex-col-reverse lg:grid grid-cols-2 items-center justify-items-center xl:pr-[8rem] px-[3rem] lg:px-0 pt-[4rem] lg:pt-[2rem] lg:min-h-[350px]">
+                <img src="assets/img/main-slide4.svg" alt="">
+
+                <div class="space-y-4 lg:space-y-[2.5rem]">
+                    <h5
+                        class="lexendzettaextrali text-[26px] lg:text-[42px] xl:text-[66px] leading-[32.5px] lg:leading-[53.3px] xl:leading-[82.5px] text-[#5682FF]">
+                        Ripley</h5>
+                    <p class="lexendb text-sm leading-[17.5px] text-[#141C26]">En Esedor podemos ofrecerte equipos de
+                        producto de clase global para crear proyectos de forma eficiente y ágil.</p>
+                    <!-- <button class="lexend text-[15.5px] w-[159px] h-[60px] rounded-[50px] bg-white shadow">
+                        Ver caso
+                    </button> -->
+                    <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false"
+                        [ngClass]="{ 'arrow' : btnStyle}" routerLink="/proyectos/ripley"
+                        class="lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[159px] h-[60px] lg:ml-4 px-6 lg:p-4 rounded-[50px]">
+                        <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33"
+                            height="31" viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g class="text-white">
+                                <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black"
+                                    stroke-width="2" />
+                                <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black"
+                                    stroke-width="2" />
+                            </g>
+                        </svg>
+                        Ver caso
+                    </button>
+                </div>
+
+            </div>
+            <div class="hidden lg:block text-[#141C26] space-y-4 text-right pb-[4.5rem] w-[100px] ml-auto">
+                <p class="lexendb leading-[20px]">Notifai</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">La primera tienda virtual b2b regional</p>
+            </div>
+        </div>
     </ng-template>
 
     <ng-template #fifth>
+        <div class="grid grid-cols-1 lg:grid-cols-8 lg:gap-4 xl:gap-[2.5rem] 2xl:gap-[4rem] items-center">
+            <div class="hidden lg:block text-[#141C26] space-y-4 pb-[4.5rem] w-[100px]">
+                <p class="lexendb leading-[20px]">Ripley</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">Diseño de producto de la pasarela de pagos más grande
+                    del Perú</p>
+            </div>
+            <div
+                class="col-span-6 flex flex-col-reverse lg:grid grid-cols-2 items-center justify-items-center xl:pr-[8rem] px-[3rem] lg:px-0 pt-[4rem] lg:pt-[2rem] lg:min-h-[350px]">
+                <img src="assets/img/main-slide5.svg" alt="">
+                <div class="space-y-4 lg:space-y-[2.5rem]">
+                    <h5
+                        class="lexendzettaextrali text-[26px] lg:text-[42px] xl:text-[66px] leading-[32.5px] lg:leading-[53.3px] xl:leading-[82.5px] text-[#5682FF]">
+                        Notifai</h5>
+                    <p class="lexendb text-sm leading-[17.5px] text-[#141C26]">En Esedor podemos ofrecerte equipos de
+                        producto de clase global para crear proyectos de forma eficiente y ágil.</p>
+                    <!-- <button class="lexend text-[15.5px] w-[159px] h-[60px] rounded-[50px] bg-white shadow">
+                        Ver caso
+                    </button> -->
+                    <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false"
+                        [ngClass]="{ 'arrow' : btnStyle}" routerLink="/proyectos/notifai"
+                        class="lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[159px] h-[60px] lg:ml-4 px-6 lg:p-4 rounded-[50px]">
+                        <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33"
+                            height="31" viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g class="text-white">
+                                <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black"
+                                    stroke-width="2" />
+                                <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black"
+                                    stroke-width="2" />
+                            </g>
+                        </svg>
+                        Ver caso
+                    </button>
+                </div>
+
+            </div>
+            <div class="hidden lg:block text-[#141C26] space-y-4 text-right pb-[4.5rem] w-[100px] ml-auto">
+                <p class="lexendb leading-[20px]">Primax</p>
+                <p class="lexend text-[11.5px] leading-[14.38px]">La primera tienda virtual b2b regional</p>
+            </div>
+        </div>
     </ng-template>
 
     <button NguCarouselNext class="rightRs">
-        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ml-auto" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.5601 24L23.0601 12.5L11.5601 1" stroke="black" />
             <line x1="23.0601" y1="13.0898" x2="-6.67135e-05" y2="13.0898" stroke="black" />
         </svg>
@@ -92,7 +224,7 @@
             <line x1="1" y1="11.9102" x2="24.0601" y2="11.9102" stroke="black" />
         </svg>
     </button>
-    <ul class="myPoint" NguCarouselPoint>
+    <ul class="myPoint hidden lg:block" NguCarouselPoint>
         <span class="text-[#141C26] text-sm lexendzetta pr-2">01</span>
         <li *ngFor="let i of myCarousel.pointNumbers; let ind = index" [class.active]="i==myCarousel.activePoint"
             (click)="myCarousel.moveTo(i)"></li>

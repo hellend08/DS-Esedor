@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-nosotros',
   templateUrl: './nosotros.component.html',
@@ -8,6 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class NosotrosComponent implements OnInit {
 
   colorWhite = true;
+
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
 
   featureGroup = [
     {title: 'Sobrepasar las expectativas de los clientes y colegas', text: 'Nunca te conformes con lo “suficientemente bueno” cuando sabes que puedes y debes hacerlo mejor.'},
@@ -35,6 +47,9 @@ export class NosotrosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    AOS.init()
+
   }
 
 }

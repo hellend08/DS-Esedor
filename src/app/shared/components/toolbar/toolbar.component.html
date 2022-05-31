@@ -10,10 +10,10 @@
     </div>
     <div #menu class="flex justify-end w-full lexendzetta font-bold">
       <div [class.header_variable]="header_variable"
-        class="lg:grid grid-cols-6 gap-4 hidden space-x-10 justify-between w-full lexendzetta font-bold">
+        class="lg:grid grid-cols-6 gap-4 hidden space-x-10 justify-between items-center w-full lexendzetta font-bold">
+        <span class="cursor-pointer col-span-2 text-[1rem]" (click)="redirectService()">Servicios</span>
         <span class="cursor-pointer col-span-2 text-[1rem]" (click)="redirectProject()">Proyectos</span>
         <span class="cursor-pointer col-span-2 text-[1rem]" (click)="redirectUs()">Nosotros</span>
-        <span class="col-span-2 text-[1rem]" (click)="redirectContact()">Contacto</span>
       </div>
 
       <div #search (click)="openMenu = true" class="pb-2">
@@ -52,8 +52,8 @@
     <!-- space-y-[3.5rem] -->
     <div class="flex flex-col justify-center lg:justify-between pr-[6rem] h-full">
       <div class="w-[500px] hidden lg:block">
-        <h4 class="lexendli text-[21px]">Trabajar con Esedor es optimizar tus oportunidades.</h4>
-        <p class="lexend text-[14.5px]">¿Qué proyecto podemos construir para ti?</p>
+        <h4 data-aos="fade-down-left" class="lexendli text-[21px]">Trabajar con Esedor es optimizar tus oportunidades.</h4>
+        <p data-aos="fade-down-left" class="lexend text-[14.5px]">¿Qué proyecto podemos construir para ti?</p>
       </div>
       <button
         class="h-[46px] lg:h-[50px] 2xl:h-[65px] w-[192px] lg:w-[236px] rounded-[50px] bg-white text-[15.5px] text-black flex justify-center items-center p-4">
@@ -68,7 +68,7 @@
       </button>
     </div>
   </div>
-  <div class="h-[75%] lg:h-[70%] px-4 pt-4 lg:pt-[13rem] pb-2 flex flex-col lg:justify-between">
+  <div data-aos="fade-right" class="h-[75%] lg:h-[70%] px-4 pt-4 lg:pt-[12rem] pb-2 flex flex-col lg:justify-between">
     <ul class="open-menu lg:flex flex-wrap">
       <li class="cursor-pointer" *ngFor="let list of listGroup" (click)="redirectInternas(list.ruta)"
         (mouseover)="list.state = false" (mouseout)="list.state = true">{{list.name}}

@@ -2,10 +2,11 @@
 
 <app-loader></app-loader>
 
-<div>
-  <section #slideContent class="lg:pt-28 px-4 flex flex-col justify-center bg-[#F2F4F5]">
+<div class="lg:pb-[5rem] 2xl:pb-0">
+  <section #slideContent class="lg:pt-28 px-4 flex flex-col justify-center bg-[#F2F4F5] h-screen">
     <!-- <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p> -->
     <div>
+      <!-- class="w-[98.5%]" -->
       <app-main-slider></app-main-slider>
     </div>
   </section>
@@ -54,7 +55,7 @@
         class="border-b border-black col-span-2 col-end-4 pb-[5rem] lg:pb-[13rem] space-y-[3rem] xl:pr-[4rem] 2xl:pr-[6rem]">
         <div data-aos="fade-right" data-aos-duration="500" class="flex space-x-4 items-center">
           <div class="border-b border-black w-[43px]"></div>
-          <p class="text-[13px] lexend">Conozca lo que necesita su negocio</p>
+          <p class="text-[17.5px] lexend">Conozca lo que necesita su negocio</p>
         </div>
         <h1 data-aos="fade-up-right" data-aos-duration="500"
           class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">¿Cuál es
@@ -172,12 +173,33 @@
         Confían en nosotros</p>
       <h1 data-aos="fade-up" data-aos-duration="500"
         class="text-[28px] lg:text-[40px] xl:text-[46px] lexendzettali text-[#FFFFFF] lg:w-[60%] leading-[35px] lg:leading-[57px]">
-        Esedor te acompaña en todas las etapas de tu proyecto, maximizando tus objetivos de negocio. </h1>
+        Nos sentimos orgullosos de nuestros proyectos y de los clientes que confían en nosotros. </h1>
     </div>
     <app-allies [displayElement]="displayElement"></app-allies>
   </section>
 
-  <section
+  <section class="grid grid-cols-1 lg:grid-cols-3 items-center h-[1024px] bg-[#141C26] px-4 lg:px-0 lg:pr-[5rem]">
+    <img src="assets/img/tornillo.png" alt="">
+    <div
+      class="col-span-2 grid grid-cols-1 lg:grid-cols-2 pb-[4rem] lg:pt-[8rem] 2xl:pt-[10rem] lg:pb-[5rem] 2xl:pb-[7rem] text-white">
+      <h3 data-aos="fade-right" data-aos-duration="500" class="lexendli text-[18px] lg:text-[21px] pb-8 lg:pb-[5rem] 2xl:pb-[8rem] lg:col-span-2 ">Trainee impact</h3>
+      <div class="space-y-8 lg:space-y-[4rem] 2xl:space-y-[6rem] lg:col-span-2 ">
+        <h1 data-aos="fade-up" data-aos-duration="500" class="text-[28px] lg:text-[36px] xl:text-[46px] leading-[35px] lg:leading-[57.5px] ">¿Buscas una manera de
+          comenzar tu carrera? </h1>
+        <h4 data-aos="fade-up" data-aos-duration="500" class="lexendli text-[18px] xl:text-[21px] leading-[25.6px] lg:leading-[33.6px]">Ven y únete a nuestro
+          Programa Trainee y desarrolla tu potencial en 6 meses. ¡Será una experiencia increíble! No sólo ofrecemos
+          habilidades prácticas, sino también tutoría de personas realmente talentosas en un entorno increíble centrado
+          en las personas, mientras pone sus manos en proyectos reales junto con nuestro equipo calificado de Diseño y
+          Desarrollo de Productos en Zemoga.</h4>
+        <h4 data-aos="fade-up" data-aos-duration="500" class="lexendli text-[18px] xl:text-[21px] leading-[25.6px] lg:leading-[33.6px]">Envia
+          tu CV y datos personales:</h4>
+
+      </div>
+      <p data-aos="fade-up" data-aos-duration="500" class="lexendzettali text-[32px] pt-[2rem] col-span-2 hidden lg:block">talento@esedor.com</p>
+    </div>
+  </section>
+
+  <!-- <section
     class="bg-[#141C26] flex flex-col lg:flex-row space-y-[167px] lg:space-y-0 lg:justify-between px-4 pb-[5rem] lg:py-[12rem]">
     <div class="inline-block ml-[-15px]">
       <div class="text-[64px] lg:text-[96px] type-family text-[#FFFFFF] flex text-left">
@@ -258,7 +280,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <app-lets-talk (letsForm)="showFormEvent()"></app-lets-talk>
 

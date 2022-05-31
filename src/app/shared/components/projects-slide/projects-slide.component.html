@@ -25,7 +25,7 @@
   </div>
   <ng-template #first>
     <div data-aos="fade-down-left" data-aos-duration="700" class="cursor-pointer relative" (mouseover)="bgColor = false"
-      (mouseout)="bgColor = true">
+      (mouseout)="bgColor = true" routerLink="/proyectos/primax">
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-color' : !bgColor }">
@@ -51,7 +51,7 @@
 
   <ng-template #second>
     <div data-aos="fade-down-left" data-aos-duration="800" class="cursor-pointer relative"
-      (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true">
+      (mouseover)="bgColorTwo = false" (mouseout)="bgColorTwo = true" routerLink="/proyectos/ripley">
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-two' : !bgColorTwo }">
@@ -75,7 +75,7 @@
 
   <ng-template #third>
     <div data-aos="fade-down-left" data-aos-duration="900" class="cursor-pointer relative"
-      (mouseover)="bgColorThree = false" (mouseout)="bgColorThree = true">
+      (mouseover)="bgColorThree = false" (mouseout)="bgColorThree = true" routerLink="/descripcion">
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-three' : !bgColorThree }">
@@ -101,7 +101,7 @@
 
   <ng-template #fourth>
     <div data-aos="fade-down-left" data-aos-duration="900" class="cursor-pointer relative"
-      (mouseover)="bgColorFourth = false" (mouseout)="bgColorFourth = true">
+      (mouseover)="bgColorFourth = false" (mouseout)="bgColorFourth = true" routerLink="/proyectos/notifai">
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-fourth' : !bgColorFourth }">
@@ -126,7 +126,9 @@
   </ng-template>
 
   <ng-template #fifth>
-    <div class="cursor-pointer relative" (mouseover)="bgColorFifth = false" (mouseout)="bgColorFifth = true">
+    <div class="cursor-pointer relative" (mouseover)="bgColorFifth = false" (mouseout)="bgColorFifth = true"
+      >
+      <!-- routerLink="/proyectos/" -->
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-fifth' : !bgColorFifth }">
@@ -150,7 +152,9 @@
   </ng-template>
 
   <ng-template #sixth>
-    <div class="cursor-pointer relative" (mouseover)="bgColorSixth = false" (mouseout)="bgColorSixth = true">
+    <div class="cursor-pointer relative" (mouseover)="bgColorSixth = false" (mouseout)="bgColorSixth = true"
+      >
+      <!-- routerLink="/proyectos/" -->
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-sixth' : !bgColorSixth }">
@@ -171,7 +175,9 @@
   </ng-template>
 
   <ng-template #seventh>
-    <div class="cursor-pointer relative" (mouseover)="bgColorSeventh = false" (mouseout)="bgColorSeventh = true">
+    <div class="cursor-pointer relative" (mouseover)="bgColorSeventh = false" (mouseout)="bgColorSeventh = true"
+      >
+      <!-- routerLink="/proyectos/" -->
       <div
         class="h-[380px] lg:h-[480px] flex items-center justify-center bg-[#454C59] transition-all duration-700 ease-in-out"
         [ngClass]="{ 'bg-seventh' : !bgColorSeventh }">

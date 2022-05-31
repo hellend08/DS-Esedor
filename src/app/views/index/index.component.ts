@@ -5,6 +5,8 @@ import { Draggable } from 'gsap/Draggable';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CookiesBarComponent } from 'src/app/shared/components/cookies-bar/cookies-bar.component';
 
 import * as AOS from 'aos';
 
@@ -62,6 +64,13 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     AOS.init()
+
+
+    this._snackBar.openFromComponent(CookiesBarComponent, {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass: ['custom-snack'],
+    });
   }
 
   baseTimeline = gsap.timeline({ paused: true });
@@ -124,8 +133,10 @@ export class IndexComponent implements AfterViewInit, OnInit {
   actualprimero!: string;
   actualsegundo!: string;
 
-  constructor(private router: Router, private _vps: ViewportScroller, @Inject(DOCUMENT) private document: Document) { }
+  constructor(private router: Router, private _vps: ViewportScroller, @Inject(DOCUMENT) private document: Document, public _snackBar: MatSnackBar) { }
 
+ 
+  
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
   }
@@ -139,6 +150,10 @@ export class IndexComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
+
+    // openSnackBar() {
+      
+    // }
 
     var tl = gsap.timeline({});
 

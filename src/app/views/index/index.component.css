@@ -18,6 +18,11 @@ g:hover  path{
     fill: #FFFFFF;
   }
 
+.custom-snack {
+  background-color: #000000;
+  margin: 1rem;
+}
+
 @media screen and (min-width: 1024px) {
   .arrow-rotate {
     transform: rotate(-45deg);

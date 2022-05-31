@@ -24,18 +24,18 @@
         <div class="grid grid-cols-2 lg:grid-cols-3 lg:col-span-2 xl:col-span-1 gap-y-[3.25rem] lg:gap-y-0 pb-[5rem] pt-8 lg:pt-0 lg:pb-0">
             <ul class="col-span-2 lg:col-span-1">
                 <li class="lexendb text-[14px] leading-[17.5px] text-[#000000]">Servicios</li>
-                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5" *ngFor="let list of servicesList">
+                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5 cursor-pointer" *ngFor="let list of servicesList" routerLink="/servicios">
                     {{list.text}}</li>
             </ul>
            
             <ul>
                 <li class="lexendb text-[14px] leading-[17.5px] text-[#000000]">Nosotros</li>
-                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5" *ngFor="let list of usList">
+                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5 cursor-pointer" *ngFor="let list of usList" routerLink="/nosotros">
                     {{list.text}}</li>
             </ul>
             <div class="flex justify-between">
                 <ul>
-                    <li class="lexendb text-[14px] leading-[17.5px] text-[#000000] pb-5" *ngFor="let list of listGroup">
+                    <li routerLink="{{list.route}}" class="lexendb text-[14px] leading-[17.5px] text-[#000000] pb-5 cursor-pointer" *ngFor="let list of listGroup">
                         {{list.text}}</li>
                     <li class="text-[10px] text-[#454C59] w-[115px]">Iniciativa para iniciar
                         tu carrera en el ecosistema digital</li>

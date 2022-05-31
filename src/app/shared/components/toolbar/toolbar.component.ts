@@ -25,7 +25,7 @@ export class ToolbarComponent implements OnInit {
     {name: 'Nosotros', ruta: '/nosotros', state: true},
     {name: 'Talento', ruta: '/talento', state: true},
     {name: 'Contacto', ruta: '/contacto', state: true},
-    {name: 'Blog', ruta: '/', state: true},
+    //{name: 'Blog', ruta: '/', state: true},
   ]
 
   public redirectInternas(ruta: string) {
@@ -50,8 +50,8 @@ export class ToolbarComponent implements OnInit {
     this.router.navigateByUrl('/nosotros');
   }
 
-  public redirectContact() {
-    this.router.navigateByUrl('/contacto');
+  public redirectService() {
+    this.router.navigateByUrl('/servicios');
   }
 
   ngOnInit(): void {

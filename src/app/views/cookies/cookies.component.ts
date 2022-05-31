@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CookiesComponent implements OnInit {
 
 
-  colorWhite = false
+
+  colorWhite = false;
 
   constructor() { }
 

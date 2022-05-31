@@ -12,6 +12,16 @@ export class ProjectsDashboardComponent implements OnInit {
   colorWhite = true;
   itemFocus!: any;
 
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
+
   listGroup = [
     {types: 'todos', name: 'Todos', state: false},
     {types: 'banca', name: 'Banca', state: false},
@@ -37,7 +47,7 @@ export class ProjectsDashboardComponent implements OnInit {
   //   this.clickListGroup.map(item => item.state = true)
   //   // this.wasInside = true;
   // }
-  
+
   // @HostListener('document:click')
   // clickout() {
   //   this.clickListGroup.map(item => item.state = true)
@@ -57,12 +67,13 @@ export class ProjectsDashboardComponent implements OnInit {
   bgColorSeventh: boolean = true;
 
   empresas = [
-    {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/phone-right.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax', state: true, background: 'bg-color'},
-    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyects.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-two'},
-    {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyect-laptop.png', alt: 'Niubiz', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-three'},
-    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-fourth'},
-    {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecommerce', ruta: '/proyectos/notifai', state: true, background: 'bg-color'},
-    {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-fifth'}
+    {name: 'Primax', descripcion: 'INVESTIGACIÓN Y CONSULTORÍA - DESCUBRIMIENTO DE PRODUCTO - DISEÑO DE PRODUCTO - DESIGN SYSTEM', img: 'assets/img/phone-right.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax', state: true, background: 'bg-color'},
+    {name: 'Ripley', descripcion: 'DESCUBRIMIENTO DE PRODUCTO - DISEÑO DE PRODUCTO - DESARROLLO DE SOFTWARE ', img: 'assets/img/Ripley-slider.png', alt: 'Ripley', tipo: 'banca', ruta: 'proyectos/ripley', state: true, background: 'bg-two'},
+    {name: 'Redeban', descripcion: 'DESCUBRIMIENTO DE PRODUCTO - DISEÑO DE PRODUCTO - DESARROLLO DE SOFTWARE', img: 'assets/img/proyect-laptop.png', alt: 'Redeban', tipo: 'ecommerce', ruta: '/descripcion', state: true, background: 'bg-three'},
+    {name: 'Notifai', descripcion: 'DESCUBRIMIENTO DE PRODUCTO - DISEÑO DE PRODUCTO - DESARROLLO DE SOFTWARE', img: 'assets/img/laptop-estadis.png', alt: 'Notifai', tipo: 'ecommerce', ruta: '/proyectos/notifai', state: true, background: 'bg-fourth'},
+    {name: 'En Proceso', descripcion: 'CAJA METROPOLITANA DE LIMA - HOME BANKING ', img: 'assets/img/cmetropolitano-slider.png', alt: 'CajaMetropolitana', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-color'},
+    {name: 'En Proceso', descripcion: 'CAJA CUSCO - UN NUEVO SISTEMA DE GESTION DE TARJETAS ', img: 'assets/img/CCusco-slider.png', alt: 'CajaCusco', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-fifth'},
+    {name: 'En Proceso', descripcion: 'NIUBIZ - SISTEMA DE GESTIÓN DE USUARIOS ', img: 'assets/img/nubiz-sileder.png', alt: 'Nubiz', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-fifth'}
   ]
 
   filtrado = this.empresas;

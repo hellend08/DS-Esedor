@@ -10,6 +10,15 @@ import * as AOS from 'aos';
 export class DescripcionComponent implements OnInit {
 
   colorWhite = false;
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
 
   date: number = 2021;
   industry: string = 'Fintech';

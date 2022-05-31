@@ -217,7 +217,7 @@
 
 -->
 
-<section class="h-full lg:px-40  bg-[#141C26] lexendzetta text-[#D8D8D8] flex justify-center">
+<!-- <section class="h-full lg:px-40  bg-[#141C26] lexendzetta text-[#D8D8D8] flex justify-center">
   <div class="flex justify-between flex-wrap content-center w-full px-4 lg:px-0">
     <div>
       <div class="lg:px-4">
@@ -231,4 +231,12 @@
       <img alt="Arrow" class="w-[39.6px] lg:w-[60%] 2xl:w-[100%]" src="assets/img/icon/Arrow.svg">
     </div>
   </div>
-</section>
+</section> -->
+
+<app-lets-talk (letsForm)="showFormEvent()"></app-lets-talk>
+
+<div *ngIf="showForm">
+  <app-contact-dashboard (closeForm)="closeFormEvent()"></app-contact-dashboard>
+</div>
+
+<app-footer></app-footer>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-services-tab',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServicesTabComponent implements OnInit {
 
   btnStyle!: boolean;
+
+  @Output() letsForm = new EventEmitter<any>();
 
   constructor() { }
 

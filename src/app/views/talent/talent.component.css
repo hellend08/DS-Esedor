@@ -1,5 +1,5 @@
 .bg-image {
-    background-image: url('../../../assets/img/bg-talent.png');
+    background-image: url('../../../assets/img/talento-esedor.png');
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
@@ -23,15 +23,15 @@ h1 {
     .arrow:hover g line {
         stroke: #5682FF;
     }
-    
+
     .arrow:hover g path {
         stroke: #5682FF;
     }
-    
+
     .arrow-btn:hover g line {
         stroke: #FFFFFF;
     }
-    
+
     .arrow-btn:hover g path {
         stroke: #FFFFFF;
     }
@@ -39,7 +39,7 @@ h1 {
     .font-color {
        color: #5682FF;
     }
-    
+
     .arrow-rotate {
         transform: rotate(-45deg);
         transition: transform .6s cubic-bezier(.4,0,0,1);
