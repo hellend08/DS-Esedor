@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RipleyComponent implements OnInit {
 
-
-
   bgHover!: boolean;
   bgHoverTwo!: boolean;
   colorWhite = false;
+  showForm!: boolean;
 
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
 
   date: number = 2021;
   industry: string = 'RETAIL';
@@ -40,7 +46,6 @@ export class RipleyComponent implements OnInit {
     {aos: 1000, label: 'UX redisign'},
     {aos: 1000, label: '& Migración'},
   ]
-
 
   firstText: string = 'Auditoría de Experiencia de Usuario';
   secondText: string = 'Realizamos una revisión exhaustiva del sistema actual, haciendo uso de la heurística detectamos una serie de oportunidades que le permitieran mejorar en el rediseño del nuevo sistema de puntos de Ripley.';

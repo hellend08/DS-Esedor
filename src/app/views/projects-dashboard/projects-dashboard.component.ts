@@ -12,6 +12,16 @@ export class ProjectsDashboardComponent implements OnInit {
   colorWhite = true;
   itemFocus!: any;
 
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
+
   listGroup = [
     {types: 'todos', name: 'Todos', state: false},
     {types: 'banca', name: 'Banca', state: false},
@@ -58,9 +68,9 @@ export class ProjectsDashboardComponent implements OnInit {
 
   empresas = [
     {name: 'Primax', descripcion: 'Pagos simples', img: 'assets/img/phone-right.png', alt: 'Primax', tipo: 'automotriz', ruta: '/proyectos/primax', state: true, background: 'bg-color'},
-    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyects.png', alt: 'Redeban', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-two'},
+    {name: 'Redeban', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyects.png', alt: 'Redeban', tipo: 'banca', ruta: '/descripcion', state: true, background: 'bg-two'},
     {name: 'Niubiz', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/proyect-laptop.png', alt: 'Niubiz', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-three'},
-    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecommerce', ruta: '/proyectos', state: true, background: 'bg-fourth'},
+    {name: 'Ripley', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project04.png', alt: 'Ripley', tipo: 'ecommerce', ruta: '/proyectos/ripley', state: true, background: 'bg-fourth'},
     {name: 'Notifai', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project01.png', alt: 'Notifai', tipo: 'ecommerce', ruta: '/proyectos/notifai', state: true, background: 'bg-color'},
     {name: 'Caja Metropolitana', descripcion: 'Transformando el Ecommerce ', img: 'assets/img/project/project02.png', alt: 'Caja Metropolitana', tipo: 'banca', ruta: '/proyectos', state: true, background: 'bg-fifth'}
   ]
