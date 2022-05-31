@@ -60,7 +60,7 @@
     </div>
   </section>
 
-  <section class="grid grid-cols-1 lg:grid-cols-4 pt-[10rem] lg:pt-[20rem] pb-[20rem] lg:pb-[20rem] px-4">
+  <section class="grid grid-cols-1 lg:grid-cols-4 pt-[10rem] lg:pt-[20rem] pb-[5rem] lg:pb-[10rem] px-4">
     <div class="col-span-4 flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 items-center">
       <h1
         class="lg:col-span-1 xl:col-span-2 text-[28px] lg:text-[36px] xl:text-[46px] leading-[35px] lg:leading-[57.5px]">
@@ -90,18 +90,22 @@
         </svg>
         Quiero Ayudar
       </button> -->
-      <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false" (click)="showFormEvent()"
-        [ngClass]="{ 'arrow-btn' : btnStyle}"
-        class="col-span-2 lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[236px] h-[45px] lg:h-[65px] 2xl:h-[82px] px-6 lg:p-4 rounded-[50px]">
-        <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33" height="31"
-          viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="text-white">
-            <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black" stroke-width="2" />
-            <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2" />
-          </g>
-        </svg>
-        Quiero Ayudar
-      </button>
+      <div
+        class="col-span-2 py-2 px-4 lg:p-0 bg-[#5682FF] lg:bg-transparent fixed bottom-0 ml-[-1rem] lg:ml-0 w-full lg:w-auto lg:relative z-50">
+        <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false" (click)="showFormEvent()"
+          [ngClass]="{ 'arrow-btn' : btnStyle}"
+          class="lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[236px] h-[45px] lg:h-[65px] 2xl:h-[82px] px-6 lg:p-4 rounded-[50px]">
+          <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33" height="31"
+            viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g class="text-white">
+              <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black" stroke-width="2" />
+              <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2" />
+            </g>
+          </svg>
+          Quiero Ayudar
+        </button>
+      </div>
     </div>
   </section>
 </div>

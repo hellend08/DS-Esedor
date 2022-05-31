@@ -19,10 +19,6 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-
-
-
-
 h1 {
     font-family: LexendZettaExtraLight;
     /* font-size: 46px;
@@ -39,5 +35,18 @@ h1 {
         border-color: #000000;
         width: 135px;
         transition: all .4s ease-in-out;
+    }
+
+    .arrow-rotate{
+        transform: rotate(-45deg);
+        transition: transform .6s cubic-bezier(.4,0,0,1);
+    }
+
+    .arrow:hover g line {
+        stroke: #FFFFFF;
+    }
+    
+    .arrow:hover g path {
+        stroke: #FFFFFF;
     }
 }
