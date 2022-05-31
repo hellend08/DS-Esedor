@@ -10,7 +10,7 @@ import * as AOS from 'aos';
 export class NosotrosComponent implements OnInit {
 
   colorWhite = true;
-
+  btnStyle!: boolean;
   showForm!: boolean;
 
   showFormEvent() {

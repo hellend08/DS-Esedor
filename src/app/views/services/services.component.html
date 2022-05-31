@@ -199,12 +199,14 @@
         </div>
     </section>
 
-    <app-lets-talk (letsForm)="showFormEvent()"></app-lets-talk>
+    <div class="hidden lg:block">
+        <app-lets-talk (letsForm)="showFormEvent()"></app-lets-talk>
+    </div>
 
     <div *ngIf="showForm">
         <app-contact-dashboard (closeForm)="closeFormEvent()"></app-contact-dashboard>
     </div>
 
-    <!-- <app-footer></app-footer> -->
+    <app-footer></app-footer>
 
 </div>
