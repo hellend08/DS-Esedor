@@ -92,7 +92,7 @@
       </button> -->
       <div
         class="col-span-2 py-2 px-4 lg:p-0 bg-[#5682FF] lg:bg-transparent fixed bottom-0 ml-[-1rem] lg:ml-0 w-full lg:w-auto lg:relative z-50">
-        <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false" (click)="showFormEvent()"
+        <button data-aos="fade-right" matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false" (click)="showFormEvent()"
           [ngClass]="{ 'arrow-btn' : btnStyle}"
           class="lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[236px] h-[45px] lg:h-[65px] 2xl:h-[82px] px-6 lg:p-4 rounded-[50px]">
           <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33" height="31"

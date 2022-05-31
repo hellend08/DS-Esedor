@@ -36,9 +36,6 @@ h1 {
         width: 135px;
         transition: all .4s ease-in-out;
     }
-<<<<<<< HEAD
-}
-=======
 
     .arrow-rotate{
         transform: rotate(-45deg);
@@ -48,9 +45,8 @@ h1 {
     .arrow:hover g line {
         stroke: #FFFFFF;
     }
-    
+
     .arrow:hover g path {
         stroke: #FFFFFF;
     }
 }
->>>>>>> a70015883beb190ec4ea9365b965c5a3f19df9a5
