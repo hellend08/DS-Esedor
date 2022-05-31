@@ -40,6 +40,7 @@ import { AlliesComponent } from './shared/components/allies/allies.component';
 import { LetsTalkComponent } from './shared/components/lets-talk/lets-talk.component';
 import { ContactDashboardComponent } from './views/contact-dashboard/contact-dashboard.component';
 import { ServicesTabComponent } from './shared/components/services-tab/services-tab.component';
+import { CookiesComponent } from './views/cookies/cookies.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { ServicesTabComponent } from './shared/components/services-tab/services-
     AlliesComponent,
     LetsTalkComponent,
     ContactDashboardComponent,
-    ServicesTabComponent
+    ServicesTabComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,
