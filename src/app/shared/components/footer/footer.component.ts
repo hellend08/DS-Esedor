@@ -13,27 +13,27 @@ export class FooterComponent implements OnInit {
   }
 
   servicesList = [
-    {text: 'Descrubrimiento de Producto'},
-    {text: 'Diseño de Productos'},
-    {text: 'Desarrollo de software'},
-    {text: 'Sistemas de Diseños'},
-    {text: 'Investigación y Consultoria '},
-    {text: 'Transformación cultural'}
+    {text: 'Descrubrimiento de Producto', route: ''},
+    {text: 'Diseño de Productos', route: ''},
+    {text: 'Desarrollo de software', route: ''},
+    {text: 'Sistemas de Diseños', route: ''},
+    {text: 'Investigación y Consultoria ', route: ''},
+    {text: 'Transformación cultural', route: ''}
   ]
 
   usList = [
-    {text: 'Nuestra Cultura'},
-    {text: 'Cómo lo Hacemos'},
-    {text: 'Equipo'},
-    {text: 'Visión Responsable'}
+    {text: 'Nuestra Cultura', route: ''},
+    {text: 'Cómo lo Hacemos', route: ''},
+    {text: 'Equipo', route: ''},
+    {text: 'Visión Responsable', route: ''}
   ]
 
   listGroup = [
-    {text: 'Proyectos'},
-    {text: 'Blog'},
-    {text: 'Contacto'},
-    {text: 'Talento'},
-    {text: 'Fresh Talent'}
+    {text: 'Proyectos', route: '/proyectos'},
+    {text: 'Blog', route: '/'},
+    {text: 'Contacto', route: '/contacto'},
+    {text: 'Talento', route: '/talento'},
+    {text: 'Fresh Talent', route: '/'}
   ]
 
 }

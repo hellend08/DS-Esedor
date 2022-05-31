@@ -9,6 +9,15 @@ export class TalentComponent implements OnInit {
 
   colorWhite = true;
   btnStyle!: boolean;
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
 
   talentGroup = [
     {text: 'Front-end Developer', state: false},

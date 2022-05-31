@@ -9,6 +9,16 @@ export class NosotrosComponent implements OnInit {
 
   colorWhite = true;
 
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
+
   featureGroup = [
     {title: 'Sobrepasar las expectativas de los clientes y colegas', text: 'Nunca te conformes con lo “suficientemente bueno” cuando sabes que puedes y debes hacerlo mejor.'},
     {title: 'Reconocer la excelencia y el compromiso.', text: 'Conocemos el valor del respeto bien ganado y la retroalimentación constructiva.'},

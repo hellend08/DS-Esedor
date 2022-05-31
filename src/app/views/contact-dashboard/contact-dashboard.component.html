@@ -1,4 +1,5 @@
-<div class="bg-[#5682FF] h-[650px] overflow-y-scroll lg:h-screen pt-2 pb-[10rem] fixed top-0 z-[99]">
+<div class="bg-[#5682FF] h-[650px] lg:h-screen pt-2 fixed top-0 z-[99]">
+    <!-- pb-[10rem] overflow-y-scroll -->
     <div class="flex justify-end px-[1.5rem]">
         <!-- mb-[5rem] -->
         <button class="rounded-[50%] w-[46px] h-[46px] bg-[#000000] flex justify-center items-center" (click)="closeForm.emit()">
@@ -8,16 +9,16 @@
         </button>
     </div>
 
-    <mat-stepper labelPosition="bottom" linear #stepper class="bg-[#5682FF]">
+    <mat-stepper labelPosition="bottom" linear #stepper class="bg-[#5682FF] lg:mt-[-3rem] 2xl:mt-0">
         <mat-step state="edit">
             <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5 pt-[1.5rem] lg:pt-2 2xl:pt-[3.5rem]">
                 <h3
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[26px] 2xl:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
                     ¿Cuáles son los principales retos a los que te enfrentas en este momento?</h3>
                 <div
                     class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-[1.5rem] justify-items-center pt-8 lg:pt-[4rem] 2xl:pt-[6rem] px-2 lg:px-0 2xl:px-[5rem]">
                     <button matStepperNext
-                        class="w-full h-[83px] rounded-[50px] p-4 bg-white focus:text-white focus:bg-[#141C26]"
+                        class="w-full lg:h-[83px] rounded-[50px] p-4 bg-white focus:text-white focus:bg-[#141C26]"
                         *ngFor="let btn of firstStepBtn">
                         {{btn.name}}
                     </button>
@@ -30,26 +31,27 @@
         </mat-step>
 
         <mat-step state="edit">
-            <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5 pt-[1.5rem] lg:pt-[3.5rem]">
+            <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5">
+                <!-- pt-[1.5rem] lg:pt-[3.5rem] -->
                 <h3
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[26px] 2xl:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
                     ¿Hay alguna tecnología específica que buscas?</h3>
                 <div
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-2 lg:grid-cols-8 gap-[1.5rem] justify-items-center pt-8 lg:pt-[6rem] px-2 lg:px-0 2xl:px-[5rem]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-2 lg:grid-cols-8 gap-[1.5rem] justify-items-center pt-8 lg:pt-[2rem] 2xl:pt-[6rem] px-2 lg:px-0 2xl:px-[5rem]">
                     <button *ngFor="let btn of secondStepBtn" (click)="btn.state = !btn.state"
                         [ngClass]="{ 'btn-checked' : btn.state }"
-                        class="lg:col-span-2 w-full h-[65px] rounded-[50px] p-4 bg-white flex justify-around items-center {{btn.style}}">
+                        class="lg:col-span-2 w-full lg:h-[48px] 2xl:h-[65px] rounded-[50px] p-4 bg-white flex justify-around items-center {{btn.style}}">
                         <mat-checkbox [checked]="btn.state"></mat-checkbox>
                         {{btn.name}}
                     </button>
                 </div>
                 <div
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 flex justify-center gap-4 lg:gap-[2rem] p-2 lg:pt-[5rem] fixed bottom-0 lg:relative w-full bg-[#5682FF]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 flex justify-center gap-4 lg:gap-[2rem] p-2 lg:pt-[2.5rem] 2xl:pt-[5rem] fixed bottom-0 lg:relative w-full bg-[#5682FF]">
                     <button
-                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
+                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg::h-[65px] 2xl:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
                         mat-button matStepperPrevious>Volver</button>
                     <button
-                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[82px] rounded-[50px] lg:p-4 bg-white"
+                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg::h-[65px] 2xl:h-[82px] rounded-[50px] lg:p-4 bg-white"
                         mat-button matStepperNext>Continuar</button>
                 </div>
             </div>
@@ -58,12 +60,12 @@
         </mat-step>
 
         <mat-step state="edit">
-            <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5 pt-[1.5rem] lg:pt-[3.5rem]">
+            <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5 pt-[1.5rem] lg:pt-2 2xl:pt-[3.5rem]">
                 <h3
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[26px] 2xl:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
                     Cuentanos más sobre tu proyecto</h3>
                 <div
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-1 lg:grid-cols-6 gap-y-[1.5rem] justify-items-center pt-8 lg:pt-[6rem] px-2 lg:px-0">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-1 lg:grid-cols-6 gap-y-[1.5rem] justify-items-center pt-8 lg:pt-[4rem] 2xl:pt-[6rem] px-2 lg:px-0">
                     <!-- <textarea class="start-col col-span-4 w-full h-[215px]" placeholder="Describe tu proyecto aquí..."
                         name="" id="" cols="30" rows="10"></textarea> -->
                         <mat-form-field appearance="fill" class="start-col col-span-4 w-full h-[215px]">
@@ -72,24 +74,24 @@
                           </mat-form-field>
                 </div>
                 <div
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 flex justify-center gap-4 lg:gap-[2rem] p-2 lg:pt-[5rem] fixed bottom-0 lg:relative w-full bg-[#5682FF]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 flex justify-center gap-4 lg:gap-[2rem] p-2 lg:pt-[2.5rem] 2xl:pt-[5rem] fixed bottom-0 lg:relative w-full bg-[#5682FF]">
                     <button
-                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
+                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[65px] 2xl:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
                         mat-button matStepperPrevious>Volver</button>
                     <button
-                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[82px] rounded-[50px] lg:p-4 bg-white"
+                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[65px] 2xl:h-[82px] rounded-[50px] lg:p-4 bg-white"
                         mat-button matStepperNext>Continuar</button>
                 </div>
             </div>
         </mat-step>
 
         <mat-step state="edit">
-            <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5 pt-[1.5rem] lg:pt-[3.5rem]">
+            <div class="grid lg:grid-cols-8 xl:grid-cols-6 2xl:grid-cols-5 pt-[1.5rem] lg:pt-2 2xl:pt-[3.5rem]">
                 <h3
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[36px] text-center leading-[18.13px] lg:leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 lexendli text-white text-[14.5px] lg:text-[26px] 2xl:text-[36px] text-center leading-[18.13px] lg:leading-[53.3px] lg:px-[5rem]">
                     Ingresa tus datos de contacto</h3>
                 <div
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-x-[2rem] justify-items-center pt-8 lg:pt-[6rem] form-input px-2 lg:px-0">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-x-[2rem] justify-items-center pt-8 lg:pt-[4rem] 2xl:pt-[6rem] form-input px-2 lg:px-0">
                     <!-- <input class="h-[60px]" type="text"> -->
                     <!-- <input class="h-[60px]" type="text"> -->
                     <mat-form-field appearance="fill" class="w-full">
@@ -119,12 +121,12 @@
                 </div>
 
                 <div
-                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 flex justify-center gap-4 lg:gap-[2rem] p-2 lg:pt-[5rem] fixed bottom-0 lg:relative w-full bg-[#5682FF]">
+                    class="start-col lg:col-span-6 xl:col-span-4 2xl:col-span-3 flex justify-center gap-4 lg:gap-[2rem] p-2 lg:pt-[2.5rem] 2xl:pt-[5rem] fixed bottom-0 lg:relative w-full bg-[#5682FF]">
                     <button
-                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
+                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[65px] 2xl:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
                         mat-button matStepperPrevious>Volver</button>
                     <button
-                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[82px] rounded-[50px] lg:p-4 bg-white"
+                        class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[65px] 2xl:h-[82px] rounded-[50px] lg:p-4 bg-white"
                         mat-button matStepperNext>Enviar</button>
                 </div>
             </div>

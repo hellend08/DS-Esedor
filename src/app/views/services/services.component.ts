@@ -40,6 +40,16 @@ export class ServicesComponent implements OnInit {
     console.log(a.index)
   }
 
+  showForm!: boolean;
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -81,7 +81,7 @@
         Buscamos negocios que compartan esta visión y que puedan colaborar con nuestra iniciativa. Permítenos ayudar a
         personas jóvenes con trabajo convenientedigno que les permita desarrollar sus habilidades y generargenera un
         impacto en su sociedad, ponte en contacto con nosotros y vuélvete partevuelvetese parte de este programa.</h4>
-      <button
+      <!-- <button
         class="col-span-2 lexendli text-[21px] flex items-center justify-start lg:justify-center talent-shadow w-full lg:w-[235px] h-[65px] px-5 lg:p-4 rounded-[20px]">
         <svg class="mr-12 lg:mr-4 w-[24px] lg:w-auto" width="33" height="31" viewBox="0 0 33 31" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,23 @@
           <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2" />
         </svg>
         Quiero Ayudar
+      </button> -->
+      <button matRipple (mouseover)="btnStyle = true" (mouseout)="btnStyle = false" (click)="showFormEvent()"
+        [ngClass]="{ 'arrow-btn' : btnStyle}"
+        class="col-span-2 lexendli cursor-pointer bg-white lg:hover:bg-[#5682FF] text-[15.5px] text-[#141C26] lg:hover:text-white flex items-center justify-start lg:justify-center shadow w-full lg:w-[236px] h-[45px] lg:h-[65px] 2xl:h-[82px] px-6 lg:p-4 rounded-[50px]">
+        <svg class="transition duration-700 ease-in-out mr-16 lg:mr-4 w-[24px] lg:w-[32px]" width="33" height="31"
+          viewBox="0 0 33 31" [ngClass]="{ 'arrow-rotate' : btnStyle }" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="text-white">
+            <line x1="5.7105e-09" y1="14.7539" x2="30.6479" y2="14.7539" stroke="black" stroke-width="2" />
+            <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2" />
+          </g>
+        </svg>
+        Quiero Ayudar
       </button>
     </div>
   </section>
+</div>
+
+<div *ngIf="showForm">
+  <app-contact-dashboard (closeForm)="closeFormEvent()"></app-contact-dashboard>
 </div>

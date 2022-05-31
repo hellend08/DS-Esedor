@@ -13,6 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatRippleModule } from '@angular/material/core';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -40,6 +41,7 @@ import { AlliesComponent } from './shared/components/allies/allies.component';
 import { LetsTalkComponent } from './shared/components/lets-talk/lets-talk.component';
 import { ContactDashboardComponent } from './views/contact-dashboard/contact-dashboard.component';
 import { ServicesTabComponent } from './shared/components/services-tab/services-tab.component';
+import { CookiesBarComponent } from './shared/components/cookies-bar/cookies-bar.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { ServicesTabComponent } from './shared/components/services-tab/services-
     AlliesComponent,
     LetsTalkComponent,
     ContactDashboardComponent,
-    ServicesTabComponent
+    ServicesTabComponent,
+    CookiesBarComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +85,8 @@ import { ServicesTabComponent } from './shared/components/services-tab/services-
     MatTabsModule,
     MatRippleModule,
     MatStepperModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

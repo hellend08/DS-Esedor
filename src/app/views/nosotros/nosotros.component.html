@@ -173,6 +173,11 @@
       <img src="assets/img/adex.png" alt="">
       <img src="assets/img/mdp.png" alt="">
     </div>
-
   </section>
+
+  <app-lets-talk (letsForm)="showFormEvent()"></app-lets-talk>
+
+    <div *ngIf="showForm">
+        <app-contact-dashboard (closeForm)="closeFormEvent()"></app-contact-dashboard>
+    </div>
 </div>
