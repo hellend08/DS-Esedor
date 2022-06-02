@@ -54,13 +54,17 @@ export class IndexComponent implements AfterViewInit, OnInit {
   displayElement: boolean = true;
 
   servicesItems = [
-    {title: 'Descubrimiento de producto', text: 'Planifique y evalúe las características esenciales de su producto para lograr sus objetivos comerciales y eliminar posibles errores.', state: false, length: '2xl:w-auto'},
-    {title: 'Diseño de Productos', text: 'Crea experiencias de usuario para sus productos digitales. Resuelva problemas reales y mejore sus métricas comerciales a través de interfaces estéticas.', state: false, length: '2xl:w-[75%]'},
-    {title: 'Desarrollo de software', text: 'Implemente interfaces de usuario hermosas y receptivas que sean altamente interactivas y brinden a los usuarios una experiencia similar a la nativa.', state: false, length: '2xl:w-[75%]'},
-    {title: 'Sistemas de diseño', text: 'Una única fuente validada que guía las decisiones de diseño, para una experiencia de usuario superior y una mayor eficiencia en la creación.', state: false, length: 'xl:w-[72%]'},
-    {title: 'Investigación y consultoría digital', text: 'Tome las decisiones correctas y realice investigación en sus usuarios. Entiende su comportamiento y decodifica sus intereses.', state: false, length: '2xl:w-auto'},
-    {title: 'Transformación Cultural', text: 'Adaptamos tu negocio al mundo digital desde una estrategia centrada en la experiencia de usuario que optimice el crecimiento de su negocio', state: false, length: '2xl:w-[75%]'},
+    {title: 'Descubrimiento de producto', text: 'Planifique y evalúe las características esenciales de su producto para lograr sus objetivos comerciales y eliminar posibles errores.', state: false, length: '2xl:w-auto', route: '/servicios'},
+    {title: 'Diseño de Productos', text: 'Crea experiencias de usuario para sus productos digitales. Resuelva problemas reales y mejore sus métricas comerciales a través de interfaces estéticas.', state: false, length: '2xl:w-[75%]', route: '/servicios'},
+    {title: 'Desarrollo de software', text: 'Implemente interfaces de usuario hermosas y receptivas que sean altamente interactivas y brinden a los usuarios una experiencia similar a la nativa.', state: false, length: '2xl:w-[75%]', route: '/servicios'},
+    {title: 'Sistemas de diseño', text: 'Una única fuente validada que guía las decisiones de diseño, para una experiencia de usuario superior y una mayor eficiencia en la creación.', state: false, length: 'xl:w-[72%]', route: '/servicios'},
+    {title: 'Investigación y consultoría digital', text: 'Tome las decisiones correctas y realice investigación en sus usuarios. Entiende su comportamiento y decodifica sus intereses.', state: false, length: '2xl:w-auto', route: '/servicios'},
+    {title: 'Transformación Cultural', text: 'Adaptamos tu negocio al mundo digital desde una estrategia centrada en la experiencia de usuario que optimice el crecimiento de su negocio', state: false, length: '2xl:w-[75%]', route: '/servicios'},
   ]
+
+  serviceRoute(route: any) {
+    this.router.navigateByUrl(route);
+  }
 
   ngOnInit(): void {
     AOS.init()
@@ -135,7 +139,7 @@ export class IndexComponent implements AfterViewInit, OnInit {
 
   constructor(private router: Router, private _vps: ViewportScroller, @Inject(DOCUMENT) private document: Document, public _snackBar: MatSnackBar) { }
 
- 
+  
   
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
