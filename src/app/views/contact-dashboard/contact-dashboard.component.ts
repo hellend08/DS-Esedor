@@ -11,9 +11,19 @@ export class ContactDashboardComponent implements OnInit {
   paso2 = false;
   paso3 = false;
 
+  finalStep!: boolean;
+
   @Output() closeForm = new EventEmitter<any>();
 
   constructor() { }
+
+  messageSent() {
+    this.finalStep = !this.finalStep;
+  }
+
+  refresh(): void {
+    window.location.reload();
+  }
 
   ngOnInit(): void {
   }
