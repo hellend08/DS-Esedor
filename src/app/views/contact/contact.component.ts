@@ -10,8 +10,18 @@ import * as AOS from 'aos';
 export class ContactComponent implements OnInit {
 
   colorWhite = true;
+  btnStyle!: boolean;
+  showForm!: boolean;
 
   constructor() { }
+
+  showFormEvent() {
+    this.showForm = true;
+  }
+
+  closeFormEvent() {
+    this.showForm = false;
+  }
 
   ngOnInit(): void {
 

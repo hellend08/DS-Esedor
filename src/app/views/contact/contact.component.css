@@ -1,6 +1,8 @@
 .bg-image {
   background-image: url('../../../assets/img/contacto-esedor.png');
   background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
 }
 
 .bg-responsive{
@@ -21,7 +23,6 @@ h1 {
   background-color: #FFFFFF ;
   border-radius: 60px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
-
 }
 
 .btn-responsive{
@@ -44,5 +45,21 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-width: 1024px ) {
+
+  .arrow-rotate{
+      transform: rotate(-45deg);
+      transition: transform .6s cubic-bezier(.4,0,0,1);
+  }
+
+  .arrow:hover g line {
+      stroke: #FFFFFF;
+  }
+  
+  .arrow:hover g path {
+      stroke: #FFFFFF;
+  }
 
 }
