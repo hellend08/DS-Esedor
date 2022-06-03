@@ -21,28 +21,33 @@
             <p class="lexend text-[11.5px]">Esedor © 2022</p>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-3 lg:col-span-2 xl:col-span-1 gap-y-[3.25rem] lg:gap-y-0 pb-[5rem] pt-8 lg:pt-0 lg:pb-0">
+        <div
+            class="grid grid-cols-2 lg:grid-cols-3 lg:col-span-2 xl:col-span-1 gap-y-[3.25rem] lg:gap-y-0 pb-[5rem] pt-8 lg:pt-0 lg:pb-0">
             <ul class="col-span-2 lg:col-span-1">
                 <li class="lexendb text-[14px] leading-[17.5px] text-[#000000]">Servicios</li>
-                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5 cursor-pointer" *ngFor="let list of servicesList" (click)="serviceRoute(list.route)">
+                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5 cursor-pointer hover:text-[#5682FF]"
+                    *ngFor="let list of servicesList" (click)="serviceRoute(list.route)">
                     {{list.text}}</li>
             </ul>
-           
+
             <ul>
                 <li class="lexendb text-[14px] leading-[17.5px] text-[#000000]">Nosotros</li>
-                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5 cursor-pointer" *ngFor="let list of usList" routerLink="/nosotros">
+                <li class="lexendli text-[13px] leading-[16.5px] text-[#454C59] pt-5 cursor-pointer hover:text-[#5682FF]"
+                    *ngFor="let list of usList" routerLink="/nosotros">
                     {{list.text}}</li>
             </ul>
             <div class="flex justify-between">
                 <ul>
-                    <li (click)="routesEvent(list.route)" class="lexendb text-[14px] leading-[17.5px] text-[#000000] pb-5 cursor-pointer" *ngFor="let list of listGroup">
+                    <li (click)="routesEvent(list.route)"
+                        class="lexendb text-[14px] leading-[17.5px] text-[#000000] pb-5 cursor-pointer hover:text-[#5682FF]"
+                        *ngFor="let list of listGroup">
                         {{list.text}}</li>
                     <li class="text-[10px] text-[#454C59] w-[115px]">Iniciativa para iniciar
                         tu carrera en el ecosistema digital</li>
                 </ul>
                 <div class="space-y-5">
                     <a class="block" href="https://www.linkedin.com/company/esedor/" target="_blank">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V10H9V17ZM7.694 8.717C6.923 8.717 6.408 8.203 6.408 7.517C6.408 6.831 6.922 6.317 7.779 6.317C8.55 6.317 9.065 6.831 9.065 7.517C9.065 8.203 8.551 8.717 7.694 8.717ZM18 17H15.558V13.174C15.558 12.116 14.907 11.872 14.663 11.872C14.419 11.872 13.605 12.035 13.605 13.174C13.605 13.337 13.605 17 13.605 17H11.082V10H13.605V10.977C13.93 10.407 14.581 10 15.802 10C17.023 10 18 10.977 18 13.174V17Z"
                                 fill="#626973" />
@@ -66,9 +71,11 @@
             </div>
             <div class="col-span-2 grid grid-cols-4 items-end absolute lg:relative bottom-0 right-0">
                 <ul class="flex flex-col lg:flex-row justify-between col-span-3 max-w-[435px] space-y-4 lg:space-y-0">
-                    <li class="lexend text-[11.5px] text-[#626973]">Pólitica de cookies</li>
-                    <li class="lexend text-[11.5px] text-[#626973]">Aviso Legal</li>
-                    <li class="lexend text-[11.5px] text-[#626973]">Política de privacidad</li>
+                    <li class="lexend text-[11.5px] text-[#626973] cursor-pointer hover:text-[#5682FF]"
+                        (click)="politicsEvent()">Pólitica de cookies</li>
+                    <!-- <li class="lexend text-[11.5px] text-[#626973]">Aviso Legal</li> -->
+                    <li class="lexend text-[11.5px] text-[#626973] cursor-pointer hover:text-[#5682FF]"
+                        (click)="politicsEvent()">Política de privacidad</li>
                 </ul>
             </div>
         </div>

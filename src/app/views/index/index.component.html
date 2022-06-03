@@ -2,12 +2,31 @@
 
 <app-loader></app-loader>
 
-<div class="lg:pb-[5rem] 2xl:pb-0">
+<div class="fixed top-0 z-[99] w-full h-screen bg-[#000000] pt-3" *ngIf="showVideo">
+  <div class="flex justify-end px-[1.5rem]">
+    <button class="rounded-[50%] w-[46px] h-[46px] bg-[#141C26] flex justify-center items-center" (click)="showVideo = false">
+      <!-- (click)="closeForm.emit()" -->
+      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.80318 1.13013L7.07359 0.40625L4.18113 3.27612L1.28867 0.40625L0.559082 1.13013L3.45155 4L0.559082 6.86987L1.28867 7.59375L4.18113 4.72388L7.07359 7.59375L7.80318 6.86987L4.91071 4L7.80318 1.13013Z"
+          fill="white" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex justify-center items-center 2xl:pt-8">
+    <video controls autoplay style="max-height: 90vh;">
+      <source src="assets/img/esedor_video.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div>
   <section #slideContent class="lg:pt-28 px-4 flex flex-col justify-center bg-[#F2F4F5] h-screen">
     <!-- <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p> -->
     <div>
       <!-- class="w-[98.5%]" -->
-      <app-main-slider></app-main-slider>
+      <app-main-slider (getDown)="getDownprueba()"></app-main-slider>
     </div>
   </section>
 
@@ -35,10 +54,10 @@
           </defs>
         </svg> -->
         <!-- <img class="max-w-[102px] ml-[-1rem]" src="assets/img/video_play.png" alt=""> -->
-        <lottie-player class="ml-[-4rem]" src="https://assets10.lottiefiles.com/packages/lf20_getcwdyd.json"
+        <lottie-player (click)="showVideo = true" class="ml-[-4rem]" src="https://assets10.lottiefiles.com/packages/lf20_getcwdyd.json"
           background="transparent" speed="1" style="width: 200px; height: 200px;" hover></lottie-player>
       </div>
-      <div class="col-span-2 space-y-[3rem]">
+      <div class="col-span-2 space-y-[3rem]" #nextContent>
         <h1 data-aos="fade-up" data-aos-duration="500"
           class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generando
           valor y experiencias increíbles para negocios ambiciosos.</h1>
@@ -49,6 +68,8 @@
           tu proyecto, maximizando tus objetivos de negocio.</h3>
       </div>
     </div>
+
+    
 
     <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] pt-[5rem] lg:pt-[13rem]">
       <div
@@ -88,9 +109,6 @@
                 <path d="M16.2585 1.00146L30.5917 15.2188L16.2585 29.436" stroke="black" stroke-width="2" />
               </g>
             </svg>
-            <!-- <img [ngClass]="{ 'arrow-rotate' : item.state}"
-              class="w-[31px] mr-5 translate-x-0 transition duration-700 ease-in-out" src="assets/img/arrow-black.png"
-              alt=""> -->
             Saber más
           </button>
         </div>
@@ -182,20 +200,26 @@
     <img src="assets/img/tornillo.png" alt="">
     <div
       class="col-span-2 grid grid-cols-1 lg:grid-cols-2 pb-[4rem] lg:pt-[8rem] 2xl:pt-[10rem] lg:pb-[5rem] 2xl:pb-[7rem] text-white">
-      <h3 data-aos="fade-right" data-aos-duration="500" class="lexendli text-[18px] lg:text-[21px] pb-8 lg:pb-[5rem] 2xl:pb-[8rem] lg:col-span-2 ">Trainee impact</h3>
+      <h3 data-aos="fade-right" data-aos-duration="500"
+        class="lexendli text-[18px] lg:text-[21px] pb-8 lg:pb-[5rem] 2xl:pb-[8rem] lg:col-span-2 ">Level Up</h3>
       <div class="space-y-8 lg:space-y-[4rem] 2xl:space-y-[6rem] lg:col-span-2 ">
-        <h1 data-aos="fade-up" data-aos-duration="500" class="text-[28px] lg:text-[36px] xl:text-[46px] leading-[35px] lg:leading-[57.5px] ">¿Buscas una manera de
-          comenzar tu carrera? </h1>
-        <h4 data-aos="fade-up" data-aos-duration="500" class="lexendli text-[18px] xl:text-[21px] leading-[25.6px] lg:leading-[33.6px]">Ven y únete a nuestro
-          Programa Trainee y desarrolla tu potencial en 6 meses. ¡Será una experiencia increíble! No sólo ofrecemos
-          habilidades prácticas, sino también tutoría de personas realmente talentosas en un entorno increíble centrado
-          en las personas, mientras pone sus manos en proyectos reales junto con nuestro equipo calificado de Diseño y
-          Desarrollo de Productos en Zemoga.</h4>
-        <h4 data-aos="fade-up" data-aos-duration="500" class="lexendli text-[18px] xl:text-[21px] leading-[25.6px] lg:leading-[33.6px]">Envia
+        <h1 data-aos="fade-up" data-aos-duration="500"
+          class="text-[28px] lg:text-[36px] xl:text-[46px] leading-[35px] lg:leading-[57.5px] ">
+          ¿Buscas una manera de iniciar tu carrera?</h1>
+        <h4 data-aos="fade-up" data-aos-duration="500"
+          class="lexendli text-[18px] xl:text-[21px] leading-[25.6px] lg:leading-[33.6px]">
+          Se parte de nuestro Programa Trainee y desarrolla tu potencial en 6 meses. ¡Será una experiencia increíble! En
+          el que no sólo ofrecemos habilidades prácticas, sino también tutoría de personas realmente talentosas en un
+          ambiente increíble centrado en las personas, mientras pone sus manos en proyectos reales junto con nuestro
+          equipo calificado de Diseño y Desarrollo de Productos en Esedor.
+        </h4>
+        <h4 data-aos="fade-up" data-aos-duration="500"
+          class="lexendli text-[18px] xl:text-[21px] leading-[25.6px] lg:leading-[33.6px]">Envia
           tu CV y datos personales:</h4>
 
       </div>
-      <p data-aos="fade-up" data-aos-duration="500" class="lexendzettali text-[32px] pt-[2rem] col-span-2 hidden lg:block">talento@esedor.com</p>
+      <p data-aos="fade-up" data-aos-duration="500"
+        class="lexendzettali text-[32px] pt-[2rem] col-span-2 hidden lg:block">talento@esedor.com</p>
     </div>
   </section>
 
@@ -290,257 +314,4 @@
     <app-contact-dashboard (closeForm)="closeFormEvent()"></app-contact-dashboard>
   </div>
 
-
 </div>
-
-<!--Seccion Start project-->
-<!-- <footer class="section py-2 px-4 flex flex-col content-center justify-between lg:h-screen"
- style="background: linear-gradient(to top, #193EFF 0%, #8B99E4 100%); min-height: 800px;">
- <div class="pt-40" *ngIf="paso1">
-   <h1
-     class="text-center text-[24px] lg:text-[49px] lexendzetta text-[#FFFFFF] lg:w-[70%] mx-auto leading-[30px] lg:leading-[61px]">
-     Iniciemos un
-     proyecto</h1>
-   <div>
-     <div class="flex flex-wrap lg:justify-center space-y-4 lg:space-y-0 lg:space-x-4 mt-20">
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Diseño de una web</span>
-       </div>
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Un sistema completo</span>
-       </div>
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Sistema de diseño</span>
-       </div>
-     </div>
-     <div class="flex flex-wrap justify-center mt-4 space-y-4 lg:space-y-0 lg:space-x-4">
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Branding</span>
-       </div>
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-full lg:w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Proyecto Start-Up</span>
-       </div>
-     </div>
-   </div>
-   <p class="text-center lexend text-sm text-white pt-12">También puedes escribirnos directamente a</p>
-   <p class="text-center lexendb text-sm text-white">hola@esedor.com</p>
-
- </div> -->
-
-
-<!--Paso1-->
-<!-- <div class="w-full mt-10" *ngIf="paso1">
-   <div class="flex justify-center">
-     <div class="text-white w-[36rem]">
-       <p style="letter-spacing: 0.0015rem;" class="text-center text-[0.875rem] lexendb mb-10">Iniciemos un proyecto
-       </p>
-       <h2 style="font-size: 35px;line-height: 44px;font-family: Lexend; text-align: center">Conversemos, selecciona
-         una de las opciones y te tomemos un café</h2>
-     </div>
-   </div>
-
-   <div>
-     <div class="flex justify-center space-x-4 mt-20">
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Diseño de una web</span>
-       </div>
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Un sistema completo</span>
-       </div>
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Sistema de diseño</span>
-       </div>
-     </div>
-     <div class="flex justify-center mt-4 space-x-4">
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Branding</span>
-       </div>
-       <div (click)="paso1 = false; paso2 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">Proyecto Start-Up</span>
-       </div>
-     </div>
-   </div>
-
-   <div class="Lexend text-white text-center mt-10">
-     <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
-     <p>hola@esedor.com</p>
-   </div>
- </div> -->
-
-<!--Paso2-->
-<!-- <div class="w-full" *ngIf="paso2">
-   <div class="flex justify-center">
-     <div class="text-white w-[36rem]">
-       <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
-       <h2 style="font-size: 35px;line-height: 44px;font-family: Lexend; text-align: center">Conversemos, selecciona
-         una de las opciones y te tomemos un café</h2>
-     </div>
-   </div>
-   <div>
-     <div class="flex justify-center space-x-4 mt-20">
-       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">US$ 2,500 - 10,000</span>
-       </div>
-       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">US$ 10,000 - 30,000</span>
-       </div>
-       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">US$ 30,000 -50,000</span>
-       </div>
-     </div>
-
-     <div class="flex justify-center mt-4 space-x-4">
-       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">US$ 50,000 -75,000</span>
-       </div>
-       <div (click)="paso2 = false; paso3 = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] lexend">US$ 75,000 +</span>
-       </div>
-     </div>
-   </div>
-   <div class="Lexend text-white text-center mt-10">
-     <p class="text-[1.3rem] lexend">Tambien puedes escribirnos directamente a</p>
-     <p class="lexend">hola@esedor.com</p>
-   </div>
- </div> -->
-
-<!--Paso3-->
-<!-- <div class="w-full" *ngIf="paso3">
-   <div class="flex justify-center">
-     <div class="text-white w-[36rem]">
-       <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
-       <h2 style="font-size: 35px;line-height: 44px;font-family: 'Lexend', sans-serif; text-align: center">Por donde
-         esuchaste sobre Esedor</h2>
-     </div>
-   </div>
-   <div>
-     <div class="flex justify-center space-x-4 mt-20">
-       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] Lexend">Awwwards</span>
-       </div>
-       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] Lexend">CCL</span>
-       </div>
-       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] Lexend">ADEX</span>
-       </div>
-     </div>
-
-     <div class="flex justify-center mt-4 space-x-4">
-       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] Lexend">Blog</span>
-       </div>
-       <div (click)="paso3 = false; formulario = true" style="border-radius: 12px;"
-         class="bg-white cursor-pointer w-[17.5rem] flex flex-wrap content-center justify-center h-[5.188rem]">
-         <span class="text[#626973] Lexend">Eventos</span>
-       </div>
-     </div>
-   </div>
-
-   <div class="Lexend text-white text-center mt-10">
-     <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
-     <p>hola@esedor.com</p>
-   </div>
- </div> -->
-
-<!--Formulario-->
-<!-- <div class="w-full" *ngIf="formulario">
-   <div class="flex justify-center">
-     <div class="text-white w-[36rem]">
-       <p style="letter-spacing: 0.0015em;" class="text-center">Iniciemos un proyecto</p>
-       <h2 style="font-size: 35px;line-height: 44px;font-family: 'Lexend', sans-serif; text-align: center">Por donde
-         esuchaste sobre Esedor</h2>
-     </div>
-   </div>
-   <div class="flex justify-center">
-     <div class="">
-
-       <div class="flex justify-between space-x-4">
-         <mat-form-field appearance="outline" class="w-[20rem]">
-           <mat-label class="text-white"> Nombres </mat-label>
-           <input matInput>
-         </mat-form-field>
-
-         <mat-form-field appearance="outline" class="w-[20rem]">
-           <mat-label class="text-white"> Apellidos </mat-label>
-           <input matInput>
-         </mat-form-field>
-       </div>
-
-       <div class="flex justify-between">
-         <mat-form-field appearance="outline" class="w-[20rem]">
-           <mat-label class="text-white"> Dirección de correo electrónico </mat-label>
-           <input matInput>
-         </mat-form-field>
-
-         <mat-form-field appearance="outline" class="w-[20rem]">
-           <mat-label class="text-white"> Número de teléfono o celular </mat-label>
-           <input matInput>
-         </mat-form-field>
-       </div>
-
-       <div class="flex justify-between">
-         <mat-form-field appearance="outline" class="w-[20rem]">
-           <mat-label class="text-white"> Empresa y cargo </mat-label>
-           <input matInput>
-         </mat-form-field>
-
-         <mat-form-field appearance="outline" class="w-[20rem]">
-           <mat-label class="text-white"> Tiempo de entrega </mat-label>
-           <input matInput>
-         </mat-form-field>
-       </div>
-       <div class="col-start-1 col-end-2 w-full">
-         <mat-form-field appearance="outline" class="w-full">
-           <mat-label class="text-white"> Describe tu proyecto aquí... </mat-label>
-           <textarea matInput></textarea>
-         </mat-form-field>
-       </div>
-     </div>
-   </div>
-
-   <div class="Lexend text-white text-center mt-10">
-     <p class="text-[1.3rem]">Tambien puedes escribirnos directamente a</p>
-     <p>hola@esedor.com</p>
-   </div>
- </div>
-
- <div class="flex justify-between">
-   <div class="text-white lexend text-[13px]">
-     <p>Ubicación</p>
-     <p class="leading-[16px] pt-4 pb-8">
-       Swiss Tower <br>
-       Av. Alfredo Benavides <br>
-       #1944 – Piso 9 <br>
-       Miraflores, Lima
-     </p>
-     <p>Esedor © 2022</p>
-   </div>
-   <div class="text-[13px] lexend font-medium text-white space-y-2 pb-2 flex flex-col justify-end">
-     <p>LINKEDIN</p>
-     <p>FACEBOOK</p>
-     <p>INSTAGRAM</p>
-     <p>YOUTUBE</p>
-   </div>
- </div>
-
-</footer> -->

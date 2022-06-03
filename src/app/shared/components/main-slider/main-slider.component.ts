@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, ViewChild, ChangeDetectorRef, ViewChildren } from '@angular/core';
+import { Output } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ChangeDetectorRef, ViewChildren, EventEmitter } from '@angular/core';
 import { NguCarousel, NguCarouselConfig } from '@ngu/carousel';
 
 @Component({
@@ -13,6 +14,8 @@ export class MainSliderComponent implements AfterViewInit {
   resetAnim = true; 
 
   btnStyle!: boolean;
+
+  @Output() getDown = new EventEmitter<any>();
 
   @ViewChild('myCarousel') myCarousel!: NguCarousel<any>;
 
