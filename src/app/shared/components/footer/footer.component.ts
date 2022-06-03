@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -7,19 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   servicesList = [
-    {text: 'Descrubrimiento de Producto', route: ''},
-    {text: 'Diseño de Productos', route: ''},
-    {text: 'Desarrollo de software', route: ''},
-    {text: 'Sistemas de Diseños', route: ''},
-    {text: 'Investigación y Consultoria ', route: ''},
-    {text: 'Transformación cultural', route: ''}
+    {text: 'Descrubrimiento de Producto', route: '/servicios'},
+    {text: 'Diseño de Productos', route: '/servicios'},
+    {text: 'Desarrollo de software', route: '/servicios'},
+    {text: 'Sistemas de Diseños', route: '/servicios'},
+    {text: 'Investigación y Consultoria ', route: '/servicios'},
+    {text: 'Transformación cultural', route: '/servicios'}
   ]
+
+  serviceRoute(route: any) {
+    this.router.navigateByUrl(route);
+  }
 
   usList = [
     {text: 'Nuestra Cultura', route: ''},
@@ -35,5 +40,9 @@ export class FooterComponent implements OnInit {
     {text: 'Talento', route: '/talento'},
     {text: 'Fresh Talent', route: '/'}
   ]
+
+  routesEvent(route: any) {
+    this.router.navigateByUrl(route);
+  }
 
 }

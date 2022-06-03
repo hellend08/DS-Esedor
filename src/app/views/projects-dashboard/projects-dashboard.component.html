@@ -21,7 +21,7 @@
       <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem] sidebar">
         <mat-list-item data-aos="fade-right" *ngFor="let list of listGroup" class="cursor-pointer" role="listitem"
           (click)="filterEmpresas(list.types); list.state = true" [ngClass]="{ 'item-focus' : list.state }">
-          <mat-icon>arrow_right</mat-icon>
+          <mat-icon class="opacity-0" [ngClass]="{ 'icon-hover' : list.state}">arrow_right</mat-icon>
           {{list.name}}
         </mat-list-item>
       </mat-list>

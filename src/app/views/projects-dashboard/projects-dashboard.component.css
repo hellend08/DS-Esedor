@@ -1,6 +1,10 @@
 .bg-image {
-  background-image: url('../../../assets/img/bg-services.png');
+  background-image: url('../../../assets/img/proyectos-esedor.png');
   background-repeat: no-repeat;
+}
+
+.icon-hover {
+  opacity: 1;
 }
 
 :host ::ng-deep .mat-drawer-side {
