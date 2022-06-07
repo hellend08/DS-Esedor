@@ -58,11 +58,11 @@ export class ServicesComponent implements OnInit {
   }
 
   labelGroup = [
-    {label: 'Descubrimiento de producto'},
+    {label: 'Descubrimiento de Producto'},
     {label: 'Diseño UX/UI'},
-    {label: 'Desarrollo de software'},
-    {label: 'Sistemas de diseño'},
-    {label: 'Validación  Cuantitativa'},
+    {label: 'Desarrollo de Software'},
+    {label: 'Sistemas de Diseño'},
+    {label: 'Investigación y Consultoría'},
     {label: 'Transformación Cultural'}
   ]
 

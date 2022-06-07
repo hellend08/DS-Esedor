@@ -18,7 +18,6 @@ export class MainSliderComponent implements AfterViewInit {
   @Output() getDown = new EventEmitter<any>();
 
   @ViewChild('myCarousel') myCarousel!: NguCarousel<any>;
-
   @ViewChildren('linkRef') linkRefs: any;
 
   carouselConfig: NguCarouselConfig = {
