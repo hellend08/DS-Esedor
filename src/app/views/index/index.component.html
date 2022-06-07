@@ -26,12 +26,12 @@
     <!-- <p class="text-right text-sm lexendzetta font-bold text-white hidden lg:block">EN</p> -->
     <div>
       <!-- class="w-[98.5%]" -->
-      <app-main-slider (getDown)="getDownprueba()"></app-main-slider>
+      <app-main-slider (getDown)="getDownSection()"></app-main-slider>
     </div>
   </section>
 
-  <section class="py-[5rem] lg:py-[13rem] px-4 bg-white">
-    <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] border-b border-black pb-[5rem] lg:pb-[13rem]">
+  <section class="py-[5rem] lg:py-[13rem] px-4 bg-white" id="nextContent">
+    <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-x-[5rem] border-b border-black pb-[5rem] lg:pb-[13rem]" >
       <div
         class="flex flex-row-reverse lg:flex-col justify-between items-center lg:items-start pt-[4rem] lg:pt-0 lg:py-4 pr-[2.5rem] lg:pr-0 order-last lg:order-none">
         <h4 data-aos="fade-right" data-aos-duration="500" class="text-[21px] lexendli">Conócenos</h4>
@@ -57,7 +57,7 @@
         <lottie-player (click)="showVideo = true" class="ml-[-4rem]" src="https://assets10.lottiefiles.com/packages/lf20_getcwdyd.json"
           background="transparent" speed="1" style="width: 200px; height: 200px;" hover></lottie-player>
       </div>
-      <div class="col-span-2 space-y-[3rem]" #nextContent>
+      <div class="col-span-2 space-y-[3rem]">
         <h1 data-aos="fade-up" data-aos-duration="500"
           class="text-[28px] lgtext-[40px] xl:text-[46px] lexendzettali leading-[35px] lg:leading-[57.5px]">Generando
           valor y experiencias increíbles para negocios ambiciosos.</h1>

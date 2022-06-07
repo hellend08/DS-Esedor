@@ -19,7 +19,7 @@ import * as AOS from 'aos';
 })
 export class IndexComponent implements AfterViewInit, OnInit {
 
-  @ViewChild('nextContent', { static: true }) nextContent!: ElementRef<HTMLDivElement>;
+  // @ViewChild('nextContent', { static: true }) nextContent!: ElementRef<HTMLDivElement>;
   // @ViewChild('title', { static: true }) title!: ElementRef<HTMLDivElement>;
   @ViewChild('slideContent', {static: true}) slideContent!: ElementRef<HTMLDivElement>;
 
@@ -35,8 +35,11 @@ export class IndexComponent implements AfterViewInit, OnInit {
     this.showForm = false;
   }
 
-  getDownprueba() {
-    this.nextContent;
+  getDownSection() {
+    let x = document.querySelector("#nextContent");
+    if (x){
+        x.scrollIntoView({behavior: "smooth"});
+    }
   }
 
   bgBlog!: boolean;

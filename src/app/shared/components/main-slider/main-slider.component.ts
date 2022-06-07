@@ -1,4 +1,5 @@
 import { Output } from '@angular/core';
+import { Input } from '@angular/core';
 import { Component, AfterViewInit, ViewChild, ChangeDetectorRef, ViewChildren, EventEmitter } from '@angular/core';
 import { NguCarousel, NguCarouselConfig } from '@ngu/carousel';
 
