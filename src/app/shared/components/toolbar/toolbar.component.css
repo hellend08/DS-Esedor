@@ -1,5 +1,6 @@
 .menu-celes{
   background: #5682FF;
+  transition: 0.3s;
 
 }
 /*Toolbar*/
@@ -25,6 +26,7 @@
   -o-transition: all .2s;
   transition: all .2s;
 }
+
 
 .open-menu li{
   color: white;
@@ -127,49 +129,3 @@
     z-index: 700;
 } */
 
-
-@keyframes animacion1{
-  0%{
-    transform: scale();
-  }
-
-  10%{
-    transform: scale();
-  }
-
-  20%{
-    transform: scale();
-  }
-
-  30%{
-    transform: scale();
-  }
-
-  40%{
-    transform: scale();
-  }
-
-  50%{
-    transform: scale();
-  }
-
-  60%{
-    transform: scale();
-  }
-
-  70%{
-    transform: scale();
-  }
-
-  80%{
-    transform: scale();
-  }
-
-  90%{
-    transform: scale();
-  }
-
-  100%{
-    transform: scale();
-  }
-}
