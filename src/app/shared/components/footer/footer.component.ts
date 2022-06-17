@@ -38,11 +38,15 @@ export class FooterComponent implements OnInit {
     {text: 'Blog', route: '/'},
     {text: 'Contacto', route: '/contacto'},
     {text: 'Talento', route: '/talento'},
-    {text: 'Fresh Talent', route: '/'}
+    {text: 'Level Up', route: '/'}
   ]
 
   routesEvent(route: any) {
     this.router.navigateByUrl(route);
+  }
+
+  politicsEvent() {
+    this.router.navigateByUrl('/proyectos/cookies');
   }
 
 }

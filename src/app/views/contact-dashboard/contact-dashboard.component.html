@@ -1,4 +1,4 @@
-<div class="bg-[#5682FF] h-screen pt-2 fixed top-0 z-[99] w-full pb-[3.5rem] lg:pb-0 overflow-y-scroll lg:overflow-y-hidden">
+<div class="bg-[#5682FF] h-screen pt-2 fixed top-0 z-[99] w-full pb-[3.5rem] lg:pb-0 overflow-y-scroll lg:overflow-y-hidden" *ngIf="!finalStep">
     <!-- pb-[10rem] overflow-y-scroll h-[650px] lg:-->
     <div class="flex justify-end px-[1.5rem]">
         <!-- mb-[5rem] -->
@@ -125,9 +125,9 @@
                     <button
                         class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[65px] 2xl:h-[82px] text-white rounded-[50px] lg:p-4 bg-transparent border boder-white"
                         mat-button matStepperPrevious>Volver</button>
-                    <button
+                    <button (click)="messageSent()"
                         class="w-full lg:w-[250px] xl:w-[260px] 2xl:w-[280px] h-[45px] lg:h-[65px] 2xl:h-[82px] rounded-[50px] lg:p-4 bg-white"
-                        mat-button matStepperNext>Enviar</button>
+                        mat-button>Enviar</button>
                 </div>
             </div>
             <!-- 
@@ -140,4 +140,14 @@
             {{index + 1}}
           </ng-template>
     </mat-stepper>
+</div>
+
+<div class="bg-[#F2F4F5] fixed top-0 z-[99] flex flex-col justify-center items-center text-[#141C26] text-center w-full h-screen px-4 lg:px-0" *ngIf="finalStep">
+    <h5 class="lexendzettaextrali text-[32px] lg:text[66px] leading-[40px] lg:leading-[82.5px] pb-5">¡Gracias!</h5>
+    <h3 class="lexendli text-[21px] lg:text-[36px] leading-[33.6px] lg:leading-[53.3px]">Su solicitud ha sido enviada.</h3>
+    <p class="lexendli text-[14.5px] lg:text-[21px] leading-[18.5px] lg:leading-[33.6px]">Nos pondremos en contacto contigo pronto para darte detalles sobre el precio de tu proyecto.</p>
+    <button class="lexend text-[15.5px] text-[#141C26] w-full lg:w-[280px] h-[82px] rounded-[50px] shadow mt-5" (click)="closeForm.emit()">
+        Ir a esedor.com
+    </button>
+
 </div>

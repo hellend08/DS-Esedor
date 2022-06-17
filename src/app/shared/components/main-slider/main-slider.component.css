@@ -5,6 +5,10 @@ img {
 .shadow {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
+
+.text-rotate {
+    transform: rotate(-90deg);
+}
 /* .ngucarouselpB8BVM {
     display: flex;
     flex-direction: column;
